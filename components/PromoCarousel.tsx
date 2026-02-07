@@ -11,19 +11,15 @@ interface Promo {
     description: string;
 }
 
-const tableCheckUrl = "https://www.tablecheck.com/en/jhl-solitaire-gading-serpong-royal-eight/reserve/experiences";
+import { useLanguage } from '@/context/LanguageContext';
 
-const activePromo: Promo = {
-    id: "tang-dynasty",
-    title: "Tang Dynasty Set Menu",
-    price: "IDR 4.888.000",
-    link: tableCheckUrl,
-    description: "A culinary journey through the ages 10-course banquet."
-};
+const tableCheckUrl = "https://www.tablecheck.com/en/jhl-solitaire-gading-serpong-royal-eight/reserve/experiences";
 
 const bgImage = "/assets/royal-eight/banquet.svg";
 
 export const PromoCarousel = () => {
+    const { t } = useLanguage();
+
     return (
         <div className="w-full py-8 mb-4">
             <m.div
@@ -43,26 +39,26 @@ export const PromoCarousel = () => {
                 <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-6 md:p-10 gap-6">
                     <div className="text-center md:text-left">
                         <span className="text-luxury-gold font-sans text-xs uppercase tracking-[0.3em] mb-2 block animate-pulse">
-                            Special Offer
+                            {t.promo.specialOffer}
                         </span>
                         <h3 className="text-3xl md:text-4xl font-serif text-white mb-2">
-                            {activePromo.title}
+                            {t.promo.tangDynasty.title}
                         </h3>
                         <p className="text-white/80 mb-4 font-light italic">
-                            {activePromo.description}
+                            {t.promo.tangDynasty.description}
                         </p>
                         <div className="text-2xl text-luxury-gold font-bold font-serif">
-                            {activePromo.price}
+                            {t.promo.tangDynasty.price}
                         </div>
                     </div>
 
                     <a
-                        href={activePromo.link}
+                        href={tableCheckUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-8 py-3 bg-luxury-gold text-black font-sans font-bold text-sm tracking-uppercase hover:bg-white hover:text-black transition-all duration-300 shadow-lg transform hover:-translate-y-1"
                     >
-                        RESERVE TABLE
+                        {t.promo.reservation}
                     </a>
                 </div>
             </m.div>

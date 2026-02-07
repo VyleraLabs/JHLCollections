@@ -1,3 +1,4 @@
+"use client";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,8 +7,13 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star, MapPin, Utensils, Bed } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
+  const { t, language } = useLanguage();
+
   return (
     <main className="min-h-screen bg-brand-off-white">
       <Header />
@@ -15,25 +21,62 @@ export default function Home() {
       <HeroSlider />
 
       {/* Welcome Section */}
-      <Section className="text-center max-w-4xl mx-auto">
-        <p className="text-brand-dark/80 uppercase tracking-widest text-sm font-bold mb-4">Welcome to JHL Solitaire</p>
-        <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6">
-          Jewel of the City
-        </h2>
-        <p className="text-gray-600 leading-relaxed mb-8">
-          JHL Solitaire Gading Serpong, a JHL Collections hotel, is our 5 Star Luxury Hotel situated 40 minutes from Soekarno-Hatta International Airport.
-          The hotel creates a setting of luxury and comfort, with 141 stylishly appointed premier rooms and suites.
-        </p>
-        <div className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl">
-          <Image
-            src="/assets/original/1mc6912000qshhrwa9EE8.jpg"
-            alt="JHL Solitaire Iconic Architecture at Sunset"
-            fill
-            className="object-cover"
-            priority
-            quality={80}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
-          />
+      <Section className="py-24 bg-brand-off-white overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-20"
+          >
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-[1px] w-12 bg-brand-gold/40"></div>
+              <p className="text-brand-gold uppercase tracking-[0.4em] text-xs font-bold leading-none">
+                {t.hero.welcome}
+              </p>
+              <div className="h-[1px] w-12 bg-brand-gold/40"></div>
+            </div>
+
+            <h2 className="text-5xl md:text-7xl font-serif text-brand-dark mb-8 tracking-tight">
+              {t.hero.title}
+            </h2>
+
+            <div className="relative inline-block mb-10">
+              <span className="text-brand-gold font-serif text-3xl md:text-4xl italic px-4 relative z-10">
+                {t.hero.jewelText}
+              </span>
+              <div className="absolute -bottom-2 left-0 w-full h-4 bg-brand-gold/5 -rotate-1 z-0"></div>
+            </div>
+
+            <p className="text-gray-500 font-light leading-relaxed max-w-2xl mx-auto text-lg md:text-xl italic mb-4">
+              {t.hero.description}
+            </p>
+
+            <div className="w-24 h-[1px] bg-brand-gold mx-auto mt-12 mb-20 opacity-30"></div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            className="relative h-[500px] md:h-[650px] w-full rounded-sm overflow-hidden shadow-2xl group"
+          >
+            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+            <Image
+              src="/assets/original/1mc6912000qshhrwa9EE8.jpg"
+              alt="JHL Solitaire Iconic Architecture at Sunset"
+              fill
+              className="object-cover transition-transform duration-[3s] group-hover:scale-110"
+              priority
+              quality={90}
+              sizes="100vw"
+            />
+            {/* Elegant Corner Borders */}
+            <div className="absolute top-8 left-8 w-12 h-12 border-t border-l border-white/40 z-20"></div>
+            <div className="absolute bottom-8 right-8 w-12 h-12 border-b border-r border-white/40 z-20"></div>
+          </motion.div>
         </div>
       </Section>
 
@@ -53,13 +96,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Accommodations</span>
-            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Rooms & Suites</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">{t.nav.rooms}</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">{t.categories.rooms.title}</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Experience the art of luxurious living in rooms and suites designed with exceptional attention to detail.
+              {t.categories.rooms.description}
             </p>
             <Link href="/rooms" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Discover More
+              {t.categories.rooms.cta}
             </Link>
           </div>
         </div>
@@ -78,13 +121,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Culinary</span>
-            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Dining Experience</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">{t.nav.dining}</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">{t.categories.dining.title}</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Unfold the rich tapestry of exquisite flavors. From international buffets to authentic Italian fine dining.
+              {t.categories.dining.description}
             </p>
             <Link href="/dining" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Explore Venues
+              {t.categories.dining.cta}
             </Link>
           </div>
         </div>
@@ -101,13 +144,13 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Serenity</span>
-            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Wellness & Spa</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">{t.nav.wellness}</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">{t.categories.wellness.title}</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Rejuvenate your senses at Acqua Spa, featuring curated treatments and world-class fitness facilities.
+              {t.categories.wellness.description}
             </p>
             <Link href="/wellness" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Rejuvenate Now
+              {t.categories.wellness.cta}
             </Link>
           </div>
         </div>
@@ -125,13 +168,13 @@ export default function Home() {
           {/* Deeper overlay for bright wedding hall */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-lg">Grandeur</span>
-            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-lg">Weddings & Events</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-lg">{t.nav.meetings}</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-lg">{t.categories.meetings.title}</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Transform your special moments into eternal memories at our magnificent multifunction hall, perfect for grand weddings and prestigious events.
+              {t.categories.meetings.description}
             </p>
             <Link href="/meetings" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Plan Your Memory
+              {t.categories.meetings.cta}
             </Link>
           </div>
         </div>
@@ -148,13 +191,13 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Lifestyle</span>
-            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Exquisite Facilities</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">{t.nav.facilities}</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">{t.categories.facilities.title}</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Experience the diamond-shaped architectural marvel and refined lifestyle services unique to JHL Solitaire.
+              {t.categories.facilities.description}
             </p>
             <Link href="/facilities" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Explore Amenities
+              {t.categories.facilities.cta}
             </Link>
           </div>
         </div>
@@ -167,24 +210,24 @@ export default function Home() {
             <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
               <Star size={32} />
             </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">5-Star Luxury</h3>
-            <p className="text-gray-600 text-sm">Award-winning service and amenities designed for the discerning traveler.</p>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.luxury.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.luxury.desc}</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
               <MapPin size={32} />
             </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">Prime Location</h3>
-            <p className="text-gray-600 text-sm">Located in the heart of Gading Serpong, minutes from ICE and AEON Mall.</p>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.location.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.location.desc}</p>
           </div>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
               <ArrowRight size={32} />
             </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">Exclusive Offers</h3>
-            <p className="text-gray-600 text-sm">Book directly with us to enjoy special rates and complimentary benefits.</p>
-            <Link href="#" className="mt-4 text-brand-dark hover:text-brand-gold uppercase text-xs font-bold tracking-widest border-b border-brand-gold pb-1 transition-colors">
-              View Offers
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.offers.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.offers.desc}</p>
+            <Link href="/offers" className="mt-4 text-brand-dark hover:text-brand-gold uppercase text-xs font-bold tracking-widest border-b border-brand-gold pb-1 transition-colors">
+              {t.features.offers.cta}
             </Link>
           </div>
         </div>

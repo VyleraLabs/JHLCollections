@@ -36,6 +36,8 @@ export const metadata: Metadata = {
 
 import { headers } from "next/headers";
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -46,9 +48,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} antialiased`}>
-        <AnimationProvider nonce={nonce}>
-          {children}
-        </AnimationProvider>
+        <LanguageProvider>
+          <AnimationProvider nonce={nonce}>
+            {children}
+          </AnimationProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

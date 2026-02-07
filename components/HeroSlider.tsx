@@ -7,7 +7,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import CustomDatePicker from "./CustomDatePicker";
 
+import { useLanguage } from '@/context/LanguageContext';
+
 export default function HeroSlider() {
+    const { t, language } = useLanguage();
     const [checkIn, setCheckIn] = React.useState("");
     const [checkOut, setCheckOut] = React.useState("");
     const [adults, setAdults] = React.useState("2");
@@ -18,9 +21,13 @@ export default function HeroSlider() {
     const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
 
     const formatDateDisplay = (dateStr: string) => {
-        if (!dateStr) return "Select Date";
+        if (!dateStr) return t.booking.selectDate;
         const date = new Date(dateStr);
-        return date.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        return date.toLocaleDateString(language === 'zh' ? "zh-CN" : "en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        });
     };
 
     const handleBooking = () => {
@@ -44,13 +51,13 @@ export default function HeroSlider() {
                     )}
                 >
                     <span className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 animate-pulse drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
-                        Welcome to
+                        {t.hero.welcome}
                     </span>
                     <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8 text-white animate-pulse drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">
-                        JHL Solitaire
+                        {t.hero.title}
                     </h1>
                     <p className="text-sm md:text-lg font-light uppercase tracking-[0.3em] text-white/80 animate-pulse drop-shadow-[0_0_8px_rgba(255,255,255,0.1)]">
-                        Gading Serpong, A JHL Collections
+                        {t.hero.description}
                     </p>
                 </div>
 
@@ -84,13 +91,13 @@ export default function HeroSlider() {
                     <span
                         className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6"
                     >
-                        Welcome to
+                        {t.hero.welcome}
                     </span>
 
                     <h1
                         className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8"
                     >
-                        JHL Solitaire
+                        {t.hero.title}
                     </h1>
 
                     <div
@@ -100,7 +107,7 @@ export default function HeroSlider() {
                     <p
                         className="text-sm md:text-lg font-light uppercase tracking-[0.3em] text-white/80"
                     >
-                        Gading Serpong, A JHL Collections
+                        {t.hero.description}
                     </p>
                 </div>
 
@@ -111,7 +118,7 @@ export default function HeroSlider() {
                     transition={{ delay: 1.5, duration: 1 }}
                     className="hidden md:flex absolute bottom-40 flex-col items-center gap-3"
                 >
-                    <span className="text-[10px] uppercase tracking-[0.3em]">Discover</span>
+                    <span className="text-[10px] uppercase tracking-[0.3em]">{t.booking.discover}</span>
                     <ChevronDown className="animate-bounce" size={20} />
                 </motion.div>
             </div>
@@ -133,7 +140,7 @@ export default function HeroSlider() {
                                     className="flex flex-col gap-2 cursor-pointer group/item"
                                     onClick={() => setIsCheckInOpen(!isCheckInOpen)}
                                 >
-                                    <label className="text-[10px] uppercase font-bold tracking-widest text-brand-gold cursor-pointer">Check-in</label>
+                                    <label className="text-[10px] uppercase font-bold tracking-widest text-brand-gold cursor-pointer">{t.booking.checkIn}</label>
                                     <div className="flex items-center gap-3 border-b border-white/20 pb-2 transition-colors group-hover/item:border-brand-gold">
                                         <Calendar size={16} className="text-white/60" />
                                         <span className="text-sm font-light text-white">
@@ -160,7 +167,7 @@ export default function HeroSlider() {
                                     className="flex flex-col gap-2 cursor-pointer group/item"
                                     onClick={() => setIsCheckOutOpen(!isCheckOutOpen)}
                                 >
-                                    <label className="text-[10px] uppercase font-bold tracking-widest text-brand-gold cursor-pointer">Check-out</label>
+                                    <label className="text-[10px] uppercase font-bold tracking-widest text-brand-gold cursor-pointer">{t.booking.checkOut}</label>
                                     <div className="flex items-center gap-3 border-b border-white/20 pb-2 transition-colors group-hover/item:border-brand-gold">
                                         <Calendar size={16} className="text-white/60" />
                                         <span className="text-sm font-light text-white">
@@ -183,7 +190,7 @@ export default function HeroSlider() {
 
                             {/* Guests */}
                             <div className="flex flex-col gap-2">
-                                <label htmlFor="hero-guests" className="text-[10px] uppercase font-bold tracking-widest text-brand-gold">Guests</label>
+                                <label htmlFor="hero-guests" className="text-[10px] uppercase font-bold tracking-widest text-brand-gold">{t.booking.guests}</label>
                                 <div className="flex items-center gap-3 border-b border-white/20 pb-2 transition-colors focus-within:border-brand-gold">
                                     <Users size={16} className="text-white/60" />
                                     <select
@@ -193,10 +200,10 @@ export default function HeroSlider() {
                                         onChange={(e) => setAdults(e.target.value)}
                                         className="bg-transparent text-sm font-light text-white outline-none cursor-pointer w-full"
                                     >
-                                        <option value="1" className="bg-[#0F0F0F]">1 Adult</option>
-                                        <option value="2" className="bg-[#0F0F0F]">2 Adults</option>
-                                        <option value="3" className="bg-[#0F0F0F]">3 Adults</option>
-                                        <option value="4" className="bg-[#0F0F0F]">4 Adults</option>
+                                        <option value="1" className="bg-[#0F0F0F]">1 {t.booking.adults}</option>
+                                        <option value="2" className="bg-[#0F0F0F]">2 {t.booking.adults}</option>
+                                        <option value="3" className="bg-[#0F0F0F]">3 {t.booking.adults}</option>
+                                        <option value="4" className="bg-[#0F0F0F]">4 {t.booking.adults}</option>
                                     </select>
                                 </div>
                             </div>
@@ -206,7 +213,7 @@ export default function HeroSlider() {
                             onClick={handleBooking}
                             className="bg-brand-gold text-brand-dark px-12 py-5 font-bold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-xl"
                         >
-                            Check Availability
+                            {t.booking.availability}
                         </button>
                     </div>
                 </div>
@@ -216,7 +223,7 @@ export default function HeroSlider() {
                     onClick={handleBooking}
                     className="w-full bg-brand-gold text-brand-dark py-4 font-bold text-xs uppercase tracking-[0.2em]"
                 >
-                    Book Now
+                    {t.nav.bookNow}
                 </button>
             </div>
         </section>

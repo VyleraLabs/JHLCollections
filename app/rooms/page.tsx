@@ -1,28 +1,33 @@
 
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import { Wifi, Tv, Coffee, Wind } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Rooms() {
+    const { t } = useLanguage();
+
     const rooms = [
         {
             name: "Premier Room",
-            desc: "A spacious 40sqm sanctuary designed for modern comfort.",
+            desc: t.pages.rooms.roomTypes.premier.desc,
             price: "IDR 1,800,000",
             image: "/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp"
         },
         {
             name: "Executive Suite",
-            desc: "Elevated luxury with separate living area and panoramic city views.",
+            desc: t.pages.rooms.roomTypes.executive.desc,
             price: "IDR 3,200,000",
             image: "/assets/original/img-93fce4d6-af81-4e27-b726-55da2332debe.webp"
         },
         {
             name: "JHL Solitaire Signature",
-            desc: "The ultimate expression of luxury living for the discerning traveler.",
+            desc: t.pages.rooms.roomTypes.signature.desc,
             price: "IDR 5,500,000",
             image: "/assets/original/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp"
         }
@@ -41,18 +46,16 @@ export default function Rooms() {
                     className="object-cover opacity-60"
                 />
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
-                    <h1 className="font-serif text-5xl md:text-6xl mb-4">Accommodations</h1>
-                    <p className="font-sans tracking-widest uppercase">Rest in Refined Elegance</p>
+                    <h1 className="font-serif text-5xl md:text-6xl mb-4">{t.pages.rooms.hero.title}</h1>
+                    <p className="font-sans tracking-widest uppercase">{t.pages.rooms.hero.subtitle}</p>
                 </div>
             </div>
 
             <Section>
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <h2 className="text-3xl font-serif text-brand-dark mb-6">Your Private Sanctuary</h2>
+                    <h2 className="text-3xl font-serif text-brand-dark mb-6">{t.pages.rooms.content.title}</h2>
                     <p className="text-gray-600">
-                        Each of our 141 rooms and suites is a masterpiece of design, blending contemporary
-                        aesthetics with timeless comfort. Enjoy state-of-the-art amenities, plush bedding,
-                        and breathtaking views of the city skyline.
+                        {t.pages.rooms.content.desc}
                     </p>
                 </div>
 
@@ -74,29 +77,32 @@ export default function Rooms() {
                                 <div className="flex gap-6 justify-center md:justify-start mb-8 text-brand-gold">
                                     <div className="flex flex-col items-center gap-2">
                                         <Wifi size={20} />
-                                        <span className="text-xs uppercase text-gray-400">High Speed Wifi</span>
+                                        <span className="text-xs uppercase text-gray-400">{t.pages.rooms.amenities.wifi}</span>
                                     </div>
                                     <div className="flex flex-col items-center gap-2">
                                         <Tv size={20} />
-                                        <span className="text-xs uppercase text-gray-400">Smart TV</span>
+                                        <span className="text-xs uppercase text-gray-400">{t.pages.rooms.amenities.tv}</span>
                                     </div>
                                     <div className="flex flex-col items-center gap-2">
                                         <Coffee size={20} />
-                                        <span className="text-xs uppercase text-gray-400">Coffee Maker</span>
+                                        <span className="text-xs uppercase text-gray-400">{t.pages.rooms.amenities.coffee}</span>
                                     </div>
                                     <div className="flex flex-col items-center gap-2">
                                         <Wind size={20} />
-                                        <span className="text-xs uppercase text-gray-400">AC</span>
+                                        <span className="text-xs uppercase text-gray-400">{t.pages.rooms.amenities.ac}</span>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
                                     <div className="text-2xl font-serif text-brand-dark">
-                                        {room.price} <span className="text-sm font-sans text-gray-400 font-normal">/ Night</span>
+                                        {room.price} <span className="text-sm font-sans text-gray-400 font-normal">{t.pages.rooms.perNight}</span>
                                     </div>
-                                    <button className="bg-brand-gold text-white px-8 py-3 uppercase text-sm font-bold tracking-wider hover:bg-brand-gold-hover transition-colors">
-                                        Book Now
-                                    </button>
+                                    <Link
+                                        href="/booking"
+                                        className="bg-brand-gold text-white px-8 py-3 uppercase text-sm font-bold tracking-wider hover:bg-brand-gold-hover transition-colors"
+                                    >
+                                        {t.pages.rooms.bookNow}
+                                    </Link>
                                 </div>
                             </div>
                         </div>

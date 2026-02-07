@@ -1,58 +1,63 @@
 
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import { Utensils, GlassWater, Coffee, Clock } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Dining() {
+    const { t } = useLanguage();
+
     const venues = [
         {
             name: "Mangan All Day Dining",
-            type: "International Buffet",
-            desc: "A culinary theatre featuring live cooking stations and a diverse array of international and local delicacies.",
-            image: "/assets/original/img-ba3bd1f8-58b5-4636-a132-ced69ad01250.webp",
+            type: t.dining.venues.mangan.type,
+            desc: t.dining.venues.mangan.desc,
+            image: "/assets/original/mangan.webp",
             icon: Utensils,
             href: "#"
         },
         {
             name: "Al Gusto Italian Dining and Bar",
-            type: "Italian Fine Dining",
-            desc: "Authentic Italian flavors served in a sophisticated setting, perfect for romantic dinners or business lunches, featuring live gueridon cooking.",
-            image: "/assets/original/img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.webp",
+            type: t.dining.venues.alGusto.type,
+            desc: t.dining.venues.alGusto.desc,
+            image: "/assets/original/algusto.webp",
             icon: GlassWater,
             href: "#"
         },
         {
             name: "Royal Eight Chinese Dining",
-            type: "Chinese Fine Dining",
-            desc: "A delectable selection of lunch, dinner, and Chinese desserts served in a contemporary and thoughtfully crafted setting.",
+            type: t.dining.venues.royalEight.type,
+            desc: t.dining.venues.royalEight.desc,
             image: "/assets/original/img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp",
             icon: Utensils,
             href: "/dining/royal-eight"
         },
         {
             name: "Empress China Bar",
-            type: "Lounge & Bar",
-            desc: "Discover apothecary-inspired signature cocktails, fine spirits, and a curated wine selection in an elegant atmosphere.",
+            type: t.dining.venues.empress.type,
+            desc: t.dining.venues.empress.desc,
             image: "/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp",
             icon: GlassWater,
             href: "#"
         },
         {
             name: "Castro Lounge & Cigar Bar",
-            type: "Lounge & Bar",
-            desc: "Unwind with premium cigars, fine whiskies, and curated cocktails in an atmosphere of refined elegance.",
-            image: "/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp",
+            type: t.dining.venues.castro.type,
+            desc: t.dining.venues.castro.desc,
+            image: "/assets/original/castro.webp",
             icon: Coffee,
             href: "#"
         },
         {
             name: "Le Bléu Cafe des Fleurs",
-            type: "Café & Patisserie",
-            desc: "A crafted expression of indulgence where delicate textures, refined sweetness, and timeless technique come together in every cake.",
-            image: "/assets/original/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+            type: t.dining.venues.leBleu.type,
+            desc: t.dining.venues.leBleu.desc,
+            image: "/assets/original/lableu.webp",
             icon: Coffee,
             href: "#"
         }
@@ -71,18 +76,16 @@ export default function Dining() {
                     className="object-cover opacity-60"
                 />
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
-                    <h1 className="font-serif text-5xl md:text-6xl mb-4">Culinary Experiences</h1>
-                    <p className="font-sans tracking-widest uppercase">Taste the Extraordinary</p>
+                    <h1 className="font-serif text-5xl md:text-6xl mb-4">{t.dining.title}</h1>
+                    <p className="font-sans tracking-widest uppercase">{t.dining.subtitle}</p>
                 </div>
             </div>
 
             <Section>
                 <div className="max-w-4xl mx-auto text-center mb-16">
-                    <h2 className="text-3xl font-serif text-brand-dark mb-6">A World of Flavors</h2>
+                    <h2 className="text-3xl font-serif text-brand-dark mb-6">{t.dining.title}</h2>
                     <p className="text-gray-600">
-                        From casual dining to exquisite gourmet experiences, JHL Solitaire offers a diverse
-                        range of culinary options to satisfy every palate. Our chefs use only the freshest
-                        ingredients to create masterpieces on every plate.
+                        {t.dining.description}
                     </p>
                 </div>
 
@@ -107,11 +110,11 @@ export default function Dining() {
 
                                 <div className="flex items-center text-xs text-gray-500 mb-6">
                                     <Clock size={14} className="mr-2" />
-                                    <span>Open Daily: 10:00 - 22:00</span>
+                                    <span>{t.dining.openDaily}</span>
                                 </div>
 
                                 <Link href={venue.href} className="inline-block border-b border-brand-dark pb-1 text-brand-dark font-medium hover:text-brand-gold hover:border-brand-gold transition-colors">
-                                    View Menu
+                                    {t.dining.viewMenu}
                                 </Link>
                             </div>
                         </div>

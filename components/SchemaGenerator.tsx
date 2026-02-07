@@ -56,7 +56,7 @@ export const SchemaGenerator = ({ menuData, specialOffers }: SchemaGeneratorProp
             "@type": "Menu",
             "name": "Royal Eight Menu",
             "description": "Authentic Chinese Fine Dining Menu",
-            "inLanguage": ["en", "zh-CN"],
+            "inLanguage": ["en", "zh-CN", "id"],
             "servesCuisine": "ChineseCuisine",
             "hasMenuSection": sections
         };
