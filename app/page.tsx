@@ -87,6 +87,75 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* Wellness Highlight */}
+        <div className="relative h-[600px] group overflow-hidden">
+          <Image
+            src="/assets/original/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp"
+            alt="Wellness & Spa"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+            quality={50}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Serenity</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Wellness & Spa</h2>
+            <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              Rejuvenate your senses at Acqua Spa, featuring curated treatments and world-class fitness facilities.
+            </p>
+            <Link href="/wellness" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+              Rejuvenate Now
+            </Link>
+          </div>
+        </div>
+
+        {/* Meetings Highlight */}
+        <div className="relative h-[600px] group overflow-hidden">
+          <Image
+            src="/assets/original/img-8530056e-f007-4829-85f3-ff18c9de3419.webp"
+            alt="Meetings & Events"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+            quality={50}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Bespoke</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Events & Meetings</h2>
+            <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              Host your most prestigious events in our grand ballroom and sophisticated meeting suites.
+            </p>
+            <Link href="/meetings" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+              Plan Your Event
+            </Link>
+          </div>
+        </div>
+
+        {/* Facilities Highlight */}
+        <div className="relative h-[600px] group overflow-hidden md:col-span-2">
+          <Image
+            src="/assets/original/img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp"
+            alt="Hotel Facilities"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            quality={50}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Grandeur</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Iconic Facilities</h2>
+            <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              Experience the diamond-shaped architectural marvel and refined lifestyle services unique to JHL Solitaire.
+            </p>
+            <Link href="/facilities" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+              Explore Amenities
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Features Section */}

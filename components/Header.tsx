@@ -12,6 +12,7 @@ const NAV_LINKS = [
     { name: "Dining", href: "/dining" },
     { name: "Meetings", href: "/meetings" },
     { name: "Wellness", href: "/wellness" },
+    { name: "Facilities", href: "/facilities" },
     { name: "Offers", href: "/offers" },
 ];
 
