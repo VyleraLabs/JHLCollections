@@ -99,10 +99,10 @@ export default function Home() {
             quality={60}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Serenity</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Wellness & Spa</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Serenity</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Wellness & Spa</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Rejuvenate your senses at Acqua Spa, featuring curated treatments and world-class fitness facilities.
             </p>
@@ -122,10 +122,11 @@ export default function Home() {
             quality={60}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          {/* Deeper overlay for bright wedding hall */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Grandeur</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Weddings & Events</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-lg">Grandeur</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-lg">Weddings & Events</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Transform your special moments into eternal memories at our magnificent multifunction hall, perfect for grand weddings and prestigious events.
             </p>
@@ -145,10 +146,10 @@ export default function Home() {
             quality={75}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Lifestyle</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Exquisite Facilities</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Lifestyle</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Exquisite Facilities</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Experience the diamond-shaped architectural marvel and refined lifestyle services unique to JHL Solitaire.
             </p>
