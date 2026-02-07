@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Specific rules for AI crawlers (GPTBot, etc.)
+# You can choose to Disallow if you want to prevent AI models from scraping luxury content
+User-agent: GPTBot
+Allow: /
+
+# Sitemap (Optional but recommended once you have one)
+# Sitemap: https://jhl-collections.vercel.app/sitemap.xml
