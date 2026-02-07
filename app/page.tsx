@@ -26,11 +26,12 @@ export default function Home() {
         </p>
         <div className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl">
           <Image
-            src="/assets/original/img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp"
-            alt="JHL Solitaire Luxury Room Interior"
+            src="/assets/original/jewel-sunset.png"
+            alt="JHL Solitaire Iconic Architecture at Sunset"
             fill
             className="object-cover"
-            quality={60}
+            priority
+            quality={75}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
           />
         </div>
@@ -91,11 +92,11 @@ export default function Home() {
         {/* Wellness Highlight */}
         <div className="relative h-[600px] group overflow-hidden">
           <Image
-            src="/assets/original/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp"
-            alt="Wellness & Spa"
+            src="/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp"
+            alt="Luxury Wellness & Fitness"
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-110"
-            quality={50}
+            quality={60}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
@@ -114,22 +115,22 @@ export default function Home() {
         {/* Meetings Highlight */}
         <div className="relative h-[600px] group overflow-hidden">
           <Image
-            src="/assets/original/img-8530056e-f007-4829-85f3-ff18c9de3419.webp"
-            alt="Meetings & Events"
+            src="/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp"
+            alt="Grand Weddings & Events Hall"
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-110"
-            quality={50}
+            quality={60}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Bespoke</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Events & Meetings</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Grandeur</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Weddings & Events</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-              Host your most prestigious events in our grand ballroom and sophisticated meeting suites.
+              Transform your special moments into eternal memories at our magnificent multifunction hall, perfect for grand weddings and prestigious events.
             </p>
             <Link href="/meetings" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
-              Plan Your Event
+              Plan Your Memory
             </Link>
           </div>
         </div>
@@ -137,17 +138,17 @@ export default function Home() {
         {/* Facilities Highlight */}
         <div className="relative h-[600px] group overflow-hidden md:col-span-2">
           <Image
-            src="/assets/original/img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp"
-            alt="Hotel Facilities"
+            src="/assets/original/facilities-pool.png"
+            alt="Iconic Pool & Lifestyle Facilities"
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-105"
-            quality={50}
+            quality={70}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Grandeur</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Iconic Facilities</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Lifestyle</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Exquisite Facilities</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Experience the diamond-shaped architectural marvel and refined lifestyle services unique to JHL Solitaire.
             </p>
