@@ -145,7 +145,7 @@ export const LightstreamEight = () => {
                             }}
                         >
                             {/* This is a trick to make them follow the path roughly by grouping them */}
-                            <m.animateMotion
+                            <animateMotion
                                 dur={`${p.duration * 2}s`}
                                 repeatCount="indefinite"
                                 path="M 200,200 C 200,100 320,100 320,200 C 320,300 80,300 80,200 C 80,100 200,100 200,200"
@@ -169,7 +169,7 @@ export const LightstreamEight = () => {
                                 delay: p.delay + 1,
                             }}
                         >
-                            <m.animateMotion
+                            <animateMotion
                                 dur={`${p.duration * 3}s`}
                                 repeatCount="indefinite"
                                 path="M 200,200 C 200,300 320,300 320,200 C 320,100 80,100 80,200 C 80,300 200,300 200,200"

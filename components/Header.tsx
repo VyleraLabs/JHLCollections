@@ -25,93 +25,106 @@ export default function Header() {
             setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            document.body.style.overflow = "unset";
+        };
+    }, [isMobileMenuOpen]);
 
     return (
-        <header
-            className={cn(
-                "fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out",
-                isScrolled
-                    ? "bg-brand-dark/90 backdrop-blur-md border-b border-white/10 py-4 shadow-xl"
-                    : "bg-transparent py-8"
-            )}
-        >
-            <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
-                <Link
-                    href="/"
-                    className="flex items-center group"
-                >
-                    <div className="relative w-24 h-16 lg:w-32 lg:h-20 overflow-hidden">
-                        <Image
-                            src="/assets/original/jhl_logo.webp"
-                            alt="JHL Solitaire Logo"
-                            fill
-                            className={cn(
-                                "object-contain transition-all duration-500",
-                                !isScrolled && "brightness-0 invert"
-                            )}
-                            priority
-                        />
-                    </div>
-                </Link>
-
-                {/* Center: Desktop Navigation (Horizontal) */}
-                <nav className="hidden lg:block">
-                    <ul className="flex items-center gap-12">
-                        {NAV_LINKS.map((link) => (
-                            <li key={link.name}>
-                                <Link
-                                    href={link.href}
-                                    className={cn(
-                                        "text-[11px] font-lato font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group py-2",
-                                        isScrolled ? "text-white/90 hover:text-brand-gold" : "text-white/90 hover:text-white"
-                                    )}
-                                >
-                                    {link.name}
-                                    <span className={cn(
-                                        "absolute bottom-0 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
-                                        isScrolled ? "bg-brand-gold" : "bg-white"
-                                    )}></span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-
-                {/* Right: Book Now Button */}
-                <div className="hidden lg:flex items-center">
-                    <button
-                        onClick={() => window.location.href = "/booking"}
-                        className={cn(
-                            "px-8 py-3 text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-500 border relative overflow-hidden group",
-                            isScrolled
-                                ? "border-brand-gold text-brand-gold hover:text-white"
-                                : "border-white/50 text-white hover:border-white hover:text-brand-dark"
-                        )}
+        <>
+            <header
+                className={cn(
+                    "fixed top-0 left-0 w-full z-[100] transition-all duration-500 ease-in-out",
+                    isScrolled
+                        ? "bg-brand-dark/90 backdrop-blur-md border-b border-white/10 py-4 shadow-xl"
+                        : "bg-transparent py-8"
+                )}
+            >
+                <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+                    <Link
+                        href="/"
+                        className="flex items-center group"
                     >
-                        <span className={cn(
-                            "absolute inset-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0 z-0",
-                            isScrolled ? "bg-brand-gold" : "bg-white"
-                        )}></span>
-                        <span className="relative z-10">Book Now</span>
+                        <div className="relative w-24 h-16 lg:w-32 lg:h-20 overflow-hidden">
+                            <Image
+                                src="/assets/original/jhl_logo.webp"
+                                alt="JHL Solitaire Logo"
+                                fill
+                                className={cn(
+                                    "object-contain transition-all duration-500",
+                                    !isScrolled && "brightness-0 invert"
+                                )}
+                                priority
+                            />
+                        </div>
+                    </Link>
+
+                    {/* Center: Desktop Navigation (Horizontal) */}
+                    <nav className="hidden lg:block">
+                        <ul className="flex items-center gap-12">
+                            {NAV_LINKS.map((link) => (
+                                <li key={link.name}>
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "text-[11px] font-lato font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group py-2",
+                                            isScrolled ? "text-white/90 hover:text-brand-gold" : "text-white/90 hover:text-white"
+                                        )}
+                                    >
+                                        {link.name}
+                                        <span className={cn(
+                                            "absolute bottom-0 left-0 w-0 h-px transition-all duration-500 group-hover:w-full",
+                                            isScrolled ? "bg-brand-gold" : "bg-white"
+                                        )}></span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+
+                    {/* Right: Book Now Button */}
+                    <div className="hidden lg:flex items-center">
+                        <button
+                            onClick={() => window.location.href = "/booking"}
+                            className={cn(
+                                "px-8 py-3 text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-500 border relative overflow-hidden group",
+                                isScrolled
+                                    ? "border-brand-gold text-brand-gold hover:text-white"
+                                    : "border-white/50 text-white hover:border-white hover:text-brand-dark"
+                            )}
+                        >
+                            <span className={cn(
+                                "absolute inset-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0 z-0",
+                                isScrolled ? "bg-brand-gold" : "bg-white"
+                            )}></span>
+                            <span className="relative z-10">Book Now</span>
+                        </button>
+                    </div>
+
+                    {/* Mobile Toggle */}
+                    <button
+                        className={cn(
+                            "lg:hidden p-2 transition-colors duration-500",
+                            "text-white"
+                        )}
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
 
-                {/* Mobile Toggle */}
-                <button
-                    className={cn(
-                        "lg:hidden p-2 transition-colors duration-500",
-                        "text-white"
-                    )}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
-            </div>
+            </header>
 
-            {/* Mobile menu handled separately to avoid layout shift */}
+            {/* Mobile menu handled separately to avoid layout shift and style inheritance */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
@@ -119,7 +132,7 @@ export default function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 z-[110] bg-brand-dark text-white flex flex-col p-12"
+                        className="fixed inset-0 z-[110] bg-[#0d1f2e] text-white flex flex-col p-12 overflow-y-auto"
                     >
                         <div className="flex justify-between items-center mb-16">
                             <div className="relative w-24 h-16 overflow-hidden">
@@ -158,6 +171,6 @@ export default function Header() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </header>
+        </>
     );
 }
