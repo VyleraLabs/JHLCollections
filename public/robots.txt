@@ -6,9 +6,15 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-# Specific rules for AI crawlers (GPTBot, etc.)
-# You can choose to Disallow if you want to prevent AI models from scraping luxury content
+# Specific rules for AI crawlers (GPTBot, Applebot-Extended, etc.)
 User-agent: GPTBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# General Applebot (follows Googlebot rules if not specified)
+User-agent: Applebot
 Allow: /
 
 # Sitemap (Optional but recommended once you have one)
