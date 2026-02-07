@@ -17,5 +17,5 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Sitemap (Optional but recommended once you have one)
-# Sitemap: https://jhl-collections.vercel.app/sitemap.xml
+# Sitemap
+Sitemap: https://jhl-collections.vercel.app/sitemap.xml

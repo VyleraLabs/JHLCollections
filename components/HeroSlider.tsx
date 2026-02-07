@@ -34,12 +34,20 @@ export default function HeroSlider() {
         <section className="relative h-screen w-full bg-[#0F0F0F] flex flex-col items-center justify-center overflow-hidden">
             {/* Background Narrative */}
             <div className="absolute inset-0 z-0">
+                <Image
+                    src="/assets/original/img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp"
+                    alt="JHL Solitaire Exterior Luxury Placeholder"
+                    fill
+                    priority
+                    className="object-cover opacity-40 z-0"
+                    sizes="100vw"
+                />
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="none"
+                    preload="auto" // Changed to auto to start loading immediately after metadata
                     aria-label="Atmospheric background video of JHL Solitaire"
                     className="absolute inset-0 w-full h-full object-cover z-10"
                     onCanPlay={(e) => (e.currentTarget.style.opacity = "0.7")}
