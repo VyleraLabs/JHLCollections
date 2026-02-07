@@ -15,6 +15,8 @@ export default function HeroSlider() {
     const [isCheckInOpen, setIsCheckInOpen] = React.useState(false);
     const [isCheckOutOpen, setIsCheckOutOpen] = React.useState(false);
 
+    const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
+
     const formatDateDisplay = (dateStr: string) => {
         if (!dateStr) return "Select Date";
         const date = new Date(dateStr);
@@ -34,24 +36,37 @@ export default function HeroSlider() {
         <section className="relative h-screen w-full bg-[#0F0F0F] flex flex-col items-center justify-center overflow-hidden">
             {/* Background Narrative */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/assets/original/img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp"
-                    alt="JHL Solitaire Exterior Luxury Placeholder"
-                    fill
-                    priority
-                    className="object-cover opacity-40 z-0"
-                    sizes="100vw"
-                />
+                {/* Logo Placeholder - centered and elegant */}
+                <div
+                    className={cn(
+                        "absolute inset-0 z-30 flex items-center justify-center bg-[#0F0F0F] transition-opacity duration-1000",
+                        isVideoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
+                    )}
+                >
+                    <div className="relative w-48 h-32 animate-pulse">
+                        <Image
+                            src="/assets/original/jhl_logo.webp"
+                            alt="JHL Solitaire Loading Logo"
+                            fill
+                            priority
+                            className="object-contain brightness-0 invert"
+                        />
+                    </div>
+                </div>
+
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="auto" // Changed to auto to start loading immediately after metadata
+                    preload="auto"
                     aria-label="Atmospheric background video of JHL Solitaire"
                     className="absolute inset-0 w-full h-full object-cover z-10"
-                    onCanPlay={(e) => (e.currentTarget.style.opacity = "0.7")}
-                    style={{ opacity: 0, transition: "opacity 1.5s ease-in-out" }}
+                    onCanPlay={() => setIsVideoLoaded(true)}
+                    style={{
+                        opacity: isVideoLoaded ? 0.7 : 0,
+                        transition: "opacity 1.5s ease-in-out"
+                    }}
                 >
                     <source src="/assets/original/vdo-90a158da-4449-4f21-ad38-feafbacb8c9d.mp4" type="video/mp4" />
                     <track kind="captions" srcLang="en" label="Atmospheric background video" />
