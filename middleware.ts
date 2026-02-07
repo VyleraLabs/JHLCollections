@@ -55,7 +55,7 @@ export const config = {
          * - favicon.ico (favicon file)
          */
         {
-            source: '/((?!api|_next/static|_next/image|favicon.ico).*)',
+            source: '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
         },
     ],
 };
