@@ -15,8 +15,11 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  // Advanced Fingerprinting Suppression
+  // Advanced Performance & Security
   swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   async headers() {
     return [
       {

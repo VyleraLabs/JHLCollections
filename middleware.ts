@@ -33,6 +33,15 @@ export function middleware(request: NextRequest) {
 
     response.headers.set('Content-Security-Policy', cspHeader);
 
+    // Advanced Stealth: Mask Server & Technology
+    response.headers.set('Server', 'JHL-Web-Engine');
+    response.headers.set('X-Powered-By', 'Elite-Tech');
+
+    // Lighthouse Optimization: Enable bfcache by using 'no-cache' instead of 'no-store'
+    // This allows the browser to re-use the page for back/forward navigation 
+    // without losing the security of fresh header re-validation.
+    response.headers.set('Cache-Control', 'no-cache, private, must-revalidate');
+
     return response;
 }
 
