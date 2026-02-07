@@ -14,15 +14,15 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  reactStrictMode: true,
+  // Advanced Fingerprinting Suppression
+  swcMinify: true,
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://webadmin.jhlcollections.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://webadmin.jhlcollections.com; font-src 'self' data:; connect-src 'self' https://webadmin.jhlcollections.com; frame-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
-          },
+          /* CSP handled by middleware for Nonce support */
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',

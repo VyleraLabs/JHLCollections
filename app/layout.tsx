@@ -32,15 +32,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+import { headers } from "next/headers";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nonce = (await headers()).get('x-nonce') || undefined;
+
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} antialiased`}>
-        <AnimationProvider>
+        <AnimationProvider nonce={nonce}>
           {children}
         </AnimationProvider>
       </body>
