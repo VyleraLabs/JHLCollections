@@ -31,7 +31,7 @@ export default function Home() {
             fill
             className="object-cover"
             quality={60}
-            sizes="(max-width: 768px) 100vw, 1024px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
           />
         </div>
       </Section>

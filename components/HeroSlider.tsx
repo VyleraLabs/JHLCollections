@@ -59,7 +59,7 @@ export default function HeroSlider() {
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     aria-label="Atmospheric background video of JHL Solitaire"
                     className="absolute inset-0 w-full h-full object-cover z-10"
                     onCanPlay={() => setIsVideoLoaded(true)}
