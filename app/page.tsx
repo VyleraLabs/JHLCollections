@@ -49,12 +49,12 @@ export default function Home() {
             quality={50}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          {/* Enhanced Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Accommodations</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Rooms & Suites</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Accommodations</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Rooms & Suites</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Experience the art of luxurious living in rooms and suites designed with exceptional attention to detail.
             </p>
@@ -74,12 +74,12 @@ export default function Home() {
             quality={50}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+          {/* Enhanced Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
           <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Culinary</span>
-            <h2 className="text-4xl font-serif mb-6 italic">Dining Experience</h2>
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block drop-shadow-md">Culinary</span>
+            <h2 className="text-4xl font-serif mb-6 italic drop-shadow-md">Dining Experience</h2>
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               Unfold the rich tapestry of exquisite flavors. From international buffets to authentic Italian fine dining.
             </p>
