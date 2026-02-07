@@ -26,11 +26,11 @@ export default function Home() {
         </p>
         <div className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl">
           <Image
-            src="/assets/original/img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp"
-            alt="JHL Solitaire Exterior"
+            src="/assets/original/img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp"
+            alt="JHL Solitaire Luxury Room Interior"
             fill
             className="object-cover"
-            quality={50}
+            quality={60}
             sizes="(max-width: 768px) 100vw, 1024px"
           />
         </div>
