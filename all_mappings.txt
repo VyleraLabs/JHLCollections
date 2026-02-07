@@ -1,0 +1,197 @@
+[home_experiences.json] "Unfold The Rich Tapestry of Exquisite" -> img-90c3de0c-4eac-487a-9f90-aba3e1cfffcc.webp
+[home_experiences.json] "img-90c3de0c-4eac-487a-9f90-aba3e1cfffcc.webp" -> img-90c3de0c-4eac-487a-9f90-aba3e1cfffcc.webp
+[home_experiences.json] "Acquaree Kids Spa Journey" -> img-a58ae929-0787-4db9-8057-3eabd7f22d12.jpg
+[home_experiences.json] "img-a58ae929-0787-4db9-8057-3eabd7f22d12.jpg" -> img-a58ae929-0787-4db9-8057-3eabd7f22d12.jpg
+[home_experiences.json] "img-f1c07dd5-e899-4d02-a980-291c70197c2d.jpg" -> img-f1c07dd5-e899-4d02-a980-291c70197c2d.jpg
+[home_experiences.json] "img-ab651497-efef-4e8c-acd3-a17da17099e1.jpg" -> img-ab651497-efef-4e8c-acd3-a17da17099e1.jpg
+[home_experiences.json] "img-a58ae929-0787-4db9-8057-3eabd7f22d12.jpg" -> img-a58ae929-0787-4db9-8057-3eabd7f22d12.jpg
+[home_experiences.json] "img-f1c07dd5-e899-4d02-a980-291c70197c2d.jpg" -> img-f1c07dd5-e899-4d02-a980-291c70197c2d.jpg
+[home_experiences.json] "img-ab651497-efef-4e8c-acd3-a17da17099e1.jpg" -> img-ab651497-efef-4e8c-acd3-a17da17099e1.jpg
+[home_experiences.json] "img-5987e456-e67b-49c7-914b-ae0761591f47.webp" -> img-5987e456-e67b-49c7-914b-ae0761591f47.webp
+[home_experiences.json] "Royal Eight Chinese Dining" -> img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp
+[home_experiences.json] "img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp" -> img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp
+[home_experiences.json] "Empress China Bar" -> img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg
+[home_experiences.json] "img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg" -> img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg
+[home_experiences.json] "img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg" -> img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg
+[home_experiences.json] "img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg" -> img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg
+[home_experiences.json] "img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg" -> img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg
+[home_experiences.json] "img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp" -> img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp
+[home_experiences.json] "Sky Ballroom" -> img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.jpg
+[home_experiences.json] "img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.jpg" -> img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.jpg
+[home_experiences.json] "img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.jpg" -> img-5da9ef9c-d3de-4501-a785-ac18c9ab9087.jpg
+[home_experiences.json] "img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp" -> img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp
+[offers_list.json] "Golden Dinner Buffet — The House of Eight Fortunes at Mangan All Day Dining" -> img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp
+[offers_list.json] "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp" -> img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp
+[offers_list.json] "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp" -> img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp
+[offers_list.json] "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp" -> img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp
+[offers_list.json] "La Dolce Vita — Al Gusto Italian Dining & Bar" -> img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp
+[offers_list.json] "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp" -> img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp
+[offers_list.json] "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp" -> img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp
+[offers_list.json] "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp" -> img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp
+[offers_list.json] "Chinese New Year — The House of Eight Fortunes at Sky Ballroom" -> img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp
+[offers_list.json] "img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp" -> img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp
+[offers_list.json] "img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp" -> img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp
+[offers_list.json] "img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp" -> img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp
+[offers_list.json] "Set Menu Celebration — The House of Eight Fortunes at Royal Eight Chinese Dining" -> img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp
+[offers_list.json] "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp" -> img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp
+[offers_list.json] "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp" -> img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp
+[offers_list.json] "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp" -> img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp
+[offers_list.json] "Yee Sang — The House of Eight Fortunes" -> img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp
+[offers_list.json] "img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp" -> img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp
+[offers_list.json] "img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp" -> img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp
+[offers_list.json] "img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp" -> img-08543631-0ee8-4b47-8b98-fef9ba31902b.webp
+[offers_list.json] "Gift of Fortune — The House of Eight Fortunes" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp" -> img-d8f46744-4df2-4b3b-94c9-c1b2df0e75d4.webp
+[offers_list.json] "50% Off Dimsum Yumcha — Royal Eight Chinese Dining" -> img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp
+[offers_list.json] "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp" -> img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp
+[offers_list.json] "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp" -> img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp
+[offers_list.json] "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp" -> img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp
+[offers_list.json] "Signature Almond Fried Chicken — Royal Eight Chinese Dining" -> img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp
+[offers_list.json] "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp" -> img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp
+[offers_list.json] "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp" -> img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp
+[offers_list.json] "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp" -> img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp
+[offers_list.json] "Maison of Sweet — Le Bléu Cafe des Fleurs" -> img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp
+[offers_list.json] "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp" -> img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp
+[offers_list.json] "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp" -> img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp
+[offers_list.json] "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp" -> img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp
+[offers_list.json] "Exclusive Privilege for MYJHL Members" -> img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp
+[offers_list.json] "img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp" -> img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp
+[offers_list.json] "img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp" -> img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp
+[offers_list.json] "img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp" -> img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp
+[offers_list.json] "Cucina Dal Vivo — Al Gusto Italian Dining & Bar" -> img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg
+[offers_list.json] "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg" -> img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg
+[offers_list.json] "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg" -> img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg
+[offers_list.json] "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg" -> img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg
+[offers_list.json] "Prime Fit Coaching — The Workout" -> img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg
+[offers_list.json] "img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg" -> img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg
+[offers_list.json] "img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg" -> img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg
+[offers_list.json] "img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg" -> img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.jpg
+[offers_list.json] "Signature Dry Aged — Al Gusto Italian Dining & Bar" -> img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg
+[offers_list.json] "img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg" -> img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg
+[offers_list.json] "Brunch Harmony — Mangan All Day Dining" -> img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg
+[offers_list.json] "img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg" -> img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg
+[offers_list.json] "img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg" -> img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg
+[offers_list.json] "img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg" -> img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg
+[offers_list.json] "The First Apothecary Bar in Gading Serpong" -> img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg
+[offers_list.json] "img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg" -> img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg
+[rooms_list.json] "Premier Room" -> img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg
+[rooms_list.json] "img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg" -> img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg" -> img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg
+[rooms_list.json] "img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg" -> img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg" -> img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg
+[rooms_list.json] "img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp" -> img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp
+[rooms_list.json] "Premier Accessible Room" -> img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg
+[rooms_list.json] "img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg" -> img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg
+[rooms_list.json] "img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg" -> img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg
+[rooms_list.json] "img-19d5d333-9bb4-484d-aa83-21bda3a68653.webp" -> img-19d5d333-9bb4-484d-aa83-21bda3a68653.webp
+[rooms_list.json] "Executive Club" -> img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg
+[rooms_list.json] "img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg" -> img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg
+[rooms_list.json] "img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg" -> img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg" -> img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg
+[rooms_list.json] "img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg" -> img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-8530056e-f007-4829-85f3-ff18c9de3419.webp" -> img-8530056e-f007-4829-85f3-ff18c9de3419.webp
+[rooms_list.json] "Junior Suite" -> img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg
+[rooms_list.json] "img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg" -> img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg
+[rooms_list.json] "img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg" -> img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg" -> img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg
+[rooms_list.json] "img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg" -> img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg
+[rooms_list.json] "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg" -> img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg
+[rooms_list.json] "img-64cd927c-07a8-4b2e-bb6a-1e5d5408cd6e.webp" -> img-64cd927c-07a8-4b2e-bb6a-1e5d5408cd6e.webp
+[rooms_list.json] "Executive Suite" -> img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg
+[rooms_list.json] "img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg" -> img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg
+[rooms_list.json] "img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg" -> img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg
+[rooms_list.json] "img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg" -> img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg
+[rooms_list.json] "img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg" -> img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg
+[rooms_list.json] "img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg" -> img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg
+[rooms_list.json] "img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg" -> img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg
+[rooms_list.json] "img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg" -> img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg
+[rooms_list.json] "img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg" -> img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg
+[rooms_list.json] "img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg" -> img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg
+[rooms_list.json] "img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg" -> img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg
+[rooms_list.json] "img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg" -> img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg
+[rooms_list.json] "img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg" -> img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg
+[rooms_list.json] "img-93fce4d6-af81-4e27-b726-55da2332debe.webp" -> img-93fce4d6-af81-4e27-b726-55da2332debe.webp
+[rooms_list.json] "Solitaire Signature Suite" -> img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg
+[rooms_list.json] "img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg" -> img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg
+[rooms_list.json] "img-9f9b3665-3932-4325-b995-066cf730e29f.jpg" -> img-9f9b3665-3932-4325-b995-066cf730e29f.jpg
+[rooms_list.json] "img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg" -> img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg
+[rooms_list.json] "img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg" -> img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg
+[rooms_list.json] "img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg" -> img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg
+[rooms_list.json] "img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg" -> img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg
+[rooms_list.json] "img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg" -> img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg
+[rooms_list.json] "img-678375de-22d9-41b8-9c97-e45be142c959.jpg" -> img-678375de-22d9-41b8-9c97-e45be142c959.jpg
+[rooms_list.json] "img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg" -> img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg
+[rooms_list.json] "img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg" -> img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg
+[rooms_list.json] "img-9f9b3665-3932-4325-b995-066cf730e29f.jpg" -> img-9f9b3665-3932-4325-b995-066cf730e29f.jpg
+[rooms_list.json] "img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg" -> img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg
+[rooms_list.json] "img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg" -> img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg
+[rooms_list.json] "img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg" -> img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg
+[rooms_list.json] "img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg" -> img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg
+[rooms_list.json] "img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg" -> img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg
+[rooms_list.json] "img-678375de-22d9-41b8-9c97-e45be142c959.jpg" -> img-678375de-22d9-41b8-9c97-e45be142c959.jpg
+[rooms_list.json] "img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg" -> img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg
+[rooms_list.json] "img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp" -> img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp
+[rooms_list.json] "Chairman Suite Room" -> img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg
+[rooms_list.json] "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg" -> img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg
+[rooms_list.json] "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg" -> img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg
+[rooms_list.json] "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg" -> img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg
+[rooms_list.json] "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg" -> img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg
+[rooms_list.json] "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg" -> img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg
+[rooms_list.json] "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg" -> img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg
+[rooms_list.json] "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg" -> img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg
+[rooms_list.json] "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg" -> img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg
+[rooms_list.json] "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg" -> img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg
+[rooms_list.json] "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg" -> img-6a164090-cf7e-46e2-918a-983af75f752a.jpg
+[rooms_list.json] "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg" -> img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg
+[rooms_list.json] "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg" -> img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg
+[rooms_list.json] "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg" -> img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg
+[rooms_list.json] "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg" -> img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg
+[rooms_list.json] "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg" -> img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg
+[rooms_list.json] "img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg" -> img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg
+[rooms_list.json] "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg" -> img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg
+[rooms_list.json] "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg" -> img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg
+[rooms_list.json] "img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg" -> img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg
+[rooms_list.json] "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg" -> img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg
+[rooms_list.json] "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg" -> img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg
+[rooms_list.json] "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg" -> img-6a164090-cf7e-46e2-918a-983af75f752a.jpg
+[rooms_list.json] "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg" -> img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg
+[rooms_list.json] "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg" -> img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg
+[rooms_list.json] "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg" -> img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg
+[rooms_list.json] "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg" -> img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg
+[rooms_list.json] "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg" -> img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg
+[rooms_list.json] "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg" -> img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg
+[rooms_list.json] "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg" -> img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg
+[rooms_list.json] "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg" -> img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg
+[rooms_list.json] "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg" -> img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg
+[rooms_list.json] "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg" -> img-6a164090-cf7e-46e2-918a-983af75f752a.jpg
+[rooms_list.json] "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg" -> img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg
+[rooms_list.json] "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg" -> img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg
+[rooms_list.json] "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg" -> img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg
+[rooms_list.json] "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg" -> img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg
+[rooms_list.json] "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg" -> img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg
+[rooms_list.json] "img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg" -> img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg
+[rooms_list.json] "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg" -> img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg
+[rooms_list.json] "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg" -> img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg
+[rooms_list.json] "img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg" -> img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg
+[rooms_list.json] "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg" -> img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg
+[rooms_list.json] "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg" -> img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg
+[rooms_list.json] "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg" -> img-6a164090-cf7e-46e2-918a-983af75f752a.jpg
+[rooms_list.json] "img-16d5a22e-570d-4d2c-b931-948176ffc404.webp" -> img-16d5a22e-570d-4d2c-b931-948176ffc404.webp
+[setting.json] "JHL Solitaire" -> img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp
+[setting.json] "img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp" -> img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp
+[setting.json] "JHL Collection" -> img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp
+[setting.json] "img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp" -> img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp
+[setting.json] "img-a3b87f16-3863-44e9-bad5-19b0a6808067.webp" -> img-a3b87f16-3863-44e9-bad5-19b0a6808067.webp
+[setting.json] "JHL Solitaire Gading Serpong" -> img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp
+[setting.json] "img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp" -> img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp
+[setting.json] "img-2dc3a0d0-f84a-410f-b8d9-0ed55e620766.webp" -> img-2dc3a0d0-f84a-410f-b8d9-0ed55e620766.webp
+[setting.json] "img-69774331-21a7-40b1-ac4d-3982b317501f.webp" -> img-69774331-21a7-40b1-ac4d-3982b317501f.webp

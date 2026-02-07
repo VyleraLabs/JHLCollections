@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Imperial Majesty",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Xi Xiang Emerald",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Butterfly Breeze",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Tiao He",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Aloe Nectar",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Coco Meng Ya",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Golden Sun",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Single Espresso",
+    "price": 48000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Double Espresso",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Fresh Brewed Coffee",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Macchiato",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Piccolo",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Mochaccino",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Cappuccino",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Caf├⌐ Latte",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Flavor Latte",
+    "price": 78000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Pandan Pu-erh 78",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Blooming Mixed Tea 88",
+    "price": 118000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Imperial Garden 68",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Baby Chrysanthemum 78",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Misty Green Tea 68",
+    "price": 98000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Imperial Tie Guan Yun 68",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Rose 68",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Black Dragon 68",
+    "price": 98000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Pu Erh 3 Years 68",
+    "price": 98000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Butterfly Pea 78",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Regular Iced Tea",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Flavor Tea",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Fresh Squeezed Orange",
+    "price": 88000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Apple",
+    "price": 78000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Avocado",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Kiwi",
+    "price": 78000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Mango",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Strawberry",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Watermelon",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Honeydew",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Pineapple",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Carrot",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Mixed Juice (2 fruits)",
+    "price": 88000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Equil Natural 380 ml",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Equil Sparkling 380 ml",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Equil Sparkling 760 ml",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Acquapanna 500 ml",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Perrier 330 ml",
+    "price": 108000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Coca Cola",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Diet Coke",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Sprite",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Soda Water",
+    "price": 58000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Ginger Ale",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Tonic Water",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Green Tea Pokka",
+    "price": 68000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Red Bull",
+    "price": 98000,
+    "category": "Beverage",
+    "sourceFile": "[2025] Beverage Menu _ Royal Eight Chinese Dining.pdf ---"
+  },
+  {
+    "name": "Tang Dynasty Set Menu",
+    "price": 4888000,
+    "category": "Set Menu",
+    "sourceFile": "[2025] Main Course _ Royal Eight.pdf"
+  },
+  {
+    "name": "Peking Duck",
+    "price": 888000,
+    "category": "BBQ",
+    "sourceFile": "[2025] Main Course _ Royal Eight.pdf"
+  },
+  {
+    "name": "Coconut Pudding",
+    "price": 68000,
+    "category": "Dessert",
+    "sourceFile": "[2025] Dim Sum _ Royal Eight Chinese Dining.pdf"
+  }
+]

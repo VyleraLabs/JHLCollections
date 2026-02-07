@@ -1,0 +1,1353 @@
+{
+    "success": true,
+    "status_code": 200,
+    "data": {
+        "items": [
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "name": "img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "name": "img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "name": "img-6b503524-a06e-461b-a1f1-f84cc13d5c36.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "name": "img-2c40c917-bf09-43dc-8f79-494510f7a019.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 35 sqm\u0026nbsp; Unit: 71\u003c/p\u003e\r\n\u003cp\u003eThis refined 35-square-meter room offers a peaceful retreat with breathtaking views of Tangerang\u0026rsquo;s skyline. The plush comfort of JHL Solitaire\u0026rsquo;s signature bedding and high-quality linens promises a luxurious and restful night's sleep.\u003c/p\u003e",
+                "created_at": "2020-08-03T16:12:28.285+07:00",
+                "custom": {
+                    "detail_label": "Book Now",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=ID\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=PRK\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 35 sqm\u0026nbsp; Unit: 71\u003c/p\u003e\r\n\u003cp\u003eThis refined 35-square-meter room offers a peaceful retreat with breathtaking views of Tangerang\u0026rsquo;s skyline. The plush comfort of JHL Solitaire\u0026rsquo;s signature bedding and high-quality linens promises a luxurious and restful night's sleep.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp",
+                    "name": "img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f27d4fca1381161d44b5e34",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Premier Room | JHL Solitaire Gading Serpong"
+                },
+                "order": 1,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "premier-room",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Premier Room",
+                "updated_at": "2025-01-17T09:19:32.189+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "name": "img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "name": "img-752af6a2-3602-429d-9f88-eb4dd384072e.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 35 sqm \u0026nbsp;Unit: 3\u003c/p\u003e\r\n\u003cp\u003eAt JHL Solitaire Gading Serpong, we provide rooms thoughtfully designed to accommodate guests with limited mobility. The entrances and interior spaces are wide and easily navigable, ensuring smooth access for wheelchair users and a comfortable stay.\u003c/p\u003e",
+                "created_at": "2020-08-03T16:04:47.59+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=ID\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=DST\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 35 sqm \u0026nbsp;Unit: 3\u003c/p\u003e\r\n\u003cp\u003eAt JHL Solitaire Gading Serpong, we provide rooms thoughtfully designed to accommodate guests with limited mobility. The entrances and interior spaces are wide and easily navigable, ensuring smooth access for wheelchair users and a comfortable stay.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-19d5d333-9bb4-484d-aa83-21bda3a68653.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-19d5d333-9bb4-484d-aa83-21bda3a68653.webp",
+                    "name": "img-19d5d333-9bb4-484d-aa83-21bda3a68653.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f27d32fa1381161d44b5e33",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Premier Accessible Room | JHL Solitaire Gading Serpong"
+                },
+                "order": 2,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "premier-accessible-room",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Premier Accessible Room",
+                "updated_at": "2025-01-17T09:50:48.595+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "name": "img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "name": "img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "name": "img-d360c8b9-9fc3-4e9a-8577-716f9beabf94.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "name": "img-71d0ed44-3614-453c-92b7-b95c11cea498.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 38 sqm \u0026nbsp;Unit: 10\u003c/p\u003e\r\n\u003cp\u003eThe Executive Club features sophisticated design elements that enhance its exclusivity and warmth. With modern d\u0026eacute;cor, this room offers a tranquil retreat, providing an escape from the hustle and bustle of Tangerang.\u003c/p\u003e",
+                "created_at": "2020-08-04T09:58:28.466+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=EN\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=CMS\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 38 sqm \u0026nbsp;Unit: 10\u003c/p\u003e\r\n\u003cp\u003eThe Executive Club features sophisticated design elements that enhance its exclusivity and warmth. With modern d\u0026eacute;cor, this room offers a tranquil retreat, providing an escape from the hustle and bustle of Tangerang.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-8530056e-f007-4829-85f3-ff18c9de3419.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8530056e-f007-4829-85f3-ff18c9de3419.webp",
+                    "name": "img-8530056e-f007-4829-85f3-ff18c9de3419.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f28ced4c62f2bd796e7d098",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Executive Club | JHL Solitaire Gading Serpong"
+                },
+                "order": 3,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "executive-club",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Executive Club",
+                "updated_at": "2025-06-16T09:26:05.516+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "name": "img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "name": "img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "name": "img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "name": "img-fe771f32-6ce9-4200-9805-6cc2eb905ee2.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "name": "img-05b4d88c-cbe4-47b8-8dcd-2d7771af4762.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 45 sqm \u0026nbsp;Unit: 35\u003c/p\u003e\r\n\u003cp\u003eSpanning 45 square meters, the Junior Suite at JHL Solitaire Gading Serpong stands out with its spacious layout and impressive double-faced windows, providing guests with breathtaking natural panoramic views.\u003c/p\u003e",
+                "created_at": "2020-08-04T10:04:04.8+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=EN\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=CMS\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 45 sqm \u0026nbsp;Unit: 35\u003c/p\u003e\r\n\u003cp\u003eSpanning 45 square meters, the Junior Suite at JHL Solitaire Gading Serpong stands out with its spacious layout and impressive double-faced windows, providing guests with breathtaking natural panoramic views.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-64cd927c-07a8-4b2e-bb6a-1e5d5408cd6e.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-64cd927c-07a8-4b2e-bb6a-1e5d5408cd6e.webp",
+                    "name": "img-64cd927c-07a8-4b2e-bb6a-1e5d5408cd6e.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f28d024c62f2bd796e7d09a",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Junior Suite | JHL Solitaire Gading Serpong"
+                },
+                "order": 4,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "junior-suite",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Junior Suite",
+                "updated_at": "2025-07-10T14:17:22.211+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "name": "img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "name": "img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "name": "img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "name": "img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "name": "img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "name": "img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "name": "img-ba3bd1f8-58b5-4636-a132-ced69ad01250.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "name": "img-aa460788-7ffd-46d4-a408-0ad50c08bfe3.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "name": "img-ce032416-423b-4f0a-be02-5e433424e3d4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "name": "img-e7e3e64d-cf4e-4d83-9ce0-de8d6370b907.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "name": "img-8048f1d4-057e-4eee-b6d2-10d81504c367.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "name": "img-2cf9f394-a833-4256-a63b-859a5f7fd801.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 56 sqm Unit: 17\u003c/p\u003e\r\n\u003cp\u003eIdeal for families on vacation or business travelers seeking extra space, the Executive Suite features 56 square meters of refined accommodations. Its living room is thoughtfully designed to provide stunning views of the city of Tangerang.\u003c/p\u003e",
+                "created_at": "2020-08-04T12:03:17.24+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=EN\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=CMS\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 56 sqm Unit: 17\u003c/p\u003e\r\n\u003cp\u003eIdeal for families on vacation or business travelers seeking extra space, the Executive Suite features 56 square meters of refined accommodations. Its living room is thoughtfully designed to provide stunning views of the city of Tangerang.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-93fce4d6-af81-4e27-b726-55da2332debe.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-93fce4d6-af81-4e27-b726-55da2332debe.webp",
+                    "name": "img-93fce4d6-af81-4e27-b726-55da2332debe.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f28ec156689a6e5cb3e7664",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Executive Suite | JHL Solitaire Gading Serpong"
+                },
+                "order": 5,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "executive-suite",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Executive Suite",
+                "updated_at": "2025-01-17T10:24:27.153+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "name": "img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "name": "img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "name": "img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "name": "img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "name": "img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "name": "img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "name": "img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "name": "img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "name": "img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "name": "img-468209ce-3dee-47c5-8fe8-f1846bc1d475.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "name": "img-9f9b3665-3932-4325-b995-066cf730e29f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "name": "img-5213fd49-8469-48ab-b09e-95675699fe0c.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "name": "img-1f6e6efa-e236-47b2-80a2-606ca8e9fe73.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "name": "img-61e9a631-c525-4477-9eb0-bc31dba63cd6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "name": "img-b9f08b99-fc2c-46f3-bf7e-e0c8faf22e8d.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "name": "img-b9493b77-2917-4d8a-aac4-a9fdf1da1410.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "name": "img-678375de-22d9-41b8-9c97-e45be142c959.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "name": "img-e125dc83-3a1f-405e-81f5-f68c78bdfe56.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 129 sqm Unit: 1\u003c/p\u003e\r\n\u003cp\u003eThe JHL Solitaire Signature Suite is perfect for guests who appreciate the finest in luxurious living, offering an expansive 129 square meters of space. This suite features a separate living room, a long dining table, an executive work desk, a kitchenette, and a bathroom equipped with a separate rain shower and large bathtub, all complemented by spectacular skyline views of Tangerang.\u003c/p\u003e",
+                "created_at": "2020-08-04T12:06:20.44+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=ID\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=SSS\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 129 sqm Unit: 1\u003c/p\u003e\r\n\u003cp\u003eThe JHL Solitaire Signature Suite is perfect for guests who appreciate the finest in luxurious living, offering an expansive 129 square meters of space. This suite features a separate living room, a long dining table, an executive work desk, a kitchenette, and a bathroom equipped with a separate rain shower and large bathtub, all complemented by spectacular skyline views of Tangerang.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp",
+                    "name": "img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f28eccc6689a6e5cb3e7666",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Solitaire Signature Suite | JHL Solitaire Gading Serpong"
+                },
+                "order": 6,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "solitaire-signature-suite",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Solitaire Signature Suite",
+                "updated_at": "2025-06-16T11:58:52.924+07:00"
+            },
+            {
+                "amenities": [
+                    "5f27c986a1381161d44b5e23",
+                    "5f27c986a1381161d44b5e24",
+                    "5f27c986a1381161d44b5e25",
+                    "5f27c9ffa1381161d44b5e29",
+                    "5f27c9ffa1381161d44b5e2a",
+                    "5f27c9ffa1381161d44b5e2b",
+                    "5f27ca59a1381161d44b5e2e",
+                    "5f27ca59a1381161d44b5e2f"
+                ],
+                "attachment": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "name": "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "name": "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "name": "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "name": "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "name": "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "name": "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "name": "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "name": "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "name": "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "name": "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "name": "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "name": "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "name": "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "name": "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "name": "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "name": "img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "name": "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "name": "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "name": "img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "name": "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "name": "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "name": "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "type": "image"
+                    }
+                ],
+                "attachment_image": [
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "name": "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "name": "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "name": "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "name": "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "name": "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "name": "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "name": "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "name": "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "name": "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "name": "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "name": "img-c8ec2641-ece2-4fd6-b90b-87207b638509.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "name": "img-2f71b632-a3c4-45f3-a208-74f6ae107152.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "name": "img-69abcb57-628f-4a0d-b2cb-75c9eb3ac52f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "name": "img-e075fd05-6be4-48d3-a711-1744f9a08ebd.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "name": "img-7ff4c53a-0c88-4087-91a6-3b3e1bde2ea4.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "name": "img-85702b4e-4945-43df-9f03-47f2a6d6716f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "name": "img-65dd477f-191c-4d74-a689-d5dc146b439a.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "name": "img-d4db70ce-1f99-4386-8e09-26d352f5b3b6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "name": "img-49d346c4-5b23-4e5c-87dd-3e20f334dad6.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "name": "img-9991774d-68b3-42ee-b0c9-fd8b89c94cf7.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "name": "img-b91297ad-4f96-4c86-98fd-b78eccf4d45f.jpg",
+                        "type": "image"
+                    },
+                    {
+                        "caption": "",
+                        "cloud": "https://example.imgix.net/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "description": "",
+                        "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "name": "img-6a164090-cf7e-46e2-918a-983af75f752a.jpg",
+                        "type": "image"
+                    }
+                ],
+                "badge": {
+                    "background_color": "#000000",
+                    "button_label": "",
+                    "button_link": "",
+                    "num_bought": "",
+                    "price": "",
+                    "text": "",
+                    "text_color": "#000000"
+                },
+                "brand": {
+                    "code": "JHLS",
+                    "id": "5f27bc8ebe5343c8d8c88907",
+                    "name": "JHL Solitaire",
+                    "order": 1,
+                    "slug": "jhl-solitaire"
+                },
+                "category": {
+                    "id": "5f27bde0be5343c8d8c8890b",
+                    "lang": "en",
+                    "name": "Rooms",
+                    "slug": "rooms"
+                },
+                "content": "\u003cp\u003eArea: 227 sqm Unit: 1\u003c/p\u003e\r\n\u003cp\u003eThe Chairman Suite is designed for guests who appreciate the height of luxurious living, offering an expansive 227 square meters of space. This suite includes a separate living room, a long dining table, an executive work desk, a kitchenette, and a bathroom with a separate rain shower and large bathtub, all accompanied by spectacular skyline views of Tangerang.\u003c/p\u003e",
+                "created_at": "2020-08-04T12:07:28.227+07:00",
+                "custom": {
+                    "detail_label": "",
+                    "field": "",
+                    "link": "http://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showBestPriceFirst=1\u0026showPromotions=3\u0026langue=EN\u0026Clusternames=ASIAIDASIHTLJhlSolit\u0026Hotelnames=Asia-Id-ASI-JHL-Solitaire-Gading-Serpong\u0026frommonth=7\u0026fromday=5\u0026fromyear=2016\u0026nbdays=2\u0026adulteresa=2\u0026room=CMS\u0026rate=\u0026country=\u0026CurrencyLabel=IDR\u0026AccessCode="
+                },
+                "end_date": null,
+                "excerpt": "\u003cp\u003eArea: 227 sqm Unit: 1\u003c/p\u003e\r\n\u003cp\u003eThe Chairman Suite is designed for guests who appreciate the height of luxurious living, offering an expansive 227 square meters of space. This suite includes a separate living room, a long dining table, an executive work desk, a kitchenette, and a bathroom with a separate rain shower and large bathtub, all accompanied by spectacular skyline views of Tangerang.\u003c/p\u003e",
+                "featured_image": {
+                    "cloud": "https://example.imgix.net/img-16d5a22e-570d-4d2c-b931-948176ffc404.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-16d5a22e-570d-4d2c-b931-948176ffc404.webp",
+                    "name": "img-16d5a22e-570d-4d2c-b931-948176ffc404.webp"
+                },
+                "full_tags": [],
+                "hide_banner": false,
+                "id": "5f28ed106689a6e5cb3e7668",
+                "lang": "en",
+                "meta": {
+                    "description": "",
+                    "keyword": "",
+                    "title": "Chairman Suite Room | JHL Solitaire Gading Serpong"
+                },
+                "order": 7,
+                "parent_id": null,
+                "property": {
+                    "code": "JSGS",
+                    "id": "5f27bebfbe5343c8d8c88911",
+                    "name": "JHL Solitaire Gading Serpong",
+                    "order": 1,
+                    "slug": "jhl-solitaire-gading-serpong"
+                },
+                "script": {
+                    "body": "",
+                    "header": ""
+                },
+                "show_date": null,
+                "slug": "chairman-suite-room",
+                "status": "publish",
+                "subtitle": "",
+                "tags": [],
+                "template": "",
+                "title": "Chairman Suite Room",
+                "updated_at": "2025-01-17T10:32:26.275+07:00"
+            }
+        ],
+        "page": {
+            "created_at": "2020-08-03T14:33:52.642+07:00",
+            "description": "\u003cp\u003eExperience the art of luxurious living in rooms and suites designed with exceptional attention to detail. Each stay promises an atmosphere of exclusivity and comfort.\u003c/p\u003e",
+            "id": "5f27bde0be5343c8d8c8890b",
+            "image": {},
+            "label": {
+                "detail": "Book Now",
+                "more": "https://wa.me/+628127837712"
+            },
+            "lang": "en",
+            "meta": {
+                "description": "",
+                "keyword": "",
+                "title": "Luxury Rooms \u0026 Suites at Tangerang | JHL Solitaire Gading Serpong"
+            },
+            "name": "Rooms",
+            "slug": "rooms",
+            "title": "Unrivaled Comfort, Ultimate Luxury",
+            "updated_at": "2021-09-29T11:21:37.379+07:00"
+        },
+        "total": 7
+    }
+}

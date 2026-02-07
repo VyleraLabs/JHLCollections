@@ -1,65 +1,125 @@
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeroSlider from "@/components/HeroSlider";
+import Section from "@/components/Section";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Star, MapPin, Utensils, Bed } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-brand-off-white">
+      <Header />
+
+      <HeroSlider />
+
+      {/* Welcome Section */}
+      <Section className="text-center max-w-4xl mx-auto">
+        <p className="text-brand-dark/80 uppercase tracking-widest text-sm font-bold mb-4">Welcome to JHL Solitaire</p>
+        <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6">
+          Jewel of the City
+        </h2>
+        <p className="text-gray-600 leading-relaxed mb-8">
+          JHL Solitaire Gading Serpong, a JHL Collections hotel, is our 5 Star Luxury Hotel situated 40 minutes from Soekarno-Hatta International Airport.
+          The hotel creates a setting of luxury and comfort, with 141 stylishly appointed premier rooms and suites.
+        </p>
+        <div className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl">
+          <Image
+            src="/assets/original/img-913f1e2c-f674-4fc7-aa49-8348ef183cab.webp"
+            alt="JHL Solitaire Exterior"
+            fill
+            className="object-cover"
+            quality={50}
+            sizes="(max-width: 768px) 100vw, 1024px"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      {/* Highlights Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {/* Room Highlight */}
+        <div className="relative h-[600px] group overflow-hidden">
+          <Image
+            src="/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp"
+            alt="Rooms & Suites"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+            quality={50}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+
+          <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Accommodations</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Rooms & Suites</h2>
+            <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              Experience the art of luxurious living in rooms and suites designed with exceptional attention to detail.
+            </p>
+            <Link href="/rooms" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+              Discover More
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Dining Highlight */}
+        <div className="relative h-[600px] group overflow-hidden">
+          <Image
+            src="/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp"
+            alt="Dining"
+            fill
+            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+            quality={50}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+
+          <div className="absolute bottom-0 left-0 w-full p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+            <span className="text-brand-gold uppercase text-xs font-bold tracking-[0.2em] mb-3 block">Culinary</span>
+            <h2 className="text-4xl font-serif mb-6 italic">Dining Experience</h2>
+            <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+              Unfold the rich tapestry of exquisite flavors. From international buffets to authentic Italian fine dining.
+            </p>
+            <Link href="/dining" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+              Explore Venues
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <Section className="bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
+              <Star size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">5-Star Luxury</h3>
+            <p className="text-gray-600 text-sm">Award-winning service and amenities designed for the discerning traveler.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
+              <MapPin size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">Prime Location</h3>
+            <p className="text-gray-600 text-sm">Located in the heart of Gading Serpong, minutes from ICE and AEON Mall.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
+              <ArrowRight size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">Exclusive Offers</h3>
+            <p className="text-gray-600 text-sm">Book directly with us to enjoy special rates and complimentary benefits.</p>
+            <Link href="#" className="mt-4 text-brand-dark hover:text-brand-gold uppercase text-xs font-bold tracking-widest border-b border-brand-gold pb-1 transition-colors">
+              View Offers
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      <Footer />
+    </main>
   );
 }

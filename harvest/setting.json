@@ -1,0 +1,167 @@
+{
+    "success": true,
+    "status_code": 200,
+    "data": {
+        "brand": {
+            "code": "JHLS",
+            "display_name": "",
+            "favicon": {},
+            "featured_image": {},
+            "id": "5f27bc8ebe5343c8d8c88907",
+            "logo": {
+                "primary": {
+                    "cloud": "https://example.imgix.net/img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp",
+                    "name": "img-3364d0e0-08bb-438c-b5ac-2f1e4d479abe.webp"
+                },
+                "secondary": {}
+            },
+            "name": "JHL Solitaire",
+            "slug": "jhl-solitaire",
+            "social_media": {}
+        },
+        "corporate": {
+            "address": "Baic Tower - 17th floor \u003cbr /\u003eJl. Gading Serpong Boulevard Barat Blok S No.8 \u003cbr /\u003eKabupaten Tangerang, Banten 15810",
+            "attachment_image": [],
+            "booking_code": {
+                "brand": "",
+                "corporate": "",
+                "hotel": ""
+            },
+            "booking_url": "",
+            "city": {},
+            "code": "COR",
+            "custom": {
+                "field": "",
+                "link": ""
+            },
+            "description": "",
+            "display_name": "JHL Collection",
+            "email": "info@jhlcollections.com",
+            "favicon": {},
+            "fax": "",
+            "featured_image": {},
+            "id": "5f27b7e694f7d898d8632c99",
+            "location": {
+                "latitude": "",
+                "longitude": ""
+            },
+            "logo": {
+                "primary": {
+                    "cloud": "https://example.imgix.net/img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp",
+                    "name": "img-af978da9-6a92-4aca-8c1e-8b9c5d225e77.webp"
+                },
+                "secondary": {
+                    "cloud": "https://example.imgix.net/img-a3b87f16-3863-44e9-bad5-19b0a6808067.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-a3b87f16-3863-44e9-bad5-19b0a6808067.webp",
+                    "name": "img-a3b87f16-3863-44e9-bad5-19b0a6808067.webp"
+                }
+            },
+            "name": "JHL Collection",
+            "phone": "+62 21 3893 0777",
+            "rfp_email": "",
+            "slug": "jhl-collection",
+            "social_media": {
+                "email": "",
+                "facebook": "\u003ca href=\"https://www.facebook.com/jhlcollectionshotels\" title=\"Facebook\"\u003e\u003ci class=\"fab fa-facebook-square\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "instagram": "\u003ca href=\"https://www.instagram.com/jhl_collection\" title=\"Instagram\"\u003e\u003ci class=\"fab fa-instagram\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "tripadvisor": "",
+                "twitter": "",
+                "youtube": ""
+            },
+            "status": "",
+            "tagline": "My Tagline",
+            "whatsapp": ""
+        },
+        "general": {
+            "posts_per_page": "",
+            "site_copyright": "",
+            "site_lang": "",
+            "site_title": ""
+        },
+        "id": "5f27bebfbe5343c8d8c88911",
+        "media": {
+            "large_size": "",
+            "medium_size": "",
+            "thumbnail_size": ""
+        },
+        "meta": {
+            "description": "Iconic, Majestic, and Spectacular state of the art design and architecture, it consists of 141 stylishly appointed premier rooms and suites.",
+            "keyword": "jhl serpong, jhl solitaire serpong, jhl gading serpong",
+            "title": "The Best Five Stars Hotel in Tangerang | JHL Solitaire Gading Serpong"
+        },
+        "property": {
+            "address": "Jl. Gading Serpong Boulevard Barat Blok S No.5 Gading Serpong Tangerang, Banten Indonesia 15810",
+            "attachment_image": [],
+            "booking_code": {
+                "brand": "JHLS",
+                "corporate": "",
+                "hotel": "jhlsolitairegadingdirect"
+            },
+            "booking_url": "https://app-apac.thebookingbutton.com/properties/",
+            "city": {
+                "code": "TGR",
+                "id": "5f27c84da1381161d44b5e1f",
+                "name": "Tangerang"
+            },
+            "code": "JSGS",
+            "custom": {
+                "field": "JHL Solitaire Gading Serpong, part of JHL Collection, is a 5-star luxury hotel strategically located near Soekarno-Hatta International Airport, premium shopping destinations, and key business hubs. Featuring 141 elegant rooms, including the lavish Chairman Suite, the hotel boasts iconic architecture, five unique dining venues, and stunning city views from the Sky Ballroom.",
+                "link": "Jewel of The City"
+            },
+            "description": "\u003cp\u003eEvery moment of living is a triumphant joy to be celebrated. At JHL Solitaire, we believe our guests deserve the finest experience of living to the fullest. With pride and prestige, we aim to exceed expectations by reciprocating our guests' exquisite taste with a poised frame of mind, first-class service, and offerings.\u003c/p\u003e",
+            "display_name": "JHL Solitaire Gading Serpong",
+            "email": "info.sgs@jhlcollections.com",
+            "favicon": {
+                "cloud": "https://example.imgix.net/img-26ae523e-537d-4057-8ee5-62636b62e6e1.ico",
+                "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-26ae523e-537d-4057-8ee5-62636b62e6e1.ico",
+                "name": "img-26ae523e-537d-4057-8ee5-62636b62e6e1.ico"
+            },
+            "fax": "https://solidate.jhl-cms.alarichotels.com",
+            "featured_image": {
+                "cloud": "https://example.imgix.net/img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp",
+                "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp",
+                "name": "img-719d2f57-28fe-4ce9-a06c-1f26087159f3.webp"
+            },
+            "id": "5f27bebfbe5343c8d8c88911",
+            "location": {
+                "latitude": "",
+                "longitude": ""
+            },
+            "logo": {
+                "primary": {
+                    "cloud": "https://example.imgix.net/img-2dc3a0d0-f84a-410f-b8d9-0ed55e620766.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2dc3a0d0-f84a-410f-b8d9-0ed55e620766.webp",
+                    "name": "img-2dc3a0d0-f84a-410f-b8d9-0ed55e620766.webp"
+                },
+                "secondary": {
+                    "cloud": "https://example.imgix.net/img-69774331-21a7-40b1-ac4d-3982b317501f.webp",
+                    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-69774331-21a7-40b1-ac4d-3982b317501f.webp",
+                    "name": "img-69774331-21a7-40b1-ac4d-3982b317501f.webp"
+                }
+            },
+            "name": "JHL Solitaire Gading Serpong",
+            "phone": "+62 21 3950 3000",
+            "rfp_email": "info.sgs@jhlcollections.com",
+            "slug": "jhl-solitaire-gading-serpong",
+            "social_media": {
+                "email": "\u003ca href=\"https://wa.me/628119433397\" title=\"Whatsapp\"\u003e\u003ci class=\"fab fa-whatsapp fa-3x\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "facebook": "\u003ca href=\"https://www.facebook.com/JHLSolitaireGadingSerpong\" title=\"Facebook\"\u003e\u003ci class=\"fab fa-facebook-square fa-3x\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "instagram": "\u003ca href=\"https://www.instagram.com/jhlsolitaireserpong\" title=\"Instagram\"\u003e\u003ci class=\"fab fa-instagram fa-3x\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "tripadvisor": "\u003ca href=\"https://www.tiktok.com/@jhlsolitaireserpong\" title=\"Tiktok\"\u003e\u003ci class=\"fab fa-tiktok fa-3x\"\u003e\u003c/i\u003e\u003c/a\u003e",
+                "twitter": "",
+                "youtube": ""
+            },
+            "status": "active",
+            "tagline": "Epitomizing The Best Essence of Life",
+            "whatsapp": ""
+        },
+        "script": {
+            "body": "\u003ciframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-WKGS2G6G\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"\u003e\u003c/iframe\u003e",
+            "booking_calendar": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'\u0026l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-WKGS2G6G');",
+            "header": "\u003cscript type=\"text/javascript\" src=\"//websdk.fastbooking-services.com/widgets/app.js\"\u003e\u003c/script\u003e\n\u003cscript class=\"fb-widget-config\" data-fbConfig=\"0\" type=\"application/json\"\u003e{\"params\":[{\"calendar\":{\"firstDayOfWeek\":1,\"nbMonths2display\":2,\"title\":\"BOOK A ROOM\",\"showBestPrice\":true,\"showLastRoom\":true,\"showLastRoomThreshold\":5,\"showChildrenAges\":false,\"themeDark\":false,\"layoutNum\":2,\"roomRateFiltering\":0,\"rateFilter\":[],\"roomFilter\":[],\"useLoyalty\":false,\"loyalty\":\"\",\"loyaltyParams\":{}},\"currency\":\"IDR\",\"locale\":\"en_GB\",\"pricesDisplayMode\":\"normal\",\"offerComputeRule\":\"lowerMinstay\",\"maxAdults\":2,\"maxChildren\":1,\"mainColor\":\"#AA834F\",\"themeDark\":false,\"openFrontInNewTab\":true,\"property\":\"idtan31027\",\"title\":\"JHL Solitaire Gading Serpong\",\"childrenMaxAge\":12,\"groupsNames\":\"\",\"quicksearch\":{\"showChildrenAges\":false},\"fbWidget\":\"Calendar\"}],\"commonParams\":{\"redirectUrl\":\"https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml\",\"showPropertiesList\":false,\"demoMode\":false,\"allowGroupSelection\":false,\"groupName\":\"\"},\"_authCode\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzY29wZXMiOiIuKiIsInByb3BlcnRpZXMiOiJpZHRhbjMxMDI3IiwiZ3JvdXBzIjoiXiQiLCJmb3IiOiJCYWNrb2ZmaWNlIiwiaWF0IjoxNjM1ODMwOTc4LCJqaWQiOiI2MTgwYjBhMmQ1ZjAzIn0.4eNv6Y-bthyaz2Bpz_FGJLK9VU4IMneL2-3O2pwocvs\",\"propertyIndex\":0,\"version\":\"1.43.2\",\"baseHost\":\"websdk.fastbooking-services.com\"}\u003c/script\u003e\n",
+            "themes": ""
+        }
+    }
+}

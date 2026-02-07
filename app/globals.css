@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-gold: #aea080;
+  --color-brand-gold-hover: #dd9d4c;
+  --color-brand-dark: #0d1f2e;
+  --color-brand-off-white: #fefef7;
+  --color-brand-grey: #deddd9;
+
+  --color-luxury-black: #0F0F0F;
+  --color-luxury-charcoal: #1A1A1A;
+  --color-luxury-gold: #D4AF37;
+
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-lato: var(--font-lato), sans-serif;
+
+  --animate-fade-in-up: fade-in-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  --animate-grow-width: grow-width 1.5s ease-out forwards;
+  --animate-ken-burns: ken-burns 20s ease-out infinite alternate;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fast-expand {
+    from {
+      opacity: 0.5;
+      transform: scale(0.96);
+    }
+
+    from {
+      opacity: 1;
+      transform: scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes grow-width-horizontal {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes grow-width {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 6rem;
+    }
+  }
+
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.1);
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: var(--font-lato), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif;
 }

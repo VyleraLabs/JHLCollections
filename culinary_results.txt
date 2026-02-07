@@ -1,0 +1,329 @@
+--- Match in offers_list.json ---
+Title: Golden Dinner Buffet — The House of Eight Fortunes at Mangan All Day Dining
+Slug: golden-dinner-buffet-the-house-of-eight-fortunes-at-mangan-all-day-dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+  "name": "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+    "name": "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: La Dolce Vita — Al Gusto Italian Dining & Bar
+Slug: la-dolce-vita-al-gusto-italian-dining-bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+  "name": "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+    "name": "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: Set Menu Celebration — The House of Eight Fortunes at Royal Eight Chinese Dining
+Slug: set-menu-celebration-the-house-of-eight-fortunes-at-royal-eight-chinese-dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+  "name": "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+    "name": "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: 50% Off Dimsum Yumcha — Royal Eight Chinese Dining
+Slug: 50-off-dimsum-yumcha-royal-eight-chinese-dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+  "name": "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+    "name": "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: Signature Almond Fried Chicken — Royal Eight Chinese Dining
+Slug: signature-almond-fried-chicken-royal-eight-chinese-dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+  "name": "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+    "name": "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: Maison of Sweet — Le Bléu Cafe des Fleurs
+Slug: maison-of-sweet-le-bleu-cafe-des-fleurs
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+  "name": "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+    "name": "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: Cucina Dal Vivo — Al Gusto Italian Dining & Bar
+Slug: cucina-dal-vivo-al-gusto-italian-dining-bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+  "name": "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+    "name": "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: Signature Dry Aged — Al Gusto Italian Dining & Bar
+Slug: signature-dry-aged-al-gusto-italian-dining-bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg",
+  "name": "img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg"
+}
+Attachments: []
+------------------------
+
+--- Match in offers_list.json ---
+Title: Brunch Harmony — Mangan All Day Dining
+Slug: brunch-harmony-mangan-all-day-dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg",
+  "name": "img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg",
+    "name": "img-7ed0facb-620a-4716-a80c-43e1f2a0789c.jpg",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Match in offers_list.json ---
+Title: The First Apothecary Bar in Gading Serpong
+Slug: the-first-apothecary-bar-in-gading-serpong
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg",
+  "name": "img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg"
+}
+Attachments: []
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Golden Dinner Buffet — The House of Eight Fortunes at Mangan All Day Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp",
+  "name": "img-6da0eedf-8527-47bb-b592-5f8a637ce9fa.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: La Dolce Vita — Al Gusto Italian Dining & Bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp",
+  "name": "img-0ac70dde-5fa2-431e-a6e8-9eee98560bb0.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Set Menu Celebration — The House of Eight Fortunes at Royal Eight Chinese Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp",
+  "name": "img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: 50% Off Dimsum Yumcha — Royal Eight Chinese Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp",
+  "name": "img-0415d4d3-1b13-4a20-b47a-c34eb6201c46.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Signature Almond Fried Chicken — Royal Eight Chinese Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp",
+  "name": "img-a4b00ef0-bce4-48ba-9b8b-fc9962ebe165.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Maison of Sweet — Le Bléu Cafe des Fleurs
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp",
+  "name": "img-8b73612c-8942-417d-b556-8ebf8b7214d7.webp"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Cucina Dal Vivo — Al Gusto Italian Dining & Bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg",
+  "name": "img-d4d0f042-6c09-4ad9-aab2-ba5f8d3d31de.jpg"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Signature Dry Aged — Al Gusto Italian Dining & Bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg",
+  "name": "img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: Brunch Harmony — Mangan All Day Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg",
+  "name": "img-2cb3ac58-e73e-401f-89e6-4f23dc331b47.jpg"
+}
+------------------------
+
+--- Sub-match in offers_list.json ---
+Title: The First Apothecary Bar in Gading Serpong
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg",
+  "name": "img-ceacede4-2cbc-4dca-af03-153e0f575e3a.jpg"
+}
+------------------------
+
+--- Match in home_experiences.json ---
+Title: Royal Eight Chinese Dining
+Slug: royal-eight-chinese-dining-1
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp",
+  "name": "img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp"
+}
+Attachments: []
+------------------------
+
+--- Match in home_experiences.json ---
+Title: Empress China Bar
+Slug: empress-china-bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp",
+  "name": "img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp"
+}
+Attachments: [
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg",
+    "name": "img-7367642d-a332-42e3-baf0-f52dfb793b35.jpg",
+    "type": "image"
+  },
+  {
+    "caption": "",
+    "cloud": "https://example.imgix.net/img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg",
+    "description": "",
+    "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg",
+    "name": "img-1c659ff9-a3ce-420c-a721-091fd18cf58a.jpg",
+    "type": "image"
+  }
+]
+------------------------
+
+--- Sub-match in home_experiences.json ---
+Title: Royal Eight Chinese Dining
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp",
+  "name": "img-c846a4d7-ba07-4e74-be1a-a6621114eb15.webp"
+}
+------------------------
+
+--- Sub-match in home_experiences.json ---
+Title: Empress China Bar
+Featured Image: {
+  "cloud": "https://example.imgix.net/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp",
+  "local": "https://webadmin.jhlcollections.com/static/uploads/media/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp",
+  "name": "img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp"
+}
+------------------------
+
