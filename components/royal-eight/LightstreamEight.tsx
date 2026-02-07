@@ -8,10 +8,10 @@ export const LightstreamEight = () => {
     const particles = useMemo(() => {
         return Array.from({ length: 40 }).map((_, i) => ({
             id: i,
-            size: Math.random() * 2 + 1,
-            opacity: Math.random() * 0.5 + 0.3,
-            duration: Math.random() * 3 + 2,
-            delay: Math.random() * 5,
+            size: Math.random() * 2 + 0.5,
+            opacity: Math.random() * 0.4 + 0.2,
+            duration: Math.random() * 4 + 3,
+            delay: Math.random() * 8,
         }));
     }, []);
 
@@ -19,7 +19,7 @@ export const LightstreamEight = () => {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
             <svg
                 viewBox="0 0 400 400"
-                className="w-[100%] h-[100%] md:w-[90%] md:h-[90%] opacity-40 md:opacity-50 blur-[1px] md:blur-[2px]"
+                className="w-[100%] h-[100%] md:w-[95%] md:h-[95%] opacity-40 md:opacity-60 blur-[1px] md:blur-[2px]"
                 preserveAspectRatio="xMidYMid meet"
             >
                 <defs>
@@ -35,98 +35,93 @@ export const LightstreamEight = () => {
                         <feGaussianBlur stdDeviation="6" result="blur" />
                         <feComposite in="SourceGraphic" in2="blur" operator="over" />
                     </filter>
-
-                    <mask id="dust-mask">
-                        <rect x="0" y="0" width="400" height="400" fill="white" />
-                    </mask>
                 </defs>
 
-                {/* The Core Pathways */}
+                {/* Harmonized Parallel Pathways - All Clockwise */}
                 <g filter="url(#royal-glow)">
-                    {/* Main Eight Path - Clockwise */}
+                    {/* Path 1: Core Eight */}
                     <m.path
                         d="M 200,200 
-               C 200,100 320,100 320,200 
-               C 320,300 80,300 80,200
-               C 80,100 200,100 200,200
-               Z"
+                           C 200,100 320,100 320,200 
+                           C 320,300 80,300 80,200
+                           C 80,100 200,100 200,200 Z"
                         fill="none"
                         stroke="url(#gold-stream-main)"
-                        strokeWidth="2.5"
-                        strokeDasharray="150 1000"
+                        strokeWidth="3"
+                        strokeDasharray="140 1000"
                         animate={{
-                            strokeDashoffset: [0, -1150],
+                            strokeDashoffset: [0, -1140],
                         }}
                         transition={{
-                            duration: 8,
+                            duration: 7,
                             repeat: Infinity,
                             ease: "linear",
                         }}
                     />
 
-                    {/* Secondary Path - Counter Clockwise */}
+                    {/* Path 2: Parallel Inner (Tightly Bound) */}
                     <m.path
                         d="M 200,200 
-               C 200,300 320,300 320,200 
-               C 320,100 80,100 80,200
-               C 80,300 200,300 200,200
-               Z"
-                        fill="none"
-                        stroke="url(#gold-stream-main)"
-                        strokeWidth="1.5"
-                        strokeDasharray="100 1200"
-                        animate={{
-                            strokeDashoffset: [0, 1300],
-                        }}
-                        transition={{
-                            duration: 12,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
-                    />
-
-                    {/* Elegant Sweep 1 */}
-                    <m.path
-                        d="M 200,200 
-               C 250,50 380,50 380,200 
-               C 380,350 20,350 20,200
-               C 20,50 150,50 200,200 Z"
+                           C 200,110 310,110 310,200 
+                           C 310,290 90,290 90,200
+                           C 90,110 200,110 200,200 Z"
                         fill="none"
                         stroke="url(#gold-stream-main)"
                         strokeWidth="1"
-                        strokeDasharray="200 1800"
+                        strokeDasharray="100 1100"
                         animate={{
-                            strokeDashoffset: [400, -1400],
+                            strokeDashoffset: [100, -1000],
                         }}
                         transition={{
-                            duration: 15,
+                            duration: 9,
                             repeat: Infinity,
                             ease: "linear",
                         }}
                     />
 
-                    {/* Elegant Sweep 2 */}
+                    {/* Path 3: Parallel Outer (Slightly Offset) */}
                     <m.path
                         d="M 200,200 
-               C 150,350 20,350 20,200 
-               C 20,50 380,50 380,200
-               C 380,350 250,350 200,200 Z"
+                           C 200,90 330,90 330,200 
+                           C 330,310 70,310 70,200
+                           C 70,90 200,90 200,200 Z"
                         fill="none"
                         stroke="url(#gold-stream-main)"
                         strokeWidth="0.8"
-                        strokeDasharray="180 2000"
+                        strokeDasharray="180 1200"
                         animate={{
-                            strokeDashoffset: [-200, 1800],
+                            strokeDashoffset: [-200, -1400],
                         }}
                         transition={{
-                            duration: 18,
+                            duration: 11,
                             repeat: Infinity,
                             ease: "linear",
                         }}
                     />
+
+                    {/* Path 4: Wide Dynamic Sweep (Still Parallel Flow) */}
+                    <m.path
+                        d="M 200,200 
+                           C 220,80 340,80 340,200 
+                           C 340,320 60,320 60,200
+                           C 60,80 180,80 200,200 Z"
+                        fill="none"
+                        stroke="url(#gold-stream-main)"
+                        strokeWidth="1.2"
+                        strokeDasharray="220 1500"
+                        animate={{
+                            strokeDashoffset: [500, -1000],
+                        }}
+                        transition={{
+                            duration: 13,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                        opacity="0.6"
+                    />
                 </g>
 
-                {/* Gold Dust Particles */}
+                {/* Synchronized Gold Dust */}
                 <g>
                     {particles.map((p) => (
                         <m.circle
@@ -144,35 +139,10 @@ export const LightstreamEight = () => {
                                 delay: p.delay,
                             }}
                         >
-                            {/* This is a trick to make them follow the path roughly by grouping them */}
                             <animateMotion
                                 dur={`${p.duration * 2}s`}
                                 repeatCount="indefinite"
                                 path="M 200,200 C 200,100 320,100 320,200 C 320,300 80,300 80,200 C 80,100 200,100 200,200"
-                                begin={`${p.delay}s`}
-                            />
-                        </m.circle>
-                    ))}
-                    {particles.slice(0, 20).map((p) => (
-                        <m.circle
-                            key={`dust2-${p.id}`}
-                            r={p.size * 0.8}
-                            fill="#D4AF37"
-                            initial={{ opacity: 0 }}
-                            animate={{
-                                opacity: [0, p.opacity * 0.7, 0],
-                                scale: [0.3, 1, 0.3],
-                            }}
-                            transition={{
-                                duration: p.duration * 1.5,
-                                repeat: Infinity,
-                                delay: p.delay + 1,
-                            }}
-                        >
-                            <animateMotion
-                                dur={`${p.duration * 3}s`}
-                                repeatCount="indefinite"
-                                path="M 200,200 C 200,300 320,300 320,200 C 320,100 80,100 80,200 C 80,300 200,300 200,200"
                                 begin={`${p.delay}s`}
                             />
                         </m.circle>
