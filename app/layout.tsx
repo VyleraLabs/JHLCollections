@@ -27,6 +27,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "JHL Solitaire Gading Serpong",
   description: "A 5-star luxury hotel in Gading Serpong, Tangerang. Experience the iconic architecture and refined elegance.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
