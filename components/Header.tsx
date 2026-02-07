@@ -147,15 +147,38 @@ export default function Header() {
                                 <X size={32} strokeWidth={1} />
                             </button>
                         </div>
-                        <nav className="flex flex-col gap-8">
-                            {["Home", ...NAV_LINKS.map(l => l.name)].map((item) => (
+                        <nav className="flex flex-col gap-4">
+                            {[
+                                { name: "Home", href: "/", image: "/assets/original/1mc6912000qshhrwa9EE8.jpg", subtitle: "Jewel of the City" },
+                                { name: "Rooms", href: "/rooms", image: "/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp", subtitle: "Suites & Sanctum" },
+                                { name: "Dining", href: "/dining", image: "/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp", subtitle: "Culinary Dynasty" },
+                                { name: "Meetings", href: "/meetings", image: "/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp", subtitle: "Grand Events" },
+                                { name: "Wellness", href: "/wellness", image: "/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp", subtitle: "Serenity & Spa" },
+                                { name: "Facilities", href: "/facilities", image: "/assets/original/12-edit.jpg", subtitle: "Exquisite Lifestyle" },
+                                { name: "Offers", href: "/offers", image: "/assets/original/img-16d5a22e-570d-4d2c-b931-948176ffc404.webp", subtitle: "Exclusive Benefits" },
+                            ].map((item) => (
                                 <Link
-                                    key={item}
-                                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                                    className="text-4xl font-serif hover:text-brand-gold transition-all duration-300"
+                                    key={item.name}
+                                    href={item.href}
+                                    className="group relative h-28 w-full overflow-hidden rounded-lg shadow-lg transition-all duration-500"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                    {item}
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-105"
+                                        quality={60}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent flex flex-col justify-center px-8">
+                                        <span className="text-brand-gold text-[10px] uppercase font-bold tracking-[0.2em] mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                            {item.subtitle}
+                                        </span>
+                                        <span className="text-2xl font-serif text-white tracking-wide">
+                                            {item.name}
+                                        </span>
+                                    </div>
+                                    <div className="absolute bottom-0 left-0 h-1 bg-brand-gold w-0 group-hover:w-full transition-all duration-500"></div>
                                 </Link>
                             ))}
                             <button
@@ -163,9 +186,9 @@ export default function Header() {
                                     setIsMobileMenuOpen(false);
                                     window.location.href = "/booking";
                                 }}
-                                className="bg-brand-gold text-white px-10 py-5 mt-12 text-sm font-bold uppercase tracking-widest shadow-2xl"
+                                className="bg-brand-gold text-white px-10 py-5 mt-4 text-xs font-bold uppercase tracking-[0.2em] shadow-2xl flex items-center justify-center gap-3 active:scale-95 transition-transform"
                             >
-                                Book Now
+                                Book Your Stay
                             </button>
                         </nav>
                     </motion.div>
