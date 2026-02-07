@@ -174,7 +174,7 @@ function BookingForm() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl overflow-hidden"
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl"
         >
             {/* Progress Bar */}
             <div className="flex items-center justify-between mb-12">
@@ -226,6 +226,7 @@ function BookingForm() {
                                         label="Check-In"
                                         selectedDate={formData.checkIn}
                                         isOpen={isCheckInOpen}
+                                        side="top"
                                         onSelect={(date) => {
                                             setFormData(prev => ({ ...prev, checkIn: date }));
                                             setIsCheckInOpen(false);
@@ -248,6 +249,7 @@ function BookingForm() {
                                         label="Check-Out"
                                         selectedDate={formData.checkOut}
                                         isOpen={isCheckOutOpen}
+                                        side="top"
                                         onSelect={(date) => {
                                             setFormData(prev => ({ ...prev, checkOut: date }));
                                             setIsCheckOutOpen(false);

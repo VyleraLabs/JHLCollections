@@ -21,7 +21,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://webadmin.jhlcollections.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://webadmin.jhlcollections.com; font-src 'self' data:; connect-src 'self' https://webadmin.jhlcollections.com; frame-src 'self'; base-uri 'self'; form-action 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://webadmin.jhlcollections.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://webadmin.jhlcollections.com; font-src 'self' data:; connect-src 'self' https://webadmin.jhlcollections.com; frame-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
           },
           {
             key: 'Referrer-Policy',
