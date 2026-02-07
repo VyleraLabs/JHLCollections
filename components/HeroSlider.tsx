@@ -36,22 +36,22 @@ export default function HeroSlider() {
         <section className="relative h-screen w-full bg-[#0F0F0F] flex flex-col items-center justify-center overflow-hidden">
             {/* Background Narrative */}
             <div className="absolute inset-0 z-0">
-                {/* Logo Placeholder - centered and elegant */}
+                {/* Text-based Loading State - elegant and minimalist */}
                 <div
                     className={cn(
-                        "absolute inset-0 z-30 flex items-center justify-center bg-[#0F0F0F] transition-opacity duration-1000",
+                        "absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#0F0F0F] transition-opacity duration-1000 px-6",
                         isVideoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
                     )}
                 >
-                    <div className="relative w-48 h-32 animate-pulse">
-                        <Image
-                            src="/assets/original/jhl_logo.webp"
-                            alt="JHL Solitaire Loading Logo"
-                            fill
-                            priority
-                            className="object-contain brightness-0 invert"
-                        />
-                    </div>
+                    <span className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 animate-pulse drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
+                        Welcome to
+                    </span>
+                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8 text-white animate-pulse drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+                        JHL Solitaire
+                    </h1>
+                    <p className="text-sm md:text-lg font-light uppercase tracking-[0.3em] text-white/80 animate-pulse drop-shadow-[0_0_8px_rgba(255,255,255,0.1)]">
+                        Gading Serpong, A JHL Collections
+                    </p>
                 </div>
 
                 <video
@@ -77,25 +77,28 @@ export default function HeroSlider() {
 
             {/* Staggered Entrance Content */}
             <div className="relative z-30 container mx-auto px-6 h-full flex flex-col items-center justify-center text-center text-white pointer-events-none">
-                <div className="flex flex-col items-center max-w-5xl mb-32 md:mb-0 pointer-events-auto">
+                <div className={cn(
+                    "flex flex-col items-center max-w-5xl mb-32 md:mb-0 transition-all duration-1000",
+                    isVideoLoaded ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4"
+                )}>
                     <span
-                        className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 opacity-0 animate-[fade-in_0.5s_ease-out_forwards_0.1s]"
+                        className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6"
                     >
                         Welcome to
                     </span>
 
                     <h1
-                        className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8 animate-[fast-expand_0.4s_ease-out_forwards]"
+                        className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8"
                     >
                         JHL Solitaire
                     </h1>
 
                     <div
-                        className="w-24 h-[1px] bg-white/40 mb-8 scale-x-0 animate-[grow-width-horizontal_0.6s_ease-out_forwards_0.3s]"
+                        className="w-24 h-[1px] bg-white/40 mb-8"
                     ></div>
 
                     <p
-                        className="text-sm md:text-lg font-light uppercase tracking-[0.3em] text-white/80 opacity-0 animate-[fade-in_0.5s_ease-out_forwards_0.5s]"
+                        className="text-sm md:text-lg font-light uppercase tracking-[0.3em] text-white/80"
                     >
                         Gading Serpong, A JHL Collections
                     </p>
