@@ -26,12 +26,12 @@ export default function Home() {
         </p>
         <div className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl">
           <Image
-            src="/assets/original/jewel-sunset.png"
+            src="/assets/original/1mc6912000qshhrwa9EE8.jpg"
             alt="JHL Solitaire Iconic Architecture at Sunset"
             fill
             className="object-cover"
             priority
-            quality={75}
+            quality={80}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
           />
         </div>
@@ -138,11 +138,11 @@ export default function Home() {
         {/* Facilities Highlight */}
         <div className="relative h-[600px] group overflow-hidden md:col-span-2">
           <Image
-            src="/assets/original/facilities-pool.png"
+            src="/assets/original/12-edit.jpg"
             alt="Iconic Pool & Lifestyle Facilities"
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-105"
-            quality={70}
+            quality={75}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
