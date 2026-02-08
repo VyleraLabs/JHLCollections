@@ -225,7 +225,7 @@ function BookingForm() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl relative z-[10] !overflow-visible"
+            className="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl relative z-[10] !overflow-visible"
         >
             {/* Progress Bar */}
             <div className="flex items-center justify-between mb-12">
@@ -335,7 +335,9 @@ function BookingForm() {
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.adultsLabel}</label>
                                     <select
+                                        id="adults-select"
                                         name="adults"
+                                        aria-label={t.bookingPage.adultsLabel}
                                         value={formData.adults}
                                         onChange={handleChange}
                                         className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
@@ -346,7 +348,9 @@ function BookingForm() {
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.childrenLabel}</label>
                                     <select
+                                        id="children-select"
                                         name="children"
+                                        aria-label={t.bookingPage.childrenLabel}
                                         value={formData.children}
                                         onChange={handleChange}
                                         className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
@@ -462,6 +466,14 @@ function BookingForm() {
 
 export default function BookingPage() {
     const { t } = useLanguage();
+    const [showVideo, setShowVideo] = useState(false);
+    const [videoPlaying, setVideoPlaying] = useState(false);
+
+    useEffect(() => {
+        // Delay video loading to prioritize initial paint and LCP (image)
+        const timer = setTimeout(() => setShowVideo(true), 1500);
+        return () => clearTimeout(timer);
+    }, []);
 
     // Schema Markup for SEO
     const schemaMarkup = {
@@ -540,19 +552,43 @@ export default function BookingPage() {
             />
             <Header />
 
-            {/* Elegant Background Image with Overlay */}
+            {/* Optimized Background with Lazy Video */}
             <div className="fixed inset-0 z-0">
-                <Image
-                    src="/assets/original/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg"
-                    alt="Luxury Background"
-                    fill
-                    className="object-cover opacity-40 scale-105 animate-[ken-burns_20s_ease-in-out_infinite_alternate]"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/40 to-brand-dark/95 z-10"></div>
+                {/* Immediate LCP Image - Fades out when video starts */}
+                <motion.div
+                    animate={{ opacity: videoPlaying ? 0 : 0.4 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/assets/original/img-fc3f9082-a8d8-4064-baba-377ee1ae4503.jpg"
+                        alt="Luxury Sanctuary Background"
+                        fill
+                        priority
+                        className="object-cover blur-[2px]"
+                    />
+                </motion.div>
+
+                {showVideo && (
+                    <motion.video
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: videoPlaying ? 0.8 : 0 }}
+                        transition={{ duration: 1 }}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        onPlaying={() => setVideoPlaying(true)}
+                        className="absolute inset-0 w-full h-full object-cover"
+                    >
+                        <source src="/assets/original/vdo-d470790c-8679-4b47-b6c7-f529221aea1e.mp4" type="video/mp4" />
+                    </motion.video>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 z-10"></div>
                 {/* Subtle Gold Tint */}
                 <div className="absolute inset-0 bg-brand-gold/5 mix-blend-overlay z-20"></div>
             </div>
+
 
             <section className="relative pt-40 pb-[400px] px-6 z-40 !overflow-visible">
                 <div className="container mx-auto max-w-2xl !overflow-visible relative z-50">
