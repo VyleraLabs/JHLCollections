@@ -100,14 +100,14 @@ export default function Meetings() {
                         <motion.div variants={fadeInUp} className="mb-6 flex justify-center">
                             <div className="h-[1px] w-12 bg-brand-gold/50" />
                         </motion.div>
-                        <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight text-white drop-shadow-2xl">
+                        <motion.h1 variants={fadeInUp} className="font-luxury text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight text-white drop-shadow-2xl">
                             {t.pages.meetings.hero.title}
                         </motion.h1>
-                        <motion.p variants={fadeInUp} className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-brand-gold mb-8">
+                        <motion.p variants={fadeInUp} className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-brand-gold mb-8 font-semibold">
                             {t.pages.meetings.hero.subtitle}
                         </motion.p>
                         <motion.div variants={fadeInUp} className="flex justify-center">
-                            <div className="h-16 w-[1px] bg-brand-gold/50" />
+                            <div className="h-20 w-[1px] bg-brand-gold" />
                         </motion.div>
                     </motion.div>
                 </div>
@@ -120,7 +120,7 @@ export default function Meetings() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="font-serif text-2xl md:text-4xl leading-relaxed text-white/90"
+                        className="font-editorial text-3xl md:text-5xl leading-relaxed text-white/90 italic"
                     >
                         &quot;{t.pages.meetings.content.desc}&quot;
                     </motion.p>
@@ -195,20 +195,20 @@ export default function Meetings() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
+                        <h2 className="font-luxury text-4xl md:text-6xl text-white mb-8 tracking-wide">
                             {t.pages.meetings.packages.title}
                         </h2>
-                        <p className="text-white/70 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-white/70 text-lg md:text-xl font-editorial italic mb-12 max-w-2xl mx-auto leading-relaxed">
                             {t.pages.meetings.packages.desc}
                         </p>
                         <div className="flex flex-col md:flex-row gap-6 justify-center">
-                            <Link href="/booking" className="group relative px-8 py-4 bg-brand-gold overflow-hidden">
+                            <Link href="/booking" className="group relative px-10 py-5 bg-brand-gold overflow-hidden">
                                 <div className="absolute inset-0 w-3 bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000" />
                                 <span className="relative font-bold tracking-widest uppercase text-brand-dark text-sm">
                                     {t.pages.meetings.cta}
                                 </span>
                             </Link>
-                            <button className="px-8 py-4 border border-white/30 hover:bg-white hover:text-brand-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm text-white">
+                            <button className="px-10 py-5 border border-white/30 hover:bg-white hover:text-brand-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm text-white">
                                 Download Brochure
                             </button>
                         </div>
@@ -233,7 +233,7 @@ function VenueSection({ image, subtitle, title, description, specs, align = "lef
     ctaText?: string
 }) {
     return (
-        <section className="relative flex flex-col lg:flex-row min-h-[90vh] bg-black">
+        <section className="relative flex flex-col lg:flex-row min-h-[90vh] bg-black group">
             {/* Image Side */}
             <div className={`relative w-full lg:w-3/5 h-[50vh] lg:h-auto overflow-hidden ${align === "right" ? "lg:order-last" : "lg:order-first"}`}>
                 <motion.div
@@ -261,23 +261,23 @@ function VenueSection({ image, subtitle, title, description, specs, align = "lef
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <div className="flex items-center gap-3 mb-6 text-brand-gold/80">
-                        <div className="h-[1px] w-8 bg-brand-gold" />
-                        <span className="text-xs font-bold tracking-[0.2em] uppercase">{subtitle}</span>
+                        <div className="h-[1px] w-12 bg-brand-gold" />
+                        <span className="text-xs font-bold tracking-[0.3em] uppercase">{subtitle}</span>
                     </div>
 
-                    <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-none">
+                    <h2 className="font-luxury text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-none tracking-tight">
                         {title}
                     </h2>
 
-                    <p className="text-white/70 text-base leading-relaxed mb-8 border-l border-white/10 pl-6">
+                    <p className="text-white/70 text-lg font-editorial leading-relaxed mb-10 border-l border-white/10 pl-6">
                         {description}
                     </p>
 
-                    <div className="grid grid-cols-2 gap-8 mb-10">
+                    <div className="grid grid-cols-2 gap-8 mb-12">
                         {specs.map((spec, i) => (
                             <div key={i}>
-                                <h4 className="text-xs uppercase tracking-widest text-brand-gold mb-1">{spec.label}</h4>
-                                <p className="font-serif text-2xl text-white">{spec.value}</p>
+                                <h4 className="text-xs uppercase tracking-widest text-brand-gold mb-2">{spec.label}</h4>
+                                <p className="font-luxury text-2xl md:text-3xl text-white">{spec.value}</p>
                             </div>
                         ))}
                     </div>

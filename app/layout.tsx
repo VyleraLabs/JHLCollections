@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat, Lato, Great_Vibes } from "next/font/google"; // Using Google Fonts equivalents
+import { Playfair_Display, Montserrat, Lato, Great_Vibes, Cinzel, Cormorant_Garamond } from "next/font/google"; // Using Google Fonts equivalents
 import { AnimationProvider } from "@/components/AnimationProvider";
 import "./globals.css";
 
@@ -11,11 +11,27 @@ const playfair = Playfair_Display({
   preload: true,
 });
 
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: '--font-cinzel',
+  display: 'swap',
+  preload: true,
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  preload: true,
+});
+
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: '--font-cursive',
   display: 'swap',
+  preload: true,
 });
 
 const montserrat = Montserrat({
@@ -57,7 +73,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} ${greatVibes.variable} antialiased`}>
+      <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} ${greatVibes.variable} ${cinzel.variable} ${cormorant.variable} antialiased`}>
         <GlobalHotelSchema />
         <LanguageProvider>
           <ClientSEO />

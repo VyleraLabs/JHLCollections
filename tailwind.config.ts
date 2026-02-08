@@ -24,6 +24,8 @@ const config: Config = {
         serif: ['var(--font-playfair)', 'serif'],
         sans: ['var(--font-montserrat)', 'sans-serif'],
         lato: ['var(--font-lato)', 'sans-serif'],
+        luxury: ['var(--font-cinzel)', 'serif'],
+        editorial: ['var(--font-cormorant)', 'serif'],
       },
       keyframes: {
         'fade-in-up': {
