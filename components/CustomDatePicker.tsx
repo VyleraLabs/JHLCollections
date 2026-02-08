@@ -12,6 +12,7 @@ interface CustomDatePickerProps {
     isOpen: boolean;
     onClose: () => void;
     side?: "top" | "bottom";
+    minDate?: string; // YYYY-MM-DD
 }
 
 export default function CustomDatePicker({
@@ -20,7 +21,8 @@ export default function CustomDatePicker({
     label,
     isOpen,
     onClose,
-    side = "bottom"
+    side = "bottom",
+    minDate
 }: CustomDatePickerProps) {
     const [currentMonth, setCurrentMonth] = useState(new Date());
 
@@ -47,7 +49,11 @@ export default function CustomDatePicker({
 
     const handleDateClick = (day: number) => {
         const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
-        const formattedDate = date.toISOString().split("T")[0];
+        // Correct for timezone offset to ensure "YYYY-MM-DD" matches local date selected
+        const offset = date.getTimezoneOffset();
+        const adjustedDate = new Date(date.getTime() - (offset * 60 * 1000));
+        const formattedDate = adjustedDate.toISOString().split("T")[0];
+
         onSelect(formattedDate);
         onClose();
     };
@@ -55,7 +61,21 @@ export default function CustomDatePicker({
     const isSelected = (day: number) => {
         if (!selectedDate) return false;
         const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
-        return date.toISOString().split("T")[0] === selectedDate;
+        // Compare using local YYYY-MM-DD strings to avoid UTC shifts
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${d}` === selectedDate;
+    };
+
+    const isDisabled = (day: number) => {
+        if (!minDate) return false;
+        const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        const dateString = `${year}-${month}-${d}`;
+        return dateString < minDate;
     };
 
     const isToday = (day: number) => {
@@ -78,17 +98,20 @@ export default function CustomDatePicker({
     for (let day = 1; day <= totalDays; day++) {
         const selected = isSelected(day);
         const today = isToday(day);
+        const disabled = isDisabled(day);
 
         days.push(
             <button
                 key={day}
-                onClick={() => handleDateClick(day)}
+                onClick={() => !disabled && handleDateClick(day)}
+                disabled={disabled}
                 className={cn(
                     "h-10 w-10 rounded-full flex items-center justify-center text-xs transition-all duration-300",
-                    selected
-                        ? "bg-brand-gold text-brand-dark font-bold scale-110 shadow-lg shadow-brand-gold/20"
-                        : "text-white/80 hover:bg-white/10 hover:text-brand-gold",
-                    today && !selected && "border border-brand-gold/50 text-brand-gold"
+                    disabled ? "text-white/20 cursor-not-allowed" :
+                        selected
+                            ? "bg-brand-gold text-brand-dark font-bold scale-110 shadow-lg shadow-brand-gold/20"
+                            : "text-white/80 hover:bg-white/10 hover:text-brand-gold",
+                    today && !selected && !disabled && "border border-brand-gold/50 text-brand-gold"
                 )}
             >
                 {day}

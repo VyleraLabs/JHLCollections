@@ -19,6 +19,17 @@
   --animate-fade-in-up: fade-in-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   --animate-grow-width: grow-width 1.5s ease-out forwards;
   --animate-ken-burns: ken-burns 20s ease-out infinite alternate;
+  --animate-shimmer: shimmer 3s linear infinite;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
+  }
 
   @keyframes fade-in {
     from {

@@ -36,8 +36,8 @@ export const NavigationTabs = () => {
         setActiveTab(id);
         const element = document.getElementById(id);
         if (element) {
-            // Header is ~100px, Nav is 80px. Total offset ensuring visibility.
-            const offset = 180;
+            // Header is ~112px, Nav is ~96px. Total offset ensuring visibility.
+            const offset = 208;
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -52,15 +52,20 @@ export const NavigationTabs = () => {
 
     return (
         <nav
-            className={`sticky top-24 md:top-32 z-40 w-full transition-all duration-300 ${isSticky
-                ? "bg-royal-stone border-b border-white/20 shadow-2xl py-2"
-                : "bg-transparent py-4"
+            className={`sticky top-[96px] md:top-[112px] z-40 w-full transition-all duration-300 ${isSticky
+                ? "bg-black/80 backdrop-blur-md shadow-2xl py-2 border-t border-transparent"
+                : "bg-transparent py-4 border-t border-transparent"
                 }`}
             aria-label="Menu Categories"
         >
+            {/* Animated Golden Stream Border */}
+            {isSticky && (
+                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent animate-shimmer bg-[length:200%_auto]" />
+            )}
+
             <h2 className="sr-only">Menu Categories</h2>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-center items-center h-20">
+                <div className="flex justify-center items-center h-16 md:h-20">
                     <div className="flex space-x-2 md:space-x-8">
                         {tabs.map((tab) => (
                             <button

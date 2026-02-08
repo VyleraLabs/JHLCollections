@@ -276,8 +276,24 @@ function BookingForm() {
                                         selectedDate={formData.checkIn}
                                         isOpen={isCheckInOpen}
                                         side="bottom"
+                                        minDate={new Date().toISOString().split("T")[0]} // Disable past dates
                                         onSelect={(date) => {
-                                            setFormData(prev => ({ ...prev, checkIn: date }));
+                                            // Auto-adjust checkout if invalid
+                                            const newCheckIn = new Date(date);
+                                            const currentCheckOut = formData.checkOut ? new Date(formData.checkOut) : null;
+
+                                            let newCheckOut = formData.checkOut;
+                                            if (currentCheckOut && currentCheckOut <= newCheckIn) {
+                                                const nextDay = new Date(newCheckIn);
+                                                nextDay.setDate(nextDay.getDate() + 1);
+                                                newCheckOut = nextDay.toISOString().split("T")[0];
+                                            }
+
+                                            setFormData(prev => ({
+                                                ...prev,
+                                                checkIn: date,
+                                                checkOut: newCheckOut
+                                            }));
                                             setIsCheckInOpen(false);
                                         }}
                                         onClose={() => setIsCheckInOpen(false)}
@@ -299,6 +315,11 @@ function BookingForm() {
                                         selectedDate={formData.checkOut}
                                         isOpen={isCheckOutOpen}
                                         side="bottom"
+                                        minDate={formData.checkIn ? (() => {
+                                            const d = new Date(formData.checkIn);
+                                            d.setDate(d.getDate() + 1);
+                                            return d.toISOString().split("T")[0];
+                                        })() : new Date().toISOString().split("T")[0]} // Min check-out is check-in + 1 day
                                         onSelect={(date) => {
                                             setFormData(prev => ({ ...prev, checkOut: date }));
                                             setIsCheckOutOpen(false);
