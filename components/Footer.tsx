@@ -24,12 +24,12 @@ const Footer = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 border-t border-gray-700 pt-8">
                     <div>
-                        <h4 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.contact}</h4>
+                        <h3 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.contact}</h3>
                         <p className="text-sm opacity-80 mb-2">Gading Serpong, Tangerang</p>
                         <p className="text-sm opacity-80">+62 21 3950 3000</p>
                     </div>
                     <div>
-                        <h4 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.quickLinks}</h4>
+                        <h3 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.quickLinks}</h3>
                         <ul className="space-y-2 text-sm opacity-80">
                             <li><Link href="/" className="hover:text-brand-gold">{t.nav.home}</Link></li>
                             <li><Link href="/rooms" className="hover:text-brand-gold">{t.nav.rooms}</Link></li>
@@ -37,14 +37,14 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.legal}</h4>
+                        <h3 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.legal}</h3>
                         <ul className="space-y-2 text-sm opacity-80">
                             <li><Link href="/privacy-policy" className="hover:text-brand-gold">{t.footer.privacyPolicy}</Link></li>
                             <li><Link href="#" className="hover:text-brand-gold">{t.footer.termsOfService}</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.newsletter}</h4>
+                        <h3 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.newsletter}</h3>
                         <p className="text-sm opacity-80 mb-4">{t.footer.subscribe}</p>
                         <div className="flex">
                             <input

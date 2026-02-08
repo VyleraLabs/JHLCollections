@@ -111,6 +111,7 @@ const CookieConsent = () => {
                     <button
                         onClick={() => setIsVisible(false)}
                         className="absolute top-4 right-4 p-1 text-gray-400 hover:text-brand-dark transition-colors"
+                        aria-label="Close cookie consent banner"
                     >
                         <X className="w-5 h-5" />
                     </button>

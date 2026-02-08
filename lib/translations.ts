@@ -33,6 +33,38 @@ export interface Translations {
         facilities: { title: string; subtitle: string; description: string; cta: string };
         offers: { title: string; subtitle: string; description: string; cta: string };
     };
+    bookingPage: {
+        step1Title: string;
+        step2Title: string;
+        planYourStay: string;
+        tellUsAboutTrip: string;
+        guestDetails: string;
+        checkInLabel: string;
+        checkOutLabel: string;
+        adultsLabel: string;
+        childrenLabel: string;
+        selectDate: string;
+        adultsCount: string;
+        childrenCount: string;
+        nextStep: string;
+        fullName: string;
+        emailAddress: string;
+        phoneNumber: string;
+        fullNamePlaceholder: string;
+        emailPlaceholder: string;
+        phonePlaceholder: string;
+        bookNow: string;
+        findingRates: string;
+        redirecting: string;
+        loadingSanctuary: string;
+        validation: {
+            nameRequired: string;
+            nameInvalid: string;
+            emailInvalid: string;
+            phoneInvalid: string;
+            specialChars: string;
+        };
+    };
     booking: {
         checkIn: string;
         checkOut: string;
@@ -190,7 +222,7 @@ export const translations: Record<Language, Translations> = {
             home: "Home",
             rooms: "Rooms",
             dining: "Dining",
-            meetings: "Meetings",
+            meetings: "Meetings & Events",
             wellness: "Wellness",
             facilities: "Facilities",
             offers: "Offers",
@@ -255,6 +287,38 @@ export const translations: Record<Language, Translations> = {
                 subtitle: "Exclusive Benefits",
                 description: "Unlock exceptional privileges and bespoke experiences during your stay with our curated range of seasonal offers.",
                 cta: "View Offers"
+            },
+        },
+        bookingPage: {
+            step1Title: "Step 1",
+            step2Title: "Step 2",
+            planYourStay: "Let's Plan Your Stay",
+            tellUsAboutTrip: "Tell us about your trip",
+            guestDetails: "Guest Details",
+            checkInLabel: "Check-In",
+            checkOutLabel: "Check-Out",
+            adultsLabel: "Adults",
+            childrenLabel: "Children",
+            selectDate: "Select Date",
+            adultsCount: "Adults",
+            childrenCount: "Children",
+            nextStep: "Next Step",
+            fullName: "Full Name",
+            emailAddress: "Email Address",
+            phoneNumber: "Phone Number",
+            fullNamePlaceholder: "Enter your full name",
+            emailPlaceholder: "Enter your email",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "Book Now",
+            findingRates: "Finding Best Rates...",
+            redirecting: "Redirecting you to our secure reservation engine.",
+            loadingSanctuary: "Loading your sanctuary...",
+            validation: {
+                nameRequired: "Please enter a valid full name.",
+                nameInvalid: "Invalid characters detected. Please refine your name.",
+                emailInvalid: "Please enter a valid email address.",
+                phoneInvalid: "Please enter a valid phone number (minimum 7 digits).",
+                specialChars: "Special characters < > are not allowed for security.",
             },
         },
         booking: {
@@ -475,7 +539,7 @@ export const translations: Record<Language, Translations> = {
             home: "首页",
             rooms: "客房",
             dining: "餐饮",
-            meetings: "会议",
+            meetings: "会议·活动",
             wellness: "康体",
             facilities: "设施",
             offers: "特惠",
@@ -550,6 +614,38 @@ export const translations: Record<Language, Translations> = {
             availability: "查询空房",
             selectDate: "选择日期",
             discover: "探索",
+        },
+        bookingPage: {
+            step1Title: "第一步",
+            step2Title: "第二步",
+            planYourStay: "规划您的入住",
+            tellUsAboutTrip: "告诉我们您的行程",
+            guestDetails: "宾客信息",
+            checkInLabel: "入住",
+            checkOutLabel: "退房",
+            adultsLabel: "成人",
+            childrenLabel: "儿童",
+            selectDate: "选择日期",
+            adultsCount: "成人",
+            childrenCount: "儿童",
+            nextStep: "下一步",
+            fullName: "全名",
+            emailAddress: "电邮地址",
+            phoneNumber: "电话号码",
+            fullNamePlaceholder: "请输入您的全名",
+            emailPlaceholder: "请输入您的电邮",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "立即预订",
+            findingRates: "正在寻找最优惠价...",
+            redirecting: "正在跳转至安全订房系统。",
+            loadingSanctuary: "正在加载您的专属空间...",
+            validation: {
+                nameRequired: "请输入有效的全名。",
+                nameInvalid: "检测到无效字符。请修正您的姓名。",
+                emailInvalid: "请输入有效的电邮地址。",
+                phoneInvalid: "请输入有效的电话号码（至少7位数字）。",
+                specialChars: "出于安全考虑，不允许使用特殊字符 < >。",
+            },
         },
         footer: {
             contact: "联系我们",
@@ -760,7 +856,7 @@ export const translations: Record<Language, Translations> = {
             home: "Beranda",
             rooms: "Kamar",
             dining: "Kuliner",
-            meetings: "Pertemuan",
+            meetings: "Pertemuan & Acara",
             wellness: "Kebugaran",
             facilities: "Fasilitas",
             offers: "Penawaran",
@@ -835,6 +931,38 @@ export const translations: Record<Language, Translations> = {
             availability: "Cek Ketersediaan",
             selectDate: "Pilih Tanggal",
             discover: "Jelajahi",
+        },
+        bookingPage: {
+            step1Title: "Langkah 1",
+            step2Title: "Langkah 2",
+            planYourStay: "Rencanakan Menginap Anda",
+            tellUsAboutTrip: "Ceritakan tentang perjalanan Anda",
+            guestDetails: "Detail Tamu",
+            checkInLabel: "Check-In",
+            checkOutLabel: "Check-Out",
+            adultsLabel: "Dewasa",
+            childrenLabel: "Anak-anak",
+            selectDate: "Pilih Tanggal",
+            adultsCount: "Dewasa",
+            childrenCount: "Anak-anak",
+            nextStep: "Langkah Berikutnya",
+            fullName: "Nama Lengkap",
+            emailAddress: "Alamat Email",
+            phoneNumber: "Nomor Telepon",
+            fullNamePlaceholder: "Masukkan nama lengkap Anda",
+            emailPlaceholder: "Masukkan email Anda",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "Pesan Sekarang",
+            findingRates: "Mencari Tarif Terbaik...",
+            redirecting: "Mengalihkan Anda ke sistem reservasi aman kami.",
+            loadingSanctuary: "Memuat tempat istimewa Anda...",
+            validation: {
+                nameRequired: "Silakan masukkan nama lengkap yang valid.",
+                nameInvalid: "Karakter tidak valid terdeteksi. Silakan perbaiki nama Anda.",
+                emailInvalid: "Silakan masukkan alamat email yang valid.",
+                phoneInvalid: "Silakan masukkan nomor telepon yang valid (minimal 7 digit).",
+                specialChars: "Karakter khusus < > tidak diizinkan untuk keamanan.",
+            },
         },
         footer: {
             contact: "Kontak",
@@ -1121,6 +1249,38 @@ export const translations: Record<Language, Translations> = {
             selectDate: "Выбрать дату",
             discover: "Открыть",
         },
+        bookingPage: {
+            step1Title: "Шаг 1",
+            step2Title: "Шаг 2",
+            planYourStay: "Спланируем ваше пребывание",
+            tellUsAboutTrip: "Расскажите о вашей поездке",
+            guestDetails: "Данные гостя",
+            checkInLabel: "Заезд",
+            checkOutLabel: "Выезд",
+            adultsLabel: "Взрослые",
+            childrenLabel: "Дети",
+            selectDate: "Выбрать дату",
+            adultsCount: "Взрослые",
+            childrenCount: "Дети",
+            nextStep: "Следующий шаг",
+            fullName: "Полное имя",
+            emailAddress: "Адрес электронной почты",
+            phoneNumber: "Номер телефона",
+            fullNamePlaceholder: "Введите ваше полное имя",
+            emailPlaceholder: "Введите ваш email",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "Забронировать",
+            findingRates: "Поиск лучших тарифов...",
+            redirecting: "Перенаправление на безопасную систему бронирования.",
+            loadingSanctuary: "Загрузка вашего убежища...",
+            validation: {
+                nameRequired: "Пожалуйста, введите действительное полное имя.",
+                nameInvalid: "Обнаружены недопустимые символы. Пожалуйста, исправьте ваше имя.",
+                emailInvalid: "Пожалуйста, введите действительный адрес электронной почты.",
+                phoneInvalid: "Пожалуйста, введите действительный номер телефона (минимум 7 цифр).",
+                specialChars: "Специальные символы < > не разрешены по соображениям безопасности.",
+            },
+        },
         footer: {
             contact: "Контакты",
             quickLinks: "Быстрые ссылки",
@@ -1405,6 +1565,38 @@ export const translations: Record<Language, Translations> = {
             availability: "空室状況を確認",
             selectDate: "日付を選択",
             discover: "発見する",
+        },
+        bookingPage: {
+            step1Title: "ステップ1",
+            step2Title: "ステップ2",
+            planYourStay: "ご滞在を計画しましょう",
+            tellUsAboutTrip: "旅行についてお聞かせください",
+            guestDetails: "ゲスト詳細",
+            checkInLabel: "チェックイン",
+            checkOutLabel: "チェックアウト",
+            adultsLabel: "大人",
+            childrenLabel: "子供",
+            selectDate: "日付を選択",
+            adultsCount: "大人",
+            childrenCount: "子供",
+            nextStep: "次のステップ",
+            fullName: "氏名",
+            emailAddress: "メールアドレス",
+            phoneNumber: "電話番号",
+            fullNamePlaceholder: "氏名を入力してください",
+            emailPlaceholder: "メールアドレスを入力してください",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "今すぐ予約",
+            findingRates: "最良の料金を検索中...",
+            redirecting: "安全な予約システムにリダイレクトしています。",
+            loadingSanctuary: "あなたの聖域を読み込み中...",
+            validation: {
+                nameRequired: "有効な氏名を入力してください。",
+                nameInvalid: "無効な文字が検出されました。氏名を修正してください。",
+                emailInvalid: "有効なメールアドレスを入力してください。",
+                phoneInvalid: "有効な電話番号を入力してください（最低7桁）。",
+                specialChars: "セキュリティ上の理由により、特殊文字 < > は使用できません。",
+            },
         },
         footer: {
             contact: "お問い合わせ",
@@ -1691,6 +1883,38 @@ export const translations: Record<Language, Translations> = {
             selectDate: "اختر التاريخ",
             discover: "اكتشف",
         },
+        bookingPage: {
+            step1Title: "الخطوة 1",
+            step2Title: "الخطوة 2",
+            planYourStay: "لنخطط لإقامتك",
+            tellUsAboutTrip: "أخبرنا عن رحلتك",
+            guestDetails: "تفاصيل الضيف",
+            checkInLabel: "تسجيل الوصول",
+            checkOutLabel: "تسجيل المغادرة",
+            adultsLabel: "البالغين",
+            childrenLabel: "الأطفال",
+            selectDate: "اختر التاريخ",
+            adultsCount: "البالغين",
+            childrenCount: "الأطفال",
+            nextStep: "الخطوة التالية",
+            fullName: "الاسم الكامل",
+            emailAddress: "عنوان البريد الإلكتروني",
+            phoneNumber: "رقم الهاتف",
+            fullNamePlaceholder: "أدخل اسمك الكامل",
+            emailPlaceholder: "أدخل بريدك الإلكتروني",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "احجز الآن",
+            findingRates: "البحث عن أفضل الأسعار...",
+            redirecting: "إعادة التوجيه إلى نظام الحجز الآمن.",
+            loadingSanctuary: "تحميل ملاذك...",
+            validation: {
+                nameRequired: "الرجاء إدخال اسم كامل صحيح.",
+                nameInvalid: "تم اكتشاف أحرف غير صالحة. الرجاء تصحيح اسمك.",
+                emailInvalid: "الرجاء إدخال عنوان بريد إلكتروني صحيح.",
+                phoneInvalid: "الرجاء إدخال رقم هاتف صحيح (7 أرقام على الأقل).",
+                specialChars: "الأحرف الخاصة < > غير مسموح بها لأسباب أمنية.",
+            },
+        },
         footer: {
             contact: "اتصل",
             quickLinks: "روابط سريعة",
@@ -1900,7 +2124,7 @@ export const translations: Record<Language, Translations> = {
             home: "홈",
             rooms: "객실",
             dining: "다이닝",
-            meetings: "미팅",
+            meetings: "미팅 & 이벤트",
             wellness: "웰니스",
             facilities: "시설",
             offers: "오퍼",
@@ -1975,6 +2199,38 @@ export const translations: Record<Language, Translations> = {
             availability: "가능 여부 확인",
             selectDate: "날짜 선택",
             discover: "발견",
+        },
+        bookingPage: {
+            step1Title: "1단계",
+            step2Title: "2단계",
+            planYourStay: "숙박 계획하기",
+            tellUsAboutTrip: "여행에 대해 알려주세요",
+            guestDetails: "게스트 세부정보",
+            checkInLabel: "체크인",
+            checkOutLabel: "체크아웃",
+            adultsLabel: "성인",
+            childrenLabel: "어린이",
+            selectDate: "날짜 선택",
+            adultsCount: "성인",
+            childrenCount: "어린이",
+            nextStep: "다음 단계",
+            fullName: "성명",
+            emailAddress: "이메일 주소",
+            phoneNumber: "전화번호",
+            fullNamePlaceholder: "성명을 입력하세요",
+            emailPlaceholder: "이메일을 입력하세요",
+            phonePlaceholder: "812 3456 7890",
+            bookNow: "지금 예약",
+            findingRates: "최저가 검색 중...",
+            redirecting: "안전한 예약 시스템으로 리디렉션 중입니다.",
+            loadingSanctuary: "당신의 안식처를 불러오는 중...",
+            validation: {
+                nameRequired: "유효한 성명을 입력하세요.",
+                nameInvalid: "유효하지 않은 문자가 감지되었습니다. 성명을 수정하세요.",
+                emailInvalid: "유효한 이메일 주소를 입력하세요.",
+                phoneInvalid: "유효한 전화번호를 입력하세요 (최소 7자리).",
+                specialChars: "보안을 위해 특수 문자 < >는 허용되지 않습니다.",
+            },
         },
         footer: {
             contact: "연락처",

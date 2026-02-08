@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import CustomDatePicker from "@/components/CustomDatePicker";
+import { useLanguage } from "@/context/LanguageContext";
 
 const countryCodes = [
     { code: "+62", country: "Indonesia", flag: "🇮🇩" },
@@ -39,6 +40,7 @@ const ValidationError = ({ message }: { message: string | null }) => (
 );
 
 function BookingForm() {
+    const { t } = useLanguage();
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -72,7 +74,7 @@ function BookingForm() {
     }, [searchParams]);
 
     const formatDateDisplay = (dateStr: string) => {
-        if (!dateStr) return "Select Date";
+        if (!dateStr) return t.bookingPage.selectDate;
         const date = new Date(dateStr);
         return date.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     };
@@ -88,7 +90,7 @@ function BookingForm() {
         // Block < and > signs proactively for name and general text inputs
         if (name === "name" || name === "phone" || name === "email") {
             if (/[<>]/.test(value)) {
-                setErrors(prev => ({ ...prev, [name]: "Special characters < > are not allowed for security." }));
+                setErrors(prev => ({ ...prev, [name]: t.bookingPage.validation.specialChars }));
 
                 // Auto-dismiss after 3 seconds
                 setTimeout(() => {
@@ -140,19 +142,19 @@ function BookingForm() {
 
         // Strict Validation
         if (!formData.name.trim() || formData.name.length < 2) {
-            setErrors(prev => ({ ...prev, name: "Please enter a valid full name." }));
+            setErrors(prev => ({ ...prev, name: t.bookingPage.validation.nameRequired }));
             return;
         }
         if (/[<>]/.test(formData.name) || /<script/i.test(formData.name)) {
-            setErrors(prev => ({ ...prev, name: "Invalid characters detected. Please refine your name." }));
+            setErrors(prev => ({ ...prev, name: t.bookingPage.validation.nameInvalid }));
             return;
         }
         if (!validateEmail(formData.email)) {
-            setErrors(prev => ({ ...prev, email: "Please enter a valid email address." }));
+            setErrors(prev => ({ ...prev, email: t.bookingPage.validation.emailInvalid }));
             return;
         }
         if (!validatePhone(formData.phone)) {
-            setErrors(prev => ({ ...prev, phone: "Please enter a valid phone number (minimum 7 digits)." }));
+            setErrors(prev => ({ ...prev, phone: t.bookingPage.validation.phoneInvalid }));
             return;
         }
 
@@ -232,7 +234,7 @@ function BookingForm() {
                     <div className={`h-[2px] w-12 transition-colors ${step >= 2 ? 'bg-brand-gold' : 'bg-white/10'}`}></div>
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= 2 ? 'bg-brand-gold text-brand-dark' : 'bg-white/10 text-white/40'}`}>2</div>
                 </div>
-                <span className="text-brand-gold font-serif italic text-lg">Let's Plan Your Stay</span>
+                <span className="text-brand-gold font-serif italic text-lg">{t.bookingPage.planYourStay}</span>
             </div>
 
             <AnimatePresence mode="wait">
@@ -246,8 +248,8 @@ function BookingForm() {
                         <div className="inline-block p-4 rounded-full bg-brand-gold/20 mb-6">
                             <CheckCircle2 className="text-brand-gold animate-pulse" size={48} />
                         </div>
-                        <h2 className="text-3xl font-serif text-white mb-4">Finding Best Rates...</h2>
-                        <p className="text-white/60">Redirecting you to our secure reservation engine.</p>
+                        <h2 className="text-3xl font-serif text-white mb-4">{t.bookingPage.findingRates}</h2>
+                        <p className="text-white/60">{t.bookingPage.redirecting}</p>
                     </motion.div>
                 ) : step === 1 ? (
                     <motion.div
@@ -256,12 +258,12 @@ function BookingForm() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                     >
-                        <h2 className="text-3xl font-serif text-white mb-8">Tell us about your trip</h2>
+                        <h2 className="text-3xl font-serif text-white mb-8">{t.bookingPage.tellUsAboutTrip}</h2>
 
                         <div className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2 relative">
-                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Check-In</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.checkInLabel}</label>
                                     <div
                                         onClick={() => setIsCheckInOpen(!isCheckInOpen)}
                                         className="relative group cursor-pointer"
@@ -300,7 +302,7 @@ function BookingForm() {
                                     />
                                 </div>
                                 <div className="space-y-2 relative">
-                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Check-Out</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.checkOutLabel}</label>
                                     <div
                                         onClick={() => setIsCheckOutOpen(!isCheckOutOpen)}
                                         className="relative group cursor-pointer"
@@ -311,7 +313,7 @@ function BookingForm() {
                                         </div>
                                     </div>
                                     <CustomDatePicker
-                                        label="Check-Out"
+                                        label={t.bookingPage.checkOutLabel}
                                         selectedDate={formData.checkOut}
                                         isOpen={isCheckOutOpen}
                                         side="bottom"
@@ -331,25 +333,25 @@ function BookingForm() {
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Adults</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.adultsLabel}</label>
                                     <select
                                         name="adults"
                                         value={formData.adults}
                                         onChange={handleChange}
                                         className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
                                     >
-                                        {[1, 2, 3, 4].map(n => <option key={n} value={n} className="bg-brand-dark">{n} Adults</option>)}
+                                        {[1, 2, 3, 4].map(n => <option key={n} value={n} className="bg-brand-dark">{n} {t.bookingPage.adultsCount}</option>)}
                                     </select>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Children</label>
+                                    <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.childrenLabel}</label>
                                     <select
                                         name="children"
                                         value={formData.children}
                                         onChange={handleChange}
                                         className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
                                     >
-                                        {[0, 1, 2, 3].map(n => <option key={n} value={n} className="bg-brand-dark">{n} Children</option>)}
+                                        {[0, 1, 2, 3].map(n => <option key={n} value={n} className="bg-brand-dark">{n} {t.bookingPage.childrenCount}</option>)}
                                     </select>
                                 </div>
                             </div>
@@ -358,7 +360,7 @@ function BookingForm() {
                                 onClick={handleNext}
                                 className="w-full bg-brand-gold text-brand-dark py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all duration-300 mt-8 flex items-center justify-center gap-2 group"
                             >
-                                Next Step
+                                {t.bookingPage.nextStep}
                                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
@@ -374,19 +376,19 @@ function BookingForm() {
                             <button onClick={handleBack} className="text-white/40 hover:text-brand-gold transition-colors">
                                 <ArrowLeft size={24} />
                             </button>
-                            <h2 className="text-3xl font-serif text-white">Guest Details</h2>
+                            <h2 className="text-3xl font-serif text-white">{t.bookingPage.guestDetails}</h2>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Full Name</label>
+                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.fullName}</label>
                                 <div className="relative">
                                     <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
                                     <input
                                         required
                                         type="text"
                                         name="name"
-                                        placeholder="Enter your full name"
+                                        placeholder={t.bookingPage.fullNamePlaceholder}
                                         value={formData.name}
                                         onChange={handleChange}
                                         className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.name ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
@@ -396,14 +398,14 @@ function BookingForm() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Email Address</label>
+                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.emailAddress}</label>
                                 <div className="relative">
                                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
                                     <input
                                         required
                                         type="email"
                                         name="email"
-                                        placeholder="Enter your email"
+                                        placeholder={t.bookingPage.emailPlaceholder}
                                         value={formData.email}
                                         onChange={handleChange}
                                         className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.email ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
@@ -413,7 +415,7 @@ function BookingForm() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Phone Number</label>
+                                <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.phoneNumber}</label>
                                 <div className="flex gap-4">
                                     <select
                                         name="phoneCode"
@@ -433,7 +435,7 @@ function BookingForm() {
                                             required
                                             type="tel"
                                             name="phone"
-                                            placeholder="812 3456 7890"
+                                            placeholder={t.bookingPage.phonePlaceholder}
                                             value={formData.phone}
                                             onChange={handleChange}
                                             className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.phone ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
@@ -447,7 +449,7 @@ function BookingForm() {
                                 type="submit"
                                 className="w-full bg-brand-gold text-brand-dark py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all duration-300 mt-8 flex items-center justify-center gap-2"
                             >
-                                Book Now
+                                {t.bookingPage.bookNow}
                                 <ChevronRight size={18} />
                             </button>
                         </form>

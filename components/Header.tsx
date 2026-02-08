@@ -35,7 +35,7 @@ export default function Header() {
     const NAV_LINKS = [
         { name: t.nav.rooms, href: "/rooms" },
         { name: t.nav.dining, href: "/dining" },
-        { name: t.nav.meetings, href: "/meetings" },
+        { name: t.nav.meetings, href: "/events" },
         { name: t.nav.wellness, href: "/wellness" },
         { name: t.nav.facilities, href: "/facilities" },
         { name: t.nav.offers, href: "/offers" },
@@ -256,7 +256,7 @@ export default function Header() {
                                 { name: t.nav.home, href: "/", image: "/assets/original/1mc6912000qshhrwa9EE8.jpg", subtitle: t.hero.welcome },
                                 { name: t.nav.rooms, href: "/rooms", image: "/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp", subtitle: t.categories.rooms.subtitle },
                                 { name: t.nav.dining, href: "/dining", image: "/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp", subtitle: t.categories.dining.subtitle },
-                                { name: t.nav.meetings, href: "/meetings", image: "/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp", subtitle: t.categories.meetings.subtitle },
+                                { name: t.nav.meetings, href: "/events", image: "/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp", subtitle: t.categories.meetings.subtitle },
                                 { name: t.nav.wellness, href: "/wellness", image: "/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp", subtitle: t.categories.wellness.subtitle },
                                 { name: t.nav.facilities, href: "/facilities", image: "/assets/original/12-edit.jpg", subtitle: t.categories.facilities.subtitle },
                                 { name: t.nav.offers, href: "/offers", image: "/assets/original/img-16d5a22e-570d-4d2c-b931-948176ffc404.webp", subtitle: t.categories.offers.subtitle },

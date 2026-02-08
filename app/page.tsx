@@ -164,7 +164,7 @@ export default function Home() {
             <p className="text-gray-300 mb-8 max-w-md line-clamp-2 md:line-clamp-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               {t.categories.meetings.description}
             </p>
-            <Link href="/meetings" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
+            <Link href="/events" className="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b-2 border-brand-gold pb-2 hover:text-brand-gold transition-colors">
               {t.categories.meetings.cta}
             </Link>
           </div>
