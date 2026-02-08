@@ -66,7 +66,7 @@ export default function Meetings() {
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
     };
 
     const stagger = {
@@ -115,12 +115,12 @@ export default function Meetings() {
 
             {/* Introduction - Editorial Style */}
             <section className="py-24 px-6 md:px-12 bg-brand-dark relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-3xl mx-auto text-center">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="font-editorial text-3xl md:text-5xl leading-relaxed text-white/90 italic"
+                        className="font-editorial text-2xl md:text-3xl leading-loose text-white/80 italic font-light"
                     >
                         &quot;{t.pages.meetings.content.desc}&quot;
                     </motion.p>
