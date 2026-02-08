@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Wifi, Tv, Coffee, Wind } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Rooms() {
     const { t } = useLanguage();

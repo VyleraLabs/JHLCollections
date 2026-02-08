@@ -6,12 +6,54 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import JsonLd from "@/components/JsonLd";
 
 export default function Wellness() {
     const { t } = useLanguage();
 
+    const wellnessSchema = {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "JHL Solitaire Gading Serpong",
+        "url": "https://jhlcollections.com/wellness",
+        "parentOrganization": {
+            "@type": "Hotel",
+            "name": "JHL Solitaire Gading Serpong"
+        },
+        "department": [
+            {
+                "@type": "HealthAndBeautyBusiness",
+                "name": "Acqua Spa",
+                "description": "Luxury adult wellness & Halotherapy offering holistic treatments.",
+                "image": "https://jhlcollections.com/assets/wellness/acqua-spa.jpg",
+                "priceRange": "$$$",
+                "openingHours": "09:00-22:00",
+                "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
+            },
+            {
+                "@type": "HealthAndBeautyBusiness",
+                "name": "Acquaree Kids Spa",
+                "description": "Indonesia’s first specialized wellness journey for children, combining fun and relaxation.",
+                "image": "https://jhlcollections.com/assets/wellness/acquaree.jpg",
+                "priceRange": "$$",
+                "openingHours": "10:00-20:00",
+                "audience": { "@type": "Audience", "audienceType": "Children" },
+                "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
+            },
+            {
+                "@type": "BeautySalon",
+                "name": "La Mere",
+                "description": "Professional beauty and hair salon offering premium styling and treatments.",
+                "image": "https://jhlcollections.com/assets/wellness/la-mere.jpg",
+                "priceRange": "$$",
+                "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-brand-off-white">
+            <JsonLd data={wellnessSchema} />
             <Header />
             <div className="relative h-[60vh] bg-gray-900">
                 <Image
