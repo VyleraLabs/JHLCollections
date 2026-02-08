@@ -175,7 +175,7 @@ export default function MeetingRooms() {
                             <Link
                                 href="https://wa.me/628118822257"
                                 target="_blank"
-                                className="ml-8 px-5 py-2 bg-brand-gold text-brand-dark font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.3)] hover:shadow-[0_0_25px_rgba(198,168,124,0.6)]"
+                                className="ml-8 px-6 h-9 flex items-center justify-center bg-brand-gold text-brand-dark font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.3)] hover:shadow-[0_0_25px_rgba(198,168,124,0.6)]"
                             >
                                 Contact Planner
                             </Link>
