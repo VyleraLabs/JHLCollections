@@ -11,7 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { HeroSection } from "@/components/royal-eight/HeroSection";
 import { PromoIntegration } from "@/components/PromoIntegration";
-import { SchemaGenerator } from "@/components/SchemaGenerator";
+
 import { MENU_ITEMS } from "@/data/menu";
 
 export default function RoyalEightLayout({
@@ -34,7 +34,7 @@ export default function RoyalEightLayout({
             {/* Integrations */}
             <PromoIntegration />
             {/* Schema Generator - using English fallbacks */}
-            <SchemaGenerator menuData={MENU_ITEMS} specialOffers={specialOffers} />
+
 
             {/* Hero & Navigation */}
             <HeroSection />

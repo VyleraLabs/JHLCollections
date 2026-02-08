@@ -52,10 +52,50 @@ export default function RoyalEightPage() {
         { code: 'ko', flag: "🇰🇷", label: "KO" }
     ];
 
+    import JsonLd from "@/components/JsonLd";
+
     const activeLang = languages.find(l => l.code === language) || languages[0];
+
+    // Generate Schema Markup
+    const royalEightSchema = {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Royal Eight Chinese Dining",
+        "description": "Authentic Chinese Fine Dining at JHL Solitaire Gading Serpong, featuring 8 VIP private dining rooms and legendary Master Head Chef Chong Kok Leong.",
+        "image": "https://jhlcollections.com/assets/royal-eight/hero.webp",
+        "servesCuisine": "Chinese",
+        "priceRange": "$$$",
+        "telephone": "+62 21 3950 3000",
+        "url": "https://jhlcollections.com/dining/royal-eight",
+        "parentOrganization": {
+            "@type": "Hotel",
+            "name": "JHL Solitaire Gading Serpong"
+        },
+        "hasMenu": {
+            "@type": "Menu",
+            "name": "Signature Sets",
+            "hasMenuSection": [
+                {
+                    "@type": "MenuSection",
+                    "name": "Banquet",
+                    "hasMenuItem": {
+                        "@type": "MenuItem",
+                        "name": "Tang Dynasty Set Menu",
+                        "description": "10-course banquet for 10 persons",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "4888000",
+                            "priceCurrency": "IDR"
+                        }
+                    }
+                }
+            ]
+        }
+    };
 
     return (
         <div className="w-full py-12 space-y-12">
+            <JsonLd data={royalEightSchema} />
 
             {/* Promo Section */}
             <section id="special-offers" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
