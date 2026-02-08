@@ -95,15 +95,15 @@ export default function Meetings() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={stagger}
-                        className="max-w-4xl"
+                        className="max-w-4xl bg-black/40 backdrop-blur-sm p-8 md:p-16 border border-white/10 shadow-2xl"
                     >
                         <motion.div variants={fadeInUp} className="mb-6 flex justify-center">
-                            <div className="h-[1px] w-12 bg-brand-gold/50" />
+                            <div className="h-[1px] w-12 bg-user-gold/80" />
                         </motion.div>
                         <motion.h1 variants={fadeInUp} className="font-luxury text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight text-white drop-shadow-2xl">
                             {t.pages.meetings.hero.title}
                         </motion.h1>
-                        <motion.p variants={fadeInUp} className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-brand-gold mb-8 font-semibold">
+                        <motion.p variants={fadeInUp} className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-brand-gold mb-8 font-bold drop-shadow-md">
                             {t.pages.meetings.hero.subtitle}
                         </motion.p>
                         <motion.div variants={fadeInUp} className="flex justify-center">
