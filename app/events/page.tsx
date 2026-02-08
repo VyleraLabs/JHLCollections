@@ -194,10 +194,10 @@ export default function Meetings() {
             </div>
 
             {/* Packages / Inquiry Section */}
-            </section>
+            {/* Packages / Inquiry Section - Removed */}
 
             <Footer />
-        </main >
+        </main>
     );
 }
 
