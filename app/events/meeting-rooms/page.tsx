@@ -150,19 +150,22 @@ export default function MeetingRooms() {
             <AnimatePresence>
                 {isScrolledPastHero && (
                     <motion.div
-                        initial={{ y: -100, opacity: 0 }}
+                        initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -100, opacity: 0 }}
+                        exit={{ y: -20, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed top-[80px] left-0 right-0 z-40 bg-zinc-950/90 backdrop-blur-md border-b border-white/10 hidden lg:block"
+                        className="fixed top-[100px] left-0 right-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-white/10 hidden lg:block shadow-2xl"
                     >
-                        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                        {/* Animated Golden Stream Border */}
+                        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-gold to-transparent animate-shimmer bg-[length:200%_auto] z-50" />
+
+                        <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
                             <div className="flex items-center gap-8 overflow-x-auto no-scrollbar">
                                 {meetingRooms.map((room) => (
                                     <button
                                         key={room.name}
                                         onClick={() => scrollToSection(room.name)}
-                                        className={`text-sm uppercase tracking-widest transition-colors whitespace-nowrap ${activeSection === room.name ? "text-brand-gold" : "text-white/60 hover:text-white"
+                                        className={`text-xs uppercase tracking-[0.2em] transition-colors whitespace-nowrap font-medium ${activeSection === room.name ? "text-brand-gold" : "text-white/50 hover:text-white"
                                             }`}
                                     >
                                         {room.name}
@@ -170,9 +173,9 @@ export default function MeetingRooms() {
                                 ))}
                             </div>
                             <Link
-                                href="https://wa.me/628118822257" // Placeholder - Update with actual number if different
+                                href="https://wa.me/628118822257"
                                 target="_blank"
-                                className="ml-8 px-6 py-2 bg-brand-gold text-brand-dark font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.5)] animate-pulse-slow"
+                                className="ml-8 px-5 py-2 bg-brand-gold text-brand-dark font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.3)] hover:shadow-[0_0_25px_rgba(198,168,124,0.6)]"
                             >
                                 Contact Planner
                             </Link>
