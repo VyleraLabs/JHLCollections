@@ -154,7 +154,7 @@ export default function MeetingRooms() {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -20, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed top-[100px] left-0 right-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-white/10 hidden lg:block shadow-2xl"
+                        className="fixed top-[112px] left-0 right-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-white/10 hidden lg:block shadow-2xl"
                     >
                         {/* Animated Golden Stream Border */}
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-gold to-transparent animate-shimmer bg-[length:200%_auto] z-50" />
