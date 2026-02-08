@@ -179,7 +179,7 @@ export default function Meetings() {
 
                 {/* Meeting Rooms Link */}
                 <VenueSection
-                    image="/assets/meetings/citrine.webp"
+                    image="/assets/meetings/hero.webp"
                     subtitle="Level 6 • 7 Rooms • Flexible Configs"
                     title="Meeting Rooms"
                     description="From board meetings to corporate workshops, our 7 distinct meeting venues on Level 6 offer state-of-the-art technology and versatile layouts."
@@ -194,45 +194,10 @@ export default function Meetings() {
             </div>
 
             {/* Packages / Inquiry Section */}
-            <section className="relative py-32 flex items-center justify-center bg-zinc-900 border-t border-white/5">
-                <div className="absolute inset-0 opacity-20">
-                    <Image
-                        src="/assets/original/img-12-edit.jpg"
-                        alt="Background Pattern"
-                        fill
-                        className="object-cover grayscale"
-                    />
-                </div>
-                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <h2 className="font-luxury text-4xl md:text-6xl text-white mb-8 tracking-wide">
-                            {t.pages.meetings.packages.title}
-                        </h2>
-                        <p className="text-white/70 text-lg md:text-xl font-editorial italic mb-12 max-w-2xl mx-auto leading-relaxed">
-                            {t.pages.meetings.packages.desc}
-                        </p>
-                        <div className="flex flex-col md:flex-row gap-6 justify-center">
-                            <Link href="/booking" className="group relative px-10 py-5 bg-brand-gold overflow-hidden">
-                                <div className="absolute inset-0 w-3 bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000" />
-                                <span className="relative font-bold tracking-widest uppercase text-brand-dark text-sm">
-                                    {t.pages.meetings.cta}
-                                </span>
-                            </Link>
-                            <button className="px-10 py-5 border border-white/30 hover:bg-white hover:text-brand-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm text-white">
-                                Download Brochure
-                            </button>
-                        </div>
-                    </motion.div>
-                </div>
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }
 
