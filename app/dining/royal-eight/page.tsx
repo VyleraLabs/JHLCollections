@@ -94,6 +94,34 @@ export default function RoyalEightPage() {
             "postalCode": "15810",
             "addressCountry": "ID"
         },
+        "seatingCapacity": 250,
+        "keywords": "Luxurious Chinese Food, Authentic Chinese Food, 5 Star Chinese Food, Dim Sum, Family Dining, Business Meetings",
+        "employee": {
+            "@type": "Person",
+            "name": "Chong Kok Leong",
+            "jobTitle": "Master Head Chef",
+            "nationality": "China",
+            "description": "Legendary Master Head Chef from China with decades of culinary excellence."
+        },
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "8 VIP Private Dining Rooms",
+                "value": true,
+                "description": "Exclusive private rooms with capacity ranging from 5 to 50 guests, perfect for business or family gatherings."
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Event & Wedding Venue",
+                "value": true,
+                "description": "Available for weddings, engagements, and corporate events."
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Meeting Facilities",
+                "value": true
+            }
+        ],
         "parentOrganization": {
             "@type": "Hotel",
             "name": "JHL Solitaire Gading Serpong",
