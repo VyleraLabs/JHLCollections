@@ -174,22 +174,22 @@ export default function Meetings() {
                     ]}
                     align="right"
                     ctaLink="/dining/royal-eight"
-                    ctaText="Explore Royal Eight"
+                    ctaText={t.categories.dining.cta}
                 />
 
                 {/* Meeting Rooms Link */}
                 <VenueSection
                     image="/assets/meetings/hero.jpg"
-                    subtitle="Level 6 • 7 Rooms • Flexible Configs"
-                    title="Meeting Rooms"
-                    description="From board meetings to corporate workshops, our 7 distinct meeting venues on Level 6 offer state-of-the-art technology and versatile layouts."
+                    subtitle={t.pages.meetings.venues.meetingRooms.subtitle}
+                    title={t.pages.meetings.venues.meetingRooms.name}
+                    description={t.pages.meetings.venues.meetingRooms.description}
                     specs={[
                         { label: "Venues", value: "7 Rooms" },
-                        { label: "Max Capacity", value: "60 Pax" }
+                        { label: "Max Capacity", value: `60 ${t.pages.meetingRooms.specs.capacity}` }
                     ]}
                     align="left"
                     ctaLink="/events/meeting-rooms"
-                    ctaText="View Meeting Rooms"
+                    ctaText={t.pages.meetings.venues.meetingRooms.cta}
                 />
             </div>
 

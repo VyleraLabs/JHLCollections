@@ -159,12 +159,37 @@ export interface Translations {
                     ceremony: string;
                     reception: string;
                 };
+                meetingRooms: {
+                    name: string;
+                    subtitle: string;
+                    description: string;
+                    cta: string;
+                };
             };
             packages: {
                 title: string;
                 desc: string;
             };
             cta: string;
+        };
+        meetingRooms: {
+            hero: { title: string; subtitle: string };
+            intro: string;
+            subnav: { planner: string };
+            specs: {
+                size: string;
+                ceiling: string;
+                capacity: string;
+            };
+            rooms: {
+                citrine: { name: string; desc: string };
+                zircon: { name: string; desc: string };
+                lapisLazuli: { name: string; desc: string };
+                moonstone: { name: string; desc: string };
+                garnet: { name: string; desc: string };
+                topaz: { name: string; desc: string };
+                tourmaline: { name: string; desc: string };
+            };
         };
         wellness: {
             hero: { title: string; subtitle: string };
@@ -438,6 +463,12 @@ export const translations: Record<Language, Translations> = {
                         location: "Indoor",
                         ceremony: "250 PAX",
                         reception: "250 PAX"
+                    },
+                    meetingRooms: {
+                        name: "Meeting Rooms",
+                        subtitle: "Level 6 • 7 Rooms • Flexible Configs",
+                        description: "From board meetings to corporate workshops, our 7 distinct meeting venues on Level 6 offer state-of-the-art technology and versatile layouts.",
+                        cta: "View Meeting Rooms"
                     }
                 },
                 packages: {
@@ -445,6 +476,46 @@ export const translations: Record<Language, Translations> = {
                     desc: "Tailored to your needs, our event packages offer comprehensive services including premium catering, decoration, and dedicated event coordination."
                 },
                 cta: "Enquire Now"
+            },
+            meetingRooms: {
+                hero: { title: "Meeting Rooms", subtitle: "Where Inspiration Meets Productivity" },
+                intro: "Our professional and inspiring environment is ideal for hosting conferences. With modern meeting spaces equipped with state-of-the-art technology, we can accommodate various setups for seamless execution. Dedicated support and tailored catering options ensure a successful gathering, making it the perfect choice for business events.",
+                subnav: { planner: "Contact Planner" },
+                specs: {
+                    size: "Size",
+                    ceiling: "Ceiling",
+                    capacity: "Pax"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "This 92-square-meter space on the 6th floor offers a functional layout with a 2.4-meter ceiling. It is ideal for mid-sized meetings or corporate gatherings, providing a conducive environment for productive discussions."
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "Located on the 6th floor, this 92-square-meter venue features a modern design and a 2.4-meter ceiling, making it perfect for hosting meetings or workshops with flexibility and convenience."
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "Spanning 92 square meters, this venue is situated on the 6th floor with a 2.4-meter ceiling. It offers a versatile setup suitable for corporate events or private functions, combining comfort with practicality."
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "This 80-square-meter meeting space on the 6th floor is designed for efficiency and focus. With a 2.4-meter ceiling, it is the perfect choice for small to medium-sized gatherings that demand a professional atmosphere."
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "Featuring 80 square meters of space on the 6th floor, this room offers a welcoming environment with a 2.4-meter ceiling. It is ideal for board meetings, brainstorming sessions, or private events."
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "A stylish 80-square-meter space on the 6th floor, complemented by a 2.4-meter ceiling, this venue is designed to host gatherings with ease, providing a polished setting for any event."
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "The 67-square-meter Tourmaline Room on the 6th floor boasts a sleek design and a 2.4-meter ceiling. It is a versatile choice for intimate meetings or small-scale events, ensuring an efficient and comfortable experience."
+                    }
+                }
             },
             wellness: {
                 hero: { title: "Wellness & Spa", subtitle: "Rejuvenate Your Senses" },
@@ -736,25 +807,31 @@ export const translations: Record<Language, Translations> = {
                 venues: {
                     title: "卓越场地",
                     skyBallroom: {
-                        name: "天空宴会厅 (Sky Ballroom)",
-                        description: "天空宴会厅为任何特殊场合营造出非凡的氛围。是举办婚礼、毕业典礼或私人活动的理想之选，这一卓越场地位于 15 层，距离地面 200 英尺。配备先进的视听技术、高速无线网络和从地板到天花板的全景窗户，让自然光充盈整个空间。",
+                        name: "Sky Ballroom",
+                        description: "天空宴会厅拥有 180 度城市全景，为婚礼、企业盛会和社交活动提供绝佳背景。配备尖端科技，并由我们的专业活动团队提供鼎力支持。",
                         location: "室内 (15层)",
                         ceremony: "200 人",
                         reception: "250 人"
                     },
                     skyGarden: {
-                        name: "天空花园 (Sky Garden)",
+                        name: "Sky Garden",
                         description: "一个迷人的屋顶圣地，适合举办亲密的婚礼和聚会，在这里，壮丽的景色和永恒的优雅营造出难忘的时刻。",
                         location: "屋顶 / 私人",
                         ceremony: "500 人",
                         reception: "50 人"
                     },
                     royalEight: {
-                        name: "皇家八号中餐厅 (Royal Eight)",
+                        name: "Royal Eight",
                         description: "位于丹格朗 Gading Serpong 核心地带的中式餐饮体验。作为我们招牌半正式餐饮系列的一部分，皇家八号全天供应精选的午餐、晚餐和甜点。餐厅现代的氛围和精心设计的风格为和谐的烹饪之旅提供了完美的环境。",
                         location: "室内",
                         ceremony: "250 人",
                         reception: "250 人"
+                    },
+                    meetingRooms: {
+                        name: "会议室",
+                        subtitle: "6层 • 7间会议室 • 灵活布局",
+                        description: "从董事会议到企业研讨会，我们位于6层的7个不同会议场地提供先进的技术和多样的布局。",
+                        cta: "查看会议室"
                     }
                 },
                 packages: {
@@ -762,6 +839,46 @@ export const translations: Record<Language, Translations> = {
                     desc: "我们的活动配套方案根据您的需求量身定制，提供包括高级餐饮、装饰和专属活动协调在内的全面服务。"
                 },
                 cta: "立即咨询"
+            },
+            meetingRooms: {
+                hero: { title: "会议室", subtitle: "灵感与效率的交汇点" },
+                intro: "我们的专业且充满灵感的环境是举办会议的理想场所。配备先进技术的现代会议空间，我们可以容纳各种布局以确保完美执行。专业的支持和定制的餐饮选择确保聚会的成功，是商务活动的完美选择。",
+                subnav: { planner: "联系策划师" },
+                specs: {
+                    size: "面积",
+                    ceiling: "层高",
+                    capacity: "人数"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "位于6层，面积92平方米，布局功能齐全，层高2.4米。非常适合中型会议或企业聚会，为高效讨论提供有利环境。"
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "位于6层，面积92平方米，设计现代，层高2.4米。非常适合灵活便捷地举办会议或工作坊。"
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "面积92平方米，位于6层，层高2.4米。提供适合企业活动或私人聚会的多功能设置，兼具舒适度与实用性。"
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "位于6层，面积80平方米，专为高效和专注而设计。层高2.4米，是需要专业氛围的中小型聚会的理想选择。"
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "位于6层，面积80平方米，环境温馨，层高2.4米。非常适合董事会议、头脑风暴会议或私人活动。"
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "位于6层，面积80平方米，风格时尚，层高2.4米。旨在轻松举办各种聚会，为各种活动提供精致的场所。"
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "位于6层，面积67平方米，设计简洁，层高2.4米。是举办小型会议或规模较小活动的灵活之选，确保高效舒适的体验。"
+                    }
+                }
             },
             wellness: {
                 hero: { title: "水疗与康体", subtitle: "焕发您的感官" },
@@ -1070,15 +1187,61 @@ export const translations: Record<Language, Translations> = {
                         name: "Royal Eight Chinese Dining",
                         description: "Pengalaman bersantap Tionghoa di jantung Gading Serpong, Tangerang. Sebagai bagian dari koleksi semi-fine dining khas kami, Royal Eight menyajikan pilihan makan siang, makan malam, dan hidangan penutup yang lezat sepanjang hari. Suasana kontemporer restoran dan desain yang dirancang dengan cermat memberikan pengaturan yang sempurna untuk perjalanan kuliner yang harmonis.",
                         location: "Indoor",
-                        ceremony: "250 PAX",
+                        ceremony: "200 PAX",
                         reception: "250 PAX"
+                    },
+                    meetingRooms: {
+                        name: "Ruang Pertemuan",
+                        subtitle: "Lantai 6 • 7 Ruangan • Konfigurasi Fleksibel",
+                        description: "Dari rapat dewan hingga lokakarya perusahaan, 7 tempat pertemuan kami yang berbeda di Lantai 6 menawarkan teknologi mutakhir dan tata letak yang serbaguna.",
+                        cta: "Lihat Ruang Pertemuan"
                     }
                 },
                 packages: {
                     title: "Paket",
                     desc: "Disesuaikan dengan kebutuhan Anda, paket acara kami menawarkan layanan komprehensif termasuk katering premium, dekorasi, dan koordinasi acara khusus."
                 },
-                cta: "Hubungi Kami"
+                cta: "Tanya Sekarang"
+            },
+            meetingRooms: {
+                hero: { title: "Ruang Pertemuan", subtitle: "Di Mana Inspirasi Bertemu Produktivitas" },
+                intro: "Lingkungan kami yang profesional dan inspiratif sangat ideal untuk menyelenggarakan konferensi. Dengan ruang pertemuan modern yang dilengkapi dengan teknologi mutakhir, kami dapat mengakomodasi berbagai pengaturan untuk eksekusi yang lancar. Dukungan dedikasi dan pilihan katering yang disesuaikan memastikan pertemuan yang sukses, menjadikannya pilihan sempurna untuk acara bisnis.",
+                subnav: { planner: "Hubungi Planner" },
+                specs: {
+                    size: "Ukuran",
+                    ceiling: "Tinggi",
+                    capacity: "Pax"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "Ruang seluas 92 meter persegi di lantai 6 ini menawarkan tata letak fungsional dengan langit-langit 2,4 meter. Sangat ideal untuk rapat berukuran sedang atau pertemuan perusahaan, menyediakan lingkungan yang kondusif untuk diskusi produktif."
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "Terletak di lantai 6, tempat seluas 92 meter persegi ini menampilkan desain modern dan langit-langit 2,4 meter, menjadikannya sempurna untuk mengadakan rapat atau lokakarya dengan fleksibilitas dan kenyamanan."
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "Mencakup 92 meter persegi, tempat ini terletak di lantai 6 dengan langit-langit 2,4 meter. Ini menawarkan pengaturan serbaguna yang cocok untuk acara perusahaan atau fungsi pribadi, menggabungkan kenyamanan dengan kepraktisan."
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "Ruang pertemuan seluas 80 meter persegi di lantai 6 ini dirancang untuk efisiensi dan fokus. Dengan langit-langit 2,4 meter, ini adalah pilihan sempurna untuk pertemuan kecil hingga menengah yang menuntut suasana profesional."
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "Menampilkan ruang seluas 80 meter persegi di lantai 6, ruangan ini menawarkan lingkungan yang ramah dengan langit-langit 2,4 meter. Sangat ideal untuk rapat dewan, sesi brainstorming, atau acara pribadi."
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "Ruang seluas 80 meter persegi yang bergaya di lantai 6, dilengkapi dengan langit-langit 2,4 meter, tempat ini dirancang untuk menyelenggarakan pertemuan dengan mudah, memberikan pengaturan yang apik untuk acara apa pun."
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "Ruang Tourmaline seluas 67 meter persegi di lantai 6 menawarkan desain ramping dan langit-langit 2,4 meter. Ini adalah pilihan serbaguna untuk rapat intim atau acara berskala kecil, memastikan pengalaman yang efisien dan nyaman."
+                    }
+                }
             },
             wellness: {
                 hero: { title: "Kebugaran & Spa", subtitle: "Segarkan Panca Indera Anda" },
@@ -1389,13 +1552,59 @@ export const translations: Record<Language, Translations> = {
                         location: "В помещении",
                         ceremony: "250 чел.",
                         reception: "250 чел."
+                    },
+                    meetingRooms: {
+                        name: "Meeting Rooms",
+                        subtitle: "Уровень 6 • 7 залов • Гибкие конфигурации",
+                        description: "От совещаний совета директоров до корпоративных воркшопов, наши 7 различных конференц-залов на 6-м этаже предлагают современные технологии и универсальные планировки.",
+                        cta: "Посмотреть залы"
                     }
                 },
                 packages: {
-                    title: "Пакеты услуг",
+                    title: "Пакеты",
                     desc: "Разработанные в соответствии с вашими потребностями, наши банкетные пакеты предлагают комплексные услуги, включая кейтеринг премиум-класса, декорирование и услуги персонального координатора."
                 },
                 cta: "Узнать сейчас"
+            },
+            meetingRooms: {
+                hero: { title: "Meeting Rooms", subtitle: "Где вдохновение встречается с продуктивностью" },
+                intro: "Наша профессиональная и вдохновляющая среда идеально подходит для проведения конференций. Благодаря современным конференц-залам, оснащенным по последнему слову техники, мы можем предложить различные варианты планировки для безупречного выполнения. Преданная поддержка и индивидуальные варианты кейтеринга обеспечат успешную встречу, делая ее идеальным выбором для деловых мероприятий.",
+                subnav: { planner: "Связаться с планировщиком" },
+                specs: {
+                    size: "Размер",
+                    ceiling: "Потолок",
+                    capacity: "чел."
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "Это пространство площадью 92 кв. м на 6-м этаже предлагает функциональную планировку с потолком 2,4 метра. Оно идеально подходит для встреч среднего размера или корпоративных собраний, обеспечивая благоприятную среду для продуктивных дискуссий."
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "Расположенная на 6-м этаже, эта площадка площадью 92 кв. м отличается современным дизайном и потолком высотой 2,4 метра, что делает ее идеальной для проведения встреч или воркшопов с гибкостью и удобством."
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "Занимая площадь 92 кв. м, эта площадка расположена на 6-м этаже с потолком 2,4 метра. Она предлагает универсальную настройку, подходящую для корпоративных мероприятий или частных функций, сочетая комфорт с практичностью."
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "Этот конференц-зал площадью 80 кв. м на 6-м этаже спроектирован для эффективности и концентрации. С потолком 2,4 метра это идеальный выбор для небольших и средних собраний, требующих профессиональной атмосферы."
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "Обладая площадью 80 кв. м на 6-м этаже, этот зал предлагает гостеприимную атмосферу с потолком 2,4 метра. Он идеально подходит для заседаний совета директоров, мозговых штурмов или частных мероприятий."
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "Стильное пространство площадью 80 кв. м на 6-м этаже, дополненное потолком 2,4 метра, спроектировано для легкого проведения собраний, обеспечивая изысканную обстановку для любого мероприятия."
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "Зал Tourmaline площадью 67 кв. м на 6-м этаже отличается элегантным дизайном и потолком высотой 2,4 метра. Это универсальный выбор для камерных встреч или небольших мероприятий, обеспечивающий эффективный и комфортный опыт."
+                    }
+                }
             },
             wellness: {
                 hero: { title: "Велнес и Спа", subtitle: "Омолодите свои чувства" },
@@ -1706,6 +1915,12 @@ export const translations: Record<Language, Translations> = {
                         location: "室内",
                         ceremony: "250 名",
                         reception: "250 名"
+                    },
+                    meetingRooms: {
+                        name: "Meeting Rooms",
+                        subtitle: "6階 • 7室 • 柔軟な構成",
+                        description: "取締役会から企業ワークショップまで、6階にある7つの異なる会議スペースは、最先端のテクノロジーと多目的なレイアウトを提供します。",
+                        cta: "会議室を見る"
                     }
                 },
                 packages: {
@@ -1713,6 +1928,46 @@ export const translations: Record<Language, Translations> = {
                     desc: "お客様のニーズに合わせてカスタマイズされたイベントパッケージは、プレミアムなケータリング、装飾、専任のイベントコーディネートを含む包括的なサービスを提供します。"
                 },
                 cta: "お問い合わせ"
+            },
+            meetingRooms: {
+                hero: { title: "Meeting Rooms", subtitle: "インスピレーションと生産性が交差する場所" },
+                intro: "プロフェッショナルで刺激的な環境は、会議の開催に最適です。最先端のテクノロジーを備えたモダンな会議スペースにより、シームレスな実行のためにさまざまなセットアップに対応できます。専任のサポートとオーダーメイドのケータリングオプションが実りある集まりを保証し、ビジネスイベントに最適な選択肢となります。",
+                subnav: { planner: "プランナーに連絡" },
+                specs: {
+                    size: "広さ",
+                    ceiling: "天井高",
+                    capacity: "名"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "6階にあるこの92平方メートルのスペースは、2.4メートルの天井高と機能的なレイアウトを提供します。中規模の会議や企業の集まりに理想的で、生産的な議論のための助けとなる環境を提供します。"
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "6階に位置するこの92平方メートルの会場は、モダンなデザインと2.4メートルの天井高が特徴で、柔軟性と利便性を備えた会議やワークショップの開催に最適です。"
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "92平方メートルの広さを誇るこの会場は、6階にあり、天井高は2.4メートルです。企業イベントやプライベートな行事に適した多目的なセットアップを提供し、快適さと実用性を兼ね備えています。"
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "6階にあるこの80平方メートルの会議スペースは、効率と集中力を高めるよう設計されています。2.4メートルの天井高で、プロフェッショナルな雰囲気を求める小規模から中規模の集まりに最適です。"
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "6階にある80平方メートルのスペースを特徴とするこの部屋は、2.4メートルの天井高で歓迎的な環境を提供します。取締役会、ブレインストーミングセッション、またはプライベートイベントに理想的です。"
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "6階にあるスタイリッシュな80平方メートルのスペースで、2.4メートルの天井高を備えたこの会場は、集まりを容易に開催できるように設計されており、あらゆるイベントに洗練された設定を提供します。"
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "6階にある67平方メートルのTourmalineルームは、洗練されたデザインと2.4メートルの天井高を誇ります。親密な会議や小規模なイベントに多目的な選択肢となり、効率的で快適な体験を保証します。"
+                    }
+                }
             },
             wellness: {
                 hero: { title: "ウェルネス＆スパ", subtitle: "五感を若返らせる" },
@@ -2023,6 +2278,12 @@ export const translations: Record<Language, Translations> = {
                         location: "داخلي",
                         ceremony: "250 شخص",
                         reception: "250 شخص"
+                    },
+                    meetingRooms: {
+                        name: "Meeting Rooms",
+                        subtitle: "الطابق 6 • 7 قاعات • تكوينات مرنة",
+                        description: "من اجتماعات مجلس الإدارة إلى ورش عمل الشركات، توفر قاعات الاجتماعات السبع المتميزة في الطابق السادس تكنولوجيا متطورة وتخطيطات متعددة الاستخدامات.",
+                        cta: "عرض قاعات الاجتماعات"
                     }
                 },
                 packages: {
@@ -2030,6 +2291,46 @@ export const translations: Record<Language, Translations> = {
                     desc: "باقات الفعاليات لدينا مصممة خصيصًا لتلبية احتياجاتك، وتقدم خدمات شاملة بما في ذلك تقديم الطعام الفاخر والديكور وتنسيق الفعاليات المتخصص."
                 },
                 cta: "استفسر الآن"
+            },
+            meetingRooms: {
+                hero: { title: "Meeting Rooms", subtitle: "حيث يلتقي الإلهام بالإنتاجية" },
+                intro: "بيئتنا المهنية والملهمة مثالية لاستضافة المؤتمرات. مع مساحات اجتماعات حديثة مجهزة بأحدث التقنيات، يمكننا استيعاب إعدادات مختلفة للتنفيذ السلس. يضمن الدعم المتخصص وخيارات تقديم الطعام المخصصة تجمعًا ناجحًا، مما يجعله الخيار الأمثل لفعاليات الأعمال.",
+                subnav: { planner: "اتصل بالمخطط" },
+                specs: {
+                    size: "المساحة",
+                    ceiling: "السقف",
+                    capacity: "شخص"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "توفر هذه المساحة التي تبلغ 92 مترًا مربعًا في الطابق السادس تخطيطًا وظيفيًا بسقف يبلغ 2.4 مترًا. إنها مثالية للاجتماعات متوسطة الحجم أو تجمعات الشركات، مما يوفر بيئة مواتية للمناقشات المثمرة."
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "يقع هذا المكان الذي تبلغ مساحته 92 مترًا مربعًا في الطابق السادس، ويتميز بتصميم عصري وسقف بارتفاع 2.4 مترًا، مما يجعله مثاليًا لاستضافة الاجتماعات أو ورش العمل بمرونة وراحة."
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "تبلغ مساحة هذا المكان 92 مترًا مربعًا، ويقع في الطابق السادس بسقف يبلغ 2.4 مترًا. يوفر إعدادًا متعدد الاستخدامات مناسبًا للفعاليات المؤسسية أو الوظائف الخاصة، ويجمع بين الراحة والعملية."
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "تم تصميم مساحة الاجتماعات هذه التي تبلغ 80 مترًا مربعًا في الطابق السادس لتحقيق الكفاءة والتركيز. مع سقف يبلغ 2.4 مترًا، فهي الخيار الأمثل للتجمعات الصغيرة والمتوسطة الحجم التي تتطلب أجواءً مهنية."
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "تتميز هذه الغرفة بمساحة 80 مترًا مربعًا في الطابق السادس، وتوفر بيئة ترحيبية بسقف يبلغ 2.4 مترًا. إنها مثالية لاجتماعات مجلس الإدارة أو جلسات العصف الذهني أو الفعاليات الخاصة."
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "مساحة أنيقة تبلغ 80 مترًا مربعًا في الطابق السادس، يكملها سقف بارتفاع 2.4 مترًا، تم تصميم هذا المكان لاستضافة التجمعات بسهولة، وتوفير إعداد مصقول لأي حدث."
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "تتميز غرفة تورمالين التي تبلغ مساحتها 67 مترًا مربعًا في الطابق السادس بتصميم أنيق وسقف بارتفاع 2.4 مترًا. إنها خيار متعدد الاستخدامات للاجتماعات الحميمة أو الفعاليات صغيرة الحجم، مما يضمن تجربة فعالة ومريحة."
+                    }
+                }
             },
             wellness: {
                 hero: { title: "العافية والسبا", subtitle: "جدد حواسك" },
@@ -2316,37 +2617,83 @@ export const translations: Record<Language, Translations> = {
                 hero: { title: "미팅 & 이벤트", subtitle: "비즈니스와 럭셔리가 만나는 곳" },
                 content: {
                     title: "스카이 볼룸",
-                    desc: "상징적인 스카이 볼룸은 180도 파노라마 도시 전망을 제공하여 웨딩, 기업 갈라 및 사교 행사를 위한 멋진 배경을 선사합니다. 최첨단 기술을 갖추고 전담 이벤트 팀의 지원을 받습니다."
+                    desc: "상징적인 스카이 볼룸은 180도 도시 파노라마 뷰를 제공하며 웨딩, 기업 갈라 및 사교 행사를 위한 멋진 배경을 제공합니다. 최첨단 기술로 설비되어 있으며 전담 이벤트 팀의 지원을 받습니다."
                 },
                 venues: {
                     title: "정교한 베뉴",
                     skyBallroom: {
-                        name: "스카이 볼룸",
-                        description: "스카이 볼룸은 모든 특별한 날을 위한 비범한 환경을 만듭니다. 웨딩, 졸업식 또는 프라이빗 이벤트에 이상적인 이 탁월한 장소는 15층, 지상 200피트 높이에 위치해 있습니다. 최첨단 시청각 기술, 고속 무선 인터넷, 공간을 자연광으로 가득 채우는 바닥에서 천장까지 이어지는 통창이 특징입니다.",
+                        name: "Sky Ballroom",
+                        description: "스카이 볼룸은 모든 특별한 행사를 위한 특별한 배경을 만듭니다. 웨딩, 졸업식 또는 프라이빗 이벤트에 이상적인 이 탁월한 베뉴는 지상 200피트 높이의 15층에 위치해 있습니다. 최첨단 시청각 기술, 고속 무선 인터넷, 공간을 자연광으로 채우는 통창이 특징입니다.",
                         location: "실내 (15층)",
                         ceremony: "200명",
                         reception: "250명"
                     },
                     skyGarden: {
-                        name: "스카이 가든",
-                        description: "숨 막히는 전망과 시대를 초월한 우아함이 잊지 못할 순간을 선사하는 친밀한 웨딩과 모임을 위한 매혹적인 루프탑 안식처입니다.",
+                        name: "Sky Garden",
+                        description: "멋진 전망과 시대를 초월한 우아함이 잊지 못할 순간을 선사하는 친밀한 웨딩과 모임을 위한 매혹적인 루프탑 안식처입니다.",
                         location: "루프탑 / 프라이빗",
                         ceremony: "500명",
                         reception: "50명"
                     },
                     royalEight: {
-                        name: "로얄 에이트 중식 다이닝",
-                        description: "탕그랑 가딩 세르퐁의 중심에서 즐기는 중식 다이닝 경험입니다. 시그니처 세미 파인 다이닝 컬렉션의 일부로, 로얄 에이트는 하루 종일 엄선된 점심, 저녁 및 디저트를 제공합니다. 레스토랑의 현대적인 분위기와 사려 깊게 설계된 디자인은 조화로운 미식 여정을 위한 완벽한 환경을 제공합니다.",
+                        name: "Royal Eight",
+                        description: "탄게랑 가딩 세르퐁 중심부에서 즐기는 중식 다이닝 경험입니다. 시그니처 세미 파인 다이닝 컬렉션의 일부로, 로얄 에이트는 하루 종일 엄선된 점심, 저녁 및 디저트를 제공합니다. 레스토랑의 현대적인 분위기와 세심하게 설계된 디자인은 조화로운 미식 여행을 위한 완벽한 환경을 제공합니다.",
                         location: "실내",
                         ceremony: "250명",
                         reception: "250명"
+                    },
+                    meetingRooms: {
+                        name: "Meeting Rooms",
+                        subtitle: "6층 • 7개 객실 • 유연한 구성",
+                        description: "이사회 회의부터 기업 워크숍까지, 6층에 위치한 7개의 차별화된 회의 베뉴는 최첨단 기술과 다목적 레이아웃을 제공합니다.",
+                        cta: "회의실 보기"
                     }
                 },
                 packages: {
                     title: "패키지",
-                    desc: "고객님의 요구에 맞게 맞춤화된 이벤트 패키지는 프리미엄 케이터링, 장식 및 전담 이벤트 코디네이션을 포함한 포괄적인 서비스를 제공합니다."
+                    desc: "귀하의 필요에 맞게 조정된 이벤트 패키지는 프리미엄 케이터링, 장식 및 전담 이벤트 조율을 포함한 종합 서비스를 제공합니다."
                 },
-                cta: "문의하기"
+                cta: "지금 문의하기"
+            },
+            meetingRooms: {
+                hero: { title: "Meeting Rooms", subtitle: "영감이 생산성을 만나는 곳" },
+                intro: "전문적이고 영감을 주는 환경은 컨퍼런스 개최에 이상적입니다. 최첨단 기술을 갖춘 현대적인 회의 공간으로 원활한 실행을 위해 다양한 셋업을 수용할 수 있습니다. 헌신적인 지원과 맞춤형 케이터링 옵션은 성공적인 모임을 보장하며 비즈니스 행사를 위한 완벽한 선택입니다.",
+                subnav: { planner: "플래너 문의" },
+                specs: {
+                    size: "크기",
+                    ceiling: "천장 높이",
+                    capacity: "명"
+                },
+                rooms: {
+                    citrine: {
+                        name: "Citrine",
+                        desc: "6층에 위치한 이 92제곱미터 공간은 2.4미터 천장과 기능적인 레이아웃을 제공합니다. 중소규모 회의나 기업 모임에 이상적이며 생산적인 토론을 위한 최적의 환경을 제공합니다."
+                    },
+                    zircon: {
+                        name: "Zircon",
+                        desc: "6층에 위치한 이 92제곱미터 규모의 베뉴는 현대적인 디자인과 2.4미터 높이의 천장을 갖추고 있어 유연하고 편리하게 회의나 워크숍을 개최하기에 완벽합니다."
+                    },
+                    lapisLazuli: {
+                        name: "Lapis Lazuli",
+                        desc: "92제곱미터 규모의 이 베뉴는 6층에 위치해 있으며 천장 높이는 2.4미터입니다. 기업 행사나 사적인 모임에 적합한 다목적 셋업을 제공하며 편안함과 실용성을 결합했습니다."
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        desc: "6층에 위치한 이 80제곱미터 회의 공간은 효율성과 집중을 위해 설계되었습니다. 2.4미터 천장 높이로 전문적인 분위기를 요구하는 중소규모 모임에 완벽한 선택입니다."
+                    },
+                    garnet: {
+                        name: "Garnet",
+                        desc: "6층에 80제곱미터 공간을 갖춘 이 객실은 2.4미터 천장과 함께 환영하는 분위기를 제공합니다. 이사회 회의, 브레인스토밍 세션 또는 프라이빗 행사에 이상적입니다."
+                    },
+                    topaz: {
+                        name: "Topaz",
+                        desc: "6층의 세련된 80제곱미터 공간으로 2.4미터 높이의 천장이 보완된 이 베뉴는 모임을 쉽게 개최할 수 있도록 설계되었으며 모든 행사에 세련된 배경을 제공합니다."
+                    },
+                    tourmaline: {
+                        name: "Tourmaline",
+                        desc: "6층의 67제곱미터 투어말린 룸은 매끄러운 디자인과 2.4미터 천장 높이를 자랑합니다. 친밀한 회의나 소규모 행사를 위한 다목적 선택으로 효율적이고 편안한 경험을 보장합니다."
+                    }
+                }
             },
             wellness: {
                 hero: { title: "웰니스 & 스파", subtitle: "감각을 되살리세요" },

@@ -73,11 +73,23 @@ import { AnimatePresence } from 'framer-motion';
 import JsonLd from "@/components/JsonLd";
 
 export default function MeetingRooms() {
+    const { t } = useLanguage();
+
+    const roomsData = [
+        { ...meetingRooms[0], name: t.pages.meetingRooms.rooms.citrine.name, description: t.pages.meetingRooms.rooms.citrine.desc },
+        { ...meetingRooms[1], name: t.pages.meetingRooms.rooms.zircon.name, description: t.pages.meetingRooms.rooms.zircon.desc },
+        { ...meetingRooms[2], name: t.pages.meetingRooms.rooms.lapisLazuli.name, description: t.pages.meetingRooms.rooms.lapisLazuli.desc },
+        { ...meetingRooms[3], name: t.pages.meetingRooms.rooms.moonstone.name, description: t.pages.meetingRooms.rooms.moonstone.desc },
+        { ...meetingRooms[4], name: t.pages.meetingRooms.rooms.garnet.name, description: t.pages.meetingRooms.rooms.garnet.desc },
+        { ...meetingRooms[5], name: t.pages.meetingRooms.rooms.topaz.name, description: t.pages.meetingRooms.rooms.topaz.desc },
+        { ...meetingRooms[6], name: t.pages.meetingRooms.rooms.tourmaline.name, description: t.pages.meetingRooms.rooms.tourmaline.desc },
+    ];
+
     const meetingRoomsSchema = {
         "@context": "https://schema.org",
         "@type": "Hotel",
         "name": "JHL Solitaire Gading Serpong",
-        "containsPlace": meetingRooms.map(room => ({
+        "containsPlace": roomsData.map(room => ({
             "@type": "MeetingRoom",
             "name": room.name + " at JHL Solitaire",
             "description": room.description,
@@ -110,7 +122,7 @@ export default function MeetingRooms() {
             setIsScrolledPastHero(window.scrollY > heroHeight - 100);
 
             // Spy on sections
-            const sections = meetingRooms.map(room => room.name);
+            const sections = roomsData.map(room => room.name);
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
@@ -126,7 +138,7 @@ export default function MeetingRooms() {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [roomsData]);
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -161,7 +173,7 @@ export default function MeetingRooms() {
 
                         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
                             <div className="flex items-center gap-8 overflow-x-auto no-scrollbar">
-                                {meetingRooms.map((room) => (
+                                {roomsData.map((room) => (
                                     <button
                                         key={room.name}
                                         onClick={() => scrollToSection(room.name)}
@@ -177,7 +189,7 @@ export default function MeetingRooms() {
                                 target="_blank"
                                 className="ml-8 px-6 h-9 flex items-center justify-center bg-brand-gold text-brand-dark font-bold text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.3)] hover:shadow-[0_0_25px_rgba(198,168,124,0.6)]"
                             >
-                                Contact Planner
+                                {t.pages.meetingRooms.subnav.planner}
                             </Link>
                         </div>
                     </motion.div>
@@ -202,7 +214,7 @@ export default function MeetingRooms() {
                         transition={{ duration: 0.8 }}
                         className="font-luxury text-4xl md:text-6xl mb-6 uppercase tracking-widest text-brand-gold"
                     >
-                        Meeting Rooms
+                        {t.pages.meetingRooms.hero.title}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -210,7 +222,7 @@ export default function MeetingRooms() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="font-sans text-xl md:text-2xl tracking-[0.2em] mb-8 font-light"
                     >
-                        Where Inspiration Meets Productivity
+                        {t.pages.meetingRooms.hero.subtitle}
                     </motion.p>
                     <motion.div
                         initial={{ scaleX: 0 }}
@@ -225,24 +237,28 @@ export default function MeetingRooms() {
             <section className="py-20 px-6 bg-zinc-950 text-center">
                 <div className="max-w-4xl mx-auto">
                     <p className="font-editorial text-lg md:text-xl leading-relaxed text-gray-400">
-                        Our professional and inspiring environment is ideal for hosting conferences. With modern meeting spaces equipped with state-of-the-art technology, we can accommodate various setups for seamless execution. Dedicated support and tailored catering options ensure a successful gathering, making it the perfect choice for business events.
+                        {t.pages.meetingRooms.intro}
                     </p>
                 </div>
             </section>
 
             {/* Meeting Rooms List */}
             <div className="space-y-0">
-                {meetingRooms.map((room, index) => (
+                {roomsData.map((room, index) => (
                     <RoomSection key={index} room={room} align={index % 2 === 0 ? 'left' : 'right'} />
                 ))}
             </div>
-
-            <Footer />
         </main>
     );
 }
 
+<Footer />
+        </main >
+    );
+}
+
 function RoomSection({ room, align }: { room: any, align: 'left' | 'right' }) {
+    const { t } = useLanguage();
     return (
         <motion.section
             id={room.name} // Add ID for scroll spy
@@ -271,7 +287,14 @@ function RoomSection({ room, align }: { room: any, align: 'left' | 'right' }) {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mb-8"
                 >
-                    <h2 className="font-luxury text-4xl md:text-5xl text-brand-gold mb-4 uppercase tracking-wider">{room.name}</h2>
+                    <div className="flex items-center gap-4 mb-4">
+                        <h2 className="font-luxury text-4xl md:text-5xl text-brand-gold uppercase tracking-wider">{room.name}</h2>
+                        <div className="h-[1px] flex-grow bg-white/10" />
+                    </div>
+                    <div className="flex gap-6 mb-6 text-[10px] uppercase tracking-[0.2em] text-white/50 font-bold">
+                        <span className="flex items-center gap-2"><div className="w-1 h-1 bg-brand-gold rounded-full" /> {t.pages.meetingRooms.specs.size}: {room.size}</span>
+                        <span className="flex items-center gap-2"><div className="w-1 h-1 bg-brand-gold rounded-full" /> {t.pages.meetingRooms.specs.ceiling}: {room.ceiling}</span>
+                    </div>
                     <p className="text-gray-400 text-sm md:text-base leading-relaxed font-sans">{room.description}</p>
                 </motion.div>
 
@@ -281,23 +304,23 @@ function RoomSection({ room, align }: { room: any, align: 'left' | 'right' }) {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="grid grid-cols-2 md:grid-cols-3 gap-6 border-t border-white/10 pt-8"
                 >
-                    <CapacityItem label="U-Shape" value={room.specs.uShape} />
-                    <CapacityItem label="Classroom" value={room.specs.classRoom} />
-                    <CapacityItem label="Boardroom" value={room.specs.boardRoom} />
-                    <CapacityItem label="Theatre" value={room.specs.theatre} />
-                    <CapacityItem label="Round Table" value={room.specs.roundTable} />
-                    <CapacityItem label="Cocktail" value={room.specs.cocktail} />
+                    <CapacityItem label="U-Shape" value={room.specs.uShape} unit={t.pages.meetingRooms.specs.capacity} />
+                    <CapacityItem label="Classroom" value={room.specs.classRoom} unit={t.pages.meetingRooms.specs.capacity} />
+                    <CapacityItem label="Boardroom" value={room.specs.boardRoom} unit={t.pages.meetingRooms.specs.capacity} />
+                    <CapacityItem label="Theatre" value={room.specs.theatre} unit={t.pages.meetingRooms.specs.capacity} />
+                    <CapacityItem label="Round Table" value={room.specs.roundTable} unit={t.pages.meetingRooms.specs.capacity} />
+                    <CapacityItem label="Cocktail" value={room.specs.cocktail} unit={t.pages.meetingRooms.specs.capacity} />
                 </motion.div>
             </div>
         </motion.section>
     );
 }
 
-function CapacityItem({ label, value }: { label: string, value: number }) {
+function CapacityItem({ label, value, unit }: { label: string, value: number, unit: string }) {
     return (
         <div className="flex flex-col">
             <span className="text-xs uppercase tracking-widest text-brand-gold/60 mb-1">{label}</span>
-            <span className="text-xl font-serif text-white">{value} Pax</span>
+            <span className="text-xl font-serif text-white">{value} {unit}</span>
         </div>
     );
 }
