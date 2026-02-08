@@ -117,8 +117,8 @@ export default function CustomDatePicker({
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: side === "top" ? -10 : 10, scale: 0.95 }}
                         className={cn(
-                            "absolute md:fixed left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto z-[60] bg-brand-dark/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 shadow-2xl w-[320px]",
-                            side === "top" ? "bottom-full mb-4" : "mt-4"
+                            "absolute left-1/2 -translate-x-1/2 z-[80] bg-brand-dark border border-white/20 rounded-2xl p-6 shadow-2xl w-[320px] !overflow-visible",
+                            side === "top" ? "bottom-full mb-4" : "top-full mt-4"
                         )}
                     >
                         <div className="flex items-center justify-between mb-6">

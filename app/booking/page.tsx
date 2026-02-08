@@ -22,6 +22,22 @@ const countryCodes = [
     { code: "+61", country: "Australia", flag: "🇦🇺" },
 ];
 
+const ValidationError = ({ message }: { message: string | null }) => (
+    <AnimatePresence>
+        {message && (
+            <motion.div
+                initial={{ opacity: 0, y: 5, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 5, scale: 0.95 }}
+                className="absolute top-full left-0 mt-2 bg-red-500/90 text-white text-[10px] py-1 px-3 rounded shadow-lg backdrop-blur-sm z-50 flex items-center gap-2"
+            >
+                <span className="w-1 h-1 bg-white rounded-full animate-pulse" />
+                {message}
+            </motion.div>
+        )}
+    </AnimatePresence>
+);
+
 function BookingForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -37,6 +53,8 @@ function BookingForm() {
         adults: searchParams.get("adults") || "2",
         children: searchParams.get("children") || "0",
     });
+
+    const [errors, setErrors] = useState<{ [key: string]: string | null }>({});
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isCheckInOpen, setIsCheckInOpen] = useState(false);
@@ -61,6 +79,25 @@ function BookingForm() {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
+
+        // Clear error for this field when user types
+        if (errors[name]) {
+            setErrors(prev => ({ ...prev, [name]: null }));
+        }
+
+        // Block < and > signs proactively for name and general text inputs
+        if (name === "name" || name === "phone" || name === "email") {
+            if (/[<>]/.test(value)) {
+                setErrors(prev => ({ ...prev, [name]: "Special characters < > are not allowed for security." }));
+
+                // Auto-dismiss after 3 seconds
+                setTimeout(() => {
+                    setErrors(prev => ({ ...prev, [name]: null }));
+                }, 3000);
+                return;
+            }
+        }
+
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
@@ -75,6 +112,7 @@ function BookingForm() {
     const sanitizeInput = (str: string) => {
         if (!str) return "";
         return str
+            .replace(/<[^>]*>?/gm, '') // Remove all HTML tags
             .replace(/[&<>"']/g, (m) => ({
                 '&': '&amp;',
                 '<': '&lt;',
@@ -82,6 +120,9 @@ function BookingForm() {
                 '"': '&quot;',
                 "'": '&#39;'
             }[m] || m))
+            .replace(/javascript:/gi, '') // Block javascript: protocol
+            .replace(/onerror/gi, '') // Block common event handlers
+            .replace(/onload/gi, '')
             .replace(/;/g, "\\;") // Basic SQL escape for semicolons
             .trim();
     };
@@ -98,12 +139,20 @@ function BookingForm() {
         e.preventDefault();
 
         // Strict Validation
+        if (!formData.name.trim() || formData.name.length < 2) {
+            setErrors(prev => ({ ...prev, name: "Please enter a valid full name." }));
+            return;
+        }
+        if (/[<>]/.test(formData.name) || /<script/i.test(formData.name)) {
+            setErrors(prev => ({ ...prev, name: "Invalid characters detected. Please refine your name." }));
+            return;
+        }
         if (!validateEmail(formData.email)) {
-            alert("Please enter a valid email address.");
+            setErrors(prev => ({ ...prev, email: "Please enter a valid email address." }));
             return;
         }
         if (!validatePhone(formData.phone)) {
-            alert("Please enter a valid phone number.");
+            setErrors(prev => ({ ...prev, phone: "Please enter a valid phone number (minimum 7 digits)." }));
             return;
         }
 
@@ -174,7 +223,7 @@ function BookingForm() {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl"
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl relative z-[10] !overflow-visible"
         >
             {/* Progress Bar */}
             <div className="flex items-center justify-between mb-12">
@@ -183,7 +232,7 @@ function BookingForm() {
                     <div className={`h-[2px] w-12 transition-colors ${step >= 2 ? 'bg-brand-gold' : 'bg-white/10'}`}></div>
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= 2 ? 'bg-brand-gold text-brand-dark' : 'bg-white/10 text-white/40'}`}>2</div>
                 </div>
-                <span className="text-brand-gold font-serif italic text-lg">Your Stay</span>
+                <span className="text-brand-gold font-serif italic text-lg">Let's Plan Your Stay</span>
             </div>
 
             <AnimatePresence mode="wait">
@@ -226,7 +275,7 @@ function BookingForm() {
                                         label="Check-In"
                                         selectedDate={formData.checkIn}
                                         isOpen={isCheckInOpen}
-                                        side="top"
+                                        side="bottom"
                                         onSelect={(date) => {
                                             setFormData(prev => ({ ...prev, checkIn: date }));
                                             setIsCheckInOpen(false);
@@ -249,7 +298,7 @@ function BookingForm() {
                                         label="Check-Out"
                                         selectedDate={formData.checkOut}
                                         isOpen={isCheckOutOpen}
-                                        side="top"
+                                        side="bottom"
                                         onSelect={(date) => {
                                             setFormData(prev => ({ ...prev, checkOut: date }));
                                             setIsCheckOutOpen(false);
@@ -319,8 +368,9 @@ function BookingForm() {
                                         placeholder="Enter your full name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
+                                        className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.name ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
                                     />
+                                    <ValidationError message={errors.name} />
                                 </div>
                             </div>
 
@@ -335,8 +385,9 @@ function BookingForm() {
                                         placeholder="Enter your email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
+                                        className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.email ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
                                     />
+                                    <ValidationError message={errors.email} />
                                 </div>
                             </div>
 
@@ -364,8 +415,9 @@ function BookingForm() {
                                             placeholder="812 3456 7890"
                                             value={formData.phone}
                                             onChange={handleChange}
-                                            className="w-full bg-white/5 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
+                                            className={`w-full bg-white/5 border rounded-lg py-4 pl-12 pr-4 text-white focus:outline-none transition-colors ${errors.phone ? 'border-red-500' : 'border-white/10 focus:border-brand-gold'}`}
                                         />
+                                        <ValidationError message={errors.phone} />
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +439,7 @@ function BookingForm() {
 
 export default function BookingPage() {
     return (
-        <main className="min-h-screen bg-brand-dark overflow-x-hidden relative">
+        <main className="min-h-screen bg-brand-dark relative !overflow-visible">
             <Header />
 
             {/* Elegant Background Image with Overlay */}
@@ -404,8 +456,8 @@ export default function BookingPage() {
                 <div className="absolute inset-0 bg-brand-gold/5 mix-blend-overlay z-20"></div>
             </div>
 
-            <section className="relative pt-32 pb-20 px-6 z-30">
-                <div className="container mx-auto max-w-2xl">
+            <section className="relative pt-40 pb-[400px] px-6 z-40 !overflow-visible">
+                <div className="container mx-auto max-w-2xl !overflow-visible relative z-50">
                     <Suspense fallback={<div className="text-white text-center py-20 font-serif italic">Loading your sanctuary...</div>}>
                         <BookingForm />
                     </Suspense>

@@ -14,6 +14,7 @@
   --font-serif: var(--font-playfair), serif;
   --font-sans: var(--font-montserrat), sans-serif;
   --font-lato: var(--font-lato), sans-serif;
+  --font-cursive: var(--font-cursive), cursive;
 
   --animate-fade-in-up: fade-in-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   --animate-grow-width: grow-width 1.5s ease-out forwards;

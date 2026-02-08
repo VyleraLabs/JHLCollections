@@ -17,6 +17,8 @@ export interface Translations {
         title: string;
         description: string;
         jewelText: string;
+        welcomeTitle: string;
+        welcomeDescription: string;
     };
     features: {
         luxury: { title: string; desc: string };
@@ -142,6 +144,8 @@ export const translations: Record<Language, Translations> = {
             title: "JHL Solitaire",
             description: "Gading Serpong, A JHL Collections",
             jewelText: "The Jewel in the City",
+            welcomeTitle: "Epitomizing The Best Essence of Life",
+            welcomeDescription: "Every moment of living is a triumphant joy to be celebrated. At JHL Solitaire, we believe our guests deserve the finest experience of living to the fullest. With pride and prestige, we aim to exceed expectations by reciprocating our guests' exquisite taste with a poised frame of mind, first-class service, and offerings.",
         },
         features: {
             luxury: {
@@ -352,6 +356,8 @@ export const translations: Record<Language, Translations> = {
             title: "JHL Solitaire",
             description: "雅加达 Gading Serpong，JHL 集合酒店",
             jewelText: "璀璨雅加达",
+            welcomeTitle: "开启生活的极致精髓",
+            welcomeDescription: "生活的每一瞬间都值得欢庆。在 JHL Solitaire，我们致力于为每一位贵宾提供最顶级的奢华生活体验。我们以自豪与荣耀，通过从容的心态、一流的服务和卓越的品质，回馈宾客的高端品味，超越您的每一分期待。",
         },
         features: {
             luxury: {
@@ -562,6 +568,8 @@ export const translations: Record<Language, Translations> = {
             title: "JHL Solitaire",
             description: "Gading Serpong, A JHL Collections",
             jewelText: "Permata Gading Serpong",
+            welcomeTitle: "Mengejawantahkan Esensi Terbaik Kehidupan",
+            welcomeDescription: "Setiap momen kehidupan adalah kegembiraan yang patut dirayakan. Di JHL Solitaire, kami percaya tamu kami berhak mendapatkan pengalaman hidup terbaik. Dengan kebanggaan dan prestise, kami bertujuan untuk melampaui ekspektasi dengan membalas cita rasa istimewa tamu kami melalui pemikiran yang matang, layanan kelas satu, dan penawaran terbaik.",
         },
         features: {
             luxury: {
