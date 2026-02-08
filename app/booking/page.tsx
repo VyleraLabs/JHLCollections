@@ -461,8 +461,83 @@ function BookingForm() {
 }
 
 export default function BookingPage() {
+    const { t } = useLanguage();
+
+    // Schema Markup for SEO
+    const schemaMarkup = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://jhlcollections.com/jhlsolitaire/booking",
+                "url": "https://jhlcollections.com/jhlsolitaire/booking",
+                "name": `${t.bookingPage.planYourStay} - JHL Solitaire Gading Serpong`,
+                "description": "Book your luxury stay at JHL Solitaire Gading Serpong. Premium 5-star hotel reservation system.",
+                "isPartOf": {
+                    "@id": "https://jhlcollections.com/jhlsolitaire"
+                },
+                "breadcrumb": {
+                    "@id": "https://jhlcollections.com/jhlsolitaire/booking#breadcrumb"
+                },
+                "potentialAction": {
+                    "@type": "ReserveAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://jhlcollections.com/jhlsolitaire/booking?checkIn={checkIn}&checkOut={checkOut}&adults={adults}&children={children}",
+                        "actionPlatform": [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform"
+                        ]
+                    },
+                    "result": {
+                        "@type": "LodgingReservation",
+                        "reservationFor": {
+                            "@type": "Hotel",
+                            "name": "JHL Solitaire Gading Serpong",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Jl. Gading Serpong Boulevard Barat Blok S No.5",
+                                "addressLocality": "Tangerang",
+                                "addressRegion": "Banten",
+                                "postalCode": "15810",
+                                "addressCountry": "ID"
+                            },
+                            "telephone": "+62-21-5421-8888",
+                            "starRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://jhlcollections.com/jhlsolitaire/booking#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://jhlcollections.com/jhlsolitaire"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Booking",
+                        "item": "https://jhlcollections.com/jhlsolitaire/booking"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-brand-dark relative !overflow-visible">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+            />
             <Header />
 
             {/* Elegant Background Image with Overlay */}
@@ -481,7 +556,7 @@ export default function BookingPage() {
 
             <section className="relative pt-40 pb-[400px] px-6 z-40 !overflow-visible">
                 <div className="container mx-auto max-w-2xl !overflow-visible relative z-50">
-                    <Suspense fallback={<div className="text-white text-center py-20 font-serif italic">Loading your sanctuary...</div>}>
+                    <Suspense fallback={<div className="text-white text-center py-20 font-serif italic">{t.bookingPage.loadingSanctuary}</div>}>
                         <BookingForm />
                     </Suspense>
                 </div>

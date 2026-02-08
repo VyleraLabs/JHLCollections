@@ -1,6 +1,4 @@
-"use client";
-
-import { useLanguage } from "@/context/LanguageContext";
+import type { Translations } from "@/lib/translations";
 
 interface MenuItem {
     name: string;
@@ -8,6 +6,10 @@ interface MenuItem {
     nameChinese?: string;
     descriptionChinese?: string;
     descriptionIndonesian?: string;
+    descriptionRussian?: string;
+    descriptionJapanese?: string;
+    descriptionArabic?: string;
+    descriptionKorean?: string;
     price: number;
     imageUrl?: string;
     category?: string;
@@ -21,12 +23,16 @@ interface MenuItem {
 interface SchemaGeneratorProps {
     menuData: MenuItem[];
     specialOffers: any[];
+    language?: string;
+    translations?: Translations;
 }
 
-export const SchemaGenerator = ({ menuData, specialOffers }: SchemaGeneratorProps) => {
-    const { language, t } = useLanguage();
+export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', translations }: SchemaGeneratorProps) => {
 
     const generateMenuSchema = () => {
+        // Alias translations for backward compatibility
+        const t = translations || {} as any;
+
         // Group items by category
         const categories = Array.from(new Set(menuData.map(item => item.category)));
 
@@ -67,8 +73,8 @@ export const SchemaGenerator = ({ menuData, specialOffers }: SchemaGeneratorProp
         const hotel = {
             "@context": "https://schema.org",
             "@type": "Hotel",
-            "name": t.hero.title || "JHL Solitaire Gading Serpong",
-            "description": t.hero.welcomeDescription,
+            "name": translations?.hero?.title || "JHL Solitaire Gading Serpong",
+            "description": translations?.hero?.welcomeDescription || "Luxury 5-star hotel in Gading Serpong",
             "url": "https://jhlcollections.com/jhlsolitaire",
             "address": {
                 "@type": "PostalAddress",
@@ -275,3 +281,4 @@ export const SchemaGenerator = ({ menuData, specialOffers }: SchemaGeneratorProp
         </>
     );
 };
+

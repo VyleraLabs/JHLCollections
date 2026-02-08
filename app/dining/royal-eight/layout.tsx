@@ -7,18 +7,27 @@ export const metadata: Metadata = {
 };
 
 import React from "react";
+import { cookies } from "next/headers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { HeroSection } from "@/components/royal-eight/HeroSection";
 import { PromoIntegration } from "@/components/PromoIntegration";
 import { SchemaGenerator } from "@/components/SchemaGenerator";
 import { MENU_ITEMS } from "@/data/menu";
+import { translations } from "@/lib/translations";
+import type { Language } from "@/lib/translations";
 
-export default function RoyalEightLayout({
+export default async function RoyalEightLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    // Server-side language detection from cookies
+    const cookieStore = await cookies();
+    const languageCookie = cookieStore.get('language')?.value as Language | undefined;
+    const currentLanguage: Language = languageCookie || 'en';
+    const currentTranslations = translations[currentLanguage];
+
     // Filter special offers for schema
     const specialOffers = [{
         title: "Tang Dynasty Set Menu",
@@ -33,7 +42,12 @@ export default function RoyalEightLayout({
 
             {/* Integrations */}
             <PromoIntegration />
-            <SchemaGenerator menuData={MENU_ITEMS} specialOffers={specialOffers} />
+            <SchemaGenerator
+                menuData={MENU_ITEMS}
+                specialOffers={specialOffers}
+                language={currentLanguage}
+                translations={currentTranslations}
+            />
 
             {/* Hero & Navigation */}
             <HeroSection />
