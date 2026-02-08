@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Montserrat, Lato, Great_Vibes, Cinzel, Cormorant_Garamond } from "next/font/google"; // Using Google Fonts equivalents
 import { AnimationProvider } from "@/components/AnimationProvider";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -82,6 +83,7 @@ export default async function RootLayout({
             <CookieConsent />
           </AnimationProvider>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
