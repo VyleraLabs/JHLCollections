@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 // Global Hotel Schema - appears on all pages (SERVER COMPONENT for SEO)
 export function GlobalHotelSchema() {
     const hotelSchema = {
@@ -105,12 +107,16 @@ export function GlobalHotelSchema() {
 
     return (
         <>
-            <script
+            <Script
+                id="hotel-schema"
                 type="application/ld+json"
+                strategy="beforeInteractive"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelSchema) }}
             />
-            <script
+            <Script
+                id="organization-schema"
                 type="application/ld+json"
+                strategy="beforeInteractive"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
             />
         </>
