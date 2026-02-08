@@ -61,7 +61,7 @@ export default function MeetingRooms() {
             {/* Hero Section */}
             <section className="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
                 <Image
-                    src="/assets/meetings/hero.webp"
+                    src="/assets/meetings/hero.jpg"
                     alt="Corporate Meeting Rooms"
                     fill
                     className="object-cover opacity-60 grayscale-[20%]"

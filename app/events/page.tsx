@@ -179,7 +179,7 @@ export default function Meetings() {
 
                 {/* Meeting Rooms Link */}
                 <VenueSection
-                    image="/assets/meetings/hero.webp"
+                    image="/assets/meetings/hero.jpg"
                     subtitle="Level 6 • 7 Rooms • Flexible Configs"
                     title="Meeting Rooms"
                     description="From board meetings to corporate workshops, our 7 distinct meeting venues on Level 6 offer state-of-the-art technology and versatile layouts."
