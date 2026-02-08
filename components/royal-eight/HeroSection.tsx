@@ -26,7 +26,7 @@ export const HeroSection = () => {
                     fill
                     className="object-cover"
                     priority
-                    placeholder="blur"
+                    priority
                     sizes="100vw"
                     quality={75}
                 />
