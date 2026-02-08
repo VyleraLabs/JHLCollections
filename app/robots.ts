@@ -5,11 +5,11 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: '*',
-                allow: '/',
-                disallow: ['/api/', '/_next/'],
+                allow: ['/', '/_next/'],
+                disallow: ['/api/'],
             },
             {
-                userAgent: ['GPTBot', 'Applebot-Extended', 'Applebot'],
+                userAgent: ['GPTBot', 'Applebot-Extended', 'Applebot', 'Google-Extended', 'Vercel', 'vercel-insights'],
                 allow: '/',
             }
         ],

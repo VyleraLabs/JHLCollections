@@ -1,5 +1,14 @@
 // Global Hotel Schema - appears on all pages (SERVER COMPONENT for SEO)
 export function GlobalHotelSchema() {
+    const hotelAddress = {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Gading Serpong Boulevard Barat Blok S No.5",
+        "addressLocality": "Tangerang",
+        "addressRegion": "Banten",
+        "postalCode": "15810",
+        "addressCountry": "ID"
+    };
+
     const hotelSchema = {
         "@context": "https://schema.org",
         "@type": "Hotel",
@@ -20,14 +29,7 @@ export function GlobalHotelSchema() {
         "@id": "https://jhlcollections.com/jhlsolitaire#hotel",
         "telephone": "+62-21-5421-8888",
         "email": "reservations@jhlsolitaire.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jl. Gading Serpong Boulevard Barat Blok S No.5",
-            "addressLocality": "Tangerang",
-            "addressRegion": "Banten",
-            "postalCode": "15810",
-            "addressCountry": "ID"
-        },
+        "address": hotelAddress,
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": "-6.242831",
@@ -49,6 +51,7 @@ export function GlobalHotelSchema() {
                 "image": "https://jhlcollections.com/assets/dining/mangan.jpg",
                 "servesCuisine": "International",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "2nd Floor, JHL Solitaire" }
             },
             {
@@ -57,6 +60,7 @@ export function GlobalHotelSchema() {
                 "image": "https://jhlcollections.com/assets/royal-eight/hero.webp",
                 "servesCuisine": "Chinese",
                 "priceRange": "$$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "5th Floor, JHL Solitaire" }
             },
             {
@@ -65,6 +69,7 @@ export function GlobalHotelSchema() {
                 "image": "https://jhlcollections.com/assets/dining/al-gusto.jpg",
                 "servesCuisine": "Italian",
                 "priceRange": "$$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "2nd Floor, JHL Solitaire" }
             },
             {
@@ -73,6 +78,7 @@ export function GlobalHotelSchema() {
                 "image": "https://jhlcollections.com/assets/dining/empress.jpg",
                 "servesCuisine": "Cocktails",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "5th Floor, JHL Solitaire" }
             },
             {
@@ -80,6 +86,7 @@ export function GlobalHotelSchema() {
                 "name": "Castro Lounge & Cigar Bar",
                 "servesCuisine": "Coffee",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "Ground Floor, JHL Solitaire" }
             },
             {
@@ -87,6 +94,7 @@ export function GlobalHotelSchema() {
                 "name": "Le Bléu Cafe des Fleurs",
                 "servesCuisine": "Bakery",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "Ground Floor, JHL Solitaire" }
             },
             {
@@ -94,6 +102,7 @@ export function GlobalHotelSchema() {
                 "name": "Acqua Spa",
                 "description": "Luxury adult wellness & Halotherapy",
                 "priceRange": "$$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
             },
             {
@@ -101,6 +110,7 @@ export function GlobalHotelSchema() {
                 "name": "Acquaree Kids Spa",
                 "description": "Indonesia’s first specialized wellness journey for children",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
             },
             {
@@ -108,6 +118,7 @@ export function GlobalHotelSchema() {
                 "name": "La Mere",
                 "description": "Professional beauty and hair salon",
                 "priceRange": "$$",
+                "address": hotelAddress,
                 "location": { "@type": "Place", "name": "JHL Solitaire Wellness Floor" }
             }
         ],

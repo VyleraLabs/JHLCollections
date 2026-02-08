@@ -63,6 +63,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import ClientSEO from "@/components/ClientSEO";
 import CookieConsent from "@/components/CookieConsent";
 import { GlobalHotelSchema } from "@/components/GlobalHotelSchema";
+import { Analytics } from "@vercel/analytics/next";
 
 export default async function RootLayout({
   children,
@@ -79,6 +80,7 @@ export default async function RootLayout({
           <ClientSEO />
           <AnimationProvider nonce={nonce}>
             {children}
+            <Analytics />
             <CookieConsent />
           </AnimationProvider>
         </LanguageProvider>
