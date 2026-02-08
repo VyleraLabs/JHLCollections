@@ -248,12 +248,8 @@ export default function MeetingRooms() {
                     <RoomSection key={index} room={room} align={index % 2 === 0 ? 'left' : 'right'} />
                 ))}
             </div>
-        </main>
-    );
-}
 
-<Footer />
-        </main >
+        </main>
     );
 }
 
