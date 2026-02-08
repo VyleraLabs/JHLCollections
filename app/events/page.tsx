@@ -3,11 +3,12 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion } from "framer-motion";
+import { ArrowRight, Star, Users, MapPin } from "lucide-react";
 
 export default function Meetings() {
     const { t } = useLanguage();
@@ -63,150 +64,237 @@ export default function Meetings() {
         ]
     };
 
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    };
+
+    const stagger = {
+        visible: { transition: { staggerChildren: 0.2 } }
+    };
+
     return (
-        <main className="min-h-screen bg-brand-off-white">
+        <main className="bg-brand-dark min-h-screen text-white overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
             <JsonLd data={eventVenuesSchema} />
             <Header />
-            <div className="relative h-[60vh] bg-gray-900">
+
+            {/* Immersive Hero */}
+            <section className="relative h-screen w-full overflow-hidden">
                 <Image
                     src="/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp"
-                    alt="Meetings Hero"
+                    alt="Luxury Meetings & Events at JHL Solitaire Gading Serpong"
                     fill
-                    className="object-cover opacity-60"
+                    className="object-cover"
+                    priority
                 />
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
-                    <h1 className="font-serif text-5xl md:text-6xl mb-4">{t.pages.meetings.hero.title}</h1>
-                    <p className="font-sans tracking-widest uppercase">{t.pages.meetings.hero.subtitle}</p>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-brand-dark" />
+
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={stagger}
+                        className="max-w-4xl"
+                    >
+                        <motion.div variants={fadeInUp} className="mb-6 flex justify-center">
+                            <div className="h-[1px] w-12 bg-brand-gold/50" />
+                        </motion.div>
+                        <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight text-white drop-shadow-2xl">
+                            {t.pages.meetings.hero.title}
+                        </motion.h1>
+                        <motion.p variants={fadeInUp} className="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-brand-gold mb-8">
+                            {t.pages.meetings.hero.subtitle}
+                        </motion.p>
+                        <motion.div variants={fadeInUp} className="flex justify-center">
+                            <div className="h-16 w-[1px] bg-brand-gold/50" />
+                        </motion.div>
+                    </motion.div>
                 </div>
+            </section>
+
+            {/* Introduction - Editorial Style */}
+            <section className="py-24 px-6 md:px-12 bg-brand-dark relative z-10">
+                <div className="max-w-4xl mx-auto text-center">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="font-serif text-2xl md:text-4xl leading-relaxed text-white/90"
+                    >
+                        &quot;{t.pages.meetings.content.desc}&quot;
+                    </motion.p>
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className="h-[1px] w-24 bg-brand-gold mx-auto mt-12"
+                    />
+                </div>
+            </section>
+
+            {/* Venues - Alternating Layout */}
+            <div className="w-full space-y-0">
+                {/* Sky Ballroom */}
+                <VenueSection
+                    image="/assets/meetings/sky-ballroom-venue.jpg"
+                    subtitle="Level 15 • Indoor • 800 Pax"
+                    title={t.pages.meetings.venues.skyBallroom.name}
+                    description={t.pages.meetings.venues.skyBallroom.description}
+                    specs={[
+                        { label: "Ceremony", value: t.pages.meetings.venues.skyBallroom.ceremony },
+                        { label: "Reception", value: t.pages.meetings.venues.skyBallroom.reception }
+                    ]}
+                    align="right"
+                />
+
+                {/* Sky Garden */}
+                <VenueSection
+                    image="/assets/meetings/sky-garden-venue.webp"
+                    subtitle="Rooftop • Outdoor • 150 Pax"
+                    title={t.pages.meetings.venues.skyGarden.name}
+                    description={t.pages.meetings.venues.skyGarden.description}
+                    specs={[
+                        { label: "Ceremony", value: t.pages.meetings.venues.skyGarden.ceremony },
+                        { label: "Reception", value: t.pages.meetings.venues.skyGarden.reception }
+                    ]}
+                    align="left"
+                />
+
+                {/* Royal Eight */}
+                <VenueSection
+                    image="/assets/meetings/royal-eight-venue.webp"
+                    subtitle="Level 5 • Indoor Dining • 250 Pax"
+                    title={t.pages.meetings.venues.royalEight.name}
+                    description={t.pages.meetings.venues.royalEight.description}
+                    specs={[
+                        { label: "Ceremony", value: t.pages.meetings.venues.royalEight.ceremony },
+                        { label: "Reception", value: t.pages.meetings.venues.royalEight.reception }
+                    ]}
+                    align="right"
+                    ctaLink="/dining/royal-eight"
+                    ctaText="Explore Royal Eight"
+                />
             </div>
-            <Section className="px-0 max-w-none overflow-x-hidden">
-                <div className="text-center mb-16 px-4 max-w-6xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-6">{t.pages.meetings.venues.title}</h2>
-                    <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
-                        {t.pages.meetings.content.desc}
-                    </p>
-                </div>
 
-                {/* Sky Ballroom - Full width with overlay */}
-                <div className="relative h-[70vh] lg:h-[80vh] mb-2 group overflow-hidden">
+            {/* Packages / Inquiry Section */}
+            <section className="relative py-32 flex items-center justify-center bg-zinc-900 border-t border-white/5">
+                <div className="absolute inset-0 opacity-20">
                     <Image
-                        src="/assets/meetings/sky-ballroom-venue.jpg"
-                        alt="Sky Ballroom"
+                        src="/assets/original/img-12-edit.jpg"
+                        alt="Background Pattern"
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="object-cover grayscale"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
-
-                    {/* Floating overlay card */}
-                    <div className="absolute inset-0 flex items-center justify-start px-4 lg:px-20">
-                        <div className="bg-white/70 lg:bg-white/90 backdrop-blur-sm p-6 lg:p-12 max-w-sm lg:max-w-xl shadow-2xl">
-                            <div className="inline-block px-6 py-2 mb-4 bg-brand-dark/5 border-l-4 border-brand-gold">
-                                <span className="text-xs uppercase tracking-[0.3em] text-brand-gold font-bold">Indoor (Level 15)</span>
-                            </div>
-                            <h3 className="text-2xl lg:text-5xl font-serif text-brand-dark mb-3 lg:mb-4 leading-tight">{t.pages.meetings.venues.skyBallroom.name}</h3>
-                            <p className="text-gray-700 text-sm lg:text-lg leading-relaxed mb-4 lg:mb-6 line-clamp-3 lg:line-clamp-none">
-                                {t.pages.meetings.venues.skyBallroom.description}
-                            </p>
-                            <div className="grid grid-cols-2 gap-4 lg:gap-6">
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Ceremony</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.skyBallroom.ceremony}</p>
-                                </div>
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Reception</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.skyBallroom.reception}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                {/* Sky Garden - Full width with overlay on right */}
-                <div className="relative h-[70vh] lg:h-[80vh] mb-2 group overflow-hidden">
-                    <Image
-                        src="/assets/meetings/sky-garden-venue.webp"
-                        alt="Sky Garden"
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-l from-black/40 to-transparent" />
-
-                    {/* Floating overlay card on right */}
-                    <div className="absolute inset-0 flex items-center justify-end px-4 lg:px-20">
-                        <div className="bg-white/70 lg:bg-white/90 backdrop-blur-sm p-6 lg:p-12 max-w-sm lg:max-w-xl shadow-2xl">
-                            <div className="inline-block px-6 py-2 mb-4 bg-brand-dark/5 border-l-4 border-brand-gold">
-                                <span className="text-xs uppercase tracking-[0.3em] text-brand-gold font-bold">Rooftop / Private</span>
-                            </div>
-                            <h3 className="text-2xl lg:text-5xl font-serif text-brand-dark mb-3 lg:mb-4 leading-tight">{t.pages.meetings.venues.skyGarden.name}</h3>
-                            <p className="text-gray-700 text-sm lg:text-lg leading-relaxed mb-4 lg:mb-6 line-clamp-3 lg:line-clamp-none">
-                                {t.pages.meetings.venues.skyGarden.description}
-                            </p>
-                            <div className="grid grid-cols-2 gap-4 lg:gap-6">
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Ceremony</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.skyGarden.ceremony}</p>
-                                </div>
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Reception</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.skyGarden.reception}</p>
-                                </div>
-                            </div>
+                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
+                            {t.pages.meetings.packages.title}
+                        </h2>
+                        <p className="text-white/70 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                            {t.pages.meetings.packages.desc}
+                        </p>
+                        <div className="flex flex-col md:flex-row gap-6 justify-center">
+                            <Link href="/booking" className="group relative px-8 py-4 bg-brand-gold overflow-hidden">
+                                <div className="absolute inset-0 w-3 bg-white/20 skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000" />
+                                <span className="relative font-bold tracking-widest uppercase text-brand-dark text-sm">
+                                    {t.pages.meetings.cta}
+                                </span>
+                            </Link>
+                            <button className="px-8 py-4 border border-white/30 hover:bg-white hover:text-brand-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm text-white">
+                                Download Brochure
+                            </button>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
+            </section>
 
-                {/* Royal Eight - Full width with overlay, clickable */}
-                <Link href="/dining/royal-eight" className="block relative h-[70vh] lg:h-[80vh] mb-2 group overflow-hidden cursor-pointer">
-                    <Image
-                        src="/assets/meetings/royal-eight-venue.webp"
-                        alt="Royal Eight Chinese Dining"
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-
-                    {/* Floating overlay card */}
-                    <div className="absolute inset-0 flex items-center justify-start px-4 lg:px-20">
-                        <div className="bg-white/70 lg:bg-white/90 backdrop-blur-sm p-6 lg:p-12 max-w-sm lg:max-w-xl shadow-2xl group-hover:bg-white/95 transition-all duration-300">
-                            <div className="inline-block px-6 py-2 mb-4 bg-brand-dark/5 border-l-4 border-brand-gold">
-                                <span className="text-xs uppercase tracking-[0.3em] text-brand-gold font-bold">Indoor Dining</span>
-                            </div>
-                            <h3 className="text-2xl lg:text-5xl font-serif text-brand-dark mb-3 lg:mb-4 leading-tight group-hover:text-brand-gold transition-colors duration-300">{t.pages.meetings.venues.royalEight.name}</h3>
-                            <p className="text-gray-700 text-sm lg:text-lg leading-relaxed mb-4 lg:mb-6 line-clamp-3 lg:line-clamp-none">
-                                {t.pages.meetings.venues.royalEight.description}
-                            </p>
-                            <div className="grid grid-cols-2 gap-4 lg:gap-6 mb-4 lg:mb-6">
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Ceremony</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.royalEight.ceremony}</p>
-                                </div>
-                                <div className="border-l-2 border-brand-gold/30 pl-4">
-                                    <p className="text-xs uppercase tracking-widest text-brand-gold/70 font-bold mb-1">Reception</p>
-                                    <p className="text-brand-dark font-serif text-xl lg:text-3xl">{t.pages.meetings.venues.royalEight.reception}</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center text-brand-gold group-hover:translate-x-2 transition-transform duration-300">
-                                <span className="text-sm uppercase tracking-widest font-bold">Explore Dining</span>
-                                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-
-                {/* Packages Section */}
-                <div className="bg-brand-dark text-white p-16 text-center border-l-4 border-brand-gold">
-                    <h2 className="text-3xl md:text-4xl font-serif mb-8">{t.pages.meetings.packages.title}</h2>
-                    <p className="text-gray-300 max-w-4xl mx-auto mb-12 text-lg leading-relaxed italic font-serif">
-                        &quot;{t.pages.meetings.packages.desc}&quot;
-                    </p>
-                    <button className="bg-white text-brand-dark px-12 py-5 uppercase text-sm font-bold tracking-widest hover:bg-brand-gold hover:text-white transition-all transform hover:-translate-y-1">
-                        {t.pages.meetings.cta}
-                    </button>
-                </div>
-            </Section>
             <Footer />
         </main>
+    );
+}
+
+// Reusable Venue Section Component
+function VenueSection({ image, subtitle, title, description, specs, align = "left", ctaLink, ctaText }: {
+    image: string,
+    subtitle: string,
+    title: string,
+    description: string,
+    specs: { label: string, value: string }[],
+    align?: "left" | "right",
+    ctaLink?: string,
+    ctaText?: string
+}) {
+    return (
+        <section className="relative flex flex-col lg:flex-row min-h-[90vh] bg-black">
+            {/* Image Side */}
+            <div className={`relative w-full lg:w-3/5 h-[50vh] lg:h-auto overflow-hidden ${align === "right" ? "lg:order-last" : "lg:order-first"}`}>
+                <motion.div
+                    initial={{ scale: 1.1 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="relative w-full h-full"
+                >
+                    <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        className="object-cover opacity-80"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent lg:hidden" />
+                </motion.div>
+            </div>
+
+            {/* Content Side */}
+            <div className={`relative w-full lg:w-2/5 flex flex-col justify-center p-8 lg:p-20 z-10 -mt-20 lg:mt-0 ${align === "right" ? "lg:pr-24" : "lg:pl-24"}`}>
+                <motion.div
+                    initial={{ opacity: 0, x: align === "left" ? 30 : -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <div className="flex items-center gap-3 mb-6 text-brand-gold/80">
+                        <div className="h-[1px] w-8 bg-brand-gold" />
+                        <span className="text-xs font-bold tracking-[0.2em] uppercase">{subtitle}</span>
+                    </div>
+
+                    <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-none">
+                        {title}
+                    </h2>
+
+                    <p className="text-white/70 text-base leading-relaxed mb-8 border-l border-white/10 pl-6">
+                        {description}
+                    </p>
+
+                    <div className="grid grid-cols-2 gap-8 mb-10">
+                        {specs.map((spec, i) => (
+                            <div key={i}>
+                                <h4 className="text-xs uppercase tracking-widest text-brand-gold mb-1">{spec.label}</h4>
+                                <p className="font-serif text-2xl text-white">{spec.value}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {ctaLink ? (
+                        <Link href={ctaLink} className="inline-flex items-center gap-2 text-white hover:text-brand-gold transition-colors group">
+                            <span className="text-xs font-bold tracking-widest uppercase border-b border-white/30 pb-1 group-hover:border-brand-gold">{ctaText || "Discover More"}</span>
+                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    ) : (
+                        <div className="flex items-center gap-2 text-white/50 text-xs tracking-widest uppercase">
+                            <MapPin size={14} />
+                            <span>Gading Serpong, Tangerang</span>
+                        </div>
+                    )}
+                </motion.div>
+            </div>
+        </section>
     );
 }
