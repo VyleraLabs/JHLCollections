@@ -57,9 +57,11 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <GlobalHotelSchema />
+      </head>
       <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} ${greatVibes.variable} antialiased`}>
         <LanguageProvider>
-          <GlobalHotelSchema />
           <ClientSEO />
           <AnimationProvider nonce={nonce}>
             {children}

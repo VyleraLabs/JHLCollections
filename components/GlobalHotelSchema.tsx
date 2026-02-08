@@ -1,6 +1,4 @@
-"use client";
-
-// Global Hotel Schema - appears on all pages
+// Global Hotel Schema - appears on all pages (SERVER COMPONENT for SEO)
 export function GlobalHotelSchema() {
     const hotelSchema = {
         "@context": "https://schema.org",
