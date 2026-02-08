@@ -30,9 +30,6 @@ interface SchemaGeneratorProps {
 export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', translations }: SchemaGeneratorProps) => {
 
     const generateMenuSchema = () => {
-        // Alias translations for backward compatibility
-        const t = translations || {} as any;
-
         // Group items by category
         const categories = Array.from(new Set(menuData.map(item => item.category)));
 
@@ -73,8 +70,8 @@ export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', tran
         const hotel = {
             "@context": "https://schema.org",
             "@type": "Hotel",
-            "name": translations?.hero?.title || "JHL Solitaire Gading Serpong",
-            "description": translations?.hero?.welcomeDescription || "Luxury 5-star hotel in Gading Serpong",
+            "name": "JHL Solitaire Gading Serpong",
+            "description": "Luxury 5-star hotel in Gading Serpong",
             "url": "https://jhlcollections.com/jhlsolitaire",
             "address": {
                 "@type": "PostalAddress",
@@ -150,38 +147,38 @@ export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', tran
             "containsPlace": [
                 {
                     "@type": "Spa",
-                    "name": t.pages.wellness.venues.acqua.name,
-                    "description": t.pages.wellness.venues.acqua.desc
+                    "name": "Acqua Spa",
+                    "description": "A sanctuary of wellness offering holistic treatments."
                 },
                 {
                     "@type": "Spa",
-                    "name": t.pages.wellness.venues.sandjong.name,
-                    "description": t.pages.wellness.venues.sandjong.desc
+                    "name": "Sandjong Spa",
+                    "description": "Traditional Javanese spa treatments."
                 },
                 {
                     "@type": "Spa",
-                    "name": t.pages.wellness.venues.acquaree.name,
-                    "description": t.pages.wellness.venues.acquaree.desc
+                    "name": "Acquaree Spa",
+                    "description": "Unique spa experience for children and families."
                 },
                 {
                     "@type": "HealthAndBeautyBusiness",
-                    "name": t.pages.wellness.venues.laMere.name,
-                    "description": t.pages.wellness.venues.laMere.desc
+                    "name": "La Mere Glam Et Beaute",
+                    "description": "Premium beauty salon and aesthetic clinic."
                 },
                 {
                     "@type": "BanquetHall",
-                    "name": t.pages.meetings.venues.skyBallroom.name,
-                    "description": t.pages.meetings.venues.skyBallroom.description
+                    "name": "Sky Ballroom",
+                    "description": "Grand ballroom with 180-degree city views."
                 },
                 {
                     "@type": "BanquetHall",
-                    "name": t.pages.meetings.venues.skyGarden.name,
-                    "description": t.pages.meetings.venues.skyGarden.description
+                    "name": "Sky Garden",
+                    "description": "Outdoor venue surrounded by lush greenery."
                 },
                 {
                     "@type": "MeetingRoom",
-                    "name": t.pages.meetings.venues.royalEight.name,
-                    "description": t.pages.meetings.venues.royalEight.description
+                    "name": "Royal Eight Private Dining Rooms",
+                    "description": "8 exclusive VIP private dining rooms for intimate gatherings."
                 }
             ]
         };
@@ -190,7 +187,7 @@ export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', tran
             "@context": "https://schema.org",
             "@type": "Restaurant",
             "name": "Royal Eight Chinese Dining",
-            "description": t.dining.venues.royalEight.desc || "Authentic Chinese Fine Dining at JHL Solitaire Gading Serpong, featuring 8 VIP private dining rooms and legendary Master Head Chef Chong Kok Leong.",
+            "description": "Authentic Chinese Fine Dining at JHL Solitaire Gading Serpong, featuring 8 VIP private dining rooms and legendary Master Head Chef Chong Kok Leong.",
             "image": "https://jhlcollections.com/assets/royal-eight/hero.webp",
             "priceRange": "$$$",
             "servesCuisine": ["Chinese", "Dim Sum", "Authentic Chinese"],
@@ -241,7 +238,7 @@ export const SchemaGenerator = ({ menuData, specialOffers, language = 'en', tran
             "hasMenu": {
                 "@type": "Menu",
                 "name": "Royal Eight Menu",
-                "description": t.dining.venues.royalEight.type,
+                "description": "Chinese Fine Dining",
                 "inLanguage": language,
                 "hasMenuSection": sections
             }
