@@ -120,18 +120,18 @@ function RoomSection({ room, align }: { room: any, align: 'left' | 'right' }) {
     return (
         <section className="relative flex flex-col xl:flex-row min-h-[80vh] bg-zinc-900 border-b border-white/5">
             {/* Image Side */}
-            <div className={`relative w-full xl:w-1/2 h-[50vh] xl:h-auto overflow-hidden ${align === 'right' ? 'xl:order-last' : 'xl:order-first'}`}>
+            <div className={`relative w-full xl:w-[65%] h-[50vh] xl:h-auto overflow-hidden ${align === 'right' ? 'xl:order-last' : 'xl:order-first'}`}>
                 <Image
                     src={room.image}
                     alt={room.name}
                     fill
-                    className="object-cover opacity-60 hover:scale-105 transition-transform duration-1000"
+                    className="object-cover opacity-80 hover:scale-105 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-black/40 xl:bg-transparent" />
+                <div className="absolute inset-0 bg-black/20 xl:bg-transparent" />
             </div>
 
             {/* Content Side */}
-            <div className={`relative w-full xl:w-1/2 flex flex-col justify-center p-8 md:p-16 xl:p-24 ${align === 'right' ? 'xl:pr-32' : 'xl:pl-32'}`}>
+            <div className={`relative w-full xl:w-[35%] flex flex-col justify-center p-8 md:p-12 xl:p-16 ${align === 'right' ? 'xl:pr-24' : 'xl:pl-24'}`}>
                 <div className="mb-8">
                     <h2 className="font-luxury text-4xl md:text-5xl text-brand-gold mb-4 uppercase tracking-wider">{room.name}</h2>
                     <p className="text-gray-400 text-sm md:text-base leading-relaxed font-sans">{room.description}</p>
