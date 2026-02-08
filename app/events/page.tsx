@@ -120,7 +120,7 @@ export default function Meetings() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="font-editorial text-2xl md:text-3xl leading-loose text-white/80 italic font-light"
+                        className="font-luxury text-xl md:text-3xl leading-relaxed text-white/90"
                     >
                         &quot;{t.pages.meetings.content.desc}&quot;
                     </motion.p>
