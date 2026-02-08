@@ -120,7 +120,7 @@ export default function Meetings() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="font-luxury text-xl md:text-3xl leading-relaxed text-white/90"
+                        className="font-luxury text-lg md:text-2xl leading-loose text-white/90 uppercase tracking-widest"
                     >
                         &quot;{t.pages.meetings.content.desc}&quot;
                     </motion.p>
@@ -175,6 +175,21 @@ export default function Meetings() {
                     align="right"
                     ctaLink="/dining/royal-eight"
                     ctaText="Explore Royal Eight"
+                />
+
+                {/* Meeting Rooms Link */}
+                <VenueSection
+                    image="/assets/meetings/sky-ballroom-venue.jpg" // Placeholder for Meeting Rooms
+                    subtitle="Level 6 • 7 Rooms • Flexible Configs"
+                    title="Meeting Rooms"
+                    description="From board meetings to corporate workshops, our 7 distinct meeting venues on Level 6 offer state-of-the-art technology and versatile layouts."
+                    specs={[
+                        { label: "Venues", value: "7 Rooms" },
+                        { label: "Max Capacity", value: "60 Pax" }
+                    ]}
+                    align="left"
+                    ctaLink="/events/meeting-rooms"
+                    ctaText="View Meeting Rooms"
                 />
             </div>
 
