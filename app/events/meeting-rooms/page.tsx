@@ -67,6 +67,9 @@ const meetingRooms = [
     }
 ];
 
+import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
+
 import JsonLd from "@/components/JsonLd";
 
 export default function MeetingRooms() {
@@ -97,10 +100,86 @@ export default function MeetingRooms() {
         }))
     };
 
+    const [activeSection, setActiveSection] = useState("");
+    const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Hero height check (70vh approx)
+            const heroHeight = window.innerHeight * 0.7;
+            setIsScrolledPastHero(window.scrollY > heroHeight - 100);
+
+            // Spy on sections
+            const sections = meetingRooms.map(room => room.name);
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    // If top is near middle of viewport or just passed top
+                    if (rect.top <= 300 && rect.bottom >= 300) {
+                        setActiveSection(section);
+                        break;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 100; // Adjust for sticky header
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    };
+
     return (
         <main className="bg-zinc-950 min-h-screen text-white overflow-x-hidden selection:bg-brand-gold selection:text-brand-dark">
             <JsonLd data={meetingRoomsSchema} />
             <Header />
+
+            {/* Sub-Navbar */}
+            <AnimatePresence>
+                {isScrolledPastHero && (
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -100, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="fixed top-[80px] left-0 right-0 z-40 bg-zinc-950/90 backdrop-blur-md border-b border-white/10 hidden lg:block"
+                    >
+                        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                            <div className="flex items-center gap-8 overflow-x-auto no-scrollbar">
+                                {meetingRooms.map((room) => (
+                                    <button
+                                        key={room.name}
+                                        onClick={() => scrollToSection(room.name)}
+                                        className={`text-sm uppercase tracking-widest transition-colors whitespace-nowrap ${activeSection === room.name ? "text-brand-gold" : "text-white/60 hover:text-white"
+                                            }`}
+                                    >
+                                        {room.name}
+                                    </button>
+                                ))}
+                            </div>
+                            <Link
+                                href="https://wa.me/628118822257" // Placeholder - Update with actual number if different
+                                target="_blank"
+                                className="ml-8 px-6 py-2 bg-brand-gold text-brand-dark font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(198,168,124,0.5)] animate-pulse-slow"
+                            >
+                                Contact Planner
+                            </Link>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Hero Section */}
             <section className="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
@@ -163,6 +242,7 @@ export default function MeetingRooms() {
 function RoomSection({ room, align }: { room: any, align: 'left' | 'right' }) {
     return (
         <motion.section
+            id={room.name} // Add ID for scroll spy
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
