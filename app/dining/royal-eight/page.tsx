@@ -9,6 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { type Language } from "@/lib/translations";
 import { Globe, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import JsonLd from "@/components/JsonLd";
 
 type MenuTab = 'Main' | 'DimSum' | 'Beverage';
 
@@ -52,7 +53,6 @@ export default function RoyalEightPage() {
         { code: 'ko', flag: "🇰🇷", label: "KO" }
     ];
 
-    import JsonLd from "@/components/JsonLd";
 
     const activeLang = languages.find(l => l.code === language) || languages[0];
 
