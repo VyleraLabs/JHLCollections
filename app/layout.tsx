@@ -46,6 +46,7 @@ import { headers } from "next/headers";
 import { LanguageProvider } from "@/context/LanguageContext";
 import ClientSEO from "@/components/ClientSEO";
 import CookieConsent from "@/components/CookieConsent";
+import { GlobalHotelSchema } from "@/components/GlobalHotelSchema";
 
 export default async function RootLayout({
   children,
@@ -58,6 +59,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} ${greatVibes.variable} antialiased`}>
         <LanguageProvider>
+          <GlobalHotelSchema />
           <ClientSEO />
           <AnimationProvider nonce={nonce}>
             {children}
