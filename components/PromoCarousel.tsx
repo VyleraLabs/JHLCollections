@@ -15,7 +15,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const tableCheckUrl = "https://www.tablecheck.com/en/jhl-solitaire-gading-serpong-royal-eight/reserve/experiences";
 
-const bgImage = "/assets/royal-eight/banquet.svg";
+const bgImage = "/assets/original/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp";
 
 export const PromoCarousel = () => {
     const { t } = useLanguage();

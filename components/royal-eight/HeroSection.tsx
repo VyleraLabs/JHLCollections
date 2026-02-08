@@ -1,25 +1,25 @@
 "use client";
 
-import React, { useRef } from "react";
-import { m, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { m } from "framer-motion";
 import Image from "next/image";
-import heroBg from "@/assets/royal-eight/hero-ambience.webp";
+// import heroBg from "@/assets/royal-eight/hero-ambience.webp"; // Replaced with new asset
 import { LightstreamEight } from "./LightstreamEight";
 
-export const HeroSection = () => {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end start"]
-    });
+const heroBg = "/assets/original/img-afa9b05f-b2fc-4310-ac64-7cdb11a22bff.webp";
 
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+export const HeroSection = () => {
+    // Parallax removed for performance stability
 
     return (
-        <section ref={ref} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-            {/* Parallax Background */}
-            <m.div style={{ y, opacity }} className="absolute inset-0 z-0">
+        <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+            {/* Static Background with Entry Animation */}
+            <m.div
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute inset-0 z-0"
+            >
                 <Image
                     src={heroBg}
                     alt="Royal Eight Ambience"

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const tabs = [
+    { id: "special-offers", label: "Special Offers" },
     { id: "main-course", label: "Main Course" },
     { id: "dim-sum", label: "Dim Sum" },
     { id: "beverage", label: "Beverage" },
@@ -35,7 +36,8 @@ export const NavigationTabs = () => {
         setActiveTab(id);
         const element = document.getElementById(id);
         if (element) {
-            const offset = 80; // Height of sticky header
+            // Header is ~100px, Nav is 80px. Total offset ensuring visibility.
+            const offset = 180;
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -50,7 +52,9 @@ export const NavigationTabs = () => {
 
     return (
         <nav
-            className={`sticky top-0 z-50 w-full transition-all duration-500 ${isSticky ? "bg-luxury-black/90 backdrop-blur-md shadow-2xl border-b border-luxury-gold/20" : "bg-transparent"
+            className={`sticky top-24 md:top-32 z-40 w-full transition-all duration-300 ${isSticky
+                ? "bg-royal-stone border-b border-white/20 shadow-2xl py-2"
+                : "bg-transparent py-4"
                 }`}
             aria-label="Menu Categories"
         >

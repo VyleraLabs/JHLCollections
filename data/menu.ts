@@ -29,7 +29,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "imageKeyword": "banquet",
     "isRecommended": true,
     "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/banquet.svg"
+    "imageUrl": "/assets/original/img-6f594b46-8458-473f-a2e2-235dd3a798bd.webp"
   },
   {
     "id": "peking-duck",
@@ -111,7 +111,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "imageKeyword": "beef black pepper",
     "isRelatedTo": "Pu-erh Tea",
     "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/peking-duck.svg"
+    "imageUrl": "/assets/original/img-6e2264a9-f48f-49a8-be60-e54a57af2405.jpg"
   },
   {
     "id": "kung-pao-chicken",

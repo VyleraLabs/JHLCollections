@@ -29,7 +29,7 @@ export default function RoyalEightLayout({
     }];
 
     return (
-        <main className="min-h-screen bg-gradient-to-b from-luxury-black to-luxury-charcoal text-white font-sans selection:bg-luxury-gold selection:text-black">
+        <main className="min-h-screen bg-royal-stone text-white font-sans selection:bg-luxury-gold selection:text-black">
             <Header />
 
             {/* Integrations */}

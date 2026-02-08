@@ -14,7 +14,9 @@ export default function RoyalEightPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
 
             {/* Promo Section */}
-            <PromoCarousel />
+            <section id="special-offers" className="scroll-mt-32">
+                <PromoCarousel />
+            </section>
 
             {/* Main Course Section */}
             <section id="main-course" className="scroll-mt-32">

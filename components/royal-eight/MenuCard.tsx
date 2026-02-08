@@ -21,9 +21,9 @@ export const MenuCard = ({ item }: MenuCardProps) => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             whileHover={{
                 scale: 1.02,
-                boxShadow: "0 0 20px rgba(212, 175, 55, 0.3)" // Gold glow
+                boxShadow: "0 0 20px rgba(212, 175, 55, 0.2)" // Reduced intensity for performance
             }}
-            className="group relative bg-[#1A1A1A] rounded-xl overflow-hidden border border-white/5 hover:border-luxury-gold/50 transition-colors duration-300 flex flex-col h-full"
+            className="group relative bg-[#1A1A1A] rounded-xl overflow-hidden border border-white/5 hover:border-luxury-gold/50 transition-colors duration-300 flex flex-col h-full will-change-transform"
         >
             {/* Image Container */}
             <div className="relative h-64 w-full overflow-hidden">
