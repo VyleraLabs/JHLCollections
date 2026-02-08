@@ -104,11 +104,45 @@ export interface Translations {
         meetings: {
             hero: { title: string; subtitle: string };
             content: { title: string; desc: string };
+            venues: {
+                title: string;
+                skyBallroom: {
+                    name: string;
+                    description: string;
+                    location: string;
+                    ceremony: string;
+                    reception: string;
+                };
+                skyGarden: {
+                    name: string;
+                    description: string;
+                    location: string;
+                    ceremony: string;
+                    reception: string;
+                };
+                royalEight: {
+                    name: string;
+                    description: string;
+                    location: string;
+                    ceremony: string;
+                    reception: string;
+                };
+            };
+            packages: {
+                title: string;
+                desc: string;
+            };
             cta: string;
         };
         wellness: {
             hero: { title: string; subtitle: string };
             content: { title: string; desc: string };
+            venues: {
+                acqua: { name: string; type: string; desc: string };
+                sandjong: { name: string; type: string; desc: string };
+                acquaree: { name: string; type: string; desc: string };
+                laMere: { name: string; type: string; desc: string };
+            };
             treatments: {
                 massage: { name: string; duration: string };
                 facial: { name: string; duration: string };
@@ -129,6 +163,24 @@ export interface Translations {
                 brunch: { tag: string; title: string; desc: string; cta: string };
             };
         };
+        privacy: {
+            title: string;
+            lastUpdated: string;
+            content: string;
+            sections: {
+                storage: {
+                    title: string;
+                    content: string;
+                };
+            };
+        };
+    };
+    cookies: {
+        title: string;
+        message: string;
+        accept: string;
+        decline: string;
+        policy: string;
     };
 }
 
@@ -189,7 +241,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "Wellness & Spa",
                 subtitle: "Serenity & Spa",
-                description: "Rejuvenate your senses at Acqua Spa, featuring curated treatments and world-class fitness facilities.",
+                description: "Rejuvenate your senses at our world-class wellness facilities, featuring three specialized spas—Acqua Spa, Sandjong Spa, and Acquaree Spa for kids—alongside our state-of-the-art gym and La Mere beauty salon.",
                 cta: "Rejuvenate Now"
             },
             facilities: {
@@ -300,13 +352,63 @@ export const translations: Record<Language, Translations> = {
                     title: "Sky Ballroom",
                     desc: "Our iconic Sky Ballroom offers 180-degree panoramic views of the city, providing a stunning backdrop for weddings, corporate galas, and social events. Equipped with cutting-edge technology and supported by our dedicated events team."
                 },
+                venues: {
+                    title: "Exquisite Venues",
+                    skyBallroom: {
+                        name: "Sky Ballroom",
+                        description: "The Sky Ballroom creates an extraordinary setting for any special occasion. Ideal for weddings, graduations, or private events, this exceptional venue is located 200 feet above the ground on the 15th floor. Featuring state of the art audiovisual technology, high-speed wireless Internet, and floor-to-ceiling windows that fill the space with natural light.",
+                        location: "Indoor (15th Floor)",
+                        ceremony: "200 PAX",
+                        reception: "250 PAX"
+                    },
+                    skyGarden: {
+                        name: "Sky Garden",
+                        description: "An enchanting rooftop sanctuary for intimate weddings and gatherings, where breathtaking views and timeless elegance create unforgettable moments.",
+                        location: "Rooftop / Private",
+                        ceremony: "500 PAX",
+                        reception: "50 PAX"
+                    },
+                    royalEight: {
+                        name: "Royal Eight Chinese Dining",
+                        description: "Chinese dining experience in the heart of Gading Serpong, Tangerang. As part of our signature semi-fine dining collection, Royal Eight serves a delectable selection of lunch, dinner, and desserts throughout the day. The restaurants contemporary ambiance and thoughtfully crafted design provide the perfect setting for a harmonious culinary journey.",
+                        location: "Indoor",
+                        ceremony: "250 PAX",
+                        reception: "250 PAX"
+                    }
+                },
+                packages: {
+                    title: "Packages",
+                    desc: "Tailored to your needs, our event packages offer comprehensive services including premium catering, decoration, and dedicated event coordination."
+                },
                 cta: "Enquire Now"
             },
             wellness: {
                 hero: { title: "Wellness & Spa", subtitle: "Rejuvenate Your Senses" },
                 content: {
-                    title: "Acqua Spa",
-                    desc: "Immerse yourself in tranquility at Acqua Spa. From traditional massages to modern therapeutic treatments, our expert therapists are dedicated to restoring your balance and well-being."
+                    title: "A Haven of Holistic Well-being",
+                    desc: "JHL Solitaire Gading Serpong offers a comprehensive wellness destination featuring three distinct spa experiences: Acqua Spa (modern luxury), Sandjong Spa (traditional heritage), and Acquaree Spa (the first dedicated kids' spa). Our facilities also include a state-of-the-art gym and the prestigious La Mere Beauty Salon."
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua Spa",
+                        type: "Modern Luxury Spa",
+                        desc: "A contemporary sanctuary focused on modern therapeutic treatments and ultimate relaxation."
+                    },
+                    sandjong: {
+                        name: "Sandjong Spa",
+                        type: "Traditional Heritage Spa",
+                        desc: "Discover the essence of Indonesian heritage through ancient healing techniques and natural ingredients."
+                    },
+                    acquaree: {
+                        name: "Acquaree Kids Spa",
+                        type: "Children's Specialized Spa",
+                        desc: "The first specialized spa for children, offering fun and gentle treatments in a safe environment."
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "Beauty Salon",
+                        desc: "Professional hair, nail, and beauty services delivered by expert stylists and beauticians."
+                    }
                 },
                 treatments: {
                     massage: { name: "Signature Massage", duration: "60 / 90 Mins" },
@@ -347,7 +449,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "Book Table"
                     }
                 }
+            },
+            privacy: {
+                title: "Privacy Policy",
+                lastUpdated: "Last Updated: February 8, 2026",
+                content: "At JHL Solitaire, we value your privacy. This policy outlines how we handle your personal data.",
+                sections: {
+                    storage: {
+                        title: "Data Storage & Localization",
+                        content: "We prioritize the security of your Personal Data. In compliance with Indonesian regulations (PP No. 71/2019 and UU PDP), our primary servers and customer databases are located within the territory of the Republic of Indonesia (Google Cloud Region: Jakarta).\n\nHowever, for the purpose of performance optimization (CDN) and traffic analysis, limited anonymized data may be processed by our third-party partners (such as Google Analytics) in other jurisdictions that adhere to international data privacy standards."
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "Cookie Consent",
+            message: "We use cookies to enhance your experience and analyze our traffic. By clicking \"Accept\", you consent to our use of cookies.",
+            accept: "Accept",
+            decline: "Decline",
+            policy: "Privacy Policy"
         }
     },
     zh: {
@@ -406,7 +526,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "水疗康体",
                 subtitle: "宁静水疗",
-                description: "在 Acqua 水疗中心焕发活力，体验精心设计的护理与世界一流的健身设施。",
+                description: "在我们的世界级康体设施中焕发活力，拥有三家特色水疗中心：Acqua 水疗中心（现代奢华）、Sandjong 水疗中心（传统传承）和专为儿童设计的 Acquaree 水疗中心，以及先进的健身房和 La Mere 美容沙龙。",
                 cta: "立即焕活"
             },
             facilities: {
@@ -517,13 +637,63 @@ export const translations: Record<Language, Translations> = {
                     title: "天空宴会厅 (Sky Ballroom)",
                     desc: "我们标志性的天空宴会厅拥有 180 度城市全景，为婚礼、企业盛会和社交活动提供绝佳背景。配备尖端科技，并由我们的专业活动团队提供鼎力支持。"
                 },
+                venues: {
+                    title: "卓越场地",
+                    skyBallroom: {
+                        name: "天空宴会厅 (Sky Ballroom)",
+                        description: "天空宴会厅为任何特殊场合营造出非凡的氛围。是举办婚礼、毕业典礼或私人活动的理想之选，这一卓越场地位于 15 层，距离地面 200 英尺。配备先进的视听技术、高速无线网络和从地板到天花板的全景窗户，让自然光充盈整个空间。",
+                        location: "室内 (15层)",
+                        ceremony: "200 人",
+                        reception: "250 人"
+                    },
+                    skyGarden: {
+                        name: "天空花园 (Sky Garden)",
+                        description: "一个迷人的屋顶圣地，适合举办亲密的婚礼和聚会，在这里，壮丽的景色和永恒的优雅营造出难忘的时刻。",
+                        location: "屋顶 / 私人",
+                        ceremony: "500 人",
+                        reception: "50 人"
+                    },
+                    royalEight: {
+                        name: "皇家八号中餐厅 (Royal Eight)",
+                        description: "位于丹格朗 Gading Serpong 核心地带的中式餐饮体验。作为我们招牌半正式餐饮系列的一部分，皇家八号全天供应精选的午餐、晚餐和甜点。餐厅现代的氛围和精心设计的风格为和谐的烹饪之旅提供了完美的环境。",
+                        location: "室内",
+                        ceremony: "250 人",
+                        reception: "250 人"
+                    }
+                },
+                packages: {
+                    title: "配套方案",
+                    desc: "我们的活动配套方案根据您的需求量身定制，提供包括高级餐饮、装饰和专属活动协调在内的全面服务。"
+                },
                 cta: "立即咨询"
             },
             wellness: {
                 hero: { title: "水疗与康体", subtitle: "焕发您的感官" },
                 content: {
-                    title: "Acqua 水疗中心",
-                    desc: "在 Acqua 水疗中心沉浸于宁静之中。从传统的按摩到现代的疗程，我们专业的理疗师致力于为您恢复身心平衡与健康。"
+                    title: "身心平衡的避风港",
+                    desc: "JHL Solitaire Gading Serpong 提供全面的康体目的地，拥有三种不同的水疗体验：Acqua 水疗中心（现代奢华）、Sandjong 水疗中心（传统传承）以及首家儿童专用 Acquaree 水疗中心。此外，我们的设施还包括先进的健身中心和享誉盛名的 La Mere 美容沙龙。"
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua 水疗中心",
+                        type: "现代奢华水疗",
+                        desc: "专注于现代疗愈和极致放松的当代避风港。"
+                    },
+                    sandjong: {
+                        name: "Sandjong 水疗中心",
+                        type: "传统传承水疗",
+                        desc: "通过古老的治愈技法和天然成分，探索印度尼西亚传承的精髓。"
+                    },
+                    acquaree: {
+                        name: "Acquaree 儿童水疗中心",
+                        type: "儿童专用水疗",
+                        desc: "首家专为儿童设计的水疗中心，在安全的环境中提供有趣且温和的护理。"
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "美容沙龙",
+                        desc: "由专家级造型师和美容师提供专业的美发、美甲和美容服务。"
+                    }
                 },
                 treatments: {
                     massage: { name: "招牌按摩", duration: "60 / 90 分钟" },
@@ -564,7 +734,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "立即预约"
                     }
                 }
+            },
+            privacy: {
+                title: "隐私政策",
+                lastUpdated: "最后更新：2026年2月8日",
+                content: "在 JHL Solitaire，我们非常重视您的隐私。本政策概述了我们如何处理您的个人数据。",
+                sections: {
+                    storage: {
+                        title: "数据存储与本地化",
+                        content: "我们优先考虑您的个人数据安全。根据印度尼西亚法规（2019年第71号政府条例和UU PDP），我们的主要服务器和客户数据库位于印度尼西亚共和国境内（Google Cloud区域： Jacob达）。\n\n然而，为了性能优化（CDN）和流量分析，受限制的匿名数据可能会由我们的第三方合作伙伴（如 Google Analytics）在遵守国际数据隐私标准的其他司法管辖区进行处理。"
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "Cookie 访问权限",
+            message: "我们使用 cookie 来提升您的体验并分析流量。点击“接受”，即表示您同意我们使用 cookie。",
+            accept: "接受",
+            decline: "拒绝",
+            policy: "隐私政策"
         }
     },
     id: {
@@ -623,7 +811,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "Kebugaran & Spa",
                 subtitle: "Ketenangan Jiwa",
-                description: "Segarkan pancaindera Anda di Acqua Spa, menghadirkan perawatan pilihan dan fasilitas kebugaran kelas dunia.",
+                description: "Segarkan panca indera Anda di fasilitas kebugaran kelas dunia kami, yang menghadirkan tiga spa khusus—Acqua Spa (kemewahan modern), Sandjong Spa (warisan tradisional), dan Acquaree Spa untuk anak-anak—bersama dengan gym mutakhir dan salon kecantikan La Mere.",
                 cta: "Segarkan Sekarang"
             },
             facilities: {
@@ -734,13 +922,63 @@ export const translations: Record<Language, Translations> = {
                     title: "Sky Ballroom",
                     desc: "Sky Ballroom ikonik kami menawarkan pemandangan panorama kota 180 derajat, memberikan latar belakang yang menakjubkan untuk pernikahan, gala korporat, dan acara sosial. Dilengkapi dengan teknologi terkini dan didukung oleh tim acara kami yang berdedikasi."
                 },
+                venues: {
+                    title: "Venue Eksklusif",
+                    skyBallroom: {
+                        name: "Sky Ballroom",
+                        description: "Sky Ballroom menciptakan suasana luar biasa untuk setiap acara spesial. Ideal untuk pernikahan, wisuda, atau acara pribadi, venue istimewa ini terletak 200 kaki di atas tanah di lantai 15. Menampilkan teknologi audiovisual mutakhir, internet nirkabel berkecepatan tinggi, dan jendela setinggi langit-langit yang memenuhi ruangan dengan cahaya alami.",
+                        location: "Indoor (Lantai 15)",
+                        ceremony: "200 PAX",
+                        reception: "250 PAX"
+                    },
+                    skyGarden: {
+                        name: "Sky Garden",
+                        description: "Sanctuari atap yang menawan untuk pernikahan dan pertemuan intim, di mana pemandangan yang menakjubkan dan keanggunan abadi menciptakan momen yang tak terlupakan.",
+                        location: "Rooftop / Privat",
+                        ceremony: "500 PAX",
+                        reception: "50 PAX"
+                    },
+                    royalEight: {
+                        name: "Royal Eight Chinese Dining",
+                        description: "Pengalaman bersantap Tionghoa di jantung Gading Serpong, Tangerang. Sebagai bagian dari koleksi semi-fine dining khas kami, Royal Eight menyajikan pilihan makan siang, makan malam, dan hidangan penutup yang lezat sepanjang hari. Suasana kontemporer restoran dan desain yang dirancang dengan cermat memberikan pengaturan yang sempurna untuk perjalanan kuliner yang harmonis.",
+                        location: "Indoor",
+                        ceremony: "250 PAX",
+                        reception: "250 PAX"
+                    }
+                },
+                packages: {
+                    title: "Paket",
+                    desc: "Disesuaikan dengan kebutuhan Anda, paket acara kami menawarkan layanan komprehensif termasuk katering premium, dekorasi, dan koordinasi acara khusus."
+                },
                 cta: "Hubungi Kami"
             },
             wellness: {
                 hero: { title: "Kebugaran & Spa", subtitle: "Segarkan Panca Indera Anda" },
                 content: {
-                    title: "Acqua Spa",
-                    desc: "Hanyutkan diri Anda dalam ketenangan di Acqua Spa. Dari pijat tradisional hingga perawatan terapeutik modern, terapis ahli kami berdedikasi untuk memulihkan keseimbangan dan kesejahteraan Anda."
+                    title: "Oasis Kesejahteraan Holistik",
+                    desc: "JHL Solitaire Gading Serpong menawarkan destinasi kebugaran lengkap dengan tiga pengalaman spa yang berbeda: Acqua Spa (kemewahan modern), Sandjong Spa (warisan tradisional), dan Acquaree Spa (spa khusus anak pertama). Fasilitas kami juga mencakup gym mutakhir dan Salon Kecantikan La Mere yang bergengsi."
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua Spa",
+                        type: "Spa Mewah Modern",
+                        desc: "Sanctuari kontemporer yang berfokus pada perawatan terapeutik modern dan relaksasi maksimal."
+                    },
+                    sandjong: {
+                        name: "Sandjong Spa",
+                        type: "Spa Warisan Tradisional",
+                        desc: "Temukan esensi warisan Indonesia melalui teknik penyembuhan kuno dan bahan-bahan alami."
+                    },
+                    acquaree: {
+                        name: "Acquaree Kids Spa",
+                        type: "Spa Khusus Anak",
+                        desc: "Spa khusus anak pertama, menawarkan perawatan yang menyenangkan dan lembut dalam lingkungan yang aman."
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "Salon Kecantikan",
+                        desc: "Layanan rambut, kuku, dan kecantikan profesional yang diberikan oleh penata rambut dan ahli kecantikan ahli."
+                    }
                 },
                 treatments: {
                     massage: { name: "Signature Massage", duration: "60 / 90 Menit" },
@@ -781,7 +1019,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "Pesan Meja"
                     }
                 }
+            },
+            privacy: {
+                title: "Kebijakan Privasi",
+                lastUpdated: "Terakhir Diperbarui: 8 Februari 2026",
+                content: "Di JHL Solitaire, kami menghargai privasi Anda. Kebijakan ini menguraikan bagaimana kami menangani data pribadi Anda.",
+                sections: {
+                    storage: {
+                        title: "Penyimpanan & Teritori Data",
+                        content: "Kami memprioritaskan keamanan Data Pribadi Anda. Sesuai dengan peraturan Indonesia (PP No. 71/2019 dan UU PDP), server utama dan basis data pelanggan kami berada di wilayah Republik Indonesia (Wilayah Google Cloud: Jakarta).\n\nNamun, untuk tujuan optimalisasi performa (CDN) dan analisis lalu lintas, data anonim terbatas mungkin diproses oleh mitra pihak ketiga kami (seperti Google Analytics) di yurisdiksi lain yang mematuhi standar privasi data internasional."
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "Persetujuan Cookie",
+            message: "Kami menggunakan cookie untuk meningkatkan pengalaman Anda dan menganalisis lalu lintas kami. Dengan mengeklik \"Terima\", Anda menyetujui penggunaan cookie kami.",
+            accept: "Terima",
+            decline: "Tolak",
+            policy: "Kebijakan Privasi"
         }
     },
     ru: {
@@ -840,7 +1096,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "Велнес и Спа",
                 subtitle: "Спокойствие и Спа",
-                description: "Омолодите свои чувства в Acqua Spa с кураторскими процедурами и фитнес-залами мирового класса.",
+                description: "Омолодите свои чувства в наших велнес-залах мирового класса, где расположены три специализированных спа-центра: Acqua Spa (современная роскошь), Sandjong Spa (традиционное наследие) и Acquaree Spa для детей, а также современный тренажерный зал и салон красоты La Mere.",
                 cta: "Омолодиться сейчас"
             },
             facilities: {
@@ -949,15 +1205,65 @@ export const translations: Record<Language, Translations> = {
                 hero: { title: "Встречи и события", subtitle: "Где бизнес встречается с роскошью" },
                 content: {
                     title: "Небесный бальный зал",
-                    desc: "Наш легендарный Небесный бальный зал предлагает 180-градусный панорамный вид на город."
+                    desc: "Наш легендарный Небесный бальный зал предлагает 180-градусный панорамный вид на город, обеспечивая потрясающий фон для свадеб, корпоративных гала-концертов и светских мероприятий. Оснащен новейшими технологиями и поддерживается нашей преданной командой организаторов."
+                },
+                venues: {
+                    title: "Изысканные площадки",
+                    skyBallroom: {
+                        name: "Sky Ballroom",
+                        description: "Sky Ballroom создает необыкновенную обстановку для любого торжественного случая. Идеально подходит для свадеб, выпускных или частных мероприятий. Это исключительное место расположено на высоте 200 футов над землей на 15-м этаже. К услугам гостей современное аудиовизуальное оборудование, высокоскоростной беспроводной интернет и панорамные окна во всю стену, наполняющие пространство естественным светом.",
+                        location: "В помещении (15-й этаж)",
+                        ceremony: "200 чел.",
+                        reception: "250 чел."
+                    },
+                    skyGarden: {
+                        name: "Sky Garden",
+                        description: "Очаровательное убежище на крыше для камерных свадеб и встреч, где захватывающие виды и вечная элегантность создают незабываемые моменты.",
+                        location: "Крыша / Частная зона",
+                        ceremony: "500 чел.",
+                        reception: "50 чел."
+                    },
+                    royalEight: {
+                        name: "Royal Eight Chinese Dining",
+                        description: "Опыт китайской кухни в самом сердце Гадинг Серпонг, Тангеранг. Являясь частью нашей фирменной коллекции ресторанов полувысокой кухни, Royal Eight предлагает восхитительный выбор обедов, ужинов и десертов в течение дня. Современная атмосфера ресторана и продуманный дизайн создают идеальные условия для гармоничного кулинарного путешествия.",
+                        location: "В помещении",
+                        ceremony: "250 чел.",
+                        reception: "250 чел."
+                    }
+                },
+                packages: {
+                    title: "Пакеты услуг",
+                    desc: "Разработанные в соответствии с вашими потребностями, наши банкетные пакеты предлагают комплексные услуги, включая кейтеринг премиум-класса, декорирование и услуги персонального координатора."
                 },
                 cta: "Узнать сейчас"
             },
             wellness: {
                 hero: { title: "Велнес и Спа", subtitle: "Омолодите свои чувства" },
                 content: {
-                    title: "Acqua Spa",
-                    desc: "Погрузитесь в спокойствие в Acqua Spa. От традиционного массажа до современных процедур."
+                    title: "Оазис целостного благополучия",
+                    desc: "JHL Solitaire Gading Serpong предлагает комплексное велнес-направление, включающее три различных спа-центра: Acqua Spa (современная роскошь), Sandjong Spa (традиционное наследие) и Acquaree Spa (первый специализированный спа для детей). К вашим услугам также современный фитнес-центр и престижный салон красоты La Mere."
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua Spa",
+                        type: "Современный роскошный спа",
+                        desc: "Современное святилище, ориентированное на новейшие терапевтические процедуры и полное расслабление."
+                    },
+                    sandjong: {
+                        name: "Sandjong Spa",
+                        type: "Традиционный спа-центр",
+                        desc: "Откройте для себя суть индонезийского наследия с помощью древних техник исцеления и натуральных ингредиентов."
+                    },
+                    acquaree: {
+                        name: "Acquaree Kids Spa",
+                        type: "Специализированный детский спа",
+                        desc: "Первый специализированный спа-центр для детей, предлагающий веселые и щадящие процедуры в безопасной среде."
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "Салон красоты",
+                        desc: "Профессиональные услуги по уходу за волосами, ногтями и кожей от опытных стилистов и косметологов."
+                    }
                 },
                 treatments: {
                     massage: { name: "Фирменный массаж", duration: "60 / 90 Мин" },
@@ -998,7 +1304,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "Забронировать столик"
                     }
                 }
+            },
+            privacy: {
+                title: "Политика конфиденциальности",
+                lastUpdated: "Последнее обновление: 8 февраля 2026 г.",
+                content: "В JHL Solitaire мы ценим вашу конфиденциальность. Эта политика описывает, как мы обрабатываем ваши личные данные.",
+                sections: {
+                    storage: {
+                        title: "Хранение и локализация данных",
+                        content: "Мы уделяем приоритетное внимание безопасности ваших Персональных данных. В соответствии с правилами Индонезии (ПП № 71/2019 и UU PDP), наши основные серверы и базы данных клиентов расположены на территории Республики Индонезии (регион Google Cloud: Джакарта).\n\nОднако в целях оптимизации производительности (CDN) и анализа трафика ограниченные анонимизированные данные могут обрабатываться нашими сторонними партнерами (такими как Google Analytics) в других юрисдикциях, придерживающихся международных стандартов конфиденциальности данных."
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "Согласие на использование файлов cookie",
+            message: "Мы используем файлы cookie, чтобы улучшить ваш опыт и анализировать наш трафик. Нажимая «Принять», вы соглашаетесь на использование нами файлов cookie.",
+            accept: "Принять",
+            decline: "Отклонить",
+            policy: "Политика конфиденциальности"
         }
     },
     ja: {
@@ -1057,7 +1381,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "ウェルネス＆スパ",
                 subtitle: "静寂とスパ",
-                description: "Acqua Spaで感覚を若返らせましょう。厳選されたトリートメントと世界クラスのフィットネス施設を備えています。",
+                description: "世界クラスのウェルネス施設で五感を若返らせましょう。モダンなAcqua Spa、伝統的なSandjong Spa、お子様向けのAcquaree Spaの3つのスパに加え、最先端のジムと美容サロンLa Mereを備えています。",
                 cta: "今すぐリフレッシュ"
             },
             facilities: {
@@ -1163,18 +1487,68 @@ export const translations: Record<Language, Translations> = {
                 bookNow: "予約する"
             },
             meetings: {
-                hero: { title: "会議・イベント", subtitle: "ビジネスとラグジュアリーが出会う場所" },
+                hero: { title: "ミーティング＆イベント", subtitle: "ビジネスとラグジュアリーが交差する場所" },
                 content: {
                     title: "スカイボールルーム",
-                    desc: "象徴的なスカイボールルームは、180度のパノラマの街の景色を望み、結婚式、企業の祝賀会、社交イベントに素晴らしい背景を提供します。"
+                    desc: "街のパノラマを180度見渡すことができるアイコニックなスカイボールルームは、結婚式や企業のガラ、社交イベントに最高の背景を提供します。最先端のテクノロジーを完備し、専任のイベントチームが完璧なサポートをお約束します。"
                 },
-                cta: "今すぐ問い合わせる"
+                venues: {
+                    title: "極上の会場",
+                    skyBallroom: {
+                        name: "スカイボールルーム",
+                        description: "スカイボールルームは、あらゆる特別な機会に並外れた設定を作り出します。結婚式、卒業式、またはプライベートなイベントに理想的なこの卓越した会場は、地上200フィート（15階）に位置しています。最先端の視聴覚テクノロジー、高速ワイヤレスインターネット、そして自然光で空間を満たす床から天井までの窓が特徴です。",
+                        location: "室内 (15階)",
+                        ceremony: "200 名",
+                        reception: "250 名"
+                    },
+                    skyGarden: {
+                        name: "スカイガーデン",
+                        description: "息をのむような景色と時代を超越したエレガンスが忘れられない瞬間を作り出す、親密な結婚式や集まりのための魅惑的な屋上サンクチュアリ。",
+                        location: "屋上 / プライベート",
+                        ceremony: "500 名",
+                        reception: "50 名"
+                    },
+                    royalEight: {
+                        name: "ロイヤルエイト 中華ダイニング",
+                        description: "タンゲランのガディン・セルポンの中心で味わう中華ダイニング体验。シグネチャーなセミファインダイニングコレクションの一部として、ロイヤルエイトは一日を通して魅力的なランチ、ディナー、デザートを提供します。レストランの現代的な雰囲気と思慮深く作り込まれたデザインは、調和のとれた美食の旅に最適な環境を提供します。",
+                        location: "室内",
+                        ceremony: "250 名",
+                        reception: "250 名"
+                    }
+                },
+                packages: {
+                    title: "パッケージ",
+                    desc: "お客様のニーズに合わせてカスタマイズされたイベントパッケージは、プレミアムなケータリング、装飾、専任のイベントコーディネートを含む包括的なサービスを提供します。"
+                },
+                cta: "お問い合わせ"
             },
             wellness: {
                 hero: { title: "ウェルネス＆スパ", subtitle: "五感を若返らせる" },
                 content: {
-                    title: "Acqua Spa",
-                    desc: "Acqua Spaで静寂に浸ってください。伝統的なマッサージから現代的な治療法まで。"
+                    title: "ホリスティックな癒しの聖域",
+                    desc: "JHL Solitaire Gading Serpongは、モダンで贅沢な Acqua Spa、伝統を受け継ぐ Sandjong Spa、そして初の子供専用 Acquaree Spa の3つの異なるスパ体験を提供します。さらに、最先端のジムと一流の美容サロン La Mere も完備しています。"
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua Spa",
+                        type: "モダンラグジュアリースパ",
+                        desc: "最新のトリートメントと究極のリラクゼーションに焦点を当てた、現代的な癒しの空間。"
+                    },
+                    sandjong: {
+                        name: "Sandjong Spa",
+                        type: "伝統的ヘリテージスパ",
+                        desc: "古来の癒しの技法と天然素材を通じて、インドネシアの伝統の神髄を体験してください。"
+                    },
+                    acquaree: {
+                        name: "Acquaree Kids Spa",
+                        type: "子供専用スパ",
+                        desc: "安全な環境で楽しく優しいトリートメントを提供する、初の子供専用スパ施設。"
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "ビューティーサロン",
+                        desc: "熟練のスタイリストとエステティシャンによる、プロフェッショナルなヘア、ネイル、ビューティーサービス。"
+                    }
                 },
                 treatments: {
                     massage: { name: "シグネチャーマッサージ", duration: "60 / 90 分" },
@@ -1215,7 +1589,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "テーブルを予約"
                     }
                 }
+            },
+            privacy: {
+                title: "プライバシーポリシー",
+                lastUpdated: "最終更新日：2026年2月8日",
+                content: "JHL Solitaireでは、お客様のプライバシーを大切にしています。このポリシーでは、お客様の個人データの取り扱いについて説明します。",
+                sections: {
+                    storage: {
+                        title: "データの保存とローカリゼーション",
+                        content: "当社は、お客様の個人データのセキュリティを最優先事項としています。インドネシアの規制（PP No. 71/2019およびUU PDP）を遵守し、当社の主要なサーバーと顧客データベースはインドネシア共和国の領土内（Google Cloudリージョン：ジャカルタ）に配置されています。\n\nただし、パフォーマンスの最適化（CDN）およびトラフィック分析の目的で、国際的なデータプライバシー基準を遵守する他の法域において、当社のサードパーティパートナー（Google Analyticsなど）によって限定された匿名化データが処理される場合があります。"
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "クッキーの使用同意",
+            message: "当ウェブサイトでは、お客様の体験を向上させ、トラフィックを分析するためにクッキーを使用しています。「同意する」をクリックすると、クッキーの使用に同意したことになります。",
+            accept: "同意する",
+            decline: "拒否する",
+            policy: "プライバシーポリシー"
         }
     },
     ar: {
@@ -1274,7 +1666,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "العافية والسبا",
                 subtitle: "السكينة والسبا",
-                description: "جدد حواسك في سبا أكوا، الذي يتميز بعلاجات مخصصة ومرافق لياقة بدنية عالمية المستوى.",
+                description: "جدد حواسك في مرافقنا الصحية العالمية، التي تضم ثلاثة منتجعات متخصصة: أكوا سبا (فخامة حديثة)، وساندجونج سبا (تراث تقليدي)، وأكواريه سبا للأطفال، بالإضافة إلى صالة الألعاب الرياضية الحديثة وصالون لتجميل لا مير.",
                 cta: "تجديد النشاط الآن"
             },
             facilities: {
@@ -1382,16 +1774,66 @@ export const translations: Record<Language, Translations> = {
             meetings: {
                 hero: { title: "الاجتماعات والفعاليات", subtitle: "حيث يلتقي العمل بالرفاهية" },
                 content: {
-                    title: "قاعة سكاي",
-                    desc: "توفر قاعة سكاي الشهيرة إطلالات بانورامية بزاوية 180 درجة على المدينة."
+                    title: "سكاي بالروم",
+                    desc: "توفر قاعة سكاي بالروم الأيقونية إطلالات بانورامية بزاوية 180 درجة على المدينة، مما يوفر خلفية مذهلة لحفلات الزفاف والمناسبات الاجتماعية. مجهزة بأحدث التقنيات ويدعمها فريق الفعاليات المتخصص لدينا."
+                },
+                venues: {
+                    title: "قاعات رائعة",
+                    skyBallroom: {
+                        name: "سكاي بالروم",
+                        description: "تخلق قاعة سكاي بالروم أجواءً استثنائية لأي مناسبة خاصة. مثالية لحفلات الزفاف أو التخرج أو الفعاليات الخاصة، تقع هذه القاعة الاستثنائية على ارتفاع 200 قدم فوق سطح الأرض في الطابق الخامس عشر. تتميز بأحدث التقنيات السمعية والبصرية، وإنترنت لاسلكي عالي السرعة، ونوافذ ممتدة من الأرض حتى السقف تملأ المكان بالضوء الطبيعي.",
+                        location: "داخلي (الطابق 15)",
+                        ceremony: "200 شخص",
+                        reception: "250 شخص"
+                    },
+                    skyGarden: {
+                        name: "سكاي جاردن",
+                        description: "ملاذ ساحر على السطح لحفلات الزفاف والتجمعات الحميمة، حيث تخلق المناظر الخلابة والأناقة الخالدة لحظات لا تُنسى.",
+                        location: "سطح المبنى / خاص",
+                        ceremony: "500 شخص",
+                        reception: "50 شخص"
+                    },
+                    royalEight: {
+                        name: "رويال إيت للمأكولات الصينية",
+                        description: "تجربة طعام صيني في قلب غادينغ سيربونغ، تانجيرانج. كجزء من مجموعة المطاعم الراقية لدينا، يقدم رويال إيت مجموعة مختارة من الغداء والعشاء والحلويات طوال اليوم. توفر الأجواء المعاصرة للمطعم والتصميم المتقن بيئة مثالية لرحلة تذوق طعام متناغمة.",
+                        location: "داخلي",
+                        ceremony: "250 شخص",
+                        reception: "250 شخص"
+                    }
+                },
+                packages: {
+                    title: "الباقات",
+                    desc: "باقات الفعاليات لدينا مصممة خصيصًا لتلبية احتياجاتك، وتقدم خدمات شاملة بما في ذلك تقديم الطعام الفاخر والديكور وتنسيق الفعاليات المتخصص."
                 },
                 cta: "استفسر الآن"
             },
             wellness: {
                 hero: { title: "العافية والسبا", subtitle: "جدد حواسك" },
                 content: {
-                    title: "سبا أكوا",
-                    desc: "انغمس في الهدوء في سبا أكوا. من التدليك التقليدي إلى العلاجات الحديثة."
+                    title: "ملاذ للصحة الشمولية",
+                    desc: "يقدم جي إتش إل سوليتير غادينغ سيربونغ وجهة صحية شاملة تضم ثلاث تجارب سبا متميزة: أكوا سبا (الفخامة الحديثة)، وساندجونج سبا (التراث التقليدي)، وأكواريه سبا (أول سبا مخصص للأطفال). تضم مرافقنا أيضًا صالة ألعاب رياضية حديثة وصالون تجميل لا مير المرموق."
+                },
+                venues: {
+                    acqua: {
+                        name: "أكوا سبا",
+                        type: "سبا فاخر حديث",
+                        desc: "ملاذ معاصر يركز على العلاجات الحديثة والاسترخاء التام."
+                    },
+                    sandjong: {
+                        name: "ساندجونج سبا",
+                        type: "سبا تراثي تقليدي",
+                        desc: "اكتشف جوهر التراث الإندونيسي من خلال تقنيات الشفاء القديمة والمكونات الطبيعية."
+                    },
+                    acquaree: {
+                        name: "أكواريه كيدز سبا",
+                        type: "سبا متخصص للأطفال",
+                        desc: "أول سبا متخصص للأطفال، يقدم علاجات ممتعة ولطيفة في بيئة آمنة."
+                    },
+                    laMere: {
+                        name: "لا مير",
+                        type: "صالون تجميل",
+                        desc: "خدمات تصفيف شعر وأظافر وتجميل احترافية يقدمها خبراء التجميل."
+                    }
                 },
                 treatments: {
                     massage: { name: "تدليك مميز", duration: "60 / 90 دقيقة" },
@@ -1432,7 +1874,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "احجز طاولة"
                     }
                 }
+            },
+            privacy: {
+                title: "سياسة الخصوصية",
+                lastUpdated: "آخر تحديث: 8 فبراير 2026",
+                content: "في جي إتش إل سوليتير، نحن نقدر خصوصيتك. توضح هذه السياسة كيفية تعاملنا مع بياناتك الشخصية.",
+                sections: {
+                    storage: {
+                        title: "تخزين البيانات وتوطينها",
+                        content: "نحن نولي الأولوية لأمن بياناتك الشخصية. امتثالاً للوائح الإندونيسية (PP رقم 71/2019 وUU PDP)، تقع خوادمنا الرئيسية وقواعد بيانات عملائنا داخل أراضي جمهورية إندونيسيا (منطقة Google Cloud: جاكرتا).\n\nومع ذلك، لأغراض تحسين الأداء (CDN) وتحليل حركة المرور، قد تتم معالجة بيانات مجهولة المصدر محدودة من قبل شركائنا من الجهات الخارجية (مثل Google Analytics) في ولايات قضائية أخرى تلتزم بالمعايير الدولية لخصوصية البيانات."
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "موافقة ملفات تعريف الارتباط",
+            message: "نحن نستخدم ملفات تعريف الارتباط لتحسين تجربتك وتحليل حركة المرور لدينا. بالنقر فوق \"قبول\"، فإنك توافق على استخدامنا لملفات تعريف الارتباط.",
+            accept: "قبول",
+            decline: "رفض",
+            policy: "سياسة الخصوصية"
         }
     },
     ko: {
@@ -1491,7 +1951,7 @@ export const translations: Record<Language, Translations> = {
             wellness: {
                 title: "웰니스 & 스파",
                 subtitle: "평온 & 스파",
-                description: "엄선된 트리트먼트와 세계적 수준의 피트니스 시설을 갖춘 Acqua Spa에서 감각을 되살리십시오.",
+                description: "현대적인 Acqua Spa, 전통적인 Sandjong Spa, 어린이를 위한 Acquaree Spa 등 세 개의 전문 스파와 최첨단 피트니스 센터, La Mere 뷰티 살론을 갖춘 세계적 수준의 웰니스 시설에서 감각을 되살리세요.",
                 cta: "지금 활력 되찾기"
             },
             facilities: {
@@ -1600,18 +2060,68 @@ export const translations: Record<Language, Translations> = {
                 hero: { title: "미팅 & 이벤트", subtitle: "비즈니스와 럭셔리가 만나는 곳" },
                 content: {
                     title: "스카이 볼룸",
-                    desc: "상징적인 스카이 볼룸은 180도 파노라마 도시 전망을 제공하며 결혼식, 기업 갈라 및 사교 행사를 위한 멋진 배경을 제공합니다."
+                    desc: "상징적인 스카이 볼룸은 180도 파노라마 도시 전망을 제공하여 웨딩, 기업 갈라 및 사교 행사를 위한 멋진 배경을 선사합니다. 최첨단 기술을 갖추고 전담 이벤트 팀의 지원을 받습니다."
                 },
-                cta: "지금 문의하기"
+                venues: {
+                    title: "정교한 베뉴",
+                    skyBallroom: {
+                        name: "스카이 볼룸",
+                        description: "스카이 볼룸은 모든 특별한 날을 위한 비범한 환경을 만듭니다. 웨딩, 졸업식 또는 프라이빗 이벤트에 이상적인 이 탁월한 장소는 15층, 지상 200피트 높이에 위치해 있습니다. 최첨단 시청각 기술, 고속 무선 인터넷, 공간을 자연광으로 가득 채우는 바닥에서 천장까지 이어지는 통창이 특징입니다.",
+                        location: "실내 (15층)",
+                        ceremony: "200명",
+                        reception: "250명"
+                    },
+                    skyGarden: {
+                        name: "스카이 가든",
+                        description: "숨 막히는 전망과 시대를 초월한 우아함이 잊지 못할 순간을 선사하는 친밀한 웨딩과 모임을 위한 매혹적인 루프탑 안식처입니다.",
+                        location: "루프탑 / 프라이빗",
+                        ceremony: "500명",
+                        reception: "50명"
+                    },
+                    royalEight: {
+                        name: "로얄 에이트 중식 다이닝",
+                        description: "탕그랑 가딩 세르퐁의 중심에서 즐기는 중식 다이닝 경험입니다. 시그니처 세미 파인 다이닝 컬렉션의 일부로, 로얄 에이트는 하루 종일 엄선된 점심, 저녁 및 디저트를 제공합니다. 레스토랑의 현대적인 분위기와 사려 깊게 설계된 디자인은 조화로운 미식 여정을 위한 완벽한 환경을 제공합니다.",
+                        location: "실내",
+                        ceremony: "250명",
+                        reception: "250명"
+                    }
+                },
+                packages: {
+                    title: "패키지",
+                    desc: "고객님의 요구에 맞게 맞춤화된 이벤트 패키지는 프리미엄 케이터링, 장식 및 전담 이벤트 코디네이션을 포함한 포괄적인 서비스를 제공합니다."
+                },
+                cta: "문의하기"
             },
             wellness: {
                 hero: { title: "웰니스 & 스파", subtitle: "감각을 되살리세요" },
                 content: {
-                    title: "Acqua Spa",
-                    desc: "Acqua Spa에서 평온에 잠기십시오. 전통 마사지부터 현대적인 치료법까지."
+                    title: "홀리스틱 웰빙의 안식처",
+                    desc: "JHL Solitaire Gading Serpong은 현대적인 럭셔리의 Acqua Spa, 전통 유산의 Sandjong Spa, 그리고 최초의 어린이 전용 Acquaree Spa 등 세 가지 독특한 스파 경험을 제공합니다. 또한 최첨단 피트니스 센터와 명성 높은 La Mere 뷰티 살롱을 운영하고 있습니다."
+                },
+                venues: {
+                    acqua: {
+                        name: "Acqua Spa",
+                        type: "현대적인 럭셔리 스파",
+                        desc: "최신 치료 요법과 궁극의 휴식에 초점을 맞춘 현대적인 안식처입니다."
+                    },
+                    sandjong: {
+                        name: "Sandjong Spa",
+                        type: "전통 유산 스파",
+                        desc: "고대 치유 기술과 천연 재료를 통해 인도네시아 전통의 정수를 발견해 보세요."
+                    },
+                    acquaree: {
+                        name: "Acquaree Kids Spa",
+                        type: "어린이 전용 스파",
+                        desc: "안전한 환경에서 재미있고 부드러운 트리트먼트를 제공하는 최초의 어린이 전용 스파 시설입니다."
+                    },
+                    laMere: {
+                        name: "La Mere",
+                        type: "뷰티 살롱",
+                        desc: "전문 스타일리스트와 미용사가 제공하는 전문적인 헤어, 네일, 뷰티 서비스를 경험하세요."
+                    }
                 },
                 treatments: {
-                    massage: { name: "시그니처 마사지", duration: "60 / 90 분" },
+                    massage: { name: "시그네처 마사지", duration: "60 / 90 분" },
                     facial: { name: "럭셔리 페이셜", duration: "60 분" }
                 }
             },
@@ -1649,7 +2159,25 @@ export const translations: Record<Language, Translations> = {
                         cta: "테이블 예약"
                     }
                 }
+            },
+            privacy: {
+                title: "개인정보 처리방침",
+                lastUpdated: "최종 업데이트: 2026년 2월 8일",
+                content: "JHL Solitaire는 귀하의 개인정보를 소중히 여깁니다. 본 방침은 당사가 귀하의 개인 데이터를 처리하는 방식을 설명합니다.",
+                sections: {
+                    storage: {
+                        title: "데이터 저장 및 현지화",
+                        content: "당사는 귀하의 개인 데이터 보안을 최우선으로 생각합니다. 인도네시아 규정(PP No. 71/2019 및 UU PDP)을 준수하여 당사의 기본 서버와 고객 데이터베이스는 인도네시아 공화국 영토(Google Cloud 리전: 자카르타) 내에 위치합니다.\n\n그러나 성능 최적화(CDN) 및 트래픽 분석을 목적으로 국제 데이터 프라이버시 표준을 준수하는 다른 관할권에서 당사의 제3자 파트너(Google Analytics 등)가 제한된 익명 데이터를 처리할 수 있습니다."
+                    }
+                }
             }
+        },
+        cookies: {
+            title: "쿠키 수집 동의",
+            message: "저희는 귀하의 경험을 개선하고 트래픽을 분석하기 위해 쿠키를 사용합니다. \"수락\"을 클릭하면 쿠키 사용에 동의하는 것으로 간주됩니다.",
+            accept: "수락",
+            decline: "거부",
+            policy: "개인정보 처리방침"
         }
     }
 };

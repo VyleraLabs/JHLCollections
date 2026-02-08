@@ -50,7 +50,12 @@ export default function HeroSlider() {
                         isVideoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
                     )}
                 >
-                    <span className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6 animate-pulse drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]">
+                    <span className={cn(
+                        "font-bold uppercase animate-pulse drop-shadow-[0_0_8px_rgba(212,175,55,0.3)] mb-6",
+                        ['ja', 'zh', 'ko', 'ar'].includes(language)
+                            ? "text-lg md:text-xl tracking-normal"
+                            : "text-xs md:text-sm tracking-[0.5em]"
+                    )}>
                         {t.hero.welcome}
                     </span>
                     <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-tight mb-8 text-white animate-pulse drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">
@@ -89,7 +94,12 @@ export default function HeroSlider() {
                     isVideoLoaded ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4"
                 )}>
                     <span
-                        className="text-xs md:text-sm font-bold uppercase tracking-[0.5em] text-brand-gold mb-6"
+                        className={cn(
+                            "font-bold uppercase text-brand-gold mb-6",
+                            ['ja', 'zh', 'ko', 'ar'].includes(language)
+                                ? "text-lg md:text-xl tracking-normal"
+                                : "text-xs md:text-sm tracking-[0.5em]"
+                        )}
                     >
                         {t.hero.welcome}
                     </span>

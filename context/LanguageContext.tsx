@@ -18,28 +18,31 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         const savedLang = localStorage.getItem('language') as Language;
         const supportedLangs: Language[] = ['en', 'zh', 'id', 'ru', 'ja', 'ar', 'ko'];
 
+        let initialLang: Language = 'en';
+
         if (savedLang && supportedLangs.includes(savedLang)) {
-            setLanguageState(savedLang);
-            document.documentElement.lang = savedLang;
-            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+            initialLang = savedLang;
         } else {
             // Check browser preference
             const browserLang = navigator.language.split('-')[0];
             if (browserLang === 'zh') {
-                setLanguageState('zh');
+                initialLang = 'zh';
             } else if (browserLang === 'id' || browserLang === 'in') {
-                setLanguageState('id');
+                initialLang = 'id';
             } else if (browserLang === 'ru') {
-                setLanguageState('ru');
+                initialLang = 'ru';
             } else if (browserLang === 'ja') {
-                setLanguageState('ja');
+                initialLang = 'ja';
             } else if (browserLang === 'ar') {
-                setLanguageState('ar');
-                document.documentElement.dir = 'rtl';
+                initialLang = 'ar';
             } else if (browserLang === 'ko') {
-                setLanguageState('ko');
+                initialLang = 'ko';
             }
         }
+
+        setLanguageState(initialLang);
+        document.documentElement.lang = initialLang;
+        document.documentElement.dir = initialLang === 'ar' ? 'rtl' : 'ltr';
     }, []);
 
     const setLanguage = (lang: Language) => {

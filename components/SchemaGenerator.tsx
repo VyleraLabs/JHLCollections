@@ -144,28 +144,38 @@ export const SchemaGenerator = ({ menuData, specialOffers }: SchemaGeneratorProp
             "containsPlace": [
                 {
                     "@type": "Spa",
-                    "name": "Acqua Spa",
-                    "description": "Modern Spa features"
+                    "name": t.pages.wellness.venues.acqua.name,
+                    "description": t.pages.wellness.venues.acqua.desc
                 },
                 {
                     "@type": "Spa",
-                    "name": "Traditional Heritage Spa",
-                    "description": "Authentic traditional treatments"
+                    "name": t.pages.wellness.venues.sandjong.name,
+                    "description": t.pages.wellness.venues.sandjong.desc
                 },
                 {
                     "@type": "Spa",
-                    "name": "Acqua Kids Spa",
-                    "description": "Dedicated spa for children"
+                    "name": t.pages.wellness.venues.acquaree.name,
+                    "description": t.pages.wellness.venues.acquaree.desc
                 },
                 {
-                    "@type": "MeetingRoom",
-                    "name": "Meeting Rooms",
-                    "description": "State-of-the-art meeting facilities"
+                    "@type": "HealthAndBeautyBusiness",
+                    "name": t.pages.wellness.venues.laMere.name,
+                    "description": t.pages.wellness.venues.laMere.desc
                 },
                 {
                     "@type": "BanquetHall",
-                    "name": "Sky Ballroom",
-                    "description": "180-degree panoramic view wedding hall"
+                    "name": t.pages.meetings.venues.skyBallroom.name,
+                    "description": t.pages.meetings.venues.skyBallroom.description
+                },
+                {
+                    "@type": "BanquetHall",
+                    "name": t.pages.meetings.venues.skyGarden.name,
+                    "description": t.pages.meetings.venues.skyGarden.description
+                },
+                {
+                    "@type": "MeetingRoom",
+                    "name": t.pages.meetings.venues.royalEight.name,
+                    "description": t.pages.meetings.venues.royalEight.description
                 }
             ]
         };

@@ -2,6 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function proxy(request: NextRequest) {
+    const userAgent = request.headers.get('user-agent') || '';
+
+    // Detect legitimate search engine bots
+    const isBot = /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|facebot|ia_archiver|applebot|linkedinbot|twitterbot|whatsapp|telegram/i.test(userAgent);
+
     const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
 
     // Define strict CSP
@@ -23,7 +28,11 @@ export function proxy(request: NextRequest) {
 
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set('x-nonce', nonce);
-    requestHeaders.set('Content-Security-Policy', cspHeader);
+
+    // Only apply CSP to non-bot traffic (bots don't execute JS anyway)
+    if (!isBot) {
+        requestHeaders.set('Content-Security-Policy', cspHeader);
+    }
 
     const response = NextResponse.next({
         request: {
@@ -31,16 +40,27 @@ export function proxy(request: NextRequest) {
         },
     });
 
-    response.headers.set('Content-Security-Policy', cspHeader);
+    // Only apply CSP to non-bot traffic
+    if (!isBot) {
+        response.headers.set('Content-Security-Policy', cspHeader);
+    }
 
     // Advanced Stealth: Mask Server & Technology
     response.headers.set('Server', 'JHL-Web-Engine');
     response.headers.set('X-Powered-By', 'Elite-Tech');
 
-    // Lighthouse Optimization: Enable bfcache by using 'no-cache' instead of 'no-store'
-    response.headers.set('Cache-Control', 'no-cache, private, must-revalidate');
-    response.headers.set('Pragma', 'no-cache'); // Legacy support
-    response.headers.set('Expires', '-1');
+    // Bot-friendly caching: Allow bots to cache for better crawl efficiency
+    // Regular users get stricter cache control
+    if (isBot) {
+        response.headers.set('Cache-Control', 'public, max-age=3600, must-revalidate');
+        response.headers.delete('Pragma');
+        response.headers.delete('Expires');
+    } else {
+        // Lighthouse Optimization: Enable bfcache by using 'no-cache' instead of 'no-store'
+        response.headers.set('Cache-Control', 'no-cache, private, must-revalidate');
+        response.headers.set('Pragma', 'no-cache'); // Legacy support
+        response.headers.set('Expires', '-1');
+    }
 
     return response;
 }

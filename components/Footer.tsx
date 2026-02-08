@@ -39,7 +39,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-serif text-lg mb-4 text-brand-gold">{t.footer.legal}</h4>
                         <ul className="space-y-2 text-sm opacity-80">
-                            <li><Link href="#" className="hover:text-brand-gold">{t.footer.privacyPolicy}</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-brand-gold">{t.footer.privacyPolicy}</Link></li>
                             <li><Link href="#" className="hover:text-brand-gold">{t.footer.termsOfService}</Link></li>
                         </ul>
                     </div>
