@@ -57,6 +57,25 @@ export default function RoyalEightPage() {
     const activeLang = languages.find(l => l.code === language) || languages[0];
 
     // Generate Schema Markup
+    // Group menu items by category (sourceFile) for the schema
+    const menuSections = ['Main', 'DimSum', 'Beverage'].map(section => {
+        const items = MENU_ITEMS.filter(item => item.sourceFile === section);
+        return {
+            "@type": "MenuSection",
+            "name": section === 'Main' ? "Main Course" : section === 'DimSum' ? "Dim Sum" : "Beverages",
+            "hasMenuItem": items.map(item => ({
+                "@type": "MenuItem",
+                "name": item.name,
+                "description": item.description || item.name,
+                "offers": {
+                    "@type": "Offer",
+                    "price": item.price.toString(),
+                    "priceCurrency": "IDR"
+                }
+            }))
+        };
+    });
+
     const royalEightSchema = {
         "@context": "https://schema.org",
         "@type": "Restaurant",
@@ -67,29 +86,30 @@ export default function RoyalEightPage() {
         "priceRange": "$$$",
         "telephone": "+62 21 3950 3000",
         "url": "https://jhlcollections.com/dining/royal-eight",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Gading Serpong Boulevard Barat Blok S No.5",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Banten",
+            "postalCode": "15810",
+            "addressCountry": "ID"
+        },
         "parentOrganization": {
             "@type": "Hotel",
-            "name": "JHL Solitaire Gading Serpong"
+            "name": "JHL Solitaire Gading Serpong",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Jl. Gading Serpong Boulevard Barat Blok S No.5",
+                "addressLocality": "Tangerang",
+                "addressRegion": "Banten",
+                "postalCode": "15810",
+                "addressCountry": "ID"
+            }
         },
         "hasMenu": {
             "@type": "Menu",
-            "name": "Signature Sets",
-            "hasMenuSection": [
-                {
-                    "@type": "MenuSection",
-                    "name": "Banquet",
-                    "hasMenuItem": {
-                        "@type": "MenuItem",
-                        "name": "Tang Dynasty Set Menu",
-                        "description": "10-course banquet for 10 persons",
-                        "offers": {
-                            "@type": "Offer",
-                            "price": "4888000",
-                            "priceCurrency": "IDR"
-                        }
-                    }
-                }
-            ]
+            "name": "Royal Eight Menu",
+            "hasMenuSection": menuSections
         }
     };
 
