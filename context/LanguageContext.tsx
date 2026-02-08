@@ -16,8 +16,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
     useEffect(() => {
         const savedLang = localStorage.getItem('language') as Language;
-        if (savedLang && (savedLang === 'en' || savedLang === 'zh' || savedLang === 'id')) {
+        const supportedLangs: Language[] = ['en', 'zh', 'id', 'ru', 'ja', 'ar', 'ko'];
+
+        if (savedLang && supportedLangs.includes(savedLang)) {
             setLanguageState(savedLang);
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
         } else {
             // Check browser preference
             const browserLang = navigator.language.split('-')[0];
@@ -25,6 +29,15 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
                 setLanguageState('zh');
             } else if (browserLang === 'id' || browserLang === 'in') {
                 setLanguageState('id');
+            } else if (browserLang === 'ru') {
+                setLanguageState('ru');
+            } else if (browserLang === 'ja') {
+                setLanguageState('ja');
+            } else if (browserLang === 'ar') {
+                setLanguageState('ar');
+                document.documentElement.dir = 'rtl';
+            } else if (browserLang === 'ko') {
+                setLanguageState('ko');
             }
         }
     }, []);
@@ -34,6 +47,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
         localStorage.setItem('language', lang);
         // Also update html lang attribute
         document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     };
 
     const value = {

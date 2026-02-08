@@ -41,9 +41,9 @@ export const PromoCarousel = () => {
                         <span className="text-luxury-gold font-sans text-xs uppercase tracking-[0.3em] mb-2 block animate-pulse">
                             {t.promo.specialOffer}
                         </span>
-                        <h3 className="text-3xl md:text-4xl font-serif text-white mb-2">
+                        <h2 className="text-3xl md:text-4xl font-serif text-white mb-2">
                             {t.promo.tangDynasty.title}
-                        </h3>
+                        </h2>
                         <p className="text-white/80 mb-4 font-light italic">
                             {t.promo.tangDynasty.description}
                         </p>

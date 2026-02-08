@@ -10,7 +10,6 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { HeroSection } from "@/components/royal-eight/HeroSection";
-import { NavigationTabs } from "@/components/royal-eight/NavigationTabs";
 import { PromoIntegration } from "@/components/PromoIntegration";
 import { SchemaGenerator } from "@/components/SchemaGenerator";
 import { MENU_ITEMS } from "@/data/menu";
@@ -38,7 +37,6 @@ export default function RoyalEightLayout({
 
             {/* Hero & Navigation */}
             <HeroSection />
-            <NavigationTabs />
 
             {/* Main Content Area */}
             <div className="relative z-10">

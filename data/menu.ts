@@ -6,6 +6,12 @@ export type MenuItem = {
   nameChinese?: string;
   price: number;
   description?: string;
+  descriptionChinese?: string;
+  descriptionIndonesian?: string;
+  descriptionRussian?: string;
+  descriptionJapanese?: string;
+  descriptionKorean?: string;
+  descriptionArabic?: string;
   imageKeyword: string;
   imageUrl: string;
   isRecommended?: boolean;
@@ -26,6 +32,12 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "唐朝套餐",
     "price": 4888000,
     "description": "A luxurious 10-course banquet fit for an emperor (10 Persons).",
+    "descriptionChinese": "专为帝王般的享受而设的奢华十道菜盛宴（10位用）。",
+    "descriptionIndonesian": "Perjamuan mewah 10 hidangan yang layak untuk seorang kaisar (10 Orang).",
+    "descriptionRussian": "Роскошный банкет из 10 блюд, достойный императора (на 10 персон).",
+    "descriptionJapanese": "皇帝にふさわしい豪華な10コースの宴会（10名様用）。",
+    "descriptionKorean": "황제에게 어울리는 호화로운 10코스 연회 (10인용).",
+    "descriptionArabic": "مأدبة فاخرة مكونة من 10 أطباق تليق بالإمبراطور (10 أشخاص).",
     "imageKeyword": "banquet",
     "isRecommended": true,
     "timeRequired": "PT20M",
@@ -39,6 +51,12 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "北京烤鸭",
     "price": 488000,
     "description": "Traditional roasted duck served with pancakes, cucumber, leek and sweet bean sauce.",
+    "descriptionChinese": "传统烤鸭，配以薄饼、黄瓜、葱段和甜面酱。",
+    "descriptionIndonesian": "Bebek panggang tradisional disajikan dengan pancake, mentimun, daun bawang, dan saus kacang manis.",
+    "descriptionRussian": "Традиционная жареная утка, подается с блинчиками, огурцом, луком-пореем и сладким бобовым соусом.",
+    "descriptionJapanese": "伝統的な北京ダック。パンケーキ、きゅうり、ネギ、甘味噌添え。",
+    "descriptionKorean": "전통 북경오리 구이. 팬케이크, 오이, 파, 춘장과 함께 제공됩니다.",
+    "descriptionArabic": "بط مشوي تقليدي يقدم مع الفطائر، الخيار، الكراث وصلصة الفاصوليا الحلوة.",
     "imageKeyword": "peking duck",
     "isRecommended": true,
     "isRelatedTo": "Pu-erh Tea",
@@ -53,6 +71,12 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "脆皮烤乳猪",
     "price": 3888000,
     "description": "Whole roasted suckling pig with crispy skin.",
+    "descriptionChinese": "脆皮烤全乳猪。",
+    "descriptionIndonesian": "Babi guling panggang utuh dengan kulit yang renyah.",
+    "descriptionRussian": "Целый жареный молочный поросенок с хрустящей корочкой.",
+    "descriptionJapanese": "皮がパリパリの子豚の丸焼き。",
+    "descriptionKorean": "바삭한 껍질의 통기이 새끼 돼지 구이.",
+    "descriptionArabic": "خنزير رضيع مشوي كامل بجلد مقرمش.",
     "imageKeyword": "suckling pig",
     "isRecommended": false,
     "isRelatedTo": "Pu-erh Tea",
@@ -67,6 +91,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "红烧鲍鱼",
     "price": 1288000,
     "description": "Premium braised abalone served with shiitake mushrooms.",
+    "descriptionChinese": "红烧极品鲍鱼配香菇。",
+    "descriptionIndonesian": "Abalone braised premium disajikan dengan jamur shiitake.",
     "imageKeyword": "abalone",
     "isRecommended": false,
     "isRelatedTo": "Chrysanthemum Tea",
@@ -81,6 +107,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "清蒸东星斑",
     "price": 988000,
     "description": "Fresh star grouper steamed with superior soy sauce.",
+    "descriptionChinese": "清蒸新鲜东星斑，配特级酱油。",
+    "descriptionIndonesian": "Ikan kerapu bintang segar dikukus dengan kecap asin premium.",
     "imageKeyword": "steamed fish",
     "imageUrl": "/assets/original/steamed-star-grouper.webp"
   },
@@ -92,6 +120,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "咸蛋黄大虾",
     "price": 288000,
     "description": "Deep-fried king prawns coated in rich salted egg yolk sauce.",
+    "descriptionChinese": "深炸大虾，裹上浓郁的咸蛋黄酱。",
+    "descriptionIndonesian": "Udang raja goreng tepung dibalut saus telur asin yang kaya rasa.",
     "imageKeyword": "salted egg prawn",
     "isRecommended": false,
     "isRelatedTo": "Chrysanthemum Tea",
@@ -106,6 +136,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "黑椒和牛",
     "price": 688000,
     "description": "Tender wagyu beef cubes stir-fried with black pepper sauce.",
+    "descriptionChinese": "嫩滑和牛粒，配黑椒汁爆炒。",
+    "descriptionIndonesian": "Potongan daging sapi wagyu empuk ditumis dengan saus lada hitam.",
     "imageKeyword": "beef black pepper",
     "isRelatedTo": "Pu-erh Tea",
     "timeRequired": "PT20M",
@@ -119,6 +151,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "宫保鸡丁",
     "price": 148000,
     "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers.",
+    "descriptionChinese": "香辣爆炒鸡丁，配花生、蔬菜和干辣椒。",
+    "descriptionIndonesian": "Ayam tumis pedas dengan kacang, sayuran, dan cabai kering.",
     "imageKeyword": "kung pao chicken",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/peking-duck.svg"
@@ -131,6 +165,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "扬州炒饭",
     "price": 128000,
     "description": "Classic fried rice with BBQ pork, shrimp, and vegetables.",
+    "descriptionChinese": "经典炒饭，配叉烧、虾仁和蔬菜。",
+    "descriptionIndonesian": "Nasi goreng klasik dengan babi panggang, udang, dan sayuran.",
     "imageKeyword": "fried rice",
     "disambiguatingDescription": "Crispy",
     "timeRequired": "PT20M",
@@ -144,6 +180,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "椰汁糕",
     "price": 88000,
     "description": "Chilled sweetened coconut milk pudding.",
+    "descriptionChinese": "冷冻甜椰奶布丁。",
+    "descriptionIndonesian": "Puding santan manis dingin.",
     "imageKeyword": "coconut pudding",
     "isRecommended": true,
     "timeRequired": "PT20M",
@@ -157,6 +195,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "烧卖",
     "price": 48000,
     "description": "Steamed pork and shrimp dumplings topped with crab roe.",
+    "descriptionChinese": "蒸猪肉虾仁烧卖，点缀蟹籽。",
+    "descriptionIndonesian": "Siomay babi dan udang kukus dengan topping telur kepiting.",
     "imageKeyword": "siew mai",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/dim-sum.svg"
@@ -169,6 +209,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "虾饺",
     "price": 52000,
     "description": "Crystal shrimp dumplings.",
+    "descriptionChinese": "水晶虾饺。",
+    "descriptionIndonesian": "Hakau udang kristal.",
     "imageKeyword": "hakau",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/dim-sum.svg"
@@ -181,6 +223,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "小笼包",
     "price": 58000,
     "description": "Steamed soup dumplings filled with pork.",
+    "descriptionChinese": "鲜肉灌汤小笼包。",
+    "descriptionIndonesian": "Pangsit sup kukus isi daging babi.",
     "imageKeyword": "xiao long bao",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/dim-sum.svg"
@@ -193,6 +237,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "叉烧包",
     "price": 45000,
     "description": "Fluffy steamed buns filled with sweet BBQ pork.",
+    "descriptionChinese": "松软蒸包，内馅为蜜汁叉烧。",
+    "descriptionIndonesian": "Bakpao kukus lembut berisi babi panggang manis.",
     "imageKeyword": "pork bun",
     "isRelatedTo": "Pu-erh Tea",
     "disambiguatingDescription": "Tender/Silky",
@@ -207,6 +253,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "萝卜糕",
     "price": 42000,
     "description": "Pan-fried radish cake with dried shrimp and sausage.",
+    "descriptionChinese": "香煎萝卜糕，配海米和腊肠。",
+    "descriptionIndonesian": "Kue lobak goreng dengan udang kering dan sosis.",
     "imageKeyword": "turnip cake",
     "disambiguatingDescription": "Crispy",
     "timeRequired": "PT20M",
@@ -220,6 +268,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "蛋挞",
     "price": 42000,
     "description": "Flaky pastry tart filled with egg custard.",
+    "descriptionChinese": "酥皮迷你蛋挞。",
+    "descriptionIndonesian": "Tart telur mini dengan kulit pastry renyah.",
     "imageKeyword": "egg tart",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/dim-sum.svg"
@@ -232,6 +282,8 @@ export const MENU_ITEMS: MenuItem[] = [
     "nameChinese": "杨枝甘露",
     "price": 58000,
     "description": "Chilled mango soup with sago and pomelo.",
+    "descriptionChinese": "杨枝甘露（冷冻芒果西米露配柚子）。",
+    "descriptionIndonesian": "Sup mangga dingin dengan sagu dan jeruk bali.",
     "imageKeyword": "mango sago",
     "timeRequired": "PT20M",
     "imageUrl": "/assets/royal-eight/dim-sum.svg"

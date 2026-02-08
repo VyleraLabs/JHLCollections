@@ -46,7 +46,11 @@ export default function Header() {
         const languages: { code: Language; flag: string; label: string }[] = [
             { code: 'en', flag: "🇺🇸", label: "EN" },
             { code: 'zh', flag: "🇨🇳", label: "ZH" },
-            { code: 'id', flag: "🇮🇩", label: "ID" }
+            { code: 'id', flag: "🇮🇩", label: "ID" },
+            { code: 'ru', flag: "🇷🇺", label: "RU" },
+            { code: 'ja', flag: "🇯🇵", label: "JA" },
+            { code: 'ar', flag: "🇦🇪", label: "AR" },
+            { code: 'ko', flag: "🇰🇷", label: "KO" }
         ];
 
         const activeLang = languages.find(l => l.code === language) || languages[0];
@@ -55,7 +59,7 @@ export default function Header() {
             return (
                 <div className="mt-8 border-t border-white/10 pt-8 flex flex-col gap-4 items-center">
                     <span className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Select Language</span>
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap justify-center gap-4">
                         {languages.map((lang) => (
                             <button
                                 key={lang.code}
@@ -173,7 +177,8 @@ export default function Header() {
                                     <Link
                                         href={link.href}
                                         className={cn(
-                                            "text-[10px] font-lato font-bold uppercase tracking-[0.25em] transition-all duration-300 relative group py-2",
+                                            "font-lato font-bold uppercase transition-all duration-300 relative group py-2",
+                                            ['zh', 'ja', 'ko', 'ar'].includes(language) ? "text-base tracking-widest" : "text-[10px] tracking-[0.25em]",
                                             isScrolled ? "text-white/90 hover:text-brand-gold" : "text-white/90 hover:text-white"
                                         )}
                                     >

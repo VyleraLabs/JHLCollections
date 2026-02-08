@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 import { headers } from "next/headers";
 
 import { LanguageProvider } from "@/context/LanguageContext";
+import ClientSEO from "@/components/ClientSEO";
 
 export default async function RootLayout({
   children,
@@ -56,6 +57,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${playfair.variable} ${montserrat.variable} ${lato.variable} ${greatVibes.variable} antialiased`}>
         <LanguageProvider>
+          <ClientSEO />
           <AnimationProvider nonce={nonce}>
             {children}
           </AnimationProvider>

@@ -1,5 +1,5 @@
 
-export type Language = 'en' | 'zh' | 'id';
+export type Language = 'en' | 'zh' | 'id' | 'ru' | 'ja' | 'ar' | 'ko';
 
 export interface Translations {
     nav: {
@@ -77,6 +77,11 @@ export interface Translations {
         };
         openDaily: string;
         viewMenu: string;
+        menuCategories: {
+            main: { title: string; subtitle: string };
+            dimsum: { title: string; subtitle: string };
+            beverage: { title: string; subtitle: string };
+        };
     };
     pages: {
         rooms: {
@@ -261,7 +266,12 @@ export const translations: Record<Language, Translations> = {
                 }
             },
             openDaily: "Open Daily: 10:00 - 22:00",
-            viewMenu: "View Menu"
+            viewMenu: "View Menu",
+            menuCategories: {
+                main: { title: "Main Course", subtitle: "Signature Dishes" },
+                dimsum: { title: "Dim Sum", subtitle: "Handcrafted Daily" },
+                beverage: { title: "Beverage", subtitle: "Refreshments" }
+            }
         },
         pages: {
             rooms: {
@@ -473,7 +483,12 @@ export const translations: Record<Language, Translations> = {
                 }
             },
             openDaily: "每日营业：10:00 - 22:00",
-            viewMenu: "查看菜单"
+            viewMenu: "查看菜单",
+            menuCategories: {
+                main: { title: "主菜", subtitle: "招牌菜肴" },
+                dimsum: { title: "点心", subtitle: "每日手工制作" },
+                beverage: { title: "饮品", subtitle: "清凉特饮" }
+            }
         },
         pages: {
             rooms: {
@@ -685,7 +700,12 @@ export const translations: Record<Language, Translations> = {
                 }
             },
             openDaily: "Buka Setiap Hari: 10:00 - 22:00",
-            viewMenu: "Lihat Menu"
+            viewMenu: "Lihat Menu",
+            menuCategories: {
+                main: { title: "Hidangan Utama", subtitle: "Menu Andalan" },
+                dimsum: { title: "Dim Sum", subtitle: "Dibuat Setiap Hari" },
+                beverage: { title: "Minuman", subtitle: "Penyegar Dahaga" }
+            }
         },
         pages: {
             rooms: {
@@ -759,6 +779,874 @@ export const translations: Record<Language, Translations> = {
                         title: "Sunday Brunch",
                         desc: "Prasmanan internasional sepuasnya setiap hari Minggu.",
                         cta: "Pesan Meja"
+                    }
+                }
+            }
+        }
+    },
+    ru: {
+        nav: {
+            home: "Главная",
+            rooms: "Номера",
+            dining: "Рестораны",
+            meetings: "Мероприятия",
+            wellness: "Велнес",
+            facilities: "Удобства",
+            offers: "Предложения",
+            bookNow: "Забронировать",
+        },
+        hero: {
+            welcome: "Добро пожаловать в",
+            title: "JHL Solitaire",
+            description: "Гадинг Серпонг, коллекция JHL",
+            jewelText: "Жемчужина города",
+            welcomeTitle: "Воплощение лучшей сути жизни",
+            welcomeDescription: "Каждый момент жизни — это торжество, которое стоит отпраздновать. В JHL Solitaire мы верим, что наши гости заслуживают самого лучшего. С гордостью и престижем мы стремимся превзойти ожидания, отвечая изысканному вкусу наших гостей первоклассным сервисом и предложениями.",
+        },
+        features: {
+            luxury: {
+                title: "5-звездочная роскошь",
+                desc: "Отмеченный наградами сервис и удобства для взыскательных путешественников.",
+            },
+            location: {
+                title: "Превосходное расположение",
+                desc: "В самом сердце Гадинг Серпонг, в минутах от ICE и торгового центра AEON.",
+            },
+            offers: {
+                title: "Эксклюзивные предложения",
+                desc: "Бронируйте напрямую, чтобы получить специальные тарифы и привилегии.",
+                cta: "Смотреть предложения",
+            },
+        },
+        categories: {
+            rooms: {
+                title: "Номера и люксы",
+                subtitle: "Люксы и Святилище",
+                description: "Почувствуйте искусство роскошной жизни в номерах и люксах, созданных с исключительным вниманием к деталям.",
+                cta: "Узнать больше"
+            },
+            dining: {
+                title: "Гастрономический опыт",
+                subtitle: "Кулинарная династия",
+                description: "Откройте для себя богатую палитру изысканных вкусов. От международных шведских столов до аутентичной итальянской кухни.",
+                cta: "Исследовать рестораны"
+            },
+            meetings: {
+                title: "Свадьбы и события",
+                subtitle: "Грандиозные мероприятия",
+                description: "Превратите свои особые моменты в вечные воспоминания в нашем великолепном многофункциональном зале.",
+                cta: "Спланировать событие"
+            },
+            wellness: {
+                title: "Велнес и Спа",
+                subtitle: "Спокойствие и Спа",
+                description: "Омолодите свои чувства в Acqua Spa с кураторскими процедурами и фитнес-залами мирового класса.",
+                cta: "Омолодиться сейчас"
+            },
+            facilities: {
+                title: "Изысканные удобства",
+                subtitle: "Изысканный образ жизни",
+                description: "Оцените архитектурное чудо в форме бриллианта и утонченный стиль жизни, уникальный для JHL Solitaire.",
+                cta: "Исследовать удобства"
+            },
+            offers: {
+                title: "Эксклюзивные предложения",
+                subtitle: "Эксклюзивные привилегии",
+                description: "Откройте исключительные привилегии и индивидуальные впечатления во время вашего пребывания.",
+                cta: "Смотреть предложения"
+            },
+        },
+        booking: {
+            checkIn: "Заезд",
+            checkOut: "Выезд",
+            guests: "Гости",
+            adults: "Взрослые",
+            availability: "Проверить наличие",
+            selectDate: "Выбрать дату",
+            discover: "Открыть",
+        },
+        footer: {
+            contact: "Контакты",
+            quickLinks: "Быстрые ссылки",
+            legal: "Правовая информация",
+            newsletter: "Рассылка",
+            subscribe: "Подпишитесь на эксклюзивные предложения.",
+            placeholder: "Ваш email",
+            join: "Присоединиться",
+            rights: "Все права защищены.",
+            privacyPolicy: "Политика конфиденциальности",
+            termsOfService: "Условия использования",
+        },
+        promo: {
+            specialOffer: "Специальное предложение",
+            reservation: "ЗАРЕЗЕРВИРОВАТЬ СТОЛ",
+            tangDynasty: {
+                title: "Сет-меню Династия Тан",
+                description: "Кулинарное путешествие сквозь века: банкет из 10 блюд.",
+                price: "IDR 4.888.000",
+            }
+        },
+        dining: {
+            title: "Кулинарные впечатления",
+            subtitle: "Вкус необычайного",
+            description: "От непринужденной трапезы до изысканных гурманских впечатлений, JHL Solitaire предлагает разнообразные кулинарные варианты.",
+            venues: {
+                mangan: {
+                    type: "Международный шведский стол",
+                    desc: "Кулинарный театр с станциями живой кухни и разнообразными международными и местными деликатесами."
+                },
+                alGusto: {
+                    type: "Итальянская высокая кухня",
+                    desc: "Аутентичные итальянские вкусы в утонченной обстановке, идеально подходящие для романтических ужинов."
+                },
+                royalEight: {
+                    type: "Китайская высокая кухня",
+                    desc: "Восхитительный выбор обедов, ужинов и китайских десертов в современной обстановке."
+                },
+                empress: {
+                    type: "Лаунж и Бар",
+                    desc: "Откройте для себя авторские коктейли, вдохновленные аптекарским делом, и изысканные спиртные напитки."
+                },
+                castro: {
+                    type: "Лаунж и Бар",
+                    desc: "Отдохните с премиальными сигарами, изысканным виски и кураторскими коктейлями."
+                },
+                leBleu: {
+                    type: "Кафе и Кондитерская",
+                    desc: "Искусное выражение наслаждения, где нежные текстуры и утонченная сладость сливаются воедино."
+                }
+            },
+            openDaily: "Ежедневно: 10:00 - 22:00",
+            viewMenu: "Смотреть меню",
+            menuCategories: {
+                main: { title: "Основные блюда", subtitle: "Фирменные блюда" },
+                dimsum: { title: "Димсамы", subtitle: "Ручная работа ежедневно" },
+                beverage: { title: "Напитки", subtitle: "Освежающие напитки" }
+            }
+        },
+        pages: {
+            rooms: {
+                hero: { title: "Размещение", subtitle: "Отдых в утонченной элегантности" },
+                content: {
+                    title: "Ваше личное святилище",
+                    desc: "Каждый из наших 141 номеров и люксов — это шедевр дизайна, сочетающий современную эстетику с вечным комфортом."
+                },
+                roomTypes: {
+                    premier: { name: "Премьер номер", desc: "Просторное убежище площадью 40 кв.м, созданное для современного комфорта." },
+                    executive: { name: "Исполнительный люкс", desc: "Повышенная роскошь с отдельной гостиной и панорамным видом на город." },
+                    signature: { name: "JHL Solitaire Signature", desc: "Высшее выражение роскошной жизни для взыскательных путешественников." }
+                },
+                amenities: {
+                    wifi: "Высокоскоростной Wi-Fi",
+                    tv: "Смарт ТВ",
+                    coffee: "Кофемашина",
+                    ac: "Кондиционер"
+                },
+                perNight: "/ Ночь",
+                bookNow: "Забронировать"
+            },
+            meetings: {
+                hero: { title: "Встречи и события", subtitle: "Где бизнес встречается с роскошью" },
+                content: {
+                    title: "Небесный бальный зал",
+                    desc: "Наш легендарный Небесный бальный зал предлагает 180-градусный панорамный вид на город."
+                },
+                cta: "Узнать сейчас"
+            },
+            wellness: {
+                hero: { title: "Велнес и Спа", subtitle: "Омолодите свои чувства" },
+                content: {
+                    title: "Acqua Spa",
+                    desc: "Погрузитесь в спокойствие в Acqua Spa. От традиционного массажа до современных процедур."
+                },
+                treatments: {
+                    massage: { name: "Фирменный массаж", duration: "60 / 90 Мин" },
+                    facial: { name: "Роскошный уход за лицом", duration: "60 Мин" }
+                }
+            },
+            facilities: {
+                hero: { title: "Изысканные удобства", subtitle: "Архитектурное чудо в форме бриллианта" },
+                content: {
+                    tag: "Удобства мирового класса",
+                    title: "Суть роскоши JHL",
+                    desc: "JHL Solitaire Gading Serpong предлагает коллекцию кураторских удобств."
+                },
+                items: {
+                    pool: {
+                        name: "Фирменный инфинити-бассейн",
+                        desc: "Потрясающая архитектурная достопримечательность, наш инфинити-бассейн предлагает уникальный опыт."
+                    },
+                    fitness: {
+                        name: "Современный фитнес-центр",
+                        desc: "Оснащенный новейшими технологиями Technogym, наш фитнес-центр предоставляет все необходимое."
+                    }
+                }
+            },
+            offers: {
+                hero: { title: "Эксклюзивные предложения", subtitle: "Предложения с ограниченным сроком" },
+                items: {
+                    weekend: {
+                        tag: "Пакет проживания",
+                        title: "Выходные",
+                        desc: "Скидка 20% на проживание в выходные, включая завтрак.",
+                        cta: "Забронировать"
+                    },
+                    brunch: {
+                        tag: "Рестораны",
+                        title: "Воскресный бранч",
+                        desc: "Международный шведский стол каждое воскресенье.",
+                        cta: "Забронировать столик"
+                    }
+                }
+            }
+        }
+    },
+    ja: {
+        nav: {
+            home: "ホーム",
+            rooms: "客室",
+            dining: "お食事",
+            meetings: "会議・イベント",
+            wellness: "ウェルネス",
+            facilities: "施設",
+            offers: "オファー",
+            bookNow: "予約する",
+        },
+        hero: {
+            welcome: "ようこそ",
+            title: "JHL Solitaire",
+            description: "Gading Serpong, A JHL Collections",
+            jewelText: "都会の宝石",
+            welcomeTitle: "人生の最高の喜びを体現する",
+            welcomeDescription: "生きるすべての瞬間は、祝うべき喜びです。JHL Solitaireでは、お客様に人生を最大限に楽しむための最高の体験を提供する価値があると信じています。誇りと威信を持って、お客様の洗練された好みに応え、一流のサービスとオファーで期待を超えることを目指しています。",
+        },
+        features: {
+            luxury: {
+                title: "5つ星の贅沢",
+                desc: "目の肥えた旅行者のために設計された、受賞歴のあるサービスとアメニティ。",
+            },
+            location: {
+                title: "最高のロケーション",
+                desc: "Gading Serpongの中心部に位置し、ICEやAEONモールから数分です。",
+            },
+            offers: {
+                title: "限定オファー",
+                desc: "直接予約で特別料金と特典をお楽しみください。",
+                cta: "オファーを見る",
+            },
+        },
+        categories: {
+            rooms: {
+                title: "客室とスイート",
+                subtitle: "スイート＆サンクチュアリ",
+                description: "細部にまでこだわって設計された客室とスイートで、贅沢な生活の芸術を体験してください。",
+                cta: "もっと詳しく"
+            },
+            dining: {
+                title: "ダイニング体験",
+                subtitle: "食の王朝",
+                description: "絶妙な味の豊かなタペストリーを広げてください。国際的なビュッフェから本格的なイタリア料理まで。",
+                cta: "レストランを探す"
+            },
+            meetings: {
+                title: "ウェディング＆イベント",
+                subtitle: "壮大なイベント",
+                description: "壮大な多目的ホールで、特別な瞬間を永遠の思い出に変えましょう。豪華な結婚式や権威あるイベントに最適です。",
+                cta: "思い出を計画する"
+            },
+            wellness: {
+                title: "ウェルネス＆スパ",
+                subtitle: "静寂とスパ",
+                description: "Acqua Spaで感覚を若返らせましょう。厳選されたトリートメントと世界クラスのフィットネス施設を備えています。",
+                cta: "今すぐリフレッシュ"
+            },
+            facilities: {
+                title: "絶妙な施設",
+                subtitle: "絶妙なライフスタイル",
+                description: "JHL Solitaire独自のダイヤモンド型の建築の驚異と洗練されたライフスタイルサービスを体験してください。",
+                cta: "施設を探す"
+            },
+            offers: {
+                title: "限定オファー",
+                subtitle: "限定特典",
+                description: "厳選された季節のオファーで、滞在中の特別な特典とオーダーメイドの体験を解き放ちましょう。",
+                cta: "オファーを見る"
+            },
+        },
+        booking: {
+            checkIn: "チェックイン",
+            checkOut: "チェックアウト",
+            guests: "ゲスト",
+            adults: "大人",
+            availability: "空室状況を確認",
+            selectDate: "日付を選択",
+            discover: "発見する",
+        },
+        footer: {
+            contact: "お問い合わせ",
+            quickLinks: "クイックリンク",
+            legal: "法的情報",
+            newsletter: "ニュースレター",
+            subscribe: "限定オファーを購読する。",
+            placeholder: "メールアドレス",
+            join: "参加する",
+            rights: "全著作権所有。",
+            privacyPolicy: "プライバシーポリシー",
+            termsOfService: "利用規約",
+        },
+        promo: {
+            specialOffer: "特別オファー",
+            reservation: "テーブルを予約",
+            tangDynasty: {
+                title: "唐王朝セットメニュー",
+                description: "時代を超えた料理の旅。10コースの宴会。",
+                price: "IDR 4,888,000",
+            }
+        },
+        dining: {
+            title: "料理体験",
+            subtitle: "非凡な味",
+            description: "カジュアルな食事から絶妙なグルメ体験まで、JHL Solitaireはあらゆる味覚を満たす多様な料理の選択肢を提供します。",
+            venues: {
+                mangan: {
+                    type: "インターナショナルビュッフェ",
+                    desc: "ライブクッキングステーションと多様な国際的および地元の珍味を備えた料理劇場。"
+                },
+                alGusto: {
+                    type: "イタリアンファインダイニング",
+                    desc: "洗練された環境で提供される本格的なイタリアの味。ロマンチックなディナーやビジネスランチに最適です。"
+                },
+                royalEight: {
+                    type: "中華ファインダイニング",
+                    desc: "現代的で考え抜かれた環境で提供される、おいしいランチ、ディナー、中華デザートのセレクション。"
+                },
+                empress: {
+                    type: "ラウンジ＆バー",
+                    desc: "エレガントな雰囲気の中で、薬局風のシグネチャーカクテル、高級スピリッツ、厳選されたワインを発見してください。"
+                },
+                castro: {
+                    type: "ラウンジ＆バー",
+                    desc: "洗練されたエレガンスの雰囲気の中で、プレミアムシガー、高級ウイスキー、厳選されたカクテルでリラックスしてください。"
+                },
+                leBleu: {
+                    type: "カフェ＆パティスリー",
+                    desc: "繊細な食感、洗練された甘さ、時代を超越した技術がすべてのケーキに融合した、贅沢の表現。"
+                }
+            },
+            openDaily: "毎日営業: 10:00 - 22:00",
+            viewMenu: "メニューを見る",
+            menuCategories: {
+                main: { title: "メインコース", subtitle: "シグネチャー料理" },
+                dimsum: { title: "点心", subtitle: "毎日手作り" },
+                beverage: { title: "お飲み物", subtitle: "リフレッシュメント" }
+            }
+        },
+        pages: {
+            rooms: {
+                hero: { title: "宿泊施設", subtitle: "洗練されたエレガンスでの休息" },
+                content: {
+                    title: "あなたのプライベートサンクチュアリ",
+                    desc: "141室の客室とスイートはそれぞれ、現代的な美学と時代を超えた快適さを融合させたデザインの傑作です。"
+                },
+                roomTypes: {
+                    premier: { name: "プレミアルーム", desc: "現代的な快適さのために設計された広々とした40平方メートルのサンクチュアリ。" },
+                    executive: { name: "エグゼクティブスイート", desc: "独立したリビングエリアとパノラマの街の景色を望む、ワンランク上の贅沢。" },
+                    signature: { name: "JHL Solitaire シグネチャー", desc: "目の肥えた旅行者のための贅沢な生活の究極の表現。" }
+                },
+                amenities: {
+                    wifi: "高速Wi-Fi",
+                    tv: "スマートTV",
+                    coffee: "コーヒーメーカー",
+                    ac: "エアコン"
+                },
+                perNight: "/ 泊",
+                bookNow: "予約する"
+            },
+            meetings: {
+                hero: { title: "会議・イベント", subtitle: "ビジネスとラグジュアリーが出会う場所" },
+                content: {
+                    title: "スカイボールルーム",
+                    desc: "象徴的なスカイボールルームは、180度のパノラマの街の景色を望み、結婚式、企業の祝賀会、社交イベントに素晴らしい背景を提供します。"
+                },
+                cta: "今すぐ問い合わせる"
+            },
+            wellness: {
+                hero: { title: "ウェルネス＆スパ", subtitle: "五感を若返らせる" },
+                content: {
+                    title: "Acqua Spa",
+                    desc: "Acqua Spaで静寂に浸ってください。伝統的なマッサージから現代的な治療法まで。"
+                },
+                treatments: {
+                    massage: { name: "シグネチャーマッサージ", duration: "60 / 90 分" },
+                    facial: { name: "ラグジュアリーフェイシャル", duration: "60 分" }
+                }
+            },
+            facilities: {
+                hero: { title: "絶妙な施設", subtitle: "ダイヤモンド型の建築の驚異" },
+                content: {
+                    tag: "世界クラスのアメニティ",
+                    title: "JHLラグジュアリーのエッセンス",
+                    desc: "JHL Solitaire Gading Serpongは、最も要求の厳しいライフスタイルのニーズに応えるために設計された厳選された施設を提供します。"
+                },
+                items: {
+                    pool: {
+                        name: "シグネチャーインフィニティプール",
+                        desc: "素晴らしい建築のハイライトであるインフィニティプールは、Gading Serpongのスカイラインを制限なく眺めることができるユニークな水泳体験を提供します。"
+                    },
+                    fitness: {
+                        name: "最先端のフィットネス",
+                        desc: "最新のTechnogymテクノロジーを搭載したフィットネスセンターは、包括的なウェルネスルーチンに必要なすべてを提供します。"
+                    }
+                }
+            },
+            offers: {
+                hero: { title: "限定オファー", subtitle: "期間限定パッケージ" },
+                items: {
+                    weekend: {
+                        tag: "宿泊パッケージ",
+                        title: "ウィークエンドゲッタウェイ",
+                        desc: "朝食を含む週末の滞在が20%オフ。",
+                        cta: "予約する"
+                    },
+                    brunch: {
+                        tag: "ダイニング",
+                        title: "サンデーブランチ",
+                        desc: "毎週日曜日の食べ放題インターナショナルビュッフェ。",
+                        cta: "テーブルを予約"
+                    }
+                }
+            }
+        }
+    },
+    ar: {
+        nav: {
+            home: "الرئيسية",
+            rooms: "غرف",
+            dining: "تتناول الطعام",
+            meetings: "الاجتماعات",
+            wellness: "عافية",
+            facilities: "مرافق",
+            offers: "عروض",
+            bookNow: "احجز الآن",
+        },
+        hero: {
+            welcome: "مرحبا بك في",
+            title: "جي إتش إل سوليتير",
+            description: "غادينغ سيربونغ، مجموعة جي إتش إل",
+            jewelText: "جوهرة المدينة",
+            welcomeTitle: "تجسيد أفضل جوهر للحياة",
+            welcomeDescription: "كل لحظة من الحياة هي فرحة تستحق الاحتفال. في جي إتش إل سوليتير، نؤمن بأن ضيوفنا يستحقون أرقى تجربة للعيش على أكمل وجه. بكل فخر وهيبة، نهدف إلى تجاوز التوقعات من خلال مبادلة الذوق الرفيع لضيوفنا بإطار ذهني متزن، وخدمة من الدرجة الأولى، وعروض مميزة.",
+        },
+        features: {
+            luxury: {
+                title: "رفاهية 5 نجوم",
+                desc: "خدمة ووسائل راحة حائزة على جوائز مصممة للمسافر المميز.",
+            },
+            location: {
+                title: "موقع متميز",
+                desc: "يقع في قلب غادينغ سيربونغ، على بعد دقائق من ICE و مول AEON.",
+            },
+            offers: {
+                title: "عروض حصرية",
+                desc: "احجز مباشرة معنا للاستمتاع بأسعار خاصة ومزايا مجانية.",
+                cta: "عرض العروض",
+            },
+        },
+        categories: {
+            rooms: {
+                title: "الغرف والأجنحة",
+                subtitle: "الأجنحة والملاذ",
+                description: "جرب فن المعيشة الفاخرة في غرف وأجنحة مصممة بعناية فائقة للتفاصيل.",
+                cta: "اكتشف المزيد"
+            },
+            dining: {
+                title: "تجربة تناول الطعام",
+                subtitle: "سلالة الطهي",
+                description: "اكتشف النسيج الغني للنكهات الرائعة. من البوفيهات العالمية إلى المأكولات الإيطالية الأصيلة الفاخرة.",
+                cta: "استكشف الأماكن"
+            },
+            meetings: {
+                title: "حفلات الزفاف والفعاليات",
+                subtitle: "فعاليات كبرى",
+                description: "حول لحظاتك الخاصة إلى ذكريات أبدية في قاعتنا الرائعة متعددة الوظائف، والمثالية لحفلات الزفاف الكبرى والفعاليات المرموقة.",
+                cta: "خطط لذكرياتك"
+            },
+            wellness: {
+                title: "العافية والسبا",
+                subtitle: "السكينة والسبا",
+                description: "جدد حواسك في سبا أكوا، الذي يتميز بعلاجات مخصصة ومرافق لياقة بدنية عالمية المستوى.",
+                cta: "تجديد النشاط الآن"
+            },
+            facilities: {
+                title: "مرافق رائعة",
+                subtitle: "نظام حياة رائع",
+                description: "جرب الأعجوبة المعمارية الماسية الشكل وخدمات نمط الحياة الراقية الفريدة من نوعها في جي إتش إل سوليتير.",
+                cta: "استكشف المرافق"
+            },
+            offers: {
+                title: "عروض حصرية",
+                subtitle: "مزايا حصرية",
+                description: "افتح امتيازات استثنائية وتجارب مخصصة أثناء إقامتك مع مجموعتنا المختارة من العروض الموسمية.",
+                cta: "عرض العروض"
+            },
+        },
+        booking: {
+            checkIn: "تسجيل الوصول",
+            checkOut: "تسجيل المغادرة",
+            guests: "الضيوف",
+            adults: "البالغين",
+            availability: "تحقق من التوفر",
+            selectDate: "اختر التاريخ",
+            discover: "اكتشف",
+        },
+        footer: {
+            contact: "اتصل",
+            quickLinks: "روابط سريعة",
+            legal: "قانوني",
+            newsletter: "النشرة الإخبارية",
+            subscribe: "اشترك للحصول على عروض حصرية.",
+            placeholder: "بريدك الإلكتروني",
+            join: "انضم",
+            rights: "جميع الحقوق محفوظة.",
+            privacyPolicy: "سياسة الخصوصية",
+            termsOfService: "شروط الخدمة",
+        },
+        promo: {
+            specialOffer: "عرض خاص",
+            reservation: "احجز طاولة",
+            tangDynasty: {
+                title: "قائمة تانغ ديناستي",
+                description: "رحلة طهي عبر العصور وليمة من 10 أطباق.",
+                price: "IDR 4.888.000",
+            }
+        },
+        dining: {
+            title: "تجارب الطهي",
+            subtitle: "تذوق الاستثنائي",
+            description: "من تناول الطعام غير الرسمي إلى تجارب الذواقة الرائعة، يقدم جي إتش إل سوليتير مجموعة متنوعة من خيارات الطهي لإرضاء كل الأذواق.",
+            venues: {
+                mangan: {
+                    type: "بوفيه عالمي",
+                    desc: "مسرح للطهي يتميز بمحطات طهي حية ومجموعة متنوعة من الأطباق العالمية والمحلية."
+                },
+                alGusto: {
+                    type: "مأكولات إيطالية فاخرة",
+                    desc: "نكهات إيطالية أصيلة تقدم في أجواء راقية، مثالية للعشاء الرومانسي أو غداء العمل."
+                },
+                royalEight: {
+                    type: "مأكولات صينية فاخرة",
+                    desc: "مجموعة لذيذة من الغداء والعشاء والحلويات الصينية تقدم في بيئة معاصرة ومصممة بعناية."
+                },
+                empress: {
+                    type: "صالة وبار",
+                    desc: "اكتشف الكوكتيلات المميزة المستوحاة من الصيدلة والمشروبات الروحية الفاخرة ومجموعة مختارة من النبيذ في أجواء أنيقة."
+                },
+                castro: {
+                    type: "صالة وبار",
+                    desc: "استرخ مع السيجار الفاخر والويسكي الفاخر والكوكتيلات المختارة في جو من الأناقة الراقية."
+                },
+                leBleu: {
+                    type: "مقهى ومعجنات",
+                    desc: "تعبير متقن عن الدلال حيث تجتمع القوام الرقيق والحلاوة الراقية والتقنية الخالدة في كل كعكة."
+                }
+            },
+            openDaily: "مفتوح يوميا: 10:00 - 22:00",
+            viewMenu: "عرض القائمة",
+            menuCategories: {
+                main: { title: "الطبق الرئيسي", subtitle: "أطباق مميزة" },
+                dimsum: { title: "ديم سوم", subtitle: "صناعة يدوية يوميا" },
+                beverage: { title: "مشروبات", subtitle: "مرطبات" }
+            }
+        },
+        pages: {
+            rooms: {
+                hero: { title: "الإقامة", subtitle: "استرح في أناقة راقية" },
+                content: {
+                    title: "ملاذك الخاص",
+                    desc: "كل غرفة وجناح من غرفنا وأجنحتنا البالغ عددها 141 هي تحفة في التصميم، تمزج بين الجماليات المعاصرة والراحة الخالدة."
+                },
+                roomTypes: {
+                    premier: { name: "غرفة بريمير", desc: "ملاذ واسع بمساحة 40 مترًا مربعًا مصمم للراحة الحديثة." },
+                    executive: { name: "جناح تنفيذي", desc: "رفاهية راقية مع منطقة معيشة منفصلة وإطلالات بانورامية على المدينة." },
+                    signature: { name: "جي إتش إل سوليتير سيجنتشر", desc: "التعبير النهائي عن المعيشة الفاخرة للمسافر المميز." }
+                },
+                amenities: {
+                    wifi: "واي فاي عالي السرعة",
+                    tv: "تلفزيون ذكي",
+                    coffee: "ماكينة قهوة",
+                    ac: "مكيف هواء"
+                },
+                perNight: "/ ليلة",
+                bookNow: "احجز الآن"
+            },
+            meetings: {
+                hero: { title: "الاجتماعات والفعاليات", subtitle: "حيث يلتقي العمل بالرفاهية" },
+                content: {
+                    title: "قاعة سكاي",
+                    desc: "توفر قاعة سكاي الشهيرة إطلالات بانورامية بزاوية 180 درجة على المدينة."
+                },
+                cta: "استفسر الآن"
+            },
+            wellness: {
+                hero: { title: "العافية والسبا", subtitle: "جدد حواسك" },
+                content: {
+                    title: "سبا أكوا",
+                    desc: "انغمس في الهدوء في سبا أكوا. من التدليك التقليدي إلى العلاجات الحديثة."
+                },
+                treatments: {
+                    massage: { name: "تدليك مميز", duration: "60 / 90 دقيقة" },
+                    facial: { name: "علاج وجه فاخر", duration: "60 دقيقة" }
+                }
+            },
+            facilities: {
+                hero: { title: "مرافق رائعة", subtitle: "أعجوبة معمارية على شكل ماسة" },
+                content: {
+                    tag: "مرافق عالمية المستوى",
+                    title: "جوهر رفاهية جي إتش إل",
+                    desc: "يقدم جي إتش إل سوليتير غادينغ سيربونغ مجموعة من المرافق المنسقة."
+                },
+                items: {
+                    pool: {
+                        name: "مسبح إنفينيتي المميز",
+                        desc: "يعد مسبح إنفينيتي الخاص بنا، وهو معلم معماري مذهل، تجربة سباحة فريدة من نوعها."
+                    },
+                    fitness: {
+                        name: "لياقة بدنية حديثة",
+                        desc: "يوفر مركز اللياقة البدنية الخاص بنا، المجهز بأحدث تقنيات تكنوجيم، كل ما تحتاجه."
+                    }
+                }
+            },
+            offers: {
+                hero: { title: "عروض حصرية", subtitle: "باقات لفترة محدودة" },
+                items: {
+                    weekend: {
+                        tag: "باقة إقامة",
+                        title: "عطلة نهاية الأسبوع",
+                        desc: "تمتع بخصم 20% على إقامات نهاية الأسبوع شاملة الإفطار.",
+                        cta: "احجز الآن"
+                    },
+                    brunch: {
+                        tag: "تتناول الطعام",
+                        title: "برنش الأحد",
+                        desc: "بوفيه عالمي مفتوح كل يوم أحد.",
+                        cta: "احجز طاولة"
+                    }
+                }
+            }
+        }
+    },
+    ko: {
+        nav: {
+            home: "홈",
+            rooms: "객실",
+            dining: "다이닝",
+            meetings: "미팅",
+            wellness: "웰니스",
+            facilities: "시설",
+            offers: "오퍼",
+            bookNow: "예약하기",
+        },
+        hero: {
+            welcome: "환영합니다",
+            title: "JHL Solitaire",
+            description: "Gading Serpong, A JHL Collections",
+            jewelText: "도시의 보석",
+            welcomeTitle: "인생의 최고의 본질을 구현하다",
+            welcomeDescription: "삶의 모든 순간은 축하받아야 할 기쁨입니다. JHL Solitaire에서는 고객이 최고의 삶을 경험할 자격이 있다고 믿습니다. 자부심과 명성을 가지고, 우리는 침착한 마음가짐, 일류 서비스 및 제공으로 고객의 절묘한 취향에 보답하여 기대 이상을 목표로 합니다.",
+        },
+        features: {
+            luxury: {
+                title: "5성급 럭셔리",
+                desc: "안목 있는 여행자를 위해 설계된 수상 경력에 빛나는 서비스와 편의 시설.",
+            },
+            location: {
+                title: "최고의 위치",
+                desc: "Gading Serpong의 중심부에 위치하며 ICE 및 AEON Mall에서 몇 분 거리입니다.",
+            },
+            offers: {
+                title: "독점 오퍼",
+                desc: "저희와 직접 예약하여 특별 요금과 무료 혜택을 누리세요.",
+                cta: "오퍼 보기",
+            },
+        },
+        categories: {
+            rooms: {
+                title: "객실 및 스위트",
+                subtitle: "스위트 & 생츄어리",
+                description: "디테일에 탁월한 주의를 기울여 설계된 객실과 스위트에서 럭셔리한 삶의 예술을 경험하십시오.",
+                cta: "더 알아보기"
+            },
+            dining: {
+                title: "다이닝 경험",
+                subtitle: "요리의 왕조",
+                description: "절묘한 맛의 풍부한 태피스트리를 펼치십시오. 인터내셔널 뷔페부터 정통 이탈리아 파인 다이닝까지.",
+                cta: "장소 탐색"
+            },
+            meetings: {
+                title: "웨딩 & 이벤트",
+                subtitle: "웅장한 이벤트",
+                description: "웅장한 결혼식과 권위 있는 행사에 이상적인 웅장한 다목적 홀에서 특별한 순간을 영원한 추억으로 바꾸십시오.",
+                cta: "추억 계획하기"
+            },
+            wellness: {
+                title: "웰니스 & 스파",
+                subtitle: "평온 & 스파",
+                description: "엄선된 트리트먼트와 세계적 수준의 피트니스 시설을 갖춘 Acqua Spa에서 감각을 되살리십시오.",
+                cta: "지금 활력 되찾기"
+            },
+            facilities: {
+                title: "절묘한 시설",
+                subtitle: "절묘한 라이프스타일",
+                description: "JHL Solitaire만의 독특한 다이아몬드 모양의 건축적 경이로움과 세련된 라이프스타일 서비스를 경험하십시오.",
+                cta: "시설 탐색"
+            },
+            offers: {
+                title: "독점 오퍼",
+                subtitle: "독점 혜택",
+                description: "엄선된 시즌 오퍼로 머무는 동안 탁월한 특권과 맞춤형 경험을 잠금 해제하십시오.",
+                cta: "오퍼 보기"
+            },
+        },
+        booking: {
+            checkIn: "체크인",
+            checkOut: "체크아웃",
+            guests: "게스트",
+            adults: "성인",
+            availability: "가능 여부 확인",
+            selectDate: "날짜 선택",
+            discover: "발견",
+        },
+        footer: {
+            contact: "연락처",
+            quickLinks: "빠른 링크",
+            legal: "법적",
+            newsletter: "뉴스레터",
+            subscribe: "독점 오퍼를 구독하십시오.",
+            placeholder: "이메일",
+            join: "가입",
+            rights: "모든 권리 보유.",
+            privacyPolicy: "개인정보 처리방침",
+            termsOfService: "서비스 약관",
+        },
+        promo: {
+            specialOffer: "특별 오퍼",
+            reservation: "테이블 예약",
+            tangDynasty: {
+                title: "당나라 세트 메뉴",
+                description: "시대를 초월한 요리 여행 10코스 연회.",
+                price: "IDR 4,888,000",
+            }
+        },
+        dining: {
+            title: "요리 경험",
+            subtitle: "비범함을 맛보다",
+            description: "캐주얼 다이닝부터 절묘한 미식 경험까지, JHL Solitaire는 모든 입맛을 만족시킬 수 있는 다양한 요리 옵션을 제공합니다.",
+            venues: {
+                mangan: {
+                    type: "인터내셔널 뷔페",
+                    desc: "라이브 쿠킹 스테이션과 다양한 인터내셔널 및 현지 별미를 갖춘 요리 극장."
+                },
+                alGusto: {
+                    type: "이탈리아 파인 다이닝",
+                    desc: "세련된 분위기에서 제공되는 정통 이탈리아의 맛, 낭만적인 저녁 식사나 비즈니스 점심 식사에 완벽합니다."
+                },
+                royalEight: {
+                    type: "중국 파인 다이닝",
+                    desc: "현대적이고 사려 깊게 만들어진 환경에서 제공되는 맛있는 점심, 저녁 식사 및 중국 디저트 셀렉션."
+                },
+                empress: {
+                    type: "라운지 & 바",
+                    desc: "우아한 분위기에서 약재상에서 영감을 받은 시그니처 칵테일, 고급 증류주, 엄선된 와인을 만나보세요."
+                },
+                castro: {
+                    type: "라운지 & 바",
+                    desc: "세련된 우아함의 분위기 속에서 프리미엄 시가, 고급 위스키, 엄선된 칵테일과 함께 휴식을 취하십시오."
+                },
+                leBleu: {
+                    type: "카페 & 파티세리",
+                    desc: "모든 케이크에 섬세한 질감, 세련된 단맛, 시대를 초월한 기술이 어우러진 탐닉의 표현."
+                }
+            },
+            openDaily: "매일 영업: 10:00 - 22:00",
+            viewMenu: "메뉴 보기",
+            menuCategories: {
+                main: { title: "메인 코스", subtitle: "시그니처 요리" },
+                dimsum: { title: "딤섬", subtitle: "매일 수제" },
+                beverage: { title: "음료", subtitle: "다과" }
+            }
+        },
+        pages: {
+            rooms: {
+                hero: { title: "숙박", subtitle: "세련된 우아함 속의 휴식" },
+                content: {
+                    title: "당신의 개인 안식처",
+                    desc: "141개의 객실과 스위트는 각각 현대적인 미학과 시대를 초월한 편안함을 조화시킨 디자인의 걸작입니다."
+                },
+                roomTypes: {
+                    premier: { name: "프리미어 룸", desc: "현대적인 편안함을 위해 설계된 넓은 40제곱미터의 안식처." },
+                    executive: { name: "이그제큐티브 스위트", desc: "별도의 거실 공간과 파노라마 도시 전망을 갖춘 한 차원 높은 럭셔리." },
+                    signature: { name: "JHL Solitaire 시그니처", desc: "안목 있는 여행자를 위한 럭셔리 라이프의 궁극적인 표현." }
+                },
+                amenities: {
+                    wifi: "고속 와이파이",
+                    tv: "스마트 TV",
+                    coffee: "커피 메이커",
+                    ac: "에어컨"
+                },
+                perNight: "/ 1박",
+                bookNow: "예약하기"
+            },
+            meetings: {
+                hero: { title: "미팅 & 이벤트", subtitle: "비즈니스와 럭셔리가 만나는 곳" },
+                content: {
+                    title: "스카이 볼룸",
+                    desc: "상징적인 스카이 볼룸은 180도 파노라마 도시 전망을 제공하며 결혼식, 기업 갈라 및 사교 행사를 위한 멋진 배경을 제공합니다."
+                },
+                cta: "지금 문의하기"
+            },
+            wellness: {
+                hero: { title: "웰니스 & 스파", subtitle: "감각을 되살리세요" },
+                content: {
+                    title: "Acqua Spa",
+                    desc: "Acqua Spa에서 평온에 잠기십시오. 전통 마사지부터 현대적인 치료법까지."
+                },
+                treatments: {
+                    massage: { name: "시그니처 마사지", duration: "60 / 90 분" },
+                    facial: { name: "럭셔리 페이셜", duration: "60 분" }
+                }
+            },
+            facilities: {
+                hero: { title: "절묘한 시설", subtitle: "다이아몬드 모양의 건축적 경이로움" },
+                content: {
+                    tag: "세계적 수준의 편의 시설",
+                    title: "JHL 럭셔리의 본질",
+                    desc: "JHL Solitaire Gading Serpong은 가장 까다로운 라이프스타일 요구 사항을 충족하도록 설계된 엄선된 시설을 제공합니다."
+                },
+                items: {
+                    pool: {
+                        name: "시그니처 인피니티 풀",
+                        desc: "놀라운 건축적 하이라이트인 인피니티 풀은 Gading Serpong의 스카이라인을 제한 없이 볼 수 있는 독특한 수영 경험을 제공합니다."
+                    },
+                    fitness: {
+                        name: "최첨단 피트니스",
+                        desc: "최신 Technogym 기술을 갖춘 피트니스 센터는 포괄적인 웰빙 루틴에 필요한 모든 것을 제공합니다."
+                    }
+                }
+            },
+            offers: {
+                hero: { title: "독점 오퍼", subtitle: "기간 한정 패키지" },
+                items: {
+                    weekend: {
+                        tag: "숙박 패키지",
+                        title: "주말 휴가",
+                        desc: "조식을 포함한 주말 숙박 20% 할인.",
+                        cta: "예약하기"
+                    },
+                    brunch: {
+                        tag: "다이닝",
+                        title: "일요일 브런치",
+                        desc: "매주 일요일 무제한 인터내셔널 뷔페.",
+                        cta: "테이블 예약"
                     }
                 }
             }
