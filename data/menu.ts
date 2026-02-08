@@ -43,7 +43,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "isRecommended": true,
     "isRelatedTo": "Pu-erh Tea",
     "timeRequired": "PT30M",
-    "imageUrl": "/assets/royal-eight/peking-duck.svg"
+    "imageUrl": "/assets/original/peking-duck.webp"
   },
   {
     "id": "roasted-suckling-pig",
@@ -54,10 +54,10 @@ export const MENU_ITEMS: MenuItem[] = [
     "price": 3888000,
     "description": "Whole roasted suckling pig with crispy skin.",
     "imageKeyword": "suckling pig",
+    "isRecommended": false,
     "isRelatedTo": "Pu-erh Tea",
-    "disambiguatingDescription": "Crispy",
     "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/peking-duck.svg"
+    "imageUrl": "/assets/original/suckling-pig.webp"
   },
   {
     "id": "braised-abalone",
@@ -68,10 +68,10 @@ export const MENU_ITEMS: MenuItem[] = [
     "price": 1288000,
     "description": "Premium braised abalone served with shiitake mushrooms.",
     "imageKeyword": "abalone",
+    "isRecommended": false,
     "isRelatedTo": "Chrysanthemum Tea",
-    "disambiguatingDescription": "Tender/Silky",
     "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/abalone.svg"
+    "imageUrl": "/assets/original/braised-abalone.webp"
   },
   {
     "id": "steamed-grouper",
@@ -82,10 +82,7 @@ export const MENU_ITEMS: MenuItem[] = [
     "price": 988000,
     "description": "Fresh star grouper steamed with superior soy sauce.",
     "imageKeyword": "steamed fish",
-    "isRelatedTo": "Chrysanthemum Tea",
-    "disambiguatingDescription": "Tender/Silky",
-    "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/abalone.svg"
+    "imageUrl": "/assets/original/steamed-star-grouper.webp"
   },
   {
     "id": "king-prawn-salted-egg",
@@ -96,9 +93,10 @@ export const MENU_ITEMS: MenuItem[] = [
     "price": 288000,
     "description": "Deep-fried king prawns coated in rich salted egg yolk sauce.",
     "imageKeyword": "salted egg prawn",
+    "isRecommended": false,
     "isRelatedTo": "Chrysanthemum Tea",
     "timeRequired": "PT20M",
-    "imageUrl": "/assets/royal-eight/abalone.svg"
+    "imageUrl": "/assets/original/king-prawn-salted-egg.webp"
   },
   {
     "id": "wagyu-beef-black-pepper",

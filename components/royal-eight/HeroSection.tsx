@@ -15,9 +15,9 @@ export const HeroSection = () => {
         <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Static Background with Entry Animation */}
             <m.div
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
+                initial={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                transition={{ duration: 2.5, ease: "easeOut" }}
                 className="absolute inset-0 z-0"
             >
                 <Image
