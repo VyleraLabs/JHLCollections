@@ -7,7 +7,7 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import { Wifi, Tv, Coffee, Wind } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import JsonLd from "@/components/JsonLd";
 
 export default function Rooms() {
     const { t } = useLanguage();
@@ -17,24 +17,68 @@ export default function Rooms() {
             name: "Premier Room",
             desc: t.pages.rooms.roomTypes.premier.desc,
             price: "IDR 1,800,000",
+            priceValue: 1800000,
             image: "/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp"
         },
         {
             name: "Executive Suite",
             desc: t.pages.rooms.roomTypes.executive.desc,
             price: "IDR 3,200,000",
+            priceValue: 3200000,
             image: "/assets/original/img-93fce4d6-af81-4e27-b726-55da2332debe.webp"
         },
         {
             name: "JHL Solitaire Signature",
             desc: t.pages.rooms.roomTypes.signature.desc,
             price: "IDR 5,500,000",
+            priceValue: 5500000,
             image: "/assets/original/img-8d509d57-ebcc-4fd8-af90-355871a4ae75.webp"
         }
     ];
 
+    const roomsSchema = {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "JHL Solitaire Gading Serpong",
+        "description": "5-Star Luxury Hotel in Gading Serpong featuring 141 elegantly appointed rooms and suites.",
+        "url": "https://jhlcollections.com/rooms",
+        "parentOrganization": {
+            "@type": "Hotel",
+            "name": "JHL Solitaire Gading Serpong"
+        },
+        "containsPlace": rooms.map(room => ({
+            "@type": "HotelRoom",
+            "name": room.name,
+            "description": room.desc,
+            "image": `https://jhlcollections.com${room.image}`,
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2,
+                "unitCode": "C62" // Person
+            },
+            "bed": {
+                "@type": "BedDetails",
+                "numberOfBeds": 1,
+                "typeOfBed": "King"
+            },
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": room.priceValue,
+                "priceCurrency": "IDR",
+                "unitCode": "DAY"
+            },
+            "amenityFeature": [
+                { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
+                { "@type": "LocationFeatureSpecification", "name": "LED TV", "value": true },
+                { "@type": "LocationFeatureSpecification", "name": "Coffee & Tea Maker", "value": true },
+                { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true }
+            ]
+        }))
+    };
+
     return (
         <main className="min-h-screen bg-brand-off-white">
+            <JsonLd data={roomsSchema} />
             <Header />
 
             {/* Hero */}

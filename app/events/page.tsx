@@ -6,13 +6,65 @@ import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext";
+import JsonLd from "@/components/JsonLd";
 
 export default function Meetings() {
     const { t } = useLanguage();
 
+    const eventVenuesSchema = {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "JHL Solitaire Gading Serpong",
+        "url": "https://jhlcollections.com/events",
+        "parentOrganization": {
+            "@type": "Hotel",
+            "name": "JHL Solitaire Gading Serpong"
+        },
+        "containsPlace": [
+            {
+                "@type": "EventVenue",
+                "name": "Sky Ballroom",
+                "description": "Luxurious indoor ballroom on Level 15 with 180-degree city views. Perfect for weddings and grand receptions.",
+                "image": "https://jhlcollections.com/assets/meetings/sky-ballroom-venue.jpg",
+                "maximumAttendeeCapacity": 800,
+                "isAccessibleForFree": false,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Level 15, JHL Solitaire",
+                    "addressLocality": "Tangerang",
+                    "addressRegion": "Banten",
+                    "addressCountry": "ID"
+                }
+            },
+            {
+                "@type": "EventVenue",
+                "name": "Sky Garden",
+                "description": "Exclusive rooftop outdoor venue for intimate weddings and private parties.",
+                "image": "https://jhlcollections.com/assets/meetings/sky-garden-venue.webp",
+                "maximumAttendeeCapacity": 150,
+                "isAccessibleForFree": false,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Rooftop, JHL Solitaire",
+                    "addressLocality": "Tangerang",
+                    "addressRegion": "Banten",
+                    "addressCountry": "ID"
+                }
+            },
+            {
+                "@type": "Restaurant",
+                "name": "Royal Eight Chinese Dining",
+                "description": "Authentic Chinese dining venue suitable for engagement parties and corporate luncheons.",
+                "image": "https://jhlcollections.com/assets/meetings/royal-eight-venue.webp",
+                "servesCuisine": "Chinese",
+                "maximumAttendeeCapacity": 250
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-brand-off-white">
+            <JsonLd data={eventVenuesSchema} />
             <Header />
             <div className="relative h-[60vh] bg-gray-900">
                 <Image
