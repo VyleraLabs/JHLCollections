@@ -10,18 +10,9 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import CustomDatePicker from "@/components/CustomDatePicker";
 import { useLanguage } from "@/context/LanguageContext";
+import { countryCodes, CountryCode } from "@/data/countryCodes";
+import { Search } from "lucide-react";
 
-const countryCodes = [
-    { code: "+62", country: "Indonesia", flag: "🇮🇩" },
-    { code: "+60", country: "Malaysia", flag: "🇲🇾" },
-    { code: "+65", country: "Singapore", flag: "🇸🇬" },
-    { code: "+86", country: "China", flag: "🇨🇳" },
-    { code: "+1", country: "USA", flag: "🇺🇸" },
-    { code: "+44", country: "UK", flag: "🇬🇧" },
-    { code: "+81", country: "Japan", flag: "🇯🇵" },
-    { code: "+82", country: "South Korea", flag: "🇰🇷" },
-    { code: "+61", country: "Australia", flag: "🇦🇺" },
-];
 
 const ValidationError = ({ message }: { message: string | null }) => (
     <AnimatePresence>
@@ -38,6 +29,98 @@ const ValidationError = ({ message }: { message: string | null }) => (
         )}
     </AnimatePresence>
 );
+
+function SearchableCountrySelect({
+    value,
+    onChange
+}: {
+    value: string;
+    onChange: (code: string) => void;
+}) {
+    const [isOpen, setIsOpen] = useState(false);
+    const [search, setSearch] = useState("");
+    const dropdownRef = React.useRef<HTMLDivElement>(null);
+
+    const filteredCountries = countryCodes.filter(c =>
+        c.name.toLowerCase().includes(search.toLowerCase()) ||
+        c.dial_code.includes(search) ||
+        c.code.toLowerCase().includes(search.toLowerCase())
+    );
+
+    const selectedCountry = countryCodes.find(c => c.dial_code === value) || countryCodes[0];
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const handleSelect = (dialCode: string) => {
+        onChange(dialCode);
+        setIsOpen(false);
+        setSearch("");
+    };
+
+    return (
+        <div className="relative w-32" ref={dropdownRef}>
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white cursor-pointer hover:border-brand-gold transition-colors flex items-center justify-between"
+            >
+                <span className="text-sm truncate">
+                    {selectedCountry.code} {selectedCountry.dial_code}
+                </span>
+            </div>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute bottom-full left-0 mb-2 w-64 bg-brand-dark border border-white/10 rounded-xl shadow-2xl z-[100] overflow-hidden flex flex-col"
+                    >
+                        <div className="p-3 border-b border-white/10 bg-white/5">
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={14} />
+                                <input
+                                    autoFocus
+                                    type="text"
+                                    placeholder="Search country..."
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                    className="w-full bg-black/40 border border-white/5 rounded-md py-2 pl-9 pr-3 text-xs text-white focus:outline-none focus:border-brand-gold"
+                                />
+                            </div>
+                        </div>
+                        <div className="max-h-60 overflow-y-auto custom-scrollbar">
+                            {filteredCountries.length > 0 ? (
+                                filteredCountries.map((c) => (
+                                    <div
+                                        key={`${c.code}-${c.dial_code}`}
+                                        onClick={() => handleSelect(c.dial_code)}
+                                        className={`px-4 py-3 hover:bg-brand-gold hover:text-brand-dark transition-colors cursor-pointer flex items-center justify-between text-xs ${value === c.dial_code ? 'bg-brand-gold/10 text-brand-gold' : 'text-white/80'}`}
+                                    >
+                                        <span className="truncate flex-1 pr-2">{c.name}</span>
+                                        <span className="font-mono opacity-60">{c.dial_code}</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="px-4 py-6 text-center text-xs text-white/40 italic">
+                                    No matches found
+                                </div>
+                            )}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 function BookingForm() {
     const { t } = useLanguage();
@@ -421,18 +504,10 @@ function BookingForm() {
                             <div className="space-y-2">
                                 <label className="text-[10px] uppercase tracking-widest text-brand-gold font-bold">{t.bookingPage.phoneNumber}</label>
                                 <div className="flex gap-4">
-                                    <select
-                                        name="phoneCode"
+                                    <SearchableCountrySelect
                                         value={formData.phoneCode}
-                                        onChange={handleChange}
-                                        className="w-32 bg-white/5 border border-white/10 rounded-lg py-4 px-4 text-white focus:outline-none focus:border-brand-gold transition-colors"
-                                    >
-                                        {countryCodes.map(c => (
-                                            <option key={c.code} value={c.code} className="bg-brand-dark">
-                                                {c.flag} {c.code}
-                                            </option>
-                                        ))}
-                                    </select>
+                                        onChange={(code) => setFormData(prev => ({ ...prev, phoneCode: code }))}
+                                    />
                                     <div className="relative flex-1">
                                         <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
                                         <input
