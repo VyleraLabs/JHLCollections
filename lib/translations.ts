@@ -1204,7 +1204,7 @@ export const translations: Record<Language, Translations> = {
                 cta: "Tanya Sekarang"
             },
             meetingRooms: {
-                hero: { title: "Ruang Pertemuan", subtitle: "Di Mana Inspirasi Bertemu Produktivitas" },
+                hero: { title: "Ruang Pertemuan", subtitle: "Inspirasi Bertemu Produktivitas" },
                 intro: "Lingkungan kami yang profesional dan inspiratif sangat ideal untuk menyelenggarakan konferensi. Dengan ruang pertemuan modern yang dilengkapi dengan teknologi mutakhir, kami dapat mengakomodasi berbagai pengaturan untuk eksekusi yang lancar. Dukungan dedikasi dan pilihan katering yang disesuaikan memastikan pertemuan yang sukses, menjadikannya pilihan sempurna untuk acara bisnis.",
                 subnav: { planner: "Hubungi Planner" },
                 specs: {
