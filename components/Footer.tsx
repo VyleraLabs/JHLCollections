@@ -59,8 +59,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="text-center text-xs opacity-50 pt-8 border-t border-gray-800">
-                    © {new Date().getFullYear()} JHL Solitaire Gading Serpong. {t.footer.rights}
+                <div className="text-center text-xs opacity-50 pt-8 border-t border-gray-800 space-y-2">
+                    <p>© {new Date().getFullYear()} JHL Solitaire Gading Serpong. {t.footer.rights}</p>
+                    <div className="text-[10px] tracking-widest uppercase font-bold text-red-500/50 mt-4 border border-red-900/30 inline-block px-4 py-2 rounded bg-red-950/10">
+                        Property of VyleraLabs.com • Product Demo for JHL Group • Unauthorized Copying Prohibited
+                    </div>
                 </div>
             </div>
         </footer>
