@@ -21,32 +21,32 @@ export default function Home() {
       <HeroSlider />
 
       {/* Welcome Section */}
-      <Section className="py-20 bg-brand-off-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="py-20 bg-brand-off-white overflow-hidden w-full relative">
+        <div className="w-full pr-4 lg:pr-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-center lg:text-left"
+              className="text-center lg:text-left px-6 lg:pl-20 lg:pr-16"
             >
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif text-brand-dark mb-4 tracking-tight leading-[1.1]">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-dark mb-6 tracking-tight leading-[1.1]">
                 {t.hero.welcomeTitle}
               </h2>
 
               <div className="relative mb-10">
-                <span className="text-brand-gold font-cursive text-3xl md:text-5xl relative z-10 block">
+                <span className="text-brand-gold font-cursive text-4xl md:text-6xl relative z-10 block">
                   {t.hero.jewelText}
                 </span>
               </div>
 
-              <p className="text-gray-500 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 text-base md:text-lg mb-8">
+              <p className="text-gray-500 font-light leading-relaxed w-full mx-auto lg:mx-0 text-lg md:text-xl mb-10">
                 {t.hero.welcomeDescription}
               </p>
 
-              <div className="w-16 h-[1px] bg-brand-gold mb-10 opacity-30 mx-auto lg:mx-0"></div>
+              <div className="w-24 h-[1px] bg-brand-gold mb-10 opacity-30 mx-auto lg:mx-0"></div>
             </motion.div>
 
             {/* Featured Image */}
@@ -55,13 +55,13 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.2 }}
-              className="relative aspect-[4/5] lg:aspect-auto lg:h-[750px] w-full rounded-sm overflow-hidden shadow-2xl group bg-brand-dark/5"
+              className="relative w-full aspect-video group overflow-hidden"
             >
               <Image
-                src="/assets/original/1mc6912000qshhrwa9EE8.jpg"
+                src="/assets/original/jewel-in-the-city.webp"
                 alt="JHL Solitaire Iconic Architecture at Night"
                 fill
-                className="object-cover transition-transform duration-[3s] group-hover:scale-105 transform-gpu"
+                className="object-contain transition-transform duration-[3s] group-hover:scale-[1.02] transform-gpu"
                 priority
                 quality={80}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -69,7 +69,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Highlights Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2">

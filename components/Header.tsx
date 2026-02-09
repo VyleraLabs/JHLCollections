@@ -253,7 +253,7 @@ export default function Header() {
                         </div>
                         <nav className="flex flex-col gap-4">
                             {[
-                                { name: t.nav.home, href: "/", image: "/assets/original/1mc6912000qshhrwa9EE8.jpg", subtitle: t.hero.welcome },
+                                { name: t.nav.home, href: "/", image: "/assets/original/jewel-in-the-city.webp", subtitle: t.hero.welcome },
                                 { name: t.nav.rooms, href: "/rooms", image: "/assets/original/img-24a5fc2c-d787-414c-8a78-a919e9b9b2d4.webp", subtitle: t.categories.rooms.subtitle },
                                 { name: t.nav.dining, href: "/dining", image: "/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp", subtitle: t.categories.dining.subtitle },
                                 { name: t.nav.meetings, href: "/events", image: "/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp", subtitle: t.categories.meetings.subtitle },

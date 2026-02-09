@@ -22,7 +22,7 @@ export function GlobalHotelSchema() {
         },
         "award": "MURI Record: First Diamond-Shaped Hotel Architecture in Indonesia",
         "image": [
-            "https://jhl-collections.vercel.app/assets/original/1mc6912000qshhrwa9EE8.jpg",
+            "https://jhl-collections.vercel.app/assets/original/jewel-in-the-city.webp",
             "https://jhl-collections.vercel.app/assets/original/12-edit.jpg"
         ],
         "url": "https://jhlcollections.com/jhlsolitaire",
