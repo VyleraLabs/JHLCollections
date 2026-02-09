@@ -2,8 +2,9 @@
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
-    qualities: [50, 75],
+    qualities: [50, 60, 75],
     minimumCacheTTL: 60,
+    deviceSizes: [320, 384, 420, 520, 640, 768, 828, 1024, 1200, 1920],
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,8 +17,12 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   // Advanced Performance & Security
+  // transpilePackages removed to prevent unnecessary polyfills (Legacy JS warning)
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
   async headers() {
     return [

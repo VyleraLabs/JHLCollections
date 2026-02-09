@@ -2,6 +2,7 @@
 
 import React from "react";
 import { m } from "framer-motion";
+import Image from "next/image";
 
 interface Promo {
     id: string;
@@ -30,7 +31,15 @@ export const PromoCarousel = () => {
             >
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <img src={bgImage} alt="Banquet" className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
+                    <Image
+                        src={bgImage}
+                        alt="Banquet"
+                        fill
+                        className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 896px"
+                        quality={60}
+                        priority
+                    />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0F0F0F] via-[#0F0F0F]/80 to-transparent" />
                 </div>
 

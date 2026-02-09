@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'; // Added React import
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ChevronDown, Calendar, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -122,7 +122,7 @@ export default function HeroSlider() {
                 </div>
 
                 {/* Scroll Call to Action */}
-                <motion.div
+                <m.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 0.5 }}
                     transition={{ delay: 1.5, duration: 1 }}
@@ -130,11 +130,11 @@ export default function HeroSlider() {
                 >
                     <span className="text-[10px] uppercase tracking-[0.3em]">{t.booking.discover}</span>
                     <ChevronDown className="animate-bounce" size={20} />
-                </motion.div>
+                </m.div>
             </div>
 
             {/* Mockup Booking Widget */}
-            <motion.div
+            <m.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
@@ -227,7 +227,7 @@ export default function HeroSlider() {
                         </button>
                     </div>
                 </div>
-            </motion.div>
+            </m.div>
             <div className="md:hidden absolute bottom-0 w-full p-6 z-40">
                 <button
                     onClick={handleBooking}

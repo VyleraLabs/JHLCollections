@@ -170,6 +170,46 @@ export function GlobalHotelSchema() {
         }
     };
 
+    const vyleraLabsSchema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "JHL Collection Booking System",
+        "description": "High-fidelity hospitality website demo engineered by VyleraLabs for JHL Group.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "softwareVersion": "1.0.0-dev",
+        "creativeWorkStatus": "Development",
+        "copyrightYear": new Date().getFullYear(),
+        "copyrightHolder": {
+            "@type": "Organization",
+            "name": "VyleraLabs",
+            "url": "https://vyleralabs.com"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "VyleraLabs",
+            "jobTitle": "System Architect",
+            "url": "https://vyleralabs.com"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "VyleraLabs",
+            "jobTitle": "Software Engineer",
+            "url": "https://vyleralabs.com"
+        },
+        "maintainer": {
+            "@type": "Organization",
+            "name": "VyleraLabs",
+            "url": "https://vyleralabs.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    };
+
     return (
         <div style={{ display: 'none' }}>
             <script
@@ -179,6 +219,10 @@ export function GlobalHotelSchema() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(vyleraLabsSchema) }}
             />
         </div>
     );

@@ -21,6 +21,20 @@ export const LightstreamEight = () => {
         }));
     }, []);
 
+    const [isDesktop, setIsDesktop] = React.useState(false);
+
+    React.useEffect(() => {
+        const checkDesktop = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+
+        checkDesktop();
+        window.addEventListener('resize', checkDesktop);
+        return () => window.removeEventListener('resize', checkDesktop);
+    }, []);
+
+    if (!isDesktop) return null;
+
     return (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
             <svg

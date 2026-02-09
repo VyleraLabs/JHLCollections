@@ -63,7 +63,7 @@ export default function Home() {
                 fill
                 className="object-cover transition-transform duration-[3s] group-hover:scale-105 transform-gpu"
                 priority
-                quality={100}
+                quality={80}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </motion.div>
@@ -177,7 +177,7 @@ export default function Home() {
             alt="Iconic Pool & Lifestyle Facilities"
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-105"
-            quality={75}
+            quality={70}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>

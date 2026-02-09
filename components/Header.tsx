@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import { type Language } from "@/lib/translations";
@@ -100,7 +100,7 @@ export default function Header() {
 
                 <AnimatePresence>
                     {isHovered && (
-                        <motion.div
+                        <m.div
                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -125,7 +125,7 @@ export default function Header() {
                                         <span className="text-base">{lang.flag}</span>
                                         <span className="text-xs font-bold tracking-widest">{lang.label}</span>
                                         {language === lang.code && (
-                                            <motion.div
+                                            <m.div
                                                 layoutId="active-lang-dot"
                                                 className="ml-auto w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_white]"
                                             />
@@ -133,7 +133,7 @@ export default function Header() {
                                     </button>
                                 ))}
                             </div>
-                        </motion.div>
+                        </m.div>
                     )}
                 </AnimatePresence>
             </div>
@@ -231,7 +231,7 @@ export default function Header() {
             {/* Mobile menu handled separately to avoid layout shift and style inheritance */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, x: "100%" }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
@@ -258,7 +258,7 @@ export default function Header() {
                                 { name: t.nav.dining, href: "/dining", image: "/assets/original/img-18c2e520-f15d-415a-a07b-f27bb31373ee.webp", subtitle: t.categories.dining.subtitle },
                                 { name: t.nav.meetings, href: "/events", image: "/assets/original/img-7fca6da7-689b-466d-9dac-18c9c47dcda1.webp", subtitle: t.categories.meetings.subtitle },
                                 { name: t.nav.wellness, href: "/wellness", image: "/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp", subtitle: t.categories.wellness.subtitle },
-                                { name: t.nav.facilities, href: "/facilities", image: "/assets/original/12-edit.jpg", subtitle: t.categories.facilities.subtitle },
+                                { name: t.nav.facilities, href: "/facilities", image: "/assets/original/img-1f1dc5b2-25c7-47a8-8d9a-3aee88c3d769.webp", subtitle: t.categories.facilities.subtitle },
                                 { name: t.nav.offers, href: "/offers", image: "/assets/original/img-16d5a22e-570d-4d2c-b931-948176ffc404.webp", subtitle: t.categories.offers.subtitle },
                             ].map((item) => (
                                 <Link
@@ -295,7 +295,7 @@ export default function Header() {
                             </button>
                             <LanguageSwitcher isMobile />
                         </nav>
-                    </motion.div>
+                    </m.div>
                 )}
             </AnimatePresence>
         </>

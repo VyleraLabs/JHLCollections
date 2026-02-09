@@ -58,13 +58,14 @@ export const MenuCard = ({ item }: MenuCardProps) => {
                     alt={language === 'zh' ? (item.nameChinese || item.name) : item.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px"
                     priority={item.isRecommended}
+                    quality={60}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent opacity-80" />
 
                 {/* Price Tag */}
-                <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm border border-luxury-gold/30 px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-black/80 border border-luxury-gold/30 px-3 py-1 rounded-full">
                     <span className="text-luxury-gold font-serif font-bold tracking-wider">
                         {item.price ? `IDR ${(item.price / 1000).toLocaleString('id-ID')}k` : "MP"}
                     </span>

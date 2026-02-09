@@ -94,6 +94,8 @@ export default async function RootLayout({
           SHA256: 08278b510ed2dced6c3dec17f2cce6bb7d90f133b2b9a0f8a4fc4bbe860c15bf
         */}
         <script
+          nonce={nonce}
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `
               console.log("%cSTOP!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 0px black;");
@@ -107,8 +109,12 @@ export default async function RootLayout({
           <ClientSEO />
           <AnimationProvider nonce={nonce}>
             {children}
-            <Analytics />
-            <SpeedInsights />
+            {process.env.VERCEL && (
+              <>
+                <Analytics />
+                <SpeedInsights />
+              </>
+            )}
             <CookieConsent />
           </AnimationProvider>
         </LanguageProvider>

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
     const userAgent = request.headers.get('user-agent') || '';
 
     // Detect legitimate search engine bots
@@ -15,11 +15,11 @@ export function proxy(request: NextRequest) {
     // but remove 'unsafe-inline' in favor of the nonce.
     const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-eval' https://webadmin.jhlcollections.com;
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-eval' https://webadmin.jhlcollections.com https://vercel.live https://va.vercel-scripts.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: https://webadmin.jhlcollections.com;
     font-src 'self' data:;
-    connect-src 'self' https://webadmin.jhlcollections.com;
+    connect-src 'self' https://webadmin.jhlcollections.com https://vitals.vercel-insights.com;
     frame-src 'self';
     base-uri 'self';
     form-action 'self';

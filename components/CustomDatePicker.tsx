@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface CustomDatePickerProps {
@@ -126,7 +126,7 @@ export default function CustomDatePicker({
             {isOpen && (
                 <>
                     {/* Backdrop */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -135,7 +135,7 @@ export default function CustomDatePicker({
                     />
 
                     {/* Picker Dialog */}
-                    <motion.div
+                    <m.div
                         initial={{ opacity: 0, y: side === "top" ? -10 : 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: side === "top" ? -10 : 10, scale: 0.95 }}
@@ -189,7 +189,7 @@ export default function CustomDatePicker({
                                 Select a date
                             </div>
                         </div>
-                    </motion.div>
+                    </m.div>
                 </>
             )}
         </AnimatePresence>
