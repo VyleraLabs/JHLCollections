@@ -71,6 +71,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Section */}
+      <Section className="bg-brand-off-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-gold/20 flex items-center justify-center mb-6 text-brand-gold">
+              <Star size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.luxury.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.luxury.desc}</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-gold/20 flex items-center justify-center mb-6 text-brand-gold">
+              <MapPin size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.location.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.location.desc}</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="w-16 h-16 rounded-full bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-brand-gold/20 flex items-center justify-center mb-6 text-brand-gold">
+              <ArrowRight size={32} />
+            </div>
+            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.offers.title}</h3>
+            <p className="text-gray-600 text-sm">{t.features.offers.desc}</p>
+            <Link href="/offers" className="mt-4 text-brand-dark hover:text-brand-gold uppercase text-xs font-bold tracking-widest border-b border-brand-gold pb-1 transition-colors">
+              {t.features.offers.cta}
+            </Link>
+          </div>
+        </div>
+      </Section>
+
       {/* Highlights Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Room Highlight */}
@@ -194,35 +224,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Features Section */}
-      <Section className="bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
-              <Star size={32} />
-            </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.luxury.title}</h3>
-            <p className="text-gray-600 text-sm">{t.features.luxury.desc}</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
-              <MapPin size={32} />
-            </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.location.title}</h3>
-            <p className="text-gray-600 text-sm">{t.features.location.desc}</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-brand-off-white flex items-center justify-center mb-6 text-brand-gold">
-              <ArrowRight size={32} />
-            </div>
-            <h3 className="font-serif text-xl mb-3 text-brand-dark">{t.features.offers.title}</h3>
-            <p className="text-gray-600 text-sm">{t.features.offers.desc}</p>
-            <Link href="/offers" className="mt-4 text-brand-dark hover:text-brand-gold uppercase text-xs font-bold tracking-widest border-b border-brand-gold pb-1 transition-colors">
-              {t.features.offers.cta}
-            </Link>
-          </div>
-        </div>
-      </Section>
+
 
       <Footer />
     </main>

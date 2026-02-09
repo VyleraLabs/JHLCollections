@@ -96,43 +96,47 @@ export const RoyalEightMenu = ({ menuItems }: RoyalEightMenuProps) => {
                     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent animate-shimmer bg-[length:200%_auto]" />
                 )}
 
-                <div className={`flex flex-wrap gap-4 md:gap-8 transition-all duration-300 mx-auto relative max-w-7xl px-4 sm:px-6 lg:px-8 ${isSticky ? "justify-center items-center" : "justify-center items-end"}`}>
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => {
-                                setActiveTab(tab.id);
-                                if (isSticky) {
-                                    window.scrollTo({
-                                        top: window.innerHeight - 150, // Adjust offset as needed
-                                        behavior: 'smooth'
-                                    });
-                                }
-                            }}
-                            className={cn(
-                                "group flex flex-col items-center px-4 py-2 transition-all duration-300 relative",
-                                activeTab === tab.id ? "text-luxury-gold" : "text-white/60 hover:text-white"
-                            )}
-                        >
-                            <span className={cn(
-                                "text-xs font-sans tracking-widest uppercase mb-1 transition-colors",
-                                activeTab === tab.id ? "text-luxury-gold" : "text-white/70 group-hover:text-white"
-                            )}>
-                                {tab.subtitle}
-                            </span>
-                            <span className="text-2xl md:text-3xl font-serif">
-                                {tab.label}
-                            </span>
-                            {activeTab === tab.id && (
-                                <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-luxury-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]" />
-                            )}
-                        </button>
-                    ))}
+                <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between md:justify-center relative transition-all duration-300 gap-4 md:gap-0`}>
+                    {/* Empty Left Column for Centering - Removed */}
 
-                    {/* Reserve Button & Language Switcher Container */}
+                    {/* Center Tabs */}
+                    <div className="flex flex-wrap gap-4 md:gap-8 justify-center w-full md:w-auto z-10">
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.id}
+                                onClick={() => {
+                                    setActiveTab(tab.id);
+                                    if (isSticky) {
+                                        window.scrollTo({
+                                            top: window.innerHeight - 150, // Adjust offset as needed
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                }}
+                                className={cn(
+                                    "group flex flex-col items-center px-4 py-2 transition-all duration-300 relative",
+                                    activeTab === tab.id ? "text-luxury-gold" : "text-white/60 hover:text-white"
+                                )}
+                            >
+                                <span className={cn(
+                                    "text-xs font-sans tracking-widest uppercase mb-1 transition-colors",
+                                    activeTab === tab.id ? "text-luxury-gold" : "text-white/70 group-hover:text-white"
+                                )}>
+                                    {tab.subtitle}
+                                </span>
+                                <span className="text-2xl md:text-3xl font-serif">
+                                    {tab.label}
+                                </span>
+                                {activeTab === tab.id && (
+                                    <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-luxury-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]" />
+                                )}
+                            </button>
+                        ))}
+                    </div>
+
                     <div className={cn(
-                        "transition-all duration-300 flex items-center gap-4",
-                        isSticky ? "absolute right-4 md:right-8 top-1/2 -translate-y-1/2" : "hidden lg:flex absolute right-0 bottom-4"
+                        "transition-all duration-300 flex items-center justify-center md:justify-end gap-4 w-full md:w-auto md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 lg:right-8",
+                        isSticky ? "opacity-100" : "opacity-100" // Manage visibility opacity to avoid layout shift, or use hidden
                     )}>
                         {/* WhatsApp Reservation Button */}
                         <a
