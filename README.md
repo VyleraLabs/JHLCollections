@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JHL Collections - Premium Hospitality Web Experience
 
-## Getting Started
+Welcome to the official repository for the **JHL Collections** web platform. This bespoke solution is engineered to deliver a high-performance, visually stunning, and secure digital experience for JHL Group's premium hospitality portfolio.
 
-First, run the development server:
+**Live Website:** [jhlcollections.com](https://jhlcollections.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Technology Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project leverages the latest advancements in web technology to ensure speed, SEO dominance, and a fluid user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+-   **Core:** React 19, TypeScript
+-   **Styling & UI:** Tailwind CSS v4, Framer Motion
+-   **Optimization:** Sharp (Image Processing), Vercel Speed Insights, Vercel Analytics
+-   **Package Manager:** NPM
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔒 Security & Performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We have implemented rigorous security measures to protect user data and ensure the integrity of the platform.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Enhanced Security Headers
+-   **Content Security Policy (CSP):** Strict, nonce-based CSP to prevent XSS attacks.
+-   **HSTS (HTTP Strict Transport Security):** Enforces secure HTTPS connections.
+-   **X-Frame-Options:** set to `DENY` to prevent clickjacking.
+-   **X-Content-Type-Options:** `nosniff` to prevent MIME-sniffing attacks.
+-   **Referrer-Policy:** `strict-origin-when-cross-origin` to protect user privacy.
+-   **Permissions-Policy:** Explicitly disables sensitive features like camera, microphone, and geolocation.
 
-## Deploy on Vercel
+### Advanced Protection and Obfuscation
+-   **Bot Detection:** Intelligent middleware identifies legitimate search engine bots versus potential scrapers, applying optimized caching strategies for each.
+-   **Server Obfuscation:** Custom `Server: JHL-Web-Engine` and `X-Powered-By: Elite-Tech` headers mask the underlying infrastructure to reduce attack surface mapping.
+-   **Input Sanitization:** Robust validation to prevent injection attacks.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💎 Customization & Usage
+
+This platform is **custom-developed exclusively for JHL Group**. Every component, animation, and logic flow has been tailored to reflect the brand's unique identity.
+
+> [!IMPORTANT]
+> **COPYRIGHT NOTICE**
+>
+> This source code, design, and intellectual property are owned by **VyleraLabs** for **JHL Collections**.
+>
+> **Strictly Prohibited:**
+> *   Unauthorized copying, reproduction, or distribution of any part of this codebase.
+> *   Use of the design assets or code for commercial purposes without explicit written consent.
+> *   Reverse engineering or modifying the proprietary "Elite-Tech" obfuscation layers.
+
+---
+
+<p align="center">
+  <small>&copy; 2024 JHL Collections. Powered by VyleraLabs.</small>
+</p>
