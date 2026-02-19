@@ -231,6 +231,40 @@ export interface Translations {
                 };
             };
         };
+        sandjong: {
+            hero: { soul: string; title: string; subtitle: string; discover: string };
+            about: {
+                glanceTitle: string; glanceText: string;
+                achievementTitle: string; achievementText: string; awardText: string;
+                ambienceTitle: string; ambienceText: string;
+            };
+            menu: {
+                title: string; subtitle: string; desc: string;
+                viewPdf: string; book: string;
+                categories: {
+                    signatures: string;
+                    fullbody: string;
+                    maternity: string;
+                };
+                items: {
+                    lamonan: { name: string; desc: string };
+                    selayang: { name: string; desc: string };
+                    alam: { name: string; desc: string };
+                    serunai: { name: string; desc: string };
+                    massage: { name: string; desc: string };
+                    facial: { name: string; desc: string };
+                    scrub: { name: string; desc: string };
+                    pregnant: { name: string; desc: string };
+                    pregnancyTrts: { name: string; desc: string };
+                    postpartum: { name: string; desc: string };
+                    postpartumTrts: { name: string; desc: string };
+                    wrap: { name: string; desc: string };
+                    scrubMaternity: { name: string; desc: string };
+                    touches: { name: string; desc: string };
+                }
+            };
+            reservation: { title: string; desc: string; bookOnline: string; contactUs: string };
+        };
     };
     cookies: {
         title: string;
@@ -595,7 +629,58 @@ export const translations: Record<Language, Translations> = {
                         content: "We prioritize the security of your Personal Data. In compliance with Indonesian regulations (PP No. 71/2019 and UU PDP), our primary servers and customer databases are located within the territory of the Republic of Indonesia (Google Cloud Region: Jakarta).\n\nHowever, for the purpose of performance optimization (CDN) and traffic analysis, limited anonymized data may be processed by our third-party partners (such as Google Analytics) in other jurisdictions that adhere to international data privacy standards."
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "Nature Inheritance, Rooted in Culture",
+                    title: "Sandjong Spa",
+                    subtitle: "A sanctuary where Ancient Chinese-Peranakan healing meets modern luxury.",
+                    discover: "Discover"
+                },
+                about: {
+                    glanceTitle: "At a Glance",
+                    glanceText: "Derived from the Indonesian word 'Sanjung' which means 'praises to please someone and making people happy,' Sandjong's existence aims to brighten customers days and provide an absolute moment of repose through relaxation and pampering.",
+                    achievementTitle: "Our Achievement",
+                    achievementText: "This commitment towards excellence is reflected in Sandjong's achievement as THE BEST SPA 2023, a great beginning from many others yet to come.",
+                    awardText: "Award Winning",
+                    ambienceTitle: "Enchanting Ambience",
+                    ambienceText: "At Sandjong Wellness, we harmonize nature and culture to craft a serene haven. Our traditional Chinese-Peranakan treatments offer profound relaxation, renewing both body and mind. It's a timeless journey, akin to returning to a cherished relative's home, where delightful rejuvenation and positivity is all around."
+                },
+                menu: {
+                    title: "Wellness Menu",
+                    subtitle: "Traditional Therapies",
+                    desc: "Discover treatments rooted in ancient Javanese wisdom, curated to restore balance and harmony.",
+                    viewPdf: "View Full Menu PDF",
+                    book: "Book",
+                    categories: {
+                        signatures: "Signatures",
+                        fullbody: "Full Body Pampering",
+                        maternity: "Maternity Indulgence"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "A couple's retreat designed to harmonize energy and restore vitality." },
+                        selayang: { name: "Selayang Sandjong", desc: "Our signature massage combining long strokes and acupressure." },
+                        alam: { name: "Alam Semula", desc: "Return to nature with this organic scrub and massage ritual." },
+                        serunai: { name: "Serunai Anja", desc: "A sensory journey using aromatic oils and traditional techniques." },
+                        massage: { name: "Sandjong Body Massage", desc: "Classic full body massage to relieve tension." },
+                        facial: { name: "Sandjong Natural Facials", desc: "Rejuvenating facial using all-natural ingredients." },
+                        scrub: { name: "Sandjong Body Scrub", desc: "Exfoliating scrub to reveal glowing, soft skin." },
+                        pregnant: { name: "Pregnant Pause", desc: "Gentle relief for expectant mothers." },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "Tailored therapies for each trimester." },
+                        postpartum: { name: "Post-partum Day Break", desc: "Restorative care for new mothers." },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "Focused recovery treatments." },
+                        wrap: { name: "Body Wrap", desc: "Nourishing wrap to hydrate and firm skin." },
+                        scrubMaternity: { name: "Body Scrub", desc: "Gentle exfoliation safe for nursing mothers." },
+                        touches: { name: "Simply Touches", desc: "Express treatments for busy moms." }
+                    }
+                },
+                reservation: {
+                    title: "Begin Your Journey",
+                    desc: "Reservations are recommended to ensure your preferred treatment time.",
+                    bookOnline: "Book Online",
+                    contactUs: "Contact Us"
+                }
+            },
         },
         cookies: {
             title: "Cookie Consent",
@@ -955,10 +1040,61 @@ export const translations: Record<Language, Translations> = {
                 sections: {
                     storage: {
                         title: "数据存储与本地化",
-                        content: "我们优先考虑您的个人数据安全。根据印度尼西亚法规（2019年第71号政府条例和UU PDP），我们的主要服务器和客户数据库位于印度尼西亚共和国境内（Google Cloud区域： Jacob达）。\n\n然而，为了性能优化（CDN）和流量分析，受限制的匿名数据可能会由我们的第三方合作伙伴（如 Google Analytics）在遵守国际数据隐私标准的其他司法管辖区进行处理。"
+                        content: "我们优先保障您的个人数据安全。根据印度尼西亚法规（PP No. 71/2019 和 UU PDP），我们的主服务器和客户数据库位于印度尼西亚共和国境内（Google Cloud Region: Jakarta）。\n\n然而，为了优化性能（CDN）和流量分析，有限的匿名数据可能会被我们的第三方合作伙伴（如 Google Analytics）在遵守国际数据隐私标准的其他司法管辖区处理。"
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "爪哇之魂",
+                    title: "三钟水疗",
+                    subtitle: "古老爪哇疗愈与现代奢华相遇的圣地。",
+                    discover: "探索"
+                },
+                about: {
+                    glanceTitle: "概览",
+                    glanceText: "源自印尼语“Sanjung”，意为“取悦他人并使其快乐的赞美”，Sandjong的存在旨在通过放松和呵护，点亮客人的每一天，提供绝对的休憩时刻。",
+                    achievementTitle: "我们的成就",
+                    achievementText: "对卓越的承诺体现在Sandjong荣获2023年最佳水疗中心的成就中，这只是众多荣誉的开始。",
+                    awardText: "屡获殊荣",
+                    ambienceTitle: "迷人的氛围",
+                    ambienceText: "在Sandjong Wellness，我们将自然与文化和谐融合，打造宁静的避风港。我们要传统的中国-土生华人疗法提供深层放松，通过身心焕新。这是一场永恒的旅程，就像回到珍亲的家中一样，充满愉悦的活力和正能量。"
+                },
+                menu: {
+                    title: "健康菜单",
+                    subtitle: "传统疗法",
+                    desc: "探索植根于古老爪哇智慧的疗法，旨在恢复平衡与和谐。",
+                    viewPdf: "查看完整菜单PDF",
+                    book: "预订",
+                    categories: {
+                        signatures: "招牌",
+                        fullbody: "全身呵护",
+                        maternity: "孕期宠爱"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "专为情侣设计的恢复活力与和谐能量的疗程。" },
+                        selayang: { name: "Selayang Sandjong", desc: "结合长推与指压的招牌按摩。" },
+                        alam: { name: "Alam Semula", desc: "通过这种有机磨砂和按摩仪式回归自然。" },
+                        serunai: { name: "Serunai Anja", desc: "使用芳香精油和传统技术的感官之旅。" },
+                        massage: { name: "Sandjong Body Massage", desc: "缓解紧张的经典全身按摩。" },
+                        facial: { name: "Sandjong Natural Facials", desc: "使用全天然成分的焕新面部护理。" },
+                        scrub: { name: "Sandjong Body Scrub", desc: "展现光泽柔嫩肌肤的去角质磨砂。" },
+                        pregnant: { name: "Pregnant Pause", desc: "准妈妈的温柔慰藉。" },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "为每个孕期量身定制的疗法。" },
+                        postpartum: { name: "Post-partum Day Break", desc: "新妈妈的恢复性护理。" },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "针对性的产后恢复疗程。" },
+                        wrap: { name: "Body Wrap", desc: "滋润紧致肌肤的营养体膜。" },
+                        scrubMaternity: { name: "Body Scrub", desc: "哺乳期妈妈也可安全使用的温和磨砂。" },
+                        touches: { name: "Simply Touches", desc: "忙碌妈妈的快速护理。" }
+                    }
+                },
+                reservation: {
+                    title: "开启您的旅程",
+                    desc: "建议预订以确保您首选的治疗时间。",
+                    bookOnline: "在线预订",
+                    contactUs: "联系我们"
+                }
+            },
         },
         cookies: {
             title: "Cookie 访问权限",
@@ -1321,7 +1457,58 @@ export const translations: Record<Language, Translations> = {
                         content: "Kami memprioritaskan keamanan Data Pribadi Anda. Sesuai dengan peraturan Indonesia (PP No. 71/2019 dan UU PDP), server utama dan basis data pelanggan kami berada di wilayah Republik Indonesia (Wilayah Google Cloud: Jakarta).\n\nNamun, untuk tujuan optimalisasi performa (CDN) dan analisis lalu lintas, data anonim terbatas mungkin diproses oleh mitra pihak ketiga kami (seperti Google Analytics) di yurisdiksi lain yang mematuhi standar privasi data internasional."
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "Jiwa Jawa",
+                    title: "Sandjong Spa",
+                    subtitle: "Tempat suci di mana penyembuhan kuno Jawa bertemu dengan kemewahan modern.",
+                    discover: "Temukan"
+                },
+                about: {
+                    glanceTitle: "Sekilas Pandang",
+                    glanceText: "Berasal dari kata Indonesia 'Sanjung' yang berarti 'pujian untuk menyenangkan seseorang dan membuat orang bahagia,' keberadaan Sandjong bertujuan untuk mencerahkan hari-hari pelanggan dan memberikan momen istirahat mutlak melalui relaksasi dan pemanjaan.",
+                    achievementTitle: "Pencapaian Kami",
+                    achievementText: "Komitmen terhadap keunggulan ini tercermin dalam pencapaian Sandjong sebagai SPA TERBAIK 2023, awal yang baik dari banyak pencapaian lainnya yang akan datang.",
+                    awardText: "Pemenang Penghargaan",
+                    ambienceTitle: "Suasana Memikat",
+                    ambienceText: "Di Sandjong Wellness, kami menyelaraskan alam dan budaya untuk menciptakan surga yang tenang. Perawatan tradisional Tionghoa-Peranakan kami menawarkan relaksasi mendalam, memperbarui tubuh dan pikiran. Ini adalah perjalanan abadi, seperti kembali ke rumah kerabat tercinta, di mana peremajaan yang menyenangkan dan kepositifan ada di sekitar."
+                },
+                menu: {
+                    title: "Menu Kebugaran",
+                    subtitle: "Terapi Tradisional",
+                    desc: "Temukan perawatan yang berakar pada kearifan Jawa kuno, dikurasi untuk mengembalikan keseimbangan dan harmoni.",
+                    viewPdf: "Lihat PDF Menu Lengkap",
+                    book: "Pesan",
+                    categories: {
+                        signatures: "Tanda Tangan",
+                        fullbody: "Pemanjaan Seluruh Tubuh",
+                        maternity: "Pemanjaan Kehamilan"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "Retret pasangan yang dirancang untuk menyelaraskan energi dan memulihkan vitalitas." },
+                        selayang: { name: "Selayang Sandjong", desc: "Pijat khas kami yang menggabungkan gerakan panjang dan akupresur." },
+                        alam: { name: "Alam Semula", desc: "Kembali ke alam dengan ritual lulur dan pijat organik ini." },
+                        serunai: { name: "Serunai Anja", desc: "Perjalanan sensorik menggunakan minyak aromatik dan teknik tradisional." },
+                        massage: { name: "Sandjong Body Massage", desc: "Pijat seluruh tubuh klasik untuk meredakan ketegangan." },
+                        facial: { name: "Sandjong Natural Facials", desc: "Facial peremajaan menggunakan bahan-bahan alami." },
+                        scrub: { name: "Sandjong Body Scrub", desc: "Lulur eksfoliasi untuk kulit yang bercahaya dan lembut." },
+                        pregnant: { name: "Pregnant Pause", desc: "Bantuan lembut untuk ibu hamil." },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "Terapi yang disesuaikan untuk setiap trimester." },
+                        postpartum: { name: "Post-partum Day Break", desc: "Perawatan pemulihan bagi ibu baru." },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "Perawatan pemulihan yang terfokus." },
+                        wrap: { name: "Body Wrap", desc: "Bungkus tubuh yang menutrisi untuk menghidrasi dan mengencangkan kulit." },
+                        scrubMaternity: { name: "Body Scrub", desc: "Lulur lembut yang aman untuk ibu menyusui." },
+                        touches: { name: "Simply Touches", desc: "Perawatan ekspres untuk ibu yang sibuk." }
+                    }
+                },
+                reservation: {
+                    title: "Mulai Perjalanan Anda",
+                    desc: "Reservasi disarankan untuk memastikan waktu perawatan yang Anda inginkan.",
+                    bookOnline: "Pesan Online",
+                    contactUs: "Hubungi Kami"
+                }
+            },
         },
         cookies: {
             title: "Persetujuan Cookie",
@@ -1684,7 +1871,58 @@ export const translations: Record<Language, Translations> = {
                         content: "Мы уделяем приоритетное внимание безопасности ваших Персональных данных. В соответствии с правилами Индонезии (ПП № 71/2019 и UU PDP), наши основные серверы и базы данных клиентов расположены на территории Республики Индонезии (регион Google Cloud: Джакарта).\n\nОднако в целях оптимизации производительности (CDN) и анализа трафика ограниченные анонимизированные данные могут обрабатываться нашими сторонними партнерами (такими как Google Analytics) в других юрисдикциях, придерживающихся международных стандартов конфиденциальности данных."
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "Душа Явы",
+                    title: "Sandjong Spa",
+                    subtitle: "Святилище, где древнее яванское целительство встречается с современной роскошью.",
+                    discover: "Открыть"
+                },
+                about: {
+                    glanceTitle: "Краткий обзор",
+                    glanceText: "Происходящее от индонезийского слова «Sanjung», что означает «хвала, чтобы доставить удовольствие и сделать людей счастливыми», существование Sandjong направлено на то, чтобы скрасить дни клиентов и обеспечить абсолютный момент покоя через расслабление и баловство.",
+                    achievementTitle: "Наше достижение",
+                    achievementText: "Эта приверженность совершенству отражена в достижении Sandjong звания ЛУЧШЕГО СПА 2023 года, что является отличным началом для многих других наград в будущем.",
+                    awardText: "Награжденный",
+                    ambienceTitle: "Чарующая атмосфера",
+                    ambienceText: "В Sandjong Wellness мы гармонизируем природу и культуру, создавая безмятежную гавань. Наши традиционные китайско-перанаканские процедуры предлагают глубокое расслабление, обновляя тело и разум. Это вневременное путешествие, похожее на возвращение в дом любимого родственника, где повсюду восхитительное омоложение и позитив."
+                },
+                menu: {
+                    title: "Велнес-меню",
+                    subtitle: "Традиционные терапии",
+                    desc: "Откройте для себя процедуры, уходящие корнями в древнюю яванскую мудрость, созданные для восстановления баланса и гармонии.",
+                    viewPdf: "Посмотреть полное меню (PDF)",
+                    book: "Забронировать",
+                    categories: {
+                        signatures: "Фирменные",
+                        fullbody: "Уход за всем телом",
+                        maternity: "Наслаждение для будущих мам"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "Отдых для пар, созданный для гармонизации энергии и восстановления жизненных сил." },
+                        selayang: { name: "Selayang Sandjong", desc: "Наш фирменный массаж, сочетающий длинные поглаживания и точечный массаж." },
+                        alam: { name: "Alam Semula", desc: "Вернитесь к природе с этим ритуалом органического скраба и массажа." },
+                        serunai: { name: "Serunai Anja", desc: "Сенсорное путешествие с использованием ароматических масел и традиционных техник." },
+                        massage: { name: "Sandjong Body Massage", desc: "Классический массаж всего тела для снятия напряжения." },
+                        facial: { name: "Sandjong Natural Facials", desc: "Омолаживающий уход за лицом с использованием полностью натуральных ингредиентов." },
+                        scrub: { name: "Sandjong Body Scrub", desc: "Отшелушивающий скраб для сияющей и мягкой кожи." },
+                        pregnant: { name: "Pregnant Pause", desc: "Мягкое облегчение для будущих мам." },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "Индивидуальные процедуры для каждого триместра." },
+                        postpartum: { name: "Post-partum Day Break", desc: "Восстановительный уход для молодых мам." },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "Целенаправленные восстановительные процедуры." },
+                        wrap: { name: "Body Wrap", desc: "Питательное обертывание для увлажнения и упругости кожи." },
+                        scrubMaternity: { name: "Body Scrub", desc: "Нежное отшелушивание, безопасное для кормящих мам." },
+                        touches: { name: "Simply Touches", desc: "Экспресс-процедуры для занятых мам." }
+                    }
+                },
+                reservation: {
+                    title: "Начните свое путешествие",
+                    desc: "Рекомендуется бронирование, чтобы гарантировать предпочтительное время процедуры.",
+                    bookOnline: "Забронировать онлайн",
+                    contactUs: "Связаться с нами"
+                }
+            },
         },
         cookies: {
             title: "Согласие на использование файлов cookie",
@@ -2047,7 +2285,58 @@ export const translations: Record<Language, Translations> = {
                         content: "当社は、お客様の個人データのセキュリティを最優先事項としています。インドネシアの規制（PP No. 71/2019およびUU PDP）を遵守し、当社の主要なサーバーと顧客データベースはインドネシア共和国の領土内（Google Cloudリージョン：ジャカルタ）に配置されています。\n\nただし、パフォーマンスの最適化（CDN）およびトラフィック分析の目的で、国際的なデータプライバシー基準を遵守する他の法域において、当社のサードパーティパートナー（Google Analyticsなど）によって限定された匿名化データが処理される場合があります。"
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "ジャワの魂",
+                    title: "サンジョン・スパ",
+                    subtitle: "古代ジャワの癒しと現代の贅沢が出会う聖域。",
+                    discover: "発見する"
+                },
+                about: {
+                    glanceTitle: "概要",
+                    glanceText: "「サンジョン」という言葉は、誰かを喜ばせ、幸せにするための賞賛を意味するインドネシア語に由来し、サンジョンの存在は、リラクゼーションと甘やかしを通じて、お客様の日々を明るくし、絶対的な休息の瞬間を提供することを目指しています。",
+                    achievementTitle: "私たちの功績",
+                    achievementText: "この卓越性へのコミットメントは、サンジョンが2023年のベストスパとして選ばれたことに反映されており、これは今後の多くの成功の始まりに過ぎません。",
+                    awardText: "受賞歴",
+                    ambienceTitle: "魅惑的な雰囲気",
+                    ambienceText: "サンジョン・ウェルネスでは、自然と文化を調和させ、静かな安らぎの場を作り出しています。伝統的な中国・プラナカン療法は、深いリラクゼーションを提供し、心身をリフレッシュさせます。それは、愛する親戚の家に帰るような、時代を超越した旅であり、そこには楽しい若返りと前向きなエネルギーが満ちています。"
+                },
+                menu: {
+                    title: "ウェルネスメニュー",
+                    subtitle: "伝統療法",
+                    desc: "バランスと調和を取り戻すために厳選された、古代ジャワの知恵に根ざしたトリートメントをご覧ください。",
+                    viewPdf: "全メニューPDFを見る",
+                    book: "予約する",
+                    categories: {
+                        signatures: "シグネチャー",
+                        fullbody: "全身の贅沢",
+                        maternity: "マタニティ・インダルジェンス"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "エネルギーを調和させ、活力を取り戻すために設計されたカップルのためのリトリート。" },
+                        selayang: { name: "Selayang Sandjong", desc: "ロングストロークと指圧を組み合わせたシグネチャーマッサージ。" },
+                        alam: { name: "Alam Semula", desc: "このオーガニックスクラブとマッサージの儀式で自然に帰りましょう。" },
+                        serunai: { name: "Serunai Anja", desc: "アロマオイルと伝統的な技術を使用した感覚の旅。" },
+                        massage: { name: "Sandjong Body Massage", desc: "緊張を和らげるクラシックな全身マッサージ。" },
+                        facial: { name: "Sandjong Natural Facials", desc: "すべて天然の成分を使用した若返りのフェイシャル。" },
+                        scrub: { name: "Sandjong Body Scrub", desc: "輝く柔らかな肌を明らかにする角質除去スクラブ。" },
+                        pregnant: { name: "Pregnant Pause", desc: "妊娠中の母親のための優しい安らぎ。" },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "各妊娠期に合わせたトリートメント。" },
+                        postpartum: { name: "Post-partum Day Break", desc: "新米ママのための回復ケア。" },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "集中的な回復トリートメント。" },
+                        wrap: { name: "Body Wrap", desc: "肌に潤いを与え、引き締める栄養ラップ。" },
+                        scrubMaternity: { name: "Body Scrub", desc: "授乳中の母親にも安全な優しい角質除去。" },
+                        touches: { name: "Simply Touches", desc: "忙しいママのためのエクスプレストリートメント。" }
+                    }
+                },
+                reservation: {
+                    title: "旅を始める",
+                    desc: "希望のトリートメント時間を確保するために、予約をお勧めします。",
+                    bookOnline: "オンライン予約",
+                    contactUs: "お問い合わせ"
+                }
+            },
         },
         cookies: {
             title: "クッキーの使用同意",
@@ -2410,7 +2699,58 @@ export const translations: Record<Language, Translations> = {
                         content: "نحن نولي الأولوية لأمن بياناتك الشخصية. امتثالاً للوائح الإندونيسية (PP رقم 71/2019 وUU PDP)، تقع خوادمنا الرئيسية وقواعد بيانات عملائنا داخل أراضي جمهورية إندونيسيا (منطقة Google Cloud: جاكرتا).\n\nومع ذلك، لأغراض تحسين الأداء (CDN) وتحليل حركة المرور، قد تتم معالجة بيانات مجهولة المصدر محدودة من قبل شركائنا من الجهات الخارجية (مثل Google Analytics) في ولايات قضائية أخرى تلتزم بالمعايير الدولية لخصوصية البيانات."
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "روح جاوة",
+                    title: "ساندجونغ سبا",
+                    subtitle: "ملاذ حيث يلتقي العلاج الجاوي القديم بالفخامة الحديثة.",
+                    discover: "اكتشف"
+                },
+                about: {
+                    glanceTitle: "لمحة سريعة",
+                    glanceText: "مشتقة من الكلمة الإندونيسية 'Sanjung' التي تعني 'المديح لإرضاء شخص ما وجعل الناس سعداء'، ويهدف وجود Sandjong إلى إشراق أيام العملاء وتوفير لحظة مطلقة من الراحة من خلال الاسترخاء والتدليل.",
+                    achievementTitle: "إنجازنا",
+                    achievementText: "ينعكس هذا الالتزام تجاه التميز في فوز Sandjong بجائزة أفضل سبا لعام 2023، وهي بداية رائعة للعديد من الجوائز القادمة.",
+                    awardText: "حائز على جوائز",
+                    ambienceTitle: "أجواء ساحرة",
+                    ambienceText: "في Sandjong Wellness، نمزج بين الطبيعة والثقافة لخلق ملاذ هادئ. تقدم علاجاتنا الصينية-البيراناكان التقليدية استرخاءً عميقًا، وتجدد الجسم والعقل. إنها رحلة خالدة، تشبه العودة إلى منزل قريب عزيز، حيث يوجد تجديد مبهج وإيجابية في كل مكان."
+                },
+                menu: {
+                    title: "قائمة العافية",
+                    subtitle: "العلاجات التقليدية",
+                    desc: "اكتشف علاجات متجذرة في الحكمة الجاوية القديمة، مصممة لاستعادة التوازن والانسجام.",
+                    viewPdf: "عرض قائمة PDF الكاملة",
+                    book: "احجز",
+                    categories: {
+                        signatures: "علاجات مميزة",
+                        fullbody: "تدليل كامل للجسم",
+                        maternity: "متعة الأمومة"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "خلوة للأزواج مصممة لتنسيق الطاقة واستعادة الحيوية." },
+                        selayang: { name: "Selayang Sandjong", desc: "تدليكنا المميز الذي يجمع بين الضربات الطويلة والضغط الإبري." },
+                        alam: { name: "Alam Semula", desc: "عد إلى الطبيعة مع هذا الطقس العضوي للفرك والتدليك." },
+                        serunai: { name: "Serunai Anja", desc: "رحلة حسية باستخدام الزيوت العطرية والتقنيات التقليدية." },
+                        massage: { name: "Sandjong Body Massage", desc: "تدليك كلاسيكي كامل للجسم لتخفيف التوتر." },
+                        facial: { name: "Sandjong Natural Facials", desc: "علاج للوجه مجدد باستخدام مكونات طبيعية بالكامل." },
+                        scrub: { name: "Sandjong Body Scrub", desc: "فرك مقشر للكشف عن بشرة ناعمة ومتوهجة." },
+                        pregnant: { name: "Pregnant Pause", desc: "راحة لطيفة للأمهات الحوامل." },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "علاجات مصممة خصيصًا لكل فصل من فصول الحمل." },
+                        postpartum: { name: "Post-partum Day Break", desc: "رعاية ترميمية للأمهات الجدد." },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "علاجات استشفاء مركزة." },
+                        wrap: { name: "Body Wrap", desc: "غلاف مغذي لترطيب وشد البشرة." },
+                        scrubMaternity: { name: "Body Scrub", desc: "تقشير لطيف آمن للأمهات المرضعات." },
+                        touches: { name: "Simply Touches", desc: "علاجات سريعة للأمهات المشغولات." }
+                    }
+                },
+                reservation: {
+                    title: "ابدأ رحلتك",
+                    desc: "يوصى بالحجز لضمان وقت العلاج المفضل لديك.",
+                    bookOnline: "احجز عبر الإنترنت",
+                    contactUs: "اتصل بنا"
+                }
+            },
         },
         cookies: {
             title: "موافقة ملفات تعريف الارتباط",
@@ -2773,7 +3113,58 @@ export const translations: Record<Language, Translations> = {
                         content: "당사는 귀하의 개인 데이터 보안을 최우선으로 생각합니다. 인도네시아 규정(PP No. 71/2019 및 UU PDP)을 준수하여 당사의 기본 서버와 고객 데이터베이스는 인도네시아 공화국 영토(Google Cloud 리전: 자카르타) 내에 위치합니다.\n\n그러나 성능 최적화(CDN) 및 트래픽 분석을 목적으로 국제 데이터 프라이버시 표준을 준수하는 다른 관할권에서 당사의 제3자 파트너(Google Analytics 등)가 제한된 익명 데이터를 처리할 수 있습니다."
                     }
                 }
-            }
+            },
+            sandjong: {
+                hero: {
+                    soul: "자바의 영혼",
+                    title: "산종 스파",
+                    subtitle: "고대 자바의 치유와 현대의 럭셔리가 만나는 안식처.",
+                    discover: "발견하기"
+                },
+                about: {
+                    glanceTitle: "한눈에 보기",
+                    glanceText: "인도네시아어 'Sanjung'에서 유래한 이 단어는 '누군가를 기쁘게 하고 행복하게 하기 위한 칭찬'을 의미하며, Sandjong의 존재는 휴식과 팸퍼링을 통해 고객의 하루를 밝게 하고 절대적인 휴식의 순간을 제공하는 것을 목표로 합니다.",
+                    achievementTitle: "우리의 성취",
+                    achievementText: "탁월함에 대한 이러한 헌신은 Sandjong이 2023년 최고의 스파로 선정된 성과에 반영되어 있으며, 이는 앞으로 다가올 많은 영광의 시작일 뿐입니다.",
+                    awardText: "수상 경력",
+                    ambienceTitle: "매혹적인 분위기",
+                    ambienceText: "Sandjong Wellness에서는 자연과 문화를 조화시켜 평온한 안식처를 만듭니다. 우리의 전통 중국-페라나칸 트리트먼트는 심오한 휴식을 제공하여 몸과 마음을 새롭게 합니다. 그것은 사랑하는 친척의 집으로 돌아가는 것과 같은 시대를 초월한 여행이며, 그곳에는 즐거운 회춘과 긍정이 가득합니다."
+                },
+                menu: {
+                    title: "웰니스 메뉴",
+                    subtitle: "전통 요법",
+                    desc: "균형과 조화를 회복하기 위해 큐레이팅된 고대 자바의 지혜에 뿌리를 둔 트리트먼트를 만나보세요.",
+                    viewPdf: "전체 메뉴 PDF 보기",
+                    book: "예약하기",
+                    categories: {
+                        signatures: "시그니처",
+                        fullbody: "전신 관리",
+                        maternity: "임산부 케어"
+                    },
+                    items: {
+                        lamonan: { name: "Lamonan Puan & Tuan", desc: "에너지를 조화시키고 활력을 되찾기 위해 고안된 커플 리트리트." },
+                        selayang: { name: "Selayang Sandjong", desc: "긴 스트로크와 지압을 결합한 시그니처 마사지." },
+                        alam: { name: "Alam Semula", desc: "이 유기농 스크럽과 마사지 의식으로 자연으로 돌아가세요." },
+                        serunai: { name: "Serunai Anja", desc: "아로마 오일과 전통 기법을 사용한 감각적인 여행." },
+                        massage: { name: "Sandjong Body Massage", desc: "긴장을 풀어주는 클래식 전신 마사지." },
+                        facial: { name: "Sandjong Natural Facials", desc: "천연 성분을 사용한 회춘 페이셜." },
+                        scrub: { name: "Sandjong Body Scrub", desc: "빛나고 부드러운 피부를 드러내는 각질 제거 스크럽." },
+                        pregnant: { name: "Pregnant Pause", desc: "임산부를 위한 부드러운 안도감." },
+                        pregnancyTrts: { name: "Pregnancy Treatments", desc: "각 임신기에 맞춘 맞춤형 요법." },
+                        postpartum: { name: "Post-partum Day Break", desc: "초보 엄마를 위한 회복 케어." },
+                        postpartumTrts: { name: "Post-Partum Treatments", desc: "집중 회복 트리트먼트." },
+                        wrap: { name: "Body Wrap", desc: "피부에 수분을 공급하고 탄력을 주는 영양 랩." },
+                        scrubMaternity: { name: "Body Scrub", desc: "수유 중인 엄마에게도 안전한 부드러운 각질 제거." },
+                        touches: { name: "Simply Touches", desc: "바쁜 엄마를 위한 익스프레스 트리트먼트." }
+                    }
+                },
+                reservation: {
+                    title: "여행을 시작하세요",
+                    desc: "원하는 시술 시간을 확보하려면 예약을 권장합니다.",
+                    bookOnline: "온라인 예약",
+                    contactUs: "문의하기"
+                }
+            },
         },
         cookies: {
             title: "쿠키 수집 동의",

@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Section from "@/components/Section";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import JsonLd from "@/components/JsonLd";
 
@@ -76,21 +77,48 @@ export default function Wellness() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                    {Object.entries(t.pages.wellness.venues).map(([key, venue]) => (
-                        <div key={key} className="bg-white p-8 border border-brand-gold/20 hover:border-brand-gold transition-all duration-300 flex flex-col items-center text-center shadow-sm hover:shadow-md group">
-                            <div className="w-16 h-16 mb-6 flex items-center justify-center bg-brand-off-white rounded-full group-hover:bg-brand-gold/10 transition-colors">
-                                {key === 'acqua' && <span className="text-brand-gold text-3xl">💧</span>}
-                                {key === 'sandjong' && <span className="text-brand-gold text-3xl">🌿</span>}
-                                {key === 'acquaree' && <span className="text-brand-gold text-3xl">🎈</span>}
-                                {key === 'laMere' && <span className="text-brand-gold text-3xl">✨</span>}
+                    {Object.entries(t.pages.wellness.venues).map(([key, venue]) => {
+                        if (key === 'sandjong') {
+                            return (
+                                <Link href="/wellness/sandjong" key={key} className="group relative bg-white p-0 border border-brand-gold/20 hover:border-brand-gold transition-all duration-300 flex flex-col items-center text-center shadow-sm hover:shadow-md overflow-hidden">
+                                    <div className="w-full h-48 relative mb-6 overflow-hidden">
+                                        <Image
+                                            src="/assets/original/sandjongfacility1.png"
+                                            alt={venue.name}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                                    </div>
+                                    <div className="p-8 pt-0">
+                                        <h3 className="text-xl font-serif text-brand-dark mb-2">{venue.name}</h3>
+                                        <p className="text-brand-gold text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">{venue.type}</p>
+                                        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                                            {venue.desc}
+                                        </p>
+                                        <span className="text-brand-gold text-xs uppercase tracking-widest font-bold group-hover:underline underline-offset-4">
+                                            {t.pages.sandjong.hero.discover}
+                                        </span>
+                                    </div>
+                                </Link>
+                            );
+                        }
+
+                        return (
+                            <div key={key} className="bg-white p-8 border border-brand-gold/20 hover:border-brand-gold transition-all duration-300 flex flex-col items-center text-center shadow-sm hover:shadow-md group">
+                                <div className="w-16 h-16 mb-6 flex items-center justify-center bg-brand-off-white rounded-full group-hover:bg-brand-gold/10 transition-colors">
+                                    {key === 'acqua' && <span className="text-brand-gold text-3xl">💧</span>}
+                                    {key === 'acquaree' && <span className="text-brand-gold text-3xl">🎈</span>}
+                                    {key === 'laMere' && <span className="text-brand-gold text-3xl">✨</span>}
+                                </div>
+                                <h3 className="text-xl font-serif text-brand-dark mb-2">{venue.name}</h3>
+                                <p className="text-brand-gold text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">{venue.type}</p>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    {venue.desc}
+                                </p>
                             </div>
-                            <h3 className="text-xl font-serif text-brand-dark mb-2">{venue.name}</h3>
-                            <p className="text-brand-gold text-[10px] uppercase tracking-[0.2em] mb-4 font-bold">{venue.type}</p>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                {venue.desc}
-                            </p>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
 
                 <div className="text-center border-t border-brand-gold/10 pt-12">

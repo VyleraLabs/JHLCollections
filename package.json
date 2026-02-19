@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run watermark && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "watermark": "node scripts/embed_robust_watermark.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
