@@ -28,7 +28,7 @@ export default function SandjongPage() {
     };
 
     return (
-        <main className="min-h-screen bg-brand-off-white selection:bg-brand-gold selection:text-white">
+        <main className="min-h-screen bg-brand-off-white selection:bg-brand-gold selection:text-white relative">
             <JsonLd data={spaSchema} />
             <Header />
 

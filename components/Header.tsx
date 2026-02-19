@@ -165,6 +165,7 @@ export default function Header() {
                                     !isScrolled && "brightness-0 invert"
                                 )}
                                 priority
+                                sizes="(max-width: 1024px) 96px, 128px"
                             />
                         </div>
                     </Link>
