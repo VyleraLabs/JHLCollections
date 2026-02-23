@@ -1,21 +1,35 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import clsx from "clsx";
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
+import { useEffect, useState } from "react";
 
 export default function SandjongAbout() {
     const { t } = useLanguage();
     const about = t.pages.sandjong.about;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     // Batik Pattern (SVG equivalent as BG image)
     const batikPattern = `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
 
+    const { scrollYProgress } = useScroll();
+    const parallaxY = useTransform(scrollYProgress, [0.5, 1], [0, -100]);
+    // On mobile, use a static value or a very subtle transform to avoid layout thrashing
+    const finalY = isMobile ? 0 : parallaxY;
+
     return (
         <section className="relative bg-brand-off-white">
-            {/* Background Texture */}
-            <div className="absolute inset-0 z-0 opacity-30 fixed" style={{ backgroundImage: batikPattern }} />
+            {/* Background Texture - Removed 'fixed' to improve scroll performance and TBT */}
+            <div className="absolute inset-0 z-0 opacity-30" style={{ backgroundImage: batikPattern }} />
 
             {/* CINEMATIC SCROLL SECTION */}
             <div className="relative max-w-[1920px] mx-auto">
@@ -56,8 +70,8 @@ export default function SandjongAbout() {
                                 src="/assets/sandjong/sandjongfacility1.webp"
                                 alt="Sandjong Interior"
                                 fill
-                                sizes="(max-width: 768px) 100vw, 60vw"
-                                quality={90}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                quality={60}
                                 priority
                                 className="object-cover transition-transform duration-[1.5s] hover:scale-105 will-change-transform"
                             />
@@ -74,8 +88,8 @@ export default function SandjongAbout() {
                                 src="/assets/sandjong/sandjongmodel.webp"
                                 alt="Relaxation"
                                 fill
-                                sizes="(max-width: 768px) 100vw, 60vw"
-                                quality={90}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                quality={75}
                                 className="object-cover transition-transform duration-[1.5s] hover:scale-105"
                             />
                         </motion.div>
@@ -91,8 +105,8 @@ export default function SandjongAbout() {
                                 src="/assets/sandjong/sandjongbackhotstone.webp"
                                 alt="Hot Stone"
                                 fill
-                                sizes="(max-width: 768px) 100vw, 60vw"
-                                quality={90}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                quality={75}
                                 className="object-cover transition-transform duration-[1.5s] hover:scale-105"
                             />
                         </motion.div>
@@ -125,7 +139,7 @@ export default function SandjongAbout() {
                             alt="Award"
                             fill
                             sizes="(max-width: 768px) 300px, 400px"
-                            quality={90}
+                            quality={60}
                             className="object-contain drop-shadow-[0_20px_50px_rgba(212,175,55,0.3)]"
                         />
                     </motion.div>
@@ -149,14 +163,14 @@ export default function SandjongAbout() {
             {/* AMBIENCE PARALLAX SECTION */}
             <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
                 <motion.div
-                    style={{ y: useTransform(useScroll().scrollYProgress, [0.5, 1], [0, -100]) }}
+                    style={{ y: finalY }}
                     className="absolute inset-0 z-0 will-change-transform"
                 >
                     <Image
                         src="/assets/sandjong/sandjongreception.webp"
                         alt="Ambience"
                         fill
-                        quality={90}
+                        quality={60}
                         className="object-cover"
                     />
                     <div className="absolute inset-0 bg-black/30" />

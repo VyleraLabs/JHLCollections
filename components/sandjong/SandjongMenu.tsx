@@ -160,11 +160,11 @@ export default function SandjongMenu() {
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeTab}
-                            initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
-                            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                            exit={{ opacity: 0, scale: 0.95, filter: "blur(5px)" }}
-                            transition={{ duration: 0.5 }}
-                            className="bg-white/5 backdrop-blur-sm border border-brand-gold/10 p-8 md:p-12 rounded-sm shadow-2xl relative"
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.98 }}
+                            transition={{ duration: 0.4 }}
+                            className="bg-white/5 border border-brand-gold/10 p-8 md:p-12 rounded-sm shadow-2xl relative"
                         >
                             {/* Decorative Corner Borders */}
                             <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-brand-gold/30" />
